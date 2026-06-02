@@ -154,7 +154,8 @@ Do not publish the main Kaggle version until these are done:
   - CLIP ViT-B/32 mean level-5 native accuracy: 0.0741;
   - SigLIP Base P16 224 mean native accuracy: 0.0103;
   - conclusion: there are three usable zero-shot CLIP-family baselines and one
-    documented SigLIP protocol mismatch, not yet five usable model families.
+    documented SigLIP protocol mismatch before adding the non-CLIP prototype
+    block.
 - Full-CURE-OR v0.4 confidence/calibration pass, completed:
   - usable models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B, CLIP ViT-B/32;
   - OpenCLIP level-5 accuracy: 0.0890;
@@ -176,9 +177,14 @@ Do not publish the main Kaggle version until these are done:
   - MobileNetV3-Small Prototype clean accuracy: 0.5560;
   - MobileNetV3-Small Prototype mean native accuracy: 0.1936;
   - MobileNetV3-Small Prototype mean level-5 native accuracy: 0.0960;
-  - conclusion: prototype classifiers add useful model-family diversity and
-    change the level-5 worst-case ranking to type 05, gaussian blur, but they
-    do not replace the need for stronger pretrained VLM baselines.
+  - ConvNeXt-Tiny Prototype clean accuracy: 0.6160;
+  - ConvNeXt-Tiny Prototype mean native accuracy: 0.3436;
+  - ConvNeXt-Tiny Prototype mean level-5 native accuracy: 0.2239;
+  - conclusion: prototype classifiers add useful model-family diversity.
+    HGNetV2-B0 and MobileNetV3-Small change the level-5 worst-case ranking to
+    type 05, gaussian blur ties, while ConvNeXt-Tiny becomes the strongest
+    current native-severity baseline but still collapses near chance on type
+    18, grayscale salt-and-pepper noise.
 
 ## Stretch Gate For arXiv/Workshop
 
@@ -189,8 +195,9 @@ For arXiv or workshop seriousness, add:
   - actual screenshot/resave chain;
   - actual video-call frame capture or screen recording compression;
 - at least 5 usable model families or pretrained variants on the v0.4
-  Full-CURE-OR probe, partially satisfied by three zero-shot CLIP-family
-  baselines plus two frozen-feature prototype baselines;
+  Full-CURE-OR probe, satisfied by six usable baseline rows but still weak on
+  pretrained family diversity because three rows are CLIP-family zero-shot
+  models and three rows are frozen-feature prototype classifiers;
 - confidence calibration or confidence-collapse analysis on the v0.4 probe,
   completed for current usable zero-shot baselines and still required for new
   models;

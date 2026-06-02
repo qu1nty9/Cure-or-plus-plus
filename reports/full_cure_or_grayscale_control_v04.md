@@ -30,6 +30,10 @@ disk.
 | OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.2465 | 0.1655 | 0.2473 | 0.0890 | 0.1575 |
 | CLIP ViT-B/32 | 0.3500 | 0.2244 | 0.1256 | 0.2220 | 0.0741 | 0.1503 |
 
+The prototype-extended control comparison is generated separately in
+`results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.csv`
+and summarized in `reports/full_cure_or_prototype_v04.md`.
+
 ## Interpretation
 
 The grayscale-only control is damaging, but it does not explain the full native

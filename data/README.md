@@ -2,6 +2,10 @@
 
 This directory is intentionally lightweight in git.
 
+Raw CURE-OR and mini-CURE-OR files are intentionally excluded from this
+repository. The project code is MIT-licensed, but source datasets remain under
+the terms set by their original distributors.
+
 Recommended local layout for the first experiments:
 
 ```text

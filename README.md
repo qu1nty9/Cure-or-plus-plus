@@ -71,6 +71,7 @@ Serious-level work has started:
 - SigLIP Base P16 224 zero-shot diagnostic baseline.
 - HGNetV2-B0 clean-train prototype baseline.
 - MobileNetV3-Small clean-train prototype baseline.
+- ConvNeXt-Tiny clean-train prototype baseline.
 - Cross-model comparison and per-class failure tables.
 - Combined high-severity comparison figure.
 - Confidence shift table and high-severity confidence figure.
@@ -89,7 +90,7 @@ Serious-level work has started:
   diagnostic run.
 - Full-CURE-OR v0.4 type-10 grayscale no-challenge control.
 - Full-CURE-OR v0.4 leave-clean-condition-out prototype baselines with
-  HGNetV2-B0 and MobileNetV3-Small.
+  HGNetV2-B0, MobileNetV3-Small, and ConvNeXt-Tiny.
 
 Corrected test-split headline:
 
@@ -137,6 +138,7 @@ Full-CURE-OR staged probe:
 
 | Model | Clean accuracy | Mean native accuracy | Mean level-4 native accuracy | Mean level-5 native accuracy | Worst level-5 challenge | Worst level-5 accuracy |
 | --- | ---: | ---: | ---: | ---: | --- | ---: |
+| ConvNeXt-Tiny Prototype | 0.6160 | 0.3436 | 0.2965 | 0.2239 | type 18, grayscale salt and pepper noise | 0.0080 |
 | CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | type 09, salt and pepper noise; tied with type 18 | 0.0100 |
 | HGNetV2-B0 Prototype | 0.6240 | 0.2547 | 0.2045 | 0.1219 | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
 | MobileNetV3-Small Prototype | 0.5560 | 0.1936 | 0.1631 | 0.0960 | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
@@ -156,9 +158,18 @@ second paper-level finding: OpenCLIP reaches only 0.0890 mean level-5 accuracy
 while retaining 0.4781 mean confidence. The grayscale control adds a third
 guardrail: grayscale alone hurts, but it does not explain level-5 collapse.
 The prototype pass adds a fourth finding: non-CLIP frozen-feature classifiers
-produce a different level-5 worst-case ranking, with gaussian blur becoming the
-top collapse case. It is still a controlled probe rather than a full paper-scale
-evaluation because stronger pretrained model diversity and real transfer
-validation are not complete.
+produce different level-5 robustness rankings. HGNetV2-B0 and
+MobileNetV3-Small make gaussian blur a top collapse case, while ConvNeXt-Tiny
+substantially improves mean native and level-5 accuracy but still fails near
+chance on grayscale salt-and-pepper noise. It is still a controlled probe rather
+than a full paper-scale evaluation because stronger pretrained model diversity
+and real transfer validation are not complete.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
+
+## License
+
+Code, configs, reports, and generated aggregate result artifacts in this
+repository are released under the MIT License. Raw CURE-OR and mini-CURE-OR
+data are not included in this repository and are not relicensed here; use those
+datasets only under the terms provided by their original sources.

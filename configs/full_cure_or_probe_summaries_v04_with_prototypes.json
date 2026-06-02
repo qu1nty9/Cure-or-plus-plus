@@ -24,6 +24,11 @@
       "name": "MobileNetV3-Small Prototype",
       "slug": "mobilenet_v3_small_prototype",
       "summary_path": "results/mobilenet_v3_small_full_cure_or_prototype_v04_summary.csv"
+    },
+    {
+      "name": "ConvNeXt-Tiny Prototype",
+      "slug": "convnext_tiny_fb_in1k_prototype",
+      "summary_path": "results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv"
     }
   ],
   "comparison_path": "results/full_cure_or_probe_v04_with_prototypes_comparison.csv",

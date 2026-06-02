@@ -27,6 +27,8 @@ Completed locally:
   zero-shot baselines.
 - v0.4 type-10 grayscale no-challenge control for the three usable zero-shot
   baselines.
+- v0.4 leave-clean-condition-out prototype baselines with HGNetV2-B0,
+  MobileNetV3-Small, and ConvNeXt-Tiny.
 
 ## Mini Probe Result
 
@@ -113,12 +115,14 @@ Evaluated v0.4 probe:
 - challenge levels: 1-5 where available;
 - type 02 and type 11 have levels 1-4 only;
 - main comparison models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B,
-  CLIP ViT-B/32, HGNetV2-B0 Prototype, and MobileNetV3-Small Prototype.
+  CLIP ViT-B/32, HGNetV2-B0 Prototype, MobileNetV3-Small Prototype, and
+  ConvNeXt-Tiny Prototype.
 
 Headline v0.4 results:
 
 | Model | Clean accuracy | Mean native accuracy | Mean level-4 native accuracy | Mean level-5 native accuracy | Worst level-5 accuracy |
 | --- | ---: | ---: | ---: | ---: | ---: |
+| ConvNeXt-Tiny Prototype | 0.6160 | 0.3436 | 0.2965 | 0.2239 | 0.0080 |
 | CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | 0.0100 |
 | HGNetV2-B0 Prototype | 0.6240 | 0.2547 | 0.2045 | 0.1219 | 0.0100 |
 | MobileNetV3-Small Prototype | 0.5560 | 0.1936 | 0.1631 | 0.0960 | 0.0100 |
@@ -155,6 +159,7 @@ Grayscale control result:
 | CLIP ViT-B/32 | 0.3500 | 0.2244 | 0.1256 | 0.0741 |
 | HGNetV2-B0 Prototype | 0.6240 | 0.4429 | 0.1811 | 0.1219 |
 | MobileNetV3-Small Prototype | 0.5560 | 0.2846 | 0.2714 | 0.0960 |
+| ConvNeXt-Tiny Prototype | 0.6160 | 0.4910 | 0.1250 | 0.2239 |
 
 This separates grayscale/channel loss from full native severity: grayscale
 alone hurts, but it does not explain level-5 collapse.
@@ -215,6 +220,8 @@ Artifacts:
 - `results/full_cure_or_grayscale_control_v04_comparison.csv`
 - `results/full_cure_or_grayscale_control_v04_comparison.png`
 - `reports/full_cure_or_prototype_v04.md`
+- `configs/convnext_tiny_fb_in1k_full_cure_or_prototype_v04.json`
+- `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
@@ -226,7 +233,7 @@ Artifacts:
 
 The complete 18-folder release is now staged and probed, so the remaining
 limitation is no longer folder availability. The v0.4 probe now has three
-usable zero-shot CLIP-family baselines, two usable frozen-feature prototype
+usable zero-shot CLIP-family baselines, three usable frozen-feature prototype
 baselines, and one SigLIP diagnostic failure. It still needs stronger
 pretrained model-family diversity, uses five paired samples per
 object/challenge group, and does not yet include a real transfer validation

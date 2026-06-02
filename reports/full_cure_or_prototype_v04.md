@@ -2,15 +2,16 @@
 
 ## Summary
 
-This pass adds two non-CLIP classifier backbones to the same Full-CURE-OR v0.4
+This pass adds three non-CLIP classifier backbones to the same Full-CURE-OR v0.4
 manifest:
 
 - HGNetV2-B0 Prototype;
-- MobileNetV3-Small Prototype.
+- MobileNetV3-Small Prototype;
+- ConvNeXt-Tiny Prototype.
 
-The goal is model-family diversity, not a new training benchmark. Both models
-use frozen ImageNet features and a nearest-centroid classifier over the 100
-Full-CURE-OR object labels.
+The goal is model-family diversity, not a new training benchmark. All three
+models use frozen ImageNet features and a nearest-centroid classifier over the
+100 Full-CURE-OR object labels.
 
 Protocol:
 
@@ -40,13 +41,15 @@ disk.
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | HGNetV2-B0 Prototype | 0.6240 | 0.4429 | 0.2547 | 0.3793 | 0.3006 | 0.2505 | 0.2045 | 0.1219 |
 | MobileNetV3-Small Prototype | 0.5560 | 0.2846 | 0.1936 | 0.2855 | 0.2239 | 0.1872 | 0.1631 | 0.0960 |
+| ConvNeXt-Tiny Prototype | 0.6160 | 0.4910 | 0.3436 | 0.4481 | 0.3914 | 0.3435 | 0.2965 | 0.2239 |
 
 For context, the strongest zero-shot baseline in the current v0.4 block is
 CLIP ViT-B/16 with clean accuracy 0.4440 and mean level-5 native accuracy
-0.0994. HGNetV2-B0 is now the strongest local baseline on clean, grayscale
-control, and every native challenge level. MobileNetV3-Small is weaker than
-HGNetV2-B0, but its mean native accuracy is close to CLIP ViT-B/16 while using
-a different non-contrastive classifier protocol.
+0.0994. HGNetV2-B0 remains the strongest prototype on clean accuracy, while
+ConvNeXt-Tiny is strongest on grayscale control, mean native accuracy, and every
+native challenge level. MobileNetV3-Small is weaker than HGNetV2-B0 and
+ConvNeXt-Tiny, but its mean native accuracy is close to CLIP ViT-B/16 while
+using a different non-contrastive classifier protocol.
 
 Level-5 worst-case ranking also changes by model family:
 
@@ -57,6 +60,7 @@ Level-5 worst-case ranking also changes by model family:
 | CLIP ViT-B/32 | type 09, salt and pepper noise | 0.0060 |
 | HGNetV2-B0 Prototype | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
 | MobileNetV3-Small Prototype | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
+| ConvNeXt-Tiny Prototype | type 18, grayscale salt and pepper noise | 0.0080 |
 
 That ranking shift is useful for the paper-level argument: CURE-OR is not just
 measuring generic image difficulty. The most damaging native challenge depends
@@ -67,12 +71,15 @@ on the model family and decision protocol.
 - `scripts/evaluate_full_cure_or_prototype.py`
 - `configs/hgnetv2_b0_full_cure_or_prototype_v04.json`
 - `configs/mobilenet_v3_small_full_cure_or_prototype_v04.json`
+- `configs/convnext_tiny_fb_in1k_full_cure_or_prototype_v04.json`
 - `configs/full_cure_or_probe_summaries_v04_with_prototypes.json`
 - `configs/full_cure_or_grayscale_control_summaries_v04_with_prototypes.json`
 - `results/hgnetv2_b0_full_cure_or_prototype_v04_predictions.csv`
 - `results/hgnetv2_b0_full_cure_or_prototype_v04_summary.csv`
 - `results/mobilenet_v3_small_full_cure_or_prototype_v04_predictions.csv`
 - `results/mobilenet_v3_small_full_cure_or_prototype_v04_summary.csv`
+- `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_predictions.csv`
+- `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`

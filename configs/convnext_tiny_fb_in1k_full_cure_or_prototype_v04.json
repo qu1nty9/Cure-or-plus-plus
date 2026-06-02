@@ -1,0 +1,13 @@
+{
+  "backend": "timm",
+  "model_id": "convnext_tiny.fb_in1k",
+  "model_name": "ConvNeXt-Tiny Prototype",
+  "clean_manifest_path": "data/interim/full_cure_or_clean_probe_v04_manifest.csv",
+  "distorted_manifest_paths": [
+    "data/interim/full_cure_or_native_probe_v04_manifest.csv",
+    "data/interim/full_cure_or_grayscale_control_v04_manifest.csv"
+  ],
+  "predictions_path": "results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_predictions.csv",
+  "summary_path": "results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv",
+  "batch_size": 32
+}

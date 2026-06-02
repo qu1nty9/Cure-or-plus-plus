@@ -95,11 +95,12 @@ also near chance. This supports a stronger research claim than a single
 produce challenge-specific and model-specific robustness rankings.
 
 This is still a probe, not the final arXiv-scale benchmark. The main remaining
-gaps are more usable model families, extending confidence/calibration analysis
-to every new model, and a real transfer validation sample. The expanded pass
-increases coverage to four completed model configs, but only three are
-currently usable for robustness claims because SigLIP fails clean recognition
-under this prompt protocol.
+gaps are more usable pretrained model families, extending
+confidence/calibration analysis to every new zero-shot/VLM model, and a real
+transfer validation sample. The v0.4 block now has six usable baseline rows
+across three CLIP-family zero-shot models and three frozen-feature prototype
+classifiers, plus one SigLIP diagnostic failure under the current prompt
+protocol.
 
 The confidence/calibration pass for the three usable zero-shot baselines is now
 complete. It shows that OpenCLIP has the strongest overconfidence failure at
@@ -113,14 +114,17 @@ native level-5 collapse. CLIP ViT-B/16 accuracy is 0.3166 on grayscale control
 versus 0.0994 on native level 5. Details are in
 `reports/full_cure_or_grayscale_control_v04.md`.
 
-The non-CLIP prototype pass is also complete. It adds HGNetV2-B0 and
-MobileNetV3-Small frozen-feature nearest-centroid baselines with a
-leave-clean-condition-out protocol. HGNetV2-B0 reaches 0.6240 clean accuracy,
-0.4429 grayscale-control accuracy, and 0.1219 mean native level-5 accuracy.
-MobileNetV3-Small reaches 0.5560 clean accuracy, 0.2846 grayscale-control
-accuracy, and 0.0960 mean native level-5 accuracy. Both prototype models have a
-different worst level-5 native challenge from the CLIP-family models: type 05,
-gaussian blur, tied with other near-chance failures. Details are in
+The non-CLIP prototype pass is also complete. It adds HGNetV2-B0,
+MobileNetV3-Small, and ConvNeXt-Tiny frozen-feature nearest-centroid baselines
+with a leave-clean-condition-out protocol. HGNetV2-B0 reaches 0.6240 clean
+accuracy and 0.1219 mean native level-5 accuracy. MobileNetV3-Small reaches
+0.5560 clean accuracy and 0.0960 mean native level-5 accuracy. ConvNeXt-Tiny
+reaches 0.6160 clean accuracy, 0.4910 grayscale-control accuracy, 0.3436 mean
+native accuracy, and 0.2239 mean native level-5 accuracy, making it the
+strongest current v0.4 baseline under the native challenge metrics. The
+prototype models also show model-family-dependent worst-case rankings: HGNetV2
+and MobileNet collapse first on gaussian blur ties, while ConvNeXt-Tiny is worst
+on grayscale salt-and-pepper noise. Details are in
 `reports/full_cure_or_prototype_v04.md`.
 
 ## Artifacts
@@ -164,12 +168,15 @@ gaussian blur, tied with other near-chance failures. Details are in
 - `reports/full_cure_or_grayscale_control_v04.md`
 - `configs/hgnetv2_b0_full_cure_or_prototype_v04.json`
 - `configs/mobilenet_v3_small_full_cure_or_prototype_v04.json`
+- `configs/convnext_tiny_fb_in1k_full_cure_or_prototype_v04.json`
 - `configs/full_cure_or_probe_summaries_v04_with_prototypes.json`
 - `configs/full_cure_or_grayscale_control_summaries_v04_with_prototypes.json`
 - `results/hgnetv2_b0_full_cure_or_prototype_v04_predictions.csv`
 - `results/hgnetv2_b0_full_cure_or_prototype_v04_summary.csv`
 - `results/mobilenet_v3_small_full_cure_or_prototype_v04_predictions.csv`
 - `results/mobilenet_v3_small_full_cure_or_prototype_v04_summary.csv`
+- `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_predictions.csv`
+- `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
