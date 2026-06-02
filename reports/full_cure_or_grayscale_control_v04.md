@@ -32,7 +32,8 @@ disk.
 
 The prototype-extended control comparison is generated separately in
 `results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.csv`
-and summarized in `reports/full_cure_or_prototype_v04.md`.
+and summarized in `reports/full_cure_or_prototype_v04.md`. That extended table
+now includes HGNetV2-B0, MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 
 ## Interpretation
 

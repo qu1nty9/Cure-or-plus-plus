@@ -28,7 +28,7 @@ Completed locally:
 - v0.4 type-10 grayscale no-challenge control for the three usable zero-shot
   baselines.
 - v0.4 leave-clean-condition-out prototype baselines with HGNetV2-B0,
-  MobileNetV3-Small, and ConvNeXt-Tiny.
+  MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 
 ## Mini Probe Result
 
@@ -115,13 +115,14 @@ Evaluated v0.4 probe:
 - challenge levels: 1-5 where available;
 - type 02 and type 11 have levels 1-4 only;
 - main comparison models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B,
-  CLIP ViT-B/32, HGNetV2-B0 Prototype, MobileNetV3-Small Prototype, and
-  ConvNeXt-Tiny Prototype.
+  CLIP ViT-B/32, HGNetV2-B0 Prototype, MobileNetV3-Small Prototype,
+  ConvNeXt-Tiny Prototype, and DINOv2 ViT-S/14 Prototype.
 
 Headline v0.4 results:
 
 | Model | Clean accuracy | Mean native accuracy | Mean level-4 native accuracy | Mean level-5 native accuracy | Worst level-5 accuracy |
 | --- | ---: | ---: | ---: | ---: | ---: |
+| DINOv2 ViT-S/14 Prototype | 0.7520 | 0.4393 | 0.3819 | 0.2766 | 0.0080 |
 | ConvNeXt-Tiny Prototype | 0.6160 | 0.3436 | 0.2965 | 0.2239 | 0.0080 |
 | CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | 0.0100 |
 | HGNetV2-B0 Prototype | 0.6240 | 0.2547 | 0.2045 | 0.1219 | 0.0100 |
@@ -134,6 +135,11 @@ This is now the strongest local evidence for the project: the native CURE-OR
 failure pattern survives after moving from mini-CURE-OR to the official
 100-object Full-CURE-OR label space and after adding the remaining official
 challenge folders.
+
+DINOv2 ViT-S/14 raises the current benchmark ceiling: it is strongest on clean
+accuracy, grayscale control, mean native accuracy, and level-5 native accuracy.
+The key failure claim still holds because its worst level-5 challenge remains
+near chance at 0.0080 accuracy.
 
 SigLIP should not be counted as a strong robustness baseline yet. Its clean
 accuracy is 0.0120 under the current prompt protocol, so the run is useful as a
@@ -160,6 +166,7 @@ Grayscale control result:
 | HGNetV2-B0 Prototype | 0.6240 | 0.4429 | 0.1811 | 0.1219 |
 | MobileNetV3-Small Prototype | 0.5560 | 0.2846 | 0.2714 | 0.0960 |
 | ConvNeXt-Tiny Prototype | 0.6160 | 0.4910 | 0.1250 | 0.2239 |
+| DINOv2 ViT-S/14 Prototype | 0.7520 | 0.7415 | 0.0105 | 0.2766 |
 
 This separates grayscale/channel loss from full native severity: grayscale
 alone hurts, but it does not explain level-5 collapse.
@@ -221,7 +228,9 @@ Artifacts:
 - `results/full_cure_or_grayscale_control_v04_comparison.png`
 - `reports/full_cure_or_prototype_v04.md`
 - `configs/convnext_tiny_fb_in1k_full_cure_or_prototype_v04.json`
+- `configs/dinov2_vit_small_patch14_full_cure_or_prototype_v04.json`
 - `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv`
+- `results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
@@ -233,11 +242,11 @@ Artifacts:
 
 The complete 18-folder release is now staged and probed, so the remaining
 limitation is no longer folder availability. The v0.4 probe now has three
-usable zero-shot CLIP-family baselines, three usable frozen-feature prototype
-baselines, and one SigLIP diagnostic failure. It still needs stronger
-pretrained model-family diversity, uses five paired samples per
-object/challenge group, and does not yet include a real transfer validation
-sample.
+usable zero-shot CLIP-family baselines, four usable frozen-feature prototype
+baselines including self-supervised DINOv2, and one SigLIP diagnostic failure.
+It still needs stronger pretrained model-family diversity, uses five paired
+samples per object/challenge group, and does not yet include a real transfer
+validation sample.
 
 The next step is to add stronger usable pretrained model families or collect
 the first real transfer validation sample before scaling beyond five paired

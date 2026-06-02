@@ -72,6 +72,7 @@ Serious-level work has started:
 - HGNetV2-B0 clean-train prototype baseline.
 - MobileNetV3-Small clean-train prototype baseline.
 - ConvNeXt-Tiny clean-train prototype baseline.
+- DINOv2 ViT-S/14 self-supervised prototype baseline.
 - Cross-model comparison and per-class failure tables.
 - Combined high-severity comparison figure.
 - Confidence shift table and high-severity confidence figure.
@@ -90,7 +91,7 @@ Serious-level work has started:
   diagnostic run.
 - Full-CURE-OR v0.4 type-10 grayscale no-challenge control.
 - Full-CURE-OR v0.4 leave-clean-condition-out prototype baselines with
-  HGNetV2-B0, MobileNetV3-Small, and ConvNeXt-Tiny.
+  HGNetV2-B0, MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 
 Corrected test-split headline:
 
@@ -138,6 +139,7 @@ Full-CURE-OR staged probe:
 
 | Model | Clean accuracy | Mean native accuracy | Mean level-4 native accuracy | Mean level-5 native accuracy | Worst level-5 challenge | Worst level-5 accuracy |
 | --- | ---: | ---: | ---: | ---: | --- | ---: |
+| DINOv2 ViT-S/14 Prototype | 0.7520 | 0.4393 | 0.3819 | 0.2766 | type 18, grayscale salt and pepper noise | 0.0080 |
 | ConvNeXt-Tiny Prototype | 0.6160 | 0.3436 | 0.2965 | 0.2239 | type 18, grayscale salt and pepper noise | 0.0080 |
 | CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | type 09, salt and pepper noise; tied with type 18 | 0.0100 |
 | HGNetV2-B0 Prototype | 0.6240 | 0.2547 | 0.2045 | 0.1219 | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
@@ -160,10 +162,12 @@ guardrail: grayscale alone hurts, but it does not explain level-5 collapse.
 The prototype pass adds a fourth finding: non-CLIP frozen-feature classifiers
 produce different level-5 robustness rankings. HGNetV2-B0 and
 MobileNetV3-Small make gaussian blur a top collapse case, while ConvNeXt-Tiny
-substantially improves mean native and level-5 accuracy but still fails near
-chance on grayscale salt-and-pepper noise. It is still a controlled probe rather
-than a full paper-scale evaluation because stronger pretrained model diversity
-and real transfer validation are not complete.
+and DINOv2 substantially improve mean native and level-5 accuracy but still
+fail near chance on grayscale salt-and-pepper noise. DINOv2 is the strongest
+current v0.4 row, but it does not remove the severe native-failure pattern. It
+is still a controlled probe rather than a full paper-scale evaluation because
+stronger pretrained model diversity and real transfer validation are not
+complete.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

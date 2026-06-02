@@ -180,10 +180,13 @@ Do not publish the main Kaggle version until these are done:
   - ConvNeXt-Tiny Prototype clean accuracy: 0.6160;
   - ConvNeXt-Tiny Prototype mean native accuracy: 0.3436;
   - ConvNeXt-Tiny Prototype mean level-5 native accuracy: 0.2239;
+  - DINOv2 ViT-S/14 Prototype clean accuracy: 0.7520;
+  - DINOv2 ViT-S/14 Prototype mean native accuracy: 0.4393;
+  - DINOv2 ViT-S/14 Prototype mean level-5 native accuracy: 0.2766;
   - conclusion: prototype classifiers add useful model-family diversity.
     HGNetV2-B0 and MobileNetV3-Small change the level-5 worst-case ranking to
-    type 05, gaussian blur ties, while ConvNeXt-Tiny becomes the strongest
-    current native-severity baseline but still collapses near chance on type
+    type 05, gaussian blur ties, while ConvNeXt-Tiny and DINOv2 become much
+    stronger native-severity baselines but still collapse near chance on type
     18, grayscale salt-and-pepper noise.
 
 ## Stretch Gate For arXiv/Workshop
@@ -195,9 +198,9 @@ For arXiv or workshop seriousness, add:
   - actual screenshot/resave chain;
   - actual video-call frame capture or screen recording compression;
 - at least 5 usable model families or pretrained variants on the v0.4
-  Full-CURE-OR probe, satisfied by six usable baseline rows but still weak on
+  Full-CURE-OR probe, satisfied by seven usable baseline rows but still weak on
   pretrained family diversity because three rows are CLIP-family zero-shot
-  models and three rows are frozen-feature prototype classifiers;
+  models and four rows are frozen-feature prototype classifiers;
 - confidence calibration or confidence-collapse analysis on the v0.4 probe,
   completed for current usable zero-shot baselines and still required for new
   models;
@@ -210,8 +213,9 @@ For arXiv or workshop seriousness, add:
 1. Collect one small real app-transfer validation sample using
    `docs/real_transfer_validation_protocol.md`.
 2. Evaluate the real-transfer manifest with CLIP ViT-B/16 and OpenCLIP.
-3. Add at least one stronger pretrained model family or variant on the v0.4
-   Full-CURE-OR manifest.
+3. Add another strong pretrained model family or variant on the v0.4
+   Full-CURE-OR manifest, preferably a stronger contrastive/VLM baseline rather
+   than another nearest-centroid prototype.
 4. Add confidence-collapse and calibration tables for each new usable
    zero-shot/VLM Full-CURE-OR model.
 5. Add type 10, grayscale no-challenge, as a separate control condition,

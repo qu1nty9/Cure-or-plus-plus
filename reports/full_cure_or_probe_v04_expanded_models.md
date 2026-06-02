@@ -58,10 +58,11 @@ level step is to add at least two more usable model families or stronger
 pretrained variants, then extend the confidence-collapse/calibration analysis
 on the same v0.4 manifest.
 
-That next step has started with a separate non-CLIP prototype pass. HGNetV2-B0
-and MobileNetV3-Small now run on the same v0.4 manifest using frozen ImageNet
-features and a leave-clean-condition-out nearest-centroid protocol. Details are
-in `reports/full_cure_or_prototype_v04.md`.
+That next step has started with a separate non-CLIP prototype pass. HGNetV2-B0,
+MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14 now run on the same v0.4
+manifest using frozen pretrained features and a leave-clean-condition-out
+nearest-centroid protocol. Details are in
+`reports/full_cure_or_prototype_v04.md`.
 
 The first confidence/calibration pass is now complete for the three usable
 zero-shot baselines. OpenCLIP is the clearest overconfidence case: at level 5,

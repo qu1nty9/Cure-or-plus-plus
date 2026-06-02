@@ -1,0 +1,14 @@
+{
+  "backend": "timm",
+  "model_id": "vit_small_patch14_dinov2",
+  "model_name": "DINOv2 ViT-S/14 Prototype",
+  "pretrained": true,
+  "clean_manifest_path": "data/interim/full_cure_or_clean_probe_v04_manifest.csv",
+  "distorted_manifest_paths": [
+    "data/interim/full_cure_or_native_probe_v04_manifest.csv",
+    "data/interim/full_cure_or_grayscale_control_v04_manifest.csv"
+  ],
+  "predictions_path": "results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_predictions.csv",
+  "summary_path": "results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_summary.csv",
+  "batch_size": 16
+}

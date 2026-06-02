@@ -29,6 +29,11 @@
       "name": "ConvNeXt-Tiny Prototype",
       "slug": "convnext_tiny_fb_in1k_prototype",
       "summary_path": "results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv"
+    },
+    {
+      "name": "DINOv2 ViT-S/14 Prototype",
+      "slug": "dinov2_vit_small_patch14_prototype",
+      "summary_path": "results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_summary.csv"
     }
   ],
   "comparison_path": "results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.csv"

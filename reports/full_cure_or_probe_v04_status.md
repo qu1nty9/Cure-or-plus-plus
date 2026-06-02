@@ -97,8 +97,8 @@ produce challenge-specific and model-specific robustness rankings.
 This is still a probe, not the final arXiv-scale benchmark. The main remaining
 gaps are more usable pretrained model families, extending
 confidence/calibration analysis to every new zero-shot/VLM model, and a real
-transfer validation sample. The v0.4 block now has six usable baseline rows
-across three CLIP-family zero-shot models and three frozen-feature prototype
+transfer validation sample. The v0.4 block now has seven usable baseline rows
+across three CLIP-family zero-shot models and four frozen-feature prototype
 classifiers, plus one SigLIP diagnostic failure under the current prompt
 protocol.
 
@@ -115,16 +115,19 @@ versus 0.0994 on native level 5. Details are in
 `reports/full_cure_or_grayscale_control_v04.md`.
 
 The non-CLIP prototype pass is also complete. It adds HGNetV2-B0,
-MobileNetV3-Small, and ConvNeXt-Tiny frozen-feature nearest-centroid baselines
-with a leave-clean-condition-out protocol. HGNetV2-B0 reaches 0.6240 clean
-accuracy and 0.1219 mean native level-5 accuracy. MobileNetV3-Small reaches
-0.5560 clean accuracy and 0.0960 mean native level-5 accuracy. ConvNeXt-Tiny
-reaches 0.6160 clean accuracy, 0.4910 grayscale-control accuracy, 0.3436 mean
-native accuracy, and 0.2239 mean native level-5 accuracy, making it the
-strongest current v0.4 baseline under the native challenge metrics. The
-prototype models also show model-family-dependent worst-case rankings: HGNetV2
-and MobileNet collapse first on gaussian blur ties, while ConvNeXt-Tiny is worst
-on grayscale salt-and-pepper noise. Details are in
+MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14 frozen-feature
+nearest-centroid baselines with a leave-clean-condition-out protocol.
+HGNetV2-B0 reaches 0.6240 clean accuracy and 0.1219 mean native level-5
+accuracy. MobileNetV3-Small reaches 0.5560 clean accuracy and 0.0960 mean
+native level-5 accuracy. ConvNeXt-Tiny reaches 0.6160 clean accuracy, 0.4910
+grayscale-control accuracy, 0.3436 mean native accuracy, and 0.2239 mean native
+level-5 accuracy. DINOv2 ViT-S/14 reaches 0.7520 clean accuracy, 0.7415
+grayscale-control accuracy, 0.4393 mean native accuracy, and 0.2766 mean native
+level-5 accuracy, making it the strongest current v0.4 baseline under the
+native challenge metrics. The prototype models also show
+model-family-dependent worst-case rankings: HGNetV2 and MobileNet collapse
+first on gaussian blur ties, while ConvNeXt-Tiny and DINOv2 are worst on
+grayscale salt-and-pepper noise. Details are in
 `reports/full_cure_or_prototype_v04.md`.
 
 ## Artifacts
@@ -169,6 +172,7 @@ on grayscale salt-and-pepper noise. Details are in
 - `configs/hgnetv2_b0_full_cure_or_prototype_v04.json`
 - `configs/mobilenet_v3_small_full_cure_or_prototype_v04.json`
 - `configs/convnext_tiny_fb_in1k_full_cure_or_prototype_v04.json`
+- `configs/dinov2_vit_small_patch14_full_cure_or_prototype_v04.json`
 - `configs/full_cure_or_probe_summaries_v04_with_prototypes.json`
 - `configs/full_cure_or_grayscale_control_summaries_v04_with_prototypes.json`
 - `results/hgnetv2_b0_full_cure_or_prototype_v04_predictions.csv`
@@ -177,6 +181,8 @@ on grayscale salt-and-pepper noise. Details are in
 - `results/mobilenet_v3_small_full_cure_or_prototype_v04_summary.csv`
 - `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_predictions.csv`
 - `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv`
+- `results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_predictions.csv`
+- `results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
