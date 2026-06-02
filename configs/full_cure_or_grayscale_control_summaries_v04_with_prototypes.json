@@ -1,0 +1,30 @@
+{
+  "models": [
+    {
+      "name": "OpenCLIP ViT-B/32 LAION2B",
+      "slug": "openclip_vit_b32_laion2b",
+      "summary_path": "results/openclip_vit_b32_laion2b_full_cure_or_grayscale_control_v04_summary.csv"
+    },
+    {
+      "name": "CLIP ViT-B/16",
+      "slug": "clip_vit_b16",
+      "summary_path": "results/clip_vit_b16_full_cure_or_grayscale_control_v04_summary.csv"
+    },
+    {
+      "name": "CLIP ViT-B/32",
+      "slug": "clip_vit_b32",
+      "summary_path": "results/clip_vit_b32_full_cure_or_grayscale_control_v04_summary.csv"
+    },
+    {
+      "name": "HGNetV2-B0 Prototype",
+      "slug": "hgnetv2_b0_prototype",
+      "summary_path": "results/hgnetv2_b0_full_cure_or_prototype_v04_summary.csv"
+    },
+    {
+      "name": "MobileNetV3-Small Prototype",
+      "slug": "mobilenet_v3_small_prototype",
+      "summary_path": "results/mobilenet_v3_small_full_cure_or_prototype_v04_summary.csv"
+    }
+  ],
+  "comparison_path": "results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.csv"
+}

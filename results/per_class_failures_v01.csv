@@ -1,0 +1,1681 @@
+model_name,model_slug,family,recipe,severity,label,n,accuracy,drop_vs_clean_label
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,calcium_bottle,10,0.5,0.30000000000000004
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,canon_camera,10,0.0,0.3
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,hair_brush,10,0.6,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,lg_cell_phone,10,0.6,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,baseball,10,0.8,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,canon_camera,10,0.1,0.19999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,lg_cell_phone,10,0.6,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,canon_camera,10,0.1,0.19999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,lg_cell_phone,10,0.9,-0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,training_marker_cone,10,0.9,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,lg_cell_phone,10,0.9,-0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,baseball,10,0.8,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,canon_camera,10,0.1,0.19999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,calcium_bottle,10,0.6,0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,lg_cell_phone,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,training_marker_cone,10,0.9,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,lg_cell_phone,10,0.9,-0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,baseball,10,0.7,0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,calcium_bottle,10,0.4,0.4
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,canon_camera,10,0.0,0.3
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,hair_brush,10,0.6,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,lg_cell_phone,10,0.4,0.29999999999999993
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,training_marker_cone,10,0.8,0.19999999999999996
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,canon_camera,10,0.1,0.19999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,lg_cell_phone,10,0.5,0.19999999999999996
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,baseball,10,1.0,-0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,canon_camera,10,0.0,0.3
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,lg_cell_phone,10,0.5,0.19999999999999996
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,training_marker_cone,10,0.9,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,baseball,10,1.0,-0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,lg_cell_phone,10,0.9,-0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,lg_cell_phone,10,0.9,-0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,lg_cell_phone,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,baseball,10,0.7,0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,canon_camera,10,0.1,0.19999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,lg_cell_phone,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,lg_cell_phone,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,lg_cell_phone,10,0.9,-0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,lg_cell_phone,10,0.6,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,dymo_label_maker,10,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,lg_cell_phone,10,0.9,-0.20000000000000007
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,baseball,10,0.8,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,canon_camera,10,0.2,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,dymo_label_maker,10,0.3,0.2
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,training_marker_cone,10,0.9,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,canon_camera,10,0.3,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,dymo_label_maker,10,0.4,0.09999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,hair_brush,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,baseball,10,0.9,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,canon_camera,10,0.1,0.19999999999999998
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,dymo_label_maker,10,0.3,0.2
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,hair_brush,10,0.8,-0.10000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,lg_cell_phone,10,0.7,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,pan,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,shoes,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,toy,10,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,baseball,10,0.9,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,canon_camera,10,0.0,0.6
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,dymo_label_maker,10,0.3,0.5
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,lg_cell_phone,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,canon_camera,10,0.5,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,dymo_label_maker,10,0.6,0.20000000000000007
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,dymo_label_maker,10,0.5,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,canon_camera,10,0.2,0.39999999999999997
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,dymo_label_maker,10,0.5,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,dymo_label_maker,10,0.7,0.10000000000000009
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,dymo_label_maker,10,0.5,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,hair_brush,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,canon_camera,10,0.7,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,dymo_label_maker,10,0.7,0.10000000000000009
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,canon_camera,10,0.7,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,dymo_label_maker,10,0.7,0.10000000000000009
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,canon_camera,10,0.6,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,calcium_bottle,10,0.9,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,dymo_label_maker,10,0.5,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,calcium_bottle,10,0.9,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,hair_brush,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,baseball,10,0.9,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,dymo_label_maker,10,0.1,0.7000000000000001
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,hair_brush,10,0.8,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,lg_cell_phone,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,training_marker_cone,10,0.9,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,dymo_label_maker,10,0.7,0.10000000000000009
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,canon_camera,10,0.1,0.5
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,dymo_label_maker,10,0.3,0.5
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,hair_brush,10,0.8,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,lg_cell_phone,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,canon_camera,10,0.2,0.39999999999999997
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,dymo_label_maker,10,0.6,0.20000000000000007
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,hair_brush,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,lg_cell_phone,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,canon_camera,10,0.6,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,dymo_label_maker,10,0.7,0.10000000000000009
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,canon_camera,10,0.1,0.5
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,dymo_label_maker,10,0.5,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,hair_brush,10,0.8,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,lg_cell_phone,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,hair_brush,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,canon_camera,10,0.2,0.39999999999999997
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,dymo_label_maker,10,0.5,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,lg_cell_phone,10,0.8,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,canon_camera,10,0.5,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,dymo_label_maker,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,lg_cell_phone,10,0.8,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,dymo_label_maker,10,0.2,0.6000000000000001
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,canon_camera,10,0.4,0.19999999999999996
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,dymo_label_maker,10,0.7,0.10000000000000009
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,hair_brush,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,lg_cell_phone,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,training_marker_cone,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,baseball,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,calcium_bottle,10,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,canon_camera,10,0.3,0.3
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,dymo_label_maker,10,0.5,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,hair_brush,10,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,lg_cell_phone,10,1.0,-0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,pan,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,shoes,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,toy,10,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,training_marker_cone,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,baseball,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,hair_brush,10,0.9,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,toy,10,0.8,-0.5
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,training_marker_cone,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,baseball,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,hair_brush,10,0.9,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,baseball,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,hair_brush,10,0.9,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,toy,10,0.5,-0.2
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,baseball,10,0.5,-0.2
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,training_marker_cone,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,hair_brush,10,0.9,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,toy,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,hair_brush,10,0.9,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,baseball,10,0.5,-0.2
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,baseball,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,baseball,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,baseball,10,0.5,-0.2
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,toy,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,training_marker_cone,10,0.1,0.19999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,baseball,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,toy,10,0.5,-0.2
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,training_marker_cone,10,0.1,0.19999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,baseball,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,training_marker_cone,10,0.1,0.19999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,baseball,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,toy,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,baseball,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,toy,10,0.8,-0.5
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,baseball,10,0.5,-0.2
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,toy,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,training_marker_cone,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,toy,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,training_marker_cone,10,0.1,0.19999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,toy,10,0.1,0.19999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,toy,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,training_marker_cone,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,baseball,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,toy,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,baseball,10,0.4,-0.10000000000000003
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,toy,10,0.1,0.19999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,training_marker_cone,10,0.0,0.3
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,baseball,10,0.3,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,calcium_bottle,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,canon_camera,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,dymo_label_maker,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,hair_brush,10,1.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,lg_cell_phone,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,pan,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,shoes,10,0.0,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,toy,10,0.2,0.09999999999999998
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,training_marker_cone,10,0.0,0.3
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,baseball,10,0.9,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,canon_camera,10,0.2,0.49999999999999994
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,dymo_label_maker,10,0.6,0.20000000000000007
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,hair_brush,10,0.8,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,lg_cell_phone,10,0.5,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,canon_camera,10,0.4,0.29999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,canon_camera,10,0.3,0.39999999999999997
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,dymo_label_maker,10,0.6,0.20000000000000007
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,lg_cell_phone,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,canon_camera,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,lg_cell_phone,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,canon_camera,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,lg_cell_phone,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,canon_camera,10,0.5,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,canon_camera,10,0.4,0.29999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,dymo_label_maker,10,0.6,0.20000000000000007
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,canon_camera,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,dymo_label_maker,10,0.9,-0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,canon_camera,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,lg_cell_phone,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,canon_camera,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,canon_camera,10,0.5,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,canon_camera,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,canon_camera,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,baseball,10,0.8,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,calcium_bottle,10,0.2,0.2
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,canon_camera,10,0.1,0.6
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,dymo_label_maker,10,0.3,0.5
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,hair_brush,10,0.6,0.30000000000000004
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,lg_cell_phone,10,0.3,0.39999999999999997
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,canon_camera,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,lg_cell_phone,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,canon_camera,10,0.5,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,dymo_label_maker,10,0.3,0.5
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,hair_brush,10,0.8,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,canon_camera,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,lg_cell_phone,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,canon_camera,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,lg_cell_phone,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,canon_camera,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,canon_camera,10,0.5,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,lg_cell_phone,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,canon_camera,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,dymo_label_maker,10,0.6,0.20000000000000007
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,canon_camera,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,canon_camera,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,canon_camera,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,lg_cell_phone,10,0.9,-0.20000000000000007
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,canon_camera,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,baseball,10,0.9,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,canon_camera,10,0.3,0.39999999999999997
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,dymo_label_maker,10,0.6,0.20000000000000007
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,hair_brush,10,0.8,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,lg_cell_phone,10,0.6,0.09999999999999998
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,canon_camera,10,0.8,-0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,dymo_label_maker,10,0.7,0.10000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,training_marker_cone,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,baseball,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,calcium_bottle,10,0.4,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,canon_camera,10,0.5,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,dymo_label_maker,10,0.8,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,hair_brush,10,0.9,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,lg_cell_phone,10,0.7,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,pan,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,shoes,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,toy,10,1.0,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,training_marker_cone,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,baseball,10,0.7,0.30000000000000004
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,canon_camera,10,0.6,0.20000000000000007
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,dymo_label_maker,10,0.8,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,hair_brush,10,0.5,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,lg_cell_phone,10,0.8,-0.6000000000000001
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,training_marker_cone,10,0.5,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,lg_cell_phone,10,0.6,-0.39999999999999997
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,training_marker_cone,10,0.5,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,lg_cell_phone,10,0.4,-0.2
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,training_marker_cone,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,hair_brush,10,0.9,-0.20000000000000007
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,lg_cell_phone,10,0.7,-0.49999999999999994
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,training_marker_cone,10,0.5,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,lg_cell_phone,10,0.4,-0.2
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,lg_cell_phone,10,0.4,-0.2
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,canon_camera,10,0.7,0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,hair_brush,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,baseball,10,0.3,0.7
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,calcium_bottle,10,0.7,0.30000000000000004
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,canon_camera,10,0.2,0.6000000000000001
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,dymo_label_maker,10,0.7,0.30000000000000004
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,hair_brush,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,lg_cell_phone,10,1.0,-0.8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,shoes,10,0.6,0.4
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,toy,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,training_marker_cone,10,0.4,0.29999999999999993
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,canon_camera,10,0.9,-0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,lg_cell_phone,10,0.6,-0.39999999999999997
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,calcium_bottle,10,0.8,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,dymo_label_maker,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,lg_cell_phone,10,1.0,-0.8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,training_marker_cone,10,0.4,0.29999999999999993
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,hair_brush,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,lg_cell_phone,10,0.5,-0.3
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,lg_cell_phone,10,0.5,-0.3
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,training_marker_cone,10,0.5,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,canon_camera,10,0.6,0.20000000000000007
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,lg_cell_phone,10,0.7,-0.49999999999999994
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,canon_camera,10,0.7,0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,hair_brush,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,lg_cell_phone,10,0.3,-0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,training_marker_cone,10,0.6,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,calcium_bottle,10,0.8,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,lg_cell_phone,10,1.0,-0.8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,training_marker_cone,10,0.5,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,calcium_bottle,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,canon_camera,10,0.8,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,dymo_label_maker,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,lg_cell_phone,10,0.2,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,training_marker_cone,10,0.7,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,baseball,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,calcium_bottle,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,canon_camera,10,0.7,0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,dymo_label_maker,10,0.9,0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,hair_brush,10,0.8,-0.10000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,lg_cell_phone,10,0.3,-0.09999999999999998
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,pan,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,shoes,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,toy,10,1.0,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,training_marker_cone,10,0.5,0.19999999999999996
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,baseball,10,0.0,0.5
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,dymo_label_maker,10,0.4,0.19999999999999996
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,hair_brush,10,0.3,0.3
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,pan,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,pan,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,baseball,10,0.3,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,canon_camera,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,dymo_label_maker,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,pan,10,0.2,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,pan,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,baseball,10,0.3,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,pan,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,baseball,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,canon_camera,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,dymo_label_maker,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,lg_cell_phone,10,0.0,0.1
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,pan,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,baseball,10,0.0,0.5
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,dymo_label_maker,10,0.3,0.3
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,lg_cell_phone,10,0.6,-0.5
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,pan,10,0.8,-0.4
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,shoes,10,0.9,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,baseball,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,baseball,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,canon_camera,10,0.6,-0.19999999999999996
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,hair_brush,10,0.4,0.19999999999999996
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,pan,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,baseball,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,canon_camera,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,dymo_label_maker,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,hair_brush,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,pan,10,0.2,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,pan,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,pan,10,0.2,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,baseball,10,0.3,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,dymo_label_maker,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,hair_brush,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,pan,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,pan,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,baseball,10,0.3,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,canon_camera,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,dymo_label_maker,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,pan,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,pan,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,baseball,10,0.1,0.4
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,calcium_bottle,10,0.6,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,dymo_label_maker,10,0.2,0.39999999999999997
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,hair_brush,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,pan,10,0.2,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,training_marker_cone,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,baseball,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,canon_camera,10,0.4,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,hair_brush,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,pan,10,0.3,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,training_marker_cone,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,baseball,10,0.4,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,calcium_bottle,10,0.5,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,canon_camera,10,0.5,-0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,dymo_label_maker,10,0.6,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,hair_brush,10,0.5,0.09999999999999998
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,lg_cell_phone,10,0.1,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,pan,10,0.2,0.2
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,shoes,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,toy,10,1.0,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,training_marker_cone,10,0.4,0.09999999999999998

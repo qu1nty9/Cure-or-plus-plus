@@ -1,0 +1,212 @@
+{
+  "archives": [
+    {
+      "challenge_name": "No challenge",
+      "challenge_type": "01",
+      "exists": false,
+      "expected_size_gb": 1.56,
+      "filename": "01_no_challenge.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/01_no_challenge.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Resize",
+      "challenge_type": "02",
+      "exists": false,
+      "expected_size_gb": 3.3,
+      "filename": "02_resize.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/02_resize.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Underexposure",
+      "challenge_type": "03",
+      "exists": false,
+      "expected_size_gb": 3.65,
+      "filename": "03_underexposure.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/03_underexposure.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Overexposure",
+      "challenge_type": "04",
+      "exists": false,
+      "expected_size_gb": 5.51,
+      "filename": "04_overexposure.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/04_overexposure.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Gaussian blur",
+      "challenge_type": "05",
+      "exists": false,
+      "expected_size_gb": 2.46,
+      "filename": "05_blur.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/05_blur.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Contrast",
+      "challenge_type": "06",
+      "exists": false,
+      "expected_size_gb": 8.06,
+      "filename": "06_contrast.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/06_contrast.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Dirty lens 1",
+      "challenge_type": "07",
+      "exists": false,
+      "expected_size_gb": 16.04,
+      "filename": "07_dirtylens1.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/07_dirtylens1.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Dirty lens 2",
+      "challenge_type": "08",
+      "exists": false,
+      "expected_size_gb": 15.64,
+      "filename": "08_dirtylens2.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/08_dirtylens2.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Salt & pepper noise",
+      "challenge_type": "09",
+      "exists": false,
+      "expected_size_gb": 44.22,
+      "filename": "09_saltpepper.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/09_saltpepper.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale",
+      "challenge_type": "10",
+      "exists": false,
+      "expected_size_gb": 1.38,
+      "filename": "10_grayscale_no_challenge.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/10_grayscale_no_challenge.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale resize",
+      "challenge_type": "11",
+      "exists": false,
+      "expected_size_gb": 2.9,
+      "filename": "11_grayscale_resize.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/11_grayscale_resize.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale underexposure",
+      "challenge_type": "12",
+      "exists": false,
+      "expected_size_gb": 3.18,
+      "filename": "12_grayscale_underexposure.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/12_grayscale_underexposure.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale overexposure",
+      "challenge_type": "13",
+      "exists": false,
+      "expected_size_gb": 4.21,
+      "filename": "13_grayscale_overexposure.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/13_grayscale_overexposure.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale gaussian blur",
+      "challenge_type": "14",
+      "exists": false,
+      "expected_size_gb": 1.86,
+      "filename": "14_grayscale_blur.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/14_grayscale_blur.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale contrast",
+      "challenge_type": "15",
+      "exists": false,
+      "expected_size_gb": 6.3,
+      "filename": "15_grayscale_contrast.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/15_grayscale_contrast.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale dirty lens 1",
+      "challenge_type": "16",
+      "exists": false,
+      "expected_size_gb": 15.27,
+      "filename": "16_grayscale_dirtylens1.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/16_grayscale_dirtylens1.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale dirty lens 2",
+      "challenge_type": "17",
+      "exists": false,
+      "expected_size_gb": 14.56,
+      "filename": "17_grayscale_dirtylens2.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/17_grayscale_dirtylens2.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale salt & pepper noise",
+      "challenge_type": "18",
+      "exists": false,
+      "expected_size_gb": 37.86,
+      "filename": "18_grayscale_saltpepper.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/18_grayscale_saltpepper.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    }
+  ],
+  "archives_dir": "/Volumes/980PRO/CURE-OR++/archives",
+  "expected_archives": 18,
+  "expected_total_gb_decimal": 187.96,
+  "missing_archives": 18,
+  "missing_filenames": [
+    "01_no_challenge.tar.gz",
+    "02_resize.tar.gz",
+    "03_underexposure.tar.gz",
+    "04_overexposure.tar.gz",
+    "05_blur.tar.gz",
+    "06_contrast.tar.gz",
+    "07_dirtylens1.tar.gz",
+    "08_dirtylens2.tar.gz",
+    "09_saltpepper.tar.gz",
+    "10_grayscale_no_challenge.tar.gz",
+    "11_grayscale_resize.tar.gz",
+    "12_grayscale_underexposure.tar.gz",
+    "13_grayscale_overexposure.tar.gz",
+    "14_grayscale_blur.tar.gz",
+    "15_grayscale_contrast.tar.gz",
+    "16_grayscale_dirtylens1.tar.gz",
+    "17_grayscale_dirtylens2.tar.gz",
+    "18_grayscale_saltpepper.tar.gz"
+  ],
+  "present_archives": 0,
+  "present_total_gib": 0.0,
+  "source": "https://ieee-dataport.org/open-access/cure-or-challenging-unreal-and-real-environment-object-recognition",
+  "subset": "all"
+}

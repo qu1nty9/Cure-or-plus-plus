@@ -1,0 +1,133 @@
+split,challenge_type,challenge_name,challenge_level,n
+test,01,No challenge,0,100
+test,02,Resize,1,100
+test,02,Resize,2,100
+test,02,Resize,3,100
+test,02,Resize,4,100
+test,03,Underexposure,1,100
+test,03,Underexposure,2,100
+test,03,Underexposure,3,100
+test,03,Underexposure,4,100
+test,04,Overexposure,1,100
+test,04,Overexposure,2,100
+test,04,Overexposure,3,100
+test,04,Overexposure,4,100
+test,05,Gaussian blur,1,100
+test,05,Gaussian blur,2,100
+test,05,Gaussian blur,3,100
+test,05,Gaussian blur,4,100
+test,06,Contrast,1,100
+test,06,Contrast,2,100
+test,06,Contrast,3,100
+test,06,Contrast,4,100
+test,07,Dirty lens 1,1,100
+test,07,Dirty lens 1,2,100
+test,07,Dirty lens 1,3,100
+test,07,Dirty lens 1,4,100
+test,08,Dirty lens 2,1,100
+test,08,Dirty lens 2,2,100
+test,08,Dirty lens 2,3,100
+test,08,Dirty lens 2,4,100
+test,09,Salt & pepper noise,1,100
+test,09,Salt & pepper noise,2,100
+test,09,Salt & pepper noise,3,100
+test,09,Salt & pepper noise,4,100
+test,10,Grayscale,0,100
+test,11,Grayscale resize,1,100
+test,11,Grayscale resize,2,100
+test,11,Grayscale resize,3,100
+test,11,Grayscale resize,4,100
+test,12,Grayscale underexposure,1,100
+test,12,Grayscale underexposure,2,100
+test,12,Grayscale underexposure,3,100
+test,12,Grayscale underexposure,4,100
+test,13,Grayscale overexposure,1,100
+test,13,Grayscale overexposure,2,100
+test,13,Grayscale overexposure,3,100
+test,13,Grayscale overexposure,4,100
+test,14,Grayscale gaussian blur,1,100
+test,14,Grayscale gaussian blur,2,100
+test,14,Grayscale gaussian blur,3,100
+test,14,Grayscale gaussian blur,4,100
+test,15,Grayscale contrast,1,100
+test,15,Grayscale contrast,2,100
+test,15,Grayscale contrast,3,100
+test,15,Grayscale contrast,4,100
+test,16,Grayscale dirty lens 1,1,100
+test,16,Grayscale dirty lens 1,2,100
+test,16,Grayscale dirty lens 1,3,100
+test,16,Grayscale dirty lens 1,4,100
+test,17,Grayscale dirty lens 2,1,100
+test,17,Grayscale dirty lens 2,2,100
+test,17,Grayscale dirty lens 2,3,100
+test,17,Grayscale dirty lens 2,4,100
+test,18,Grayscale salt & pepper noise,1,100
+test,18,Grayscale salt & pepper noise,2,100
+test,18,Grayscale salt & pepper noise,3,100
+test,18,Grayscale salt & pepper noise,4,100
+train,01,No challenge,0,150
+train,02,Resize,1,150
+train,02,Resize,2,150
+train,02,Resize,3,150
+train,02,Resize,4,150
+train,03,Underexposure,1,150
+train,03,Underexposure,2,150
+train,03,Underexposure,3,150
+train,03,Underexposure,4,150
+train,04,Overexposure,1,150
+train,04,Overexposure,2,150
+train,04,Overexposure,3,150
+train,04,Overexposure,4,150
+train,05,Gaussian blur,1,150
+train,05,Gaussian blur,2,150
+train,05,Gaussian blur,3,150
+train,05,Gaussian blur,4,150
+train,06,Contrast,1,150
+train,06,Contrast,2,150
+train,06,Contrast,3,150
+train,06,Contrast,4,150
+train,07,Dirty lens 1,1,150
+train,07,Dirty lens 1,2,150
+train,07,Dirty lens 1,3,150
+train,07,Dirty lens 1,4,150
+train,08,Dirty lens 2,1,150
+train,08,Dirty lens 2,2,150
+train,08,Dirty lens 2,3,150
+train,08,Dirty lens 2,4,150
+train,09,Salt & pepper noise,1,150
+train,09,Salt & pepper noise,2,150
+train,09,Salt & pepper noise,3,150
+train,09,Salt & pepper noise,4,150
+train,10,Grayscale,0,150
+train,11,Grayscale resize,1,150
+train,11,Grayscale resize,2,150
+train,11,Grayscale resize,3,150
+train,11,Grayscale resize,4,150
+train,12,Grayscale underexposure,1,150
+train,12,Grayscale underexposure,2,150
+train,12,Grayscale underexposure,3,150
+train,12,Grayscale underexposure,4,150
+train,13,Grayscale overexposure,1,150
+train,13,Grayscale overexposure,2,150
+train,13,Grayscale overexposure,3,150
+train,13,Grayscale overexposure,4,150
+train,14,Grayscale gaussian blur,1,150
+train,14,Grayscale gaussian blur,2,150
+train,14,Grayscale gaussian blur,3,150
+train,14,Grayscale gaussian blur,4,150
+train,15,Grayscale contrast,1,150
+train,15,Grayscale contrast,2,150
+train,15,Grayscale contrast,3,150
+train,15,Grayscale contrast,4,150
+train,16,Grayscale dirty lens 1,1,150
+train,16,Grayscale dirty lens 1,2,150
+train,16,Grayscale dirty lens 1,3,150
+train,16,Grayscale dirty lens 1,4,150
+train,17,Grayscale dirty lens 2,1,150
+train,17,Grayscale dirty lens 2,2,150
+train,17,Grayscale dirty lens 2,3,150
+train,17,Grayscale dirty lens 2,4,150
+train,18,Grayscale salt & pepper noise,1,150
+train,18,Grayscale salt & pepper noise,2,150
+train,18,Grayscale salt & pepper noise,3,150
+train,18,Grayscale salt & pepper noise,4,150

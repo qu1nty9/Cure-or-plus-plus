@@ -1,0 +1,237 @@
+# Full-CURE-OR Readiness v0.4
+
+## Current State
+
+We have completed a controlled all-challenge Full-CURE-OR ingestion and
+evaluation probe, but we are not ready for a final paper-scale evaluation yet.
+
+Completed locally:
+
+- official challenge type mapping;
+- local native mini-CURE-OR test-grid evaluation;
+- reusable native manifest builder;
+- reusable dataset probe script;
+- official 100-object label map for Full-CURE-OR;
+- Full-CURE-OR OpenCLIP and CLIP probe configs;
+- config validator with duplicate-display-name warning;
+- mini-CURE-OR probe report with image existence checks;
+- extracted Full-CURE-OR first-probe folders on the external disk;
+- balanced Full-CURE-OR clean and native probe manifests;
+- all 18 official extracted folders staged on the external disk;
+- Full-CURE-OR CLIP ViT-B/16 and OpenCLIP ViT-B/32 zero-shot probe results;
+- all-challenge Full-CURE-OR v0.4 probe across challenge types 02-09 and
+  11-18.
+- expanded v0.4 local-cache model pass with CLIP ViT-B/32 and a SigLIP
+  diagnostic result.
+- v0.4 confidence-collapse and calibration analysis for the three usable
+  zero-shot baselines.
+- v0.4 type-10 grayscale no-challenge control for the three usable zero-shot
+  baselines.
+
+## Mini Probe Result
+
+`scripts/probe_cure_or_dataset.py` was run on `data/raw/mini_cure_or`.
+
+| Check | Result |
+| --- | ---: |
+| CSV rows | 16,500 |
+| Clean rows | 250 |
+| Native challenge rows | 16,250 |
+| Image files | 16,500 |
+| Image bytes | 3,455,399,222 |
+| Image GiB | 3.2181 |
+| Missing image rows | 0 |
+| Scope rows | 132 |
+
+Artifacts:
+
+- `reports/mini_cure_or_probe_v01.json`
+- `reports/mini_cure_or_scope_v01.csv`
+- `configs/cure_or_objects_v01.json`
+- `configs/openclip_vit_b32_laion2b_full_cure_or_probe_v01.json`
+- `configs/clip_vit_b16_full_cure_or_probe_v01.json`
+- `scripts/validate_eval_config.py`
+
+## Full-CURE-OR Probe Result
+
+The Full-CURE-OR probes use extracted official folders under
+`/Volumes/980PRO/CURE-OR++/archives`.
+
+Local extracted folders:
+
+- all 18 official folders are staged;
+- type 01 and type 10 are no-challenge controls;
+- type 02 and type 11 provide levels 1-4;
+- types 03-09 and 12-18 provide levels 1-5.
+
+Evaluated v0.1 probe:
+
+- 100 clean images, one per official object ID;
+- 2,000 native challenge images;
+- challenge types: 02, 05, 09, 14, 18;
+- challenge levels: 1-4;
+- models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B, CLIP ViT-B/32, and
+  SigLIP Base P16 224 diagnostic.
+
+Evaluated v0.2 probe:
+
+- 500 clean images;
+- 10,000 native challenge images;
+- 5 paired acquisition-condition samples per object/challenge/level;
+- challenge types: 02, 05, 09, 14, 18;
+- challenge levels: 1-4;
+- models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B, CLIP ViT-B/32, and
+  SigLIP Base P16 224 diagnostic.
+
+Headline v0.2 results:
+
+| Model | Clean accuracy | Mean level-4 native accuracy | Worst level-4 accuracy |
+| --- | ---: | ---: | ---: |
+| CLIP ViT-B/16 | 0.4440 | 0.1012 | 0.0120 |
+| OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.0932 | 0.0100 |
+
+v0.3 extends the same six-folder probe to official level 5 for challenge types
+05, 09, 14, and 18:
+
+| Model | Clean accuracy | Mean level-5 native accuracy | Worst level-5 accuracy |
+| --- | ---: | ---: | ---: |
+| CLIP ViT-B/16 | 0.4440 | 0.0135 | 0.0100 |
+| OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.0115 | 0.0080 |
+
+This subset directly tests whether the strongest mini-CURE-OR native failures
+survive on the full release. They do: resize remains comparatively mild, while
+blur, salt and pepper noise, and grayscale combinations nearly collapse both
+zero-shot models at level 4.
+
+Evaluated v0.4 probe:
+
+- 500 clean images;
+- 38,999 native challenge images;
+- 5 paired acquisition-condition samples per object/challenge/level, except one
+  strict paired-source group with 4 usable samples;
+- challenge types: 02-09 and 11-18;
+- challenge levels: 1-5 where available;
+- type 02 and type 11 have levels 1-4 only;
+- main comparison models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B,
+  CLIP ViT-B/32, HGNetV2-B0 Prototype, and MobileNetV3-Small Prototype.
+
+Headline v0.4 results:
+
+| Model | Clean accuracy | Mean native accuracy | Mean level-4 native accuracy | Mean level-5 native accuracy | Worst level-5 accuracy |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | 0.0100 |
+| HGNetV2-B0 Prototype | 0.6240 | 0.2547 | 0.2045 | 0.1219 | 0.0100 |
+| MobileNetV3-Small Prototype | 0.5560 | 0.1936 | 0.1631 | 0.0960 | 0.0100 |
+| OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.1705 | 0.1400 | 0.0890 | 0.0080 |
+| CLIP ViT-B/32 | 0.3500 | 0.1532 | 0.1249 | 0.0741 | 0.0060 |
+| SigLIP Base P16 224 | 0.0120 | 0.0103 | 0.0096 | 0.0084 | 0.0060 |
+
+This is now the strongest local evidence for the project: the native CURE-OR
+failure pattern survives after moving from mini-CURE-OR to the official
+100-object Full-CURE-OR label space and after adding the remaining official
+challenge folders.
+
+SigLIP should not be counted as a strong robustness baseline yet. Its clean
+accuracy is 0.0120 under the current prompt protocol, so the run is useful as a
+documented diagnostic failure, not as evidence about SigLIP robustness.
+
+Confidence/calibration result:
+
+| Model | Level-5 accuracy | Level-5 confidence | Calibration gap | High-conf wrong rate |
+| --- | ---: | ---: | ---: | ---: |
+| CLIP ViT-B/16 | 0.0994 | 0.2610 | 0.1616 | 0.0439 |
+| OpenCLIP ViT-B/32 LAION2B | 0.0890 | 0.4781 | 0.3891 | 0.3141 |
+| CLIP ViT-B/32 | 0.0741 | 0.2716 | 0.1974 | 0.0700 |
+
+This adds an arXiv-relevant failure mode: native distortions can produce
+low-accuracy, high-confidence predictions, especially for OpenCLIP.
+
+Grayscale control result:
+
+| Model | Clean | Grayscale control | Drop vs clean | Native level 5 |
+| --- | ---: | ---: | ---: | ---: |
+| CLIP ViT-B/16 | 0.4440 | 0.3166 | 0.1274 | 0.0994 |
+| OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.2465 | 0.1655 | 0.0890 |
+| CLIP ViT-B/32 | 0.3500 | 0.2244 | 0.1256 | 0.0741 |
+| HGNetV2-B0 Prototype | 0.6240 | 0.4429 | 0.1811 | 0.1219 |
+| MobileNetV3-Small Prototype | 0.5560 | 0.2846 | 0.2714 | 0.0960 |
+
+This separates grayscale/channel loss from full native severity: grayscale
+alone hurts, but it does not explain level-5 collapse.
+
+Config validation status:
+
+- OpenCLIP Full-CURE v0.4 probe config loads 100 label keys.
+- CLIP ViT-B/16 Full-CURE v0.4 probe config loads 100 label keys.
+- CLIP ViT-B/32 Full-CURE v0.4 probe config loads 100 label keys.
+- SigLIP Base P16 224 Full-CURE v0.4 probe config loads 100 label keys.
+- All configs warn that `Calculator` is a duplicate display name in the
+  official object list.
+
+Artifacts:
+
+- `reports/full_cure_or_probe_v01.md`
+- `reports/full_cure_or_probe_v02_status.md`
+- `reports/full_cure_or_probe_v03_status.md`
+- `reports/full_cure_or_probe_v04_status.md`
+- `data/interim/full_cure_or_clean_probe_v01_manifest.csv`
+- `data/interim/full_cure_or_native_probe_v01_manifest.csv`
+- `data/interim/full_cure_or_clean_probe_v02_manifest.csv`
+- `data/interim/full_cure_or_native_probe_v02_manifest.csv`
+- `data/interim/full_cure_or_clean_probe_v03_manifest.csv`
+- `data/interim/full_cure_or_native_probe_v03_manifest.csv`
+- `data/interim/full_cure_or_clean_probe_v04_manifest.csv`
+- `data/interim/full_cure_or_native_probe_v04_manifest.csv`
+- `results/full_cure_or_probe_v01_comparison.csv`
+- `results/full_cure_or_probe_v01_level4_ranking.csv`
+- `results/full_cure_or_probe_v01_level4_ranking.png`
+- `results/full_cure_or_probe_v01_severity_curves.png`
+- `results/full_cure_or_probe_v02_comparison.csv`
+- `results/full_cure_or_probe_v02_level4_ranking.csv`
+- `results/full_cure_or_probe_v02_level4_ranking.png`
+- `results/full_cure_or_probe_v02_severity_curves.png`
+- `results/full_cure_or_probe_v03_comparison.csv`
+- `results/full_cure_or_probe_v03_level5_ranking.csv`
+- `results/full_cure_or_probe_v03_level5_ranking.png`
+- `results/full_cure_or_probe_v03_severity_curves.png`
+- `results/full_cure_or_probe_v04_comparison.csv`
+- `results/full_cure_or_probe_v04_level5_ranking.csv`
+- `results/full_cure_or_probe_v04_level5_ranking.png`
+- `results/full_cure_or_probe_v04_severity_curves.png`
+- `results/full_cure_or_probe_v04_mean_accuracy_by_level.png`
+- `reports/full_cure_or_probe_v04_expanded_models.md`
+- `results/full_cure_or_probe_v04_expanded_comparison.csv`
+- `results/full_cure_or_probe_v04_expanded_level5_ranking.csv`
+- `results/full_cure_or_probe_v04_expanded_level5_ranking.png`
+- `results/full_cure_or_probe_v04_expanded_mean_accuracy_by_level.png`
+- `reports/full_cure_or_confidence_v04.md`
+- `results/full_cure_or_probe_v04_confidence_shift.csv`
+- `results/full_cure_or_probe_v04_confidence_by_level.csv`
+- `results/full_cure_or_probe_v04_overconfidence_ranking.csv`
+- `results/full_cure_or_probe_v04_confidence_by_level.png`
+- `results/full_cure_or_probe_v04_level5_overconfidence.png`
+- `reports/full_cure_or_grayscale_control_v04.md`
+- `data/interim/full_cure_or_grayscale_control_v04_manifest.csv`
+- `results/full_cure_or_grayscale_control_v04_comparison.csv`
+- `results/full_cure_or_grayscale_control_v04_comparison.png`
+- `reports/full_cure_or_prototype_v04.md`
+- `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
+- `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
+- `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
+- `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png`
+- `results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.csv`
+- `results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.png`
+
+## Remaining Limitation
+
+The complete 18-folder release is now staged and probed, so the remaining
+limitation is no longer folder availability. The v0.4 probe now has three
+usable zero-shot CLIP-family baselines, two usable frozen-feature prototype
+baselines, and one SigLIP diagnostic failure. It still needs stronger
+pretrained model-family diversity, uses five paired samples per
+object/challenge group, and does not yet include a real transfer validation
+sample.
+
+The next step is to add stronger usable pretrained model families or collect
+the first real transfer validation sample before scaling beyond five paired
+samples per group.

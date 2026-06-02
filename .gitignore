@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.DS_Store
+.venv/
+.obsidian/
+.omx/
+
+*.docx
+~$*.docx
+
+# Dataset payloads and generated image trees stay out of the code repo.
+data/raw/
+data/interim/
+data/processed/
+kaggle/cure-or-plus-plus-v01/
+
+# Keep aggregate result tables and figures, but not per-image prediction dumps.
+results/*
+!results/*.png
+!results/*.jpg
+!results/*_summary.csv
+!results/*comparison*.csv
+!results/*ranking*.csv
+!results/*confidence*.csv
+!results/*overconfidence*.csv
+!results/per_class_failures*.csv
+results/*_predictions.csv

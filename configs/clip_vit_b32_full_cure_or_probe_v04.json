@@ -1,0 +1,17 @@
+{
+  "model_type": "clip",
+  "model_id": "openai/clip-vit-base-patch32",
+  "clean_manifest_path": "data/interim/full_cure_or_clean_probe_v04_manifest.csv",
+  "distorted_manifest_path": "data/interim/full_cure_or_native_probe_v04_manifest.csv",
+  "predictions_path": "results/clip_vit_b32_full_cure_or_probe_v04_predictions.csv",
+  "summary_path": "results/clip_vit_b32_full_cure_or_probe_v04_summary.csv",
+  "labels_path": "configs/cure_or_objects_v01.json",
+  "labels_key": "objects",
+  "batch_size": 16,
+  "prompt_templates": [
+    "a photo of a {}.",
+    "a photo of the {}.",
+    "a close-up photo of a {}.",
+    "a product photo of a {}."
+  ]
+}

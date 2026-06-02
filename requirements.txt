@@ -1,0 +1,12 @@
+pillow
+numpy
+pandas
+tqdm
+torch
+transformers
+matplotlib
+sentencepiece
+protobuf
+torchvision
+timm
+open_clip_torch

@@ -1,0 +1,131 @@
+model_name,model_slug,family,recipe,severity,n,accuracy,mean_confidence,relative_accuracy_drop
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,100,0.9,0.8785907293856144,0.0
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_02,level_1,100,0.9,0.8791225400567054,0.0
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_02,level_2,100,0.9,0.8766709750890732,0.0
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_02,level_3,100,0.91,0.8799389040470124,-0.010000000000000009
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_02,level_4,100,0.88,0.8746388530731202,0.020000000000000018
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_03,level_1,100,0.87,0.8187236753106117,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_03,level_2,100,0.88,0.8183560474216938,0.020000000000000018
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_03,level_3,100,0.87,0.8097592224180699,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_03,level_4,100,0.85,0.7775372430682183,0.050000000000000044
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_04,level_1,100,0.9,0.873927718102932,0.0
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_04,level_2,100,0.83,0.8391663217544556,0.07000000000000006
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_04,level_3,100,0.71,0.7523985253274441,0.19000000000000006
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_04,level_4,100,0.6,0.7414121897518635,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_05,level_1,100,0.64,0.692842119038105,0.26
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_05,level_2,100,0.29,0.4333209003508091,0.6100000000000001
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_05,level_3,100,0.11,0.39128137633204463,0.79
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_05,level_4,100,0.12,0.45411048874258997,0.78
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_06,level_1,100,0.86,0.8417368805408478,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_06,level_2,100,0.87,0.8247019210457802,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_06,level_3,100,0.85,0.81514304459095,0.050000000000000044
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_06,level_4,100,0.79,0.7944260960817338,0.10999999999999999
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_07,level_1,100,0.82,0.849726350903511,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_07,level_2,100,0.79,0.8154107117652893,0.10999999999999999
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_07,level_3,100,0.68,0.7550511859357357,0.21999999999999997
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_07,level_4,100,0.6,0.6351409648358822,0.30000000000000004
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_08,level_1,100,0.7,0.7364727918803692,0.20000000000000007
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_08,level_2,100,0.62,0.6959944231808186,0.28
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_08,level_3,100,0.55,0.7001954154670238,0.35
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_08,level_4,100,0.42,0.6695665688812733,0.48000000000000004
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_09,level_1,100,0.82,0.8251434588432311,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_09,level_2,100,0.62,0.7148575346171856,0.28
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_09,level_3,100,0.43,0.5650078320503235,0.47000000000000003
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_09,level_4,100,0.21,0.4013837857544422,0.6900000000000001
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_11,level_1,100,0.86,0.8110246463119983,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_11,level_2,100,0.87,0.8129400320351123,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_11,level_3,100,0.86,0.8156293742358685,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_11,level_4,100,0.85,0.8128656430542469,0.050000000000000044
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_12,level_1,100,0.85,0.7765647949278355,0.050000000000000044
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_12,level_2,100,0.84,0.7720987252891064,0.06000000000000005
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_12,level_3,100,0.83,0.7471644811332225,0.07000000000000006
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_12,level_4,100,0.8,0.7032664614915848,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_13,level_1,100,0.8,0.8143358185887337,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_13,level_2,100,0.66,0.676346674412489,0.24
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_13,level_3,100,0.56,0.6186946560442448,0.33999999999999997
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_13,level_4,100,0.48,0.5419677536189557,0.42000000000000004
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_14,level_1,100,0.47,0.4282919389009476,0.43000000000000005
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_14,level_2,100,0.11,0.4497089870274067,0.79
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_14,level_3,100,0.1,0.49229596942663195,0.8
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_14,level_4,100,0.1,0.4606503540277481,0.8
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_15,level_1,100,0.84,0.7984326340258121,0.06000000000000005
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_15,level_2,100,0.83,0.788966491818428,0.07000000000000006
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_15,level_3,100,0.81,0.7748096880316734,0.08999999999999997
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_15,level_4,100,0.82,0.7515700161457062,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_16,level_1,100,0.72,0.7528143426775933,0.18000000000000005
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_16,level_2,100,0.62,0.6808395546674728,0.28
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_16,level_3,100,0.45,0.5663209027051925,0.45
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_16,level_4,100,0.27,0.43377194330096247,0.63
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_17,level_1,100,0.64,0.6490102991461754,0.26
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_17,level_2,100,0.47,0.5946419559419155,0.43000000000000005
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_17,level_3,100,0.37,0.5551580990850925,0.53
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_17,level_4,100,0.36,0.5498049852252006,0.54
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_18,level_1,100,0.55,0.6791018691658973,0.35
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_18,level_2,100,0.42,0.5537067086994648,0.48000000000000004
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_18,level_3,100,0.28,0.3988072821497917,0.62
+CLIP ViT-B/16,clip_vit_b16,native_cure_or,native_challenge_type_18,level_4,100,0.11,0.34768502697348597,0.79
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,100,0.85,0.8929685404896737,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_02,level_1,100,0.87,0.8928628489375114,-0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_02,level_2,100,0.86,0.882833289206028,-0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_02,level_3,100,0.86,0.8810428255796432,-0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_02,level_4,100,0.86,0.8864822289347649,-0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_03,level_1,100,0.84,0.8791524365544319,0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_03,level_2,100,0.85,0.8749101787805558,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_03,level_3,100,0.83,0.871384060382843,0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_03,level_4,100,0.71,0.8550685709714889,0.14
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_04,level_1,100,0.88,0.8798141825199127,-0.030000000000000027
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_04,level_2,100,0.7,0.8203232881426811,0.15000000000000002
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_04,level_3,100,0.65,0.8208130413293838,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_04,level_4,100,0.52,0.8233871611952782,0.32999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_05,level_1,100,0.57,0.8434569498896599,0.28
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_05,level_2,100,0.26,0.7236985468864441,0.59
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_05,level_3,100,0.18,0.5784617090225219,0.6699999999999999
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_05,level_4,100,0.14,0.5876993590593338,0.71
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_06,level_1,100,0.85,0.9051295611262321,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_06,level_2,100,0.8,0.8479408174753189,0.04999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_06,level_3,100,0.77,0.8449653816223145,0.07999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_06,level_4,100,0.77,0.8435215970873833,0.07999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_07,level_1,100,0.6,0.8879863628745079,0.25
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_07,level_2,100,0.48,0.9007694876194,0.37
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_07,level_3,100,0.4,0.8590310251712799,0.44999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_07,level_4,100,0.33,0.7870331141352653,0.52
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_08,level_1,100,0.58,0.8117530637979508,0.27
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_08,level_2,100,0.49,0.8717743363976479,0.36
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_08,level_3,100,0.46,0.8644165131449699,0.38999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_08,level_4,100,0.44,0.8181923678517342,0.41
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_09,level_1,100,0.69,0.8329632586240768,0.16000000000000003
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_09,level_2,100,0.47,0.7632763025164604,0.38
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_09,level_3,100,0.25,0.6520557889342308,0.6
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_09,level_4,100,0.11,0.694938496351242,0.74
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_11,level_1,100,0.79,0.8499394860863686,0.05999999999999994
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_11,level_2,100,0.8,0.8460452288389206,0.04999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_11,level_3,100,0.8,0.8435053914785385,0.04999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_11,level_4,100,0.8,0.8401019933819771,0.04999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_12,level_1,100,0.69,0.8100357708334923,0.16000000000000003
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_12,level_2,100,0.61,0.8145208278298378,0.24
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_12,level_3,100,0.57,0.8291114810109138,0.28
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_12,level_4,100,0.55,0.8381102254986763,0.29999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_13,level_1,100,0.78,0.830395547747612,0.06999999999999995
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_13,level_2,100,0.55,0.8213770571351051,0.29999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_13,level_3,100,0.43,0.7993872910737991,0.42
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_13,level_4,100,0.36,0.6929179409146309,0.49
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_14,level_1,100,0.36,0.7507597547769547,0.49
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_14,level_2,100,0.15,0.5858730205893516,0.7
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_14,level_3,100,0.1,0.7376434487104416,0.75
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_14,level_4,100,0.1,0.8570338165760041,0.75
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_15,level_1,100,0.78,0.8094897073507309,0.06999999999999995
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_15,level_2,100,0.71,0.806068348288536,0.14
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_15,level_3,100,0.69,0.7964884948730468,0.16000000000000003
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_15,level_4,100,0.65,0.778170476257801,0.19999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_16,level_1,100,0.46,0.8540226593613625,0.38999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_16,level_2,100,0.39,0.812349262535572,0.45999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_16,level_3,100,0.29,0.7497444289922714,0.56
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_16,level_4,100,0.16,0.8468163037300109,0.69
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_17,level_1,100,0.4,0.7498637288808823,0.44999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_17,level_2,100,0.35,0.8464266577363014,0.5
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_17,level_3,100,0.33,0.8603913763165474,0.52
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_17,level_4,100,0.32,0.8837774893641472,0.53
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_18,level_1,100,0.41,0.7617684808373452,0.44
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_18,level_2,100,0.29,0.6831217160820962,0.56
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_18,level_3,100,0.14,0.8205033558607101,0.71
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,native_cure_or,native_challenge_type_18,level_4,100,0.1,0.9730474883317948,0.75

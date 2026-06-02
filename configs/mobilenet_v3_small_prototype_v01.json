@@ -1,0 +1,13 @@
+{
+  "model_id": "mobilenet_v3_small",
+  "model_name": "MobileNetV3-Small prototype",
+  "weights": "IMAGENET1K_V1",
+  "clean_manifest_path": "data/interim/cure_or_clean_manifest.csv",
+  "distorted_manifest_path": "data/processed/cure_or_pp_v0/manifest.csv",
+  "predictions_path": "results/mobilenet_v3_small_prototype_v01_predictions.csv",
+  "summary_path": "results/mobilenet_v3_small_prototype_v01_summary.csv",
+  "batch_size": 32,
+  "train_split": "train",
+  "eval_split": "test"
+}
+

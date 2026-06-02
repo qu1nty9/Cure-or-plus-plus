@@ -1,0 +1,95 @@
+{
+  "source": "https://github.com/olivesgatech/CURE-OR",
+  "challenge_types": {
+    "01": {
+      "name": "no_challenge",
+      "display_name": "No challenge",
+      "levels": [0]
+    },
+    "02": {
+      "name": "resize",
+      "display_name": "Resize",
+      "levels": [1, 2, 3, 4]
+    },
+    "03": {
+      "name": "underexposure",
+      "display_name": "Underexposure",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "04": {
+      "name": "overexposure",
+      "display_name": "Overexposure",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "05": {
+      "name": "gaussian_blur",
+      "display_name": "Gaussian blur",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "06": {
+      "name": "contrast",
+      "display_name": "Contrast",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "07": {
+      "name": "dirty_lens_1",
+      "display_name": "Dirty lens 1",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "08": {
+      "name": "dirty_lens_2",
+      "display_name": "Dirty lens 2",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "09": {
+      "name": "salt_pepper_noise",
+      "display_name": "Salt & pepper noise",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "10": {
+      "name": "grayscale",
+      "display_name": "Grayscale",
+      "levels": [0]
+    },
+    "11": {
+      "name": "grayscale_resize",
+      "display_name": "Grayscale resize",
+      "levels": [1, 2, 3, 4]
+    },
+    "12": {
+      "name": "grayscale_underexposure",
+      "display_name": "Grayscale underexposure",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "13": {
+      "name": "grayscale_overexposure",
+      "display_name": "Grayscale overexposure",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "14": {
+      "name": "grayscale_gaussian_blur",
+      "display_name": "Grayscale gaussian blur",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "15": {
+      "name": "grayscale_contrast",
+      "display_name": "Grayscale contrast",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "16": {
+      "name": "grayscale_dirty_lens_1",
+      "display_name": "Grayscale dirty lens 1",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "17": {
+      "name": "grayscale_dirty_lens_2",
+      "display_name": "Grayscale dirty lens 2",
+      "levels": [1, 2, 3, 4, 5]
+    },
+    "18": {
+      "name": "grayscale_salt_pepper_noise",
+      "display_name": "Grayscale salt & pepper noise",
+      "levels": [1, 2, 3, 4, 5]
+    }
+  }
+}

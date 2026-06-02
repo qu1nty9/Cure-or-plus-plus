@@ -1,0 +1,14 @@
+{
+  "id": "YOUR_KAGGLE_USERNAME/cure-or-plus-plus-modern-transfer-baseline",
+  "title": "CURE-OR++: Modern Transfer Distortion Baseline",
+  "code_file": "cure_or_pp_kaggle_v01.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "YOUR_KAGGLE_USERNAME/cure-or-plus-plus-v01"
+  ]
+}
+

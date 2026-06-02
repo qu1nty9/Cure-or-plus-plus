@@ -1,0 +1,3 @@
+family,recipe,severity,n,accuracy,mean_confidence,relative_accuracy_drop
+clean,clean,clean,500,0.444,0.5248231267482042,0.0
+control_cure_or,grayscale_no_challenge,control,499,0.3166332665330661,0.44692136580217817,0.1273667334669339

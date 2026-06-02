@@ -1,0 +1,12 @@
+{
+  "model_id": "hgnetv2_b0",
+  "model_name": "HGNetV2-B0 prototype",
+  "clean_manifest_path": "data/interim/cure_or_clean_manifest.csv",
+  "distorted_manifest_path": "data/processed/cure_or_pp_v0/manifest.csv",
+  "predictions_path": "results/hgnetv2_b0_prototype_v01_predictions.csv",
+  "summary_path": "results/hgnetv2_b0_prototype_v01_summary.csv",
+  "batch_size": 32,
+  "train_split": "train",
+  "eval_split": "test"
+}
+

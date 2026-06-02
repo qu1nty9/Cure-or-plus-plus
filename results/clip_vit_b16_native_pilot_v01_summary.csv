@@ -1,0 +1,14 @@
+family,recipe,severity,n,accuracy,mean_confidence,relative_accuracy_drop
+clean,clean,clean,100,0.9,0.8785907293856144,0.0
+native_cure_or,native_challenge_type_02,level_1,100,0.9,0.8791225400567054,0.0
+native_cure_or,native_challenge_type_02,level_2,100,0.9,0.8766709750890732,0.0
+native_cure_or,native_challenge_type_02,level_3,100,0.91,0.8799388667941094,-0.010000000000000009
+native_cure_or,native_challenge_type_02,level_4,100,0.88,0.8746388530731202,0.020000000000000018
+native_cure_or,native_challenge_type_08,level_1,100,0.7,0.7364727918803692,0.20000000000000007
+native_cure_or,native_challenge_type_08,level_2,100,0.62,0.6959944261610508,0.28
+native_cure_or,native_challenge_type_08,level_3,100,0.55,0.7001954154670238,0.35
+native_cure_or,native_challenge_type_08,level_4,100,0.42,0.6695665688812733,0.48000000000000004
+native_cure_or,native_challenge_type_14,level_1,100,0.47,0.4282919389009476,0.43000000000000005
+native_cure_or,native_challenge_type_14,level_2,100,0.11,0.44970899596810343,0.79
+native_cure_or,native_challenge_type_14,level_3,100,0.1,0.49229595959186556,0.8
+native_cure_or,native_challenge_type_14,level_4,100,0.1,0.4606503540277481,0.8

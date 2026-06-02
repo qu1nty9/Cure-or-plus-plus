@@ -1,0 +1,24 @@
+{
+  "models": [
+    {
+      "name": "CLIP ViT-B/16",
+      "slug": "clip_vit_b16",
+      "predictions_path": "results/clip_vit_b16_full_cure_or_probe_v04_predictions.csv"
+    },
+    {
+      "name": "OpenCLIP ViT-B/32 LAION2B",
+      "slug": "openclip_vit_b32_laion2b",
+      "predictions_path": "results/openclip_vit_b32_laion2b_full_cure_or_probe_v04_predictions.csv"
+    },
+    {
+      "name": "CLIP ViT-B/32",
+      "slug": "clip_vit_b32",
+      "predictions_path": "results/clip_vit_b32_full_cure_or_probe_v04_predictions.csv"
+    }
+  ],
+  "high_confidence_threshold": 0.5,
+  "ece_bins": 10,
+  "group_metrics_path": "results/full_cure_or_probe_v04_confidence_shift.csv",
+  "severity_metrics_path": "results/full_cure_or_probe_v04_confidence_by_level.csv",
+  "overconfidence_path": "results/full_cure_or_probe_v04_overconfidence_ranking.csv"
+}

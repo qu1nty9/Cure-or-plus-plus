@@ -1,0 +1,80 @@
+{
+  "archives": [
+    {
+      "challenge_name": "No challenge",
+      "challenge_type": "01",
+      "exists": false,
+      "expected_size_gb": 1.56,
+      "filename": "01_no_challenge.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/01_no_challenge.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Resize",
+      "challenge_type": "02",
+      "exists": false,
+      "expected_size_gb": 3.3,
+      "filename": "02_resize.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/02_resize.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Gaussian blur",
+      "challenge_type": "05",
+      "exists": false,
+      "expected_size_gb": 2.46,
+      "filename": "05_blur.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/05_blur.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Salt & pepper noise",
+      "challenge_type": "09",
+      "exists": false,
+      "expected_size_gb": 44.22,
+      "filename": "09_saltpepper.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/09_saltpepper.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale gaussian blur",
+      "challenge_type": "14",
+      "exists": false,
+      "expected_size_gb": 1.86,
+      "filename": "14_grayscale_blur.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/14_grayscale_blur.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    },
+    {
+      "challenge_name": "Grayscale salt & pepper noise",
+      "challenge_type": "18",
+      "exists": false,
+      "expected_size_gb": 37.86,
+      "filename": "18_grayscale_saltpepper.tar.gz",
+      "path": "/Volumes/980PRO/CURE-OR++/archives/18_grayscale_saltpepper.tar.gz",
+      "size_bytes": 0,
+      "size_gib": 0.0
+    }
+  ],
+  "archives_dir": "/Volumes/980PRO/CURE-OR++/archives",
+  "expected_archives": 6,
+  "expected_total_gb_decimal": 91.26,
+  "missing_archives": 6,
+  "missing_filenames": [
+    "01_no_challenge.tar.gz",
+    "02_resize.tar.gz",
+    "05_blur.tar.gz",
+    "09_saltpepper.tar.gz",
+    "14_grayscale_blur.tar.gz",
+    "18_grayscale_saltpepper.tar.gz"
+  ],
+  "present_archives": 0,
+  "present_total_gib": 0.0,
+  "source": "https://ieee-dataport.org/open-access/cure-or-challenging-unreal-and-real-environment-object-recognition",
+  "subset": "first_probe"
+}

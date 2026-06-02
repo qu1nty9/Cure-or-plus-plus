@@ -1,0 +1,11 @@
+{
+  "models": [
+    {
+      "name": "OpenCLIP ViT-B/32 LAION2B",
+      "slug": "openclip_vit_b32_laion2b",
+      "summary_path": "results/openclip_vit_b32_laion2b_full_cure_or_probe_v02_summary.csv"
+    }
+  ],
+  "comparison_path": "results/full_cure_or_probe_v02_openclip_only_comparison.csv",
+  "ranking_path": "results/full_cure_or_probe_v02_openclip_only_level4_ranking.csv"
+}

@@ -1,0 +1,55 @@
+model_name,model_slug,rank_most_damaging,family,recipe,accuracy,relative_accuracy_drop
+CLIP ViT-B/32,clip_vit_b32,1,modern_transfer,low_light_upload,0.64,0.15000000000000002
+CLIP ViT-B/32,clip_vit_b32,2,classic,blur_classic,0.71,0.08000000000000007
+CLIP ViT-B/32,clip_vit_b32,3,modern_transfer,video_call_frame,0.75,0.040000000000000036
+CLIP ViT-B/32,clip_vit_b32,4,modern_transfer,restoration_artifact,0.76,0.030000000000000027
+CLIP ViT-B/32,clip_vit_b32,5,classic,resize_roundtrip,0.77,0.020000000000000018
+CLIP ViT-B/32,clip_vit_b32,6,modern_transfer,dirty_lens_recompress,0.77,0.020000000000000018
+CLIP ViT-B/32,clip_vit_b32,7,classic,jpeg_classic,0.78,0.010000000000000009
+CLIP ViT-B/32,clip_vit_b32,8,modern_transfer,screenshot_chain,0.79,0.0
+CLIP ViT-B/32,clip_vit_b32,9,modern_transfer,messenger_chain,0.82,-0.029999999999999916
+CLIP ViT-B/16,clip_vit_b16,1,modern_transfer,low_light_upload,0.78,0.12
+CLIP ViT-B/16,clip_vit_b16,2,classic,blur_classic,0.79,0.10999999999999999
+CLIP ViT-B/16,clip_vit_b16,3,modern_transfer,restoration_artifact,0.82,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,4,modern_transfer,screenshot_chain,0.82,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,5,modern_transfer,video_call_frame,0.82,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,6,classic,jpeg_classic,0.83,0.07000000000000006
+CLIP ViT-B/16,clip_vit_b16,7,modern_transfer,dirty_lens_recompress,0.85,0.050000000000000044
+CLIP ViT-B/16,clip_vit_b16,8,classic,resize_roundtrip,0.86,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,9,modern_transfer,messenger_chain,0.86,0.040000000000000036
+SigLIP Base P16 224,siglip_base_p16_224,1,modern_transfer,video_call_frame,0.15,0.04000000000000001
+SigLIP Base P16 224,siglip_base_p16_224,2,modern_transfer,dirty_lens_recompress,0.16,0.03
+SigLIP Base P16 224,siglip_base_p16_224,3,classic,jpeg_classic,0.17,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,4,modern_transfer,restoration_artifact,0.17,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,5,modern_transfer,screenshot_chain,0.17,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,6,classic,resize_roundtrip,0.18,0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,7,modern_transfer,low_light_upload,0.18,0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,8,classic,blur_classic,0.19,0.0
+SigLIP Base P16 224,siglip_base_p16_224,9,modern_transfer,messenger_chain,0.21,-0.01999999999999999
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,1,modern_transfer,low_light_upload,0.63,0.21999999999999997
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,2,classic,blur_classic,0.74,0.10999999999999999
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,3,modern_transfer,video_call_frame,0.76,0.08999999999999997
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,4,classic,resize_roundtrip,0.8,0.04999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,5,modern_transfer,restoration_artifact,0.81,0.039999999999999925
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,6,modern_transfer,dirty_lens_recompress,0.82,0.030000000000000027
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,7,modern_transfer,screenshot_chain,0.84,0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,8,classic,jpeg_classic,0.85,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,9,modern_transfer,messenger_chain,0.85,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,1,modern_transfer,low_light_upload,0.64,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,2,classic,blur_classic,0.78,0.05999999999999994
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,3,classic,jpeg_classic,0.85,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,4,modern_transfer,messenger_chain,0.85,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,5,modern_transfer,restoration_artifact,0.85,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,6,modern_transfer,dirty_lens_recompress,0.86,-0.020000000000000018
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,7,modern_transfer,screenshot_chain,0.87,-0.030000000000000027
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,8,classic,resize_roundtrip,0.88,-0.040000000000000036
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,9,modern_transfer,video_call_frame,0.89,-0.050000000000000044
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,1,modern_transfer,video_call_frame,0.46,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,2,classic,blur_classic,0.47,0.09000000000000008
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,3,classic,jpeg_classic,0.49,0.07000000000000006
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,4,modern_transfer,messenger_chain,0.49,0.07000000000000006
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,5,modern_transfer,dirty_lens_recompress,0.5,0.06000000000000005
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,6,modern_transfer,screenshot_chain,0.5,0.06000000000000005
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,7,modern_transfer,restoration_artifact,0.53,0.030000000000000027
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,8,classic,resize_roundtrip,0.55,0.010000000000000009
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,9,modern_transfer,low_light_upload,0.56,0.0

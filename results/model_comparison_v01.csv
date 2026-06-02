@@ -1,0 +1,169 @@
+model_name,model_slug,family,recipe,severity,n,accuracy,mean_confidence,relative_accuracy_drop
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,high,100,0.71,0.8063394099473953,0.08000000000000007
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,low,100,0.79,0.8537436187267303,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,blur_classic,mid,100,0.76,0.8422755941748619,0.030000000000000027
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,high,100,0.78,0.8280988827347755,0.010000000000000009
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,low,100,0.78,0.8438149446249008,0.010000000000000009
+CLIP ViT-B/32,clip_vit_b32,classic,jpeg_classic,mid,100,0.8,0.8435629114508629,-0.010000000000000009
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,high,100,0.77,0.8416867953538895,0.020000000000000018
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,low,100,0.79,0.8517699927091599,0.0
+CLIP ViT-B/32,clip_vit_b32,classic,resize_roundtrip,mid,100,0.78,0.8476080632209778,0.010000000000000009
+CLIP ViT-B/32,clip_vit_b32,clean,clean,clean,100,0.79,0.8518817180395126,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,high,100,0.77,0.8424811398983002,0.020000000000000018
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,low,100,0.78,0.8491104660928249,0.010000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,dirty_lens_recompress,mid,100,0.81,0.8439469292759896,-0.020000000000000018
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,high,100,0.64,0.7460648681223393,0.15000000000000002
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,low,100,0.75,0.8221105319261551,0.040000000000000036
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,low_light_upload,mid,100,0.74,0.7972989490628243,0.050000000000000044
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,high,100,0.82,0.8421983829140663,-0.029999999999999916
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,low,100,0.81,0.8513139666616917,-0.020000000000000018
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,messenger_chain,mid,100,0.79,0.8475405898690224,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,high,100,0.76,0.8102082806825638,0.030000000000000027
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,low,100,0.79,0.8457913979887962,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,restoration_artifact,mid,100,0.79,0.8335688184201717,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,high,100,0.79,0.8222270667552948,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,low,100,0.79,0.8487654834985733,0.0
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,screenshot_chain,mid,100,0.82,0.8482864427566529,-0.029999999999999916
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,high,100,0.75,0.8153864976763725,0.040000000000000036
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,low,100,0.78,0.8416436350345612,0.010000000000000009
+CLIP ViT-B/32,clip_vit_b32,modern_transfer,video_call_frame,mid,100,0.76,0.8189205580949783,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,high,100,0.79,0.8492678132653236,0.10999999999999999
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,low,100,0.87,0.8734588950872422,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,classic,blur_classic,mid,100,0.84,0.8729715406894684,0.06000000000000005
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,high,100,0.83,0.8595800465345382,0.07000000000000006
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,low,100,0.88,0.8753455120325089,0.020000000000000018
+CLIP ViT-B/16,clip_vit_b16,classic,jpeg_classic,mid,100,0.86,0.8661421242356301,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,high,100,0.86,0.8705319716036319,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,low,100,0.9,0.8757443755865097,0.0
+CLIP ViT-B/16,clip_vit_b16,classic,resize_roundtrip,mid,100,0.9,0.872375277876854,0.0
+CLIP ViT-B/16,clip_vit_b16,clean,clean,clean,100,0.9,0.8785907293856144,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,high,100,0.85,0.8643576484918595,0.050000000000000044
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,low,100,0.9,0.8700289517641068,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,dirty_lens_recompress,mid,100,0.88,0.872401992380619,0.020000000000000018
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,high,100,0.78,0.804657946228981,0.12
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,low,100,0.86,0.8287377968430519,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,low_light_upload,mid,100,0.8,0.8335857605934143,0.09999999999999998
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,high,100,0.86,0.8681625959277153,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,low,100,0.9,0.8794464442133904,0.0
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,messenger_chain,mid,100,0.87,0.8751426410675048,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,high,100,0.82,0.8675135910511017,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,low,100,0.87,0.8700172188878059,0.030000000000000027
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,restoration_artifact,mid,100,0.89,0.8563066264986992,0.010000000000000009
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,high,100,0.82,0.8685928627848625,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,low,100,0.89,0.8771524935960769,0.010000000000000009
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,screenshot_chain,mid,100,0.86,0.8700267854332924,0.040000000000000036
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,high,100,0.82,0.8430265134572983,0.08000000000000007
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,low,100,0.88,0.8609686958789825,0.020000000000000018
+CLIP ViT-B/16,clip_vit_b16,modern_transfer,video_call_frame,mid,100,0.85,0.8479670149087906,0.050000000000000044
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,high,100,0.19,0.46973675206303594,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,low,100,0.18,0.476761579811573,0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,classic,blur_classic,mid,100,0.17,0.46568508207798004,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,high,100,0.17,0.5455367565155029,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,low,100,0.2,0.5166794353723526,-0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,classic,jpeg_classic,mid,100,0.17,0.5535006320476532,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,high,100,0.18,0.4436987181007862,0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,low,100,0.19,0.4843196113407612,0.0
+SigLIP Base P16 224,siglip_base_p16_224,classic,resize_roundtrip,mid,100,0.21,0.4711419631540775,-0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,clean,clean,clean,100,0.19,0.4902893927693367,0.0
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,high,100,0.16,0.5428060925006867,0.03
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,low,100,0.21,0.5151118545234203,-0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,dirty_lens_recompress,mid,100,0.17,0.5365945273637771,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,high,100,0.18,0.45393677055835724,0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,low,100,0.16,0.5129104468226433,0.03
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,low_light_upload,mid,100,0.14,0.5374520421028137,0.04999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,high,100,0.21,0.5631795513629914,-0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,low,100,0.22,0.5098311464488506,-0.03
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,messenger_chain,mid,100,0.16,0.5368347868323327,0.03
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,high,100,0.17,0.5346015800535678,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,low,100,0.18,0.5226949574053288,0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,restoration_artifact,mid,100,0.15,0.537708689570427,0.04000000000000001
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,high,100,0.17,0.5349683147668839,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,low,100,0.2,0.5048344497382641,-0.010000000000000009
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,screenshot_chain,mid,100,0.17,0.5379301482439041,0.01999999999999999
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,high,100,0.15,0.5246175262331962,0.04000000000000001
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,low,100,0.15,0.5312096145749092,0.04000000000000001
+SigLIP Base P16 224,siglip_base_p16_224,modern_transfer,video_call_frame,mid,100,0.15,0.5385429614782333,0.04000000000000001
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,high,100,0.74,0.8587918999791145,0.10999999999999999
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,low,100,0.82,0.886425270140171,0.030000000000000027
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,blur_classic,mid,100,0.78,0.8646886363625527,0.06999999999999995
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,high,100,0.85,0.8870111274719238,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,low,100,0.86,0.8834191778302193,-0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,jpeg_classic,mid,100,0.83,0.8848289477825165,0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,high,100,0.8,0.8549018248915672,0.04999999999999993
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,low,100,0.87,0.8878275913000107,-0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,classic,resize_roundtrip,mid,100,0.85,0.8818732771277428,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,clean,clean,clean,100,0.85,0.8929685404896737,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,high,100,0.82,0.8780013087391854,0.030000000000000027
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,low,100,0.86,0.8824186810851097,-0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,dirty_lens_recompress,mid,100,0.83,0.8829085478186607,0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,high,100,0.63,0.8507390606403351,0.21999999999999997
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,low,100,0.85,0.8696433541178703,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,low_light_upload,mid,100,0.77,0.8668014106154441,0.07999999999999996
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,high,100,0.85,0.8831182098388672,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,low,100,0.87,0.8799816751480103,-0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,messenger_chain,mid,100,0.83,0.8873636177182198,0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,high,100,0.81,0.8700086390972137,0.039999999999999925
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,low,100,0.83,0.8835603460669518,0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,restoration_artifact,mid,100,0.84,0.8751736813783646,0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,high,100,0.84,0.8722805014252663,0.010000000000000009
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,low,100,0.87,0.8785795712471008,-0.020000000000000018
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,screenshot_chain,mid,100,0.85,0.883257794380188,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,high,100,0.76,0.8515014317631722,0.08999999999999997
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,low,100,0.85,0.8810518988966942,0.0
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,modern_transfer,video_call_frame,mid,100,0.83,0.8649428787827492,0.020000000000000018
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,high,100,0.78,0.11805710054934025,0.05999999999999994
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,low,100,0.85,0.12376870535314083,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,blur_classic,mid,100,0.86,0.12165597356855869,-0.020000000000000018
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,high,100,0.85,0.12220253817737102,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,low,100,0.85,0.12348885141313076,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,jpeg_classic,mid,100,0.84,0.12296660043299198,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,high,100,0.88,0.12057416439056397,-0.040000000000000036
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,low,100,0.84,0.12392863921821118,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,classic,resize_roundtrip,mid,100,0.86,0.12342325270175934,-0.020000000000000018
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,clean,clean,clean,100,0.84,0.12402384452521802,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,high,100,0.86,0.12230465427041054,-0.020000000000000018
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,low,100,0.84,0.12349250249564647,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,dirty_lens_recompress,mid,100,0.81,0.12316901572048664,0.029999999999999916
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,high,100,0.64,0.11532002963125705,0.19999999999999996
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,low,100,0.88,0.12339500635862351,-0.040000000000000036
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,low_light_upload,mid,100,0.87,0.12029044881463051,-0.030000000000000027
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,high,100,0.85,0.12184115439653397,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,low,100,0.84,0.12354079715907573,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,messenger_chain,mid,100,0.83,0.12319021880626678,0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,high,100,0.85,0.1214683024585247,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,low,100,0.84,0.12382465071976184,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,restoration_artifact,mid,100,0.82,0.12319119513034821,0.020000000000000018
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,high,100,0.87,0.12166625380516052,-0.030000000000000027
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,low,100,0.84,0.12351460963487625,0.0
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,screenshot_chain,mid,100,0.83,0.12305418975651264,0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,high,100,0.89,0.11950416930019855,-0.050000000000000044
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,low,100,0.85,0.12335175946354866,-0.010000000000000009
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,modern_transfer,video_call_frame,mid,100,0.81,0.12207278713583947,0.029999999999999916
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,high,100,0.47,0.11499801248311997,0.09000000000000008
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,low,100,0.57,0.11560699306428432,-0.009999999999999898
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,blur_classic,mid,100,0.57,0.11559670761227608,-0.009999999999999898
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,high,100,0.49,0.1155688513815403,0.07000000000000006
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,low,100,0.56,0.11554057307541371,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,jpeg_classic,mid,100,0.54,0.11562344960868359,0.020000000000000018
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,high,100,0.55,0.11565308824181557,0.010000000000000009
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,low,100,0.56,0.11560881927609444,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,classic,resize_roundtrip,mid,100,0.57,0.11576637730002404,-0.009999999999999898
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,clean,clean,clean,100,0.56,0.11554641984403133,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,high,100,0.5,0.11515393301844597,0.06000000000000005
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,low,100,0.56,0.11547130100429058,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,dirty_lens_recompress,mid,100,0.56,0.11542676828801632,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,high,100,0.56,0.11185363627970218,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,low,100,0.54,0.11519199438393116,0.020000000000000018
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,low_light_upload,mid,100,0.53,0.11432866536080838,0.030000000000000027
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,high,100,0.49,0.1155362579971552,0.07000000000000006
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,low,100,0.55,0.11551622398197652,0.010000000000000009
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,messenger_chain,mid,100,0.54,0.11561211064457894,0.020000000000000018
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,high,100,0.53,0.11523171283304691,0.030000000000000027
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,low,100,0.55,0.11546021811664105,0.010000000000000009
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,restoration_artifact,mid,100,0.55,0.11545056857168674,0.010000000000000009
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,high,100,0.5,0.1154459159821272,0.06000000000000005
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,low,100,0.56,0.11558282785117627,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,screenshot_chain,mid,100,0.56,0.1155268131941557,0.0
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,high,100,0.46,0.11467532701790333,0.10000000000000003
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,low,100,0.55,0.11554424658417702,0.010000000000000009
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,modern_transfer,video_call_frame,mid,100,0.52,0.11514775976538658,0.040000000000000036

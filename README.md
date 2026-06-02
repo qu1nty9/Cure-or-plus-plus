@@ -1,0 +1,164 @@
+# CURE-OR++
+
+CURE-OR++ is a research benchmark project for measuring how modern vision and
+vision-language models degrade under realistic visual transfer distortions.
+
+The core hypothesis is narrow on purpose:
+
+> Modern digital transfer pipelines, such as messenger recompression, social
+> media resizing, screenshots, video-call artifacts, and AI restoration artifacts,
+> create failure modes that are not fully captured by classic corruption
+> benchmarks such as ImageNet-C.
+
+## Why This Exists
+
+Many robustness benchmarks test clean images against isolated corruptions:
+noise, blur, JPEG compression, weather, or geometric transforms. Real images
+often pass through chains instead:
+
+- phone capture in weak lighting;
+- crop or screenshot;
+- app resize;
+- messenger recompression;
+- platform preview generation;
+- user-side restoration, denoising, or upscaling.
+
+CURE-OR++ aims to evaluate models against these practical chains and compare
+them with classic single-step corruptions.
+
+## First Target
+
+The first milestone is a small, reproducible benchmark rather than a large
+platform:
+
+- a curated CURE-OR subset or compatible open object-recognition subset;
+- 6-10 distortion recipes;
+- 5-8 baseline models;
+- accuracy, confidence degradation, stability, and ranking-shift metrics;
+- degradation curves and robustness heatmaps;
+- a public dataset card and a short technical write-up.
+
+## Expected Artifacts
+
+- Reproducible evaluation code.
+- Distorted image generation scripts.
+- Benchmark configuration files.
+- Baseline result tables.
+- Kaggle or Hugging Face dataset release.
+- arXiv/workshop-ready technical report if the empirical signal is strong.
+
+## Current v0.1 Status
+
+The first Kaggle-ready artifact is built locally:
+
+- 250 mini-CURE-OR clean source images.
+- 6,750 generated distorted images.
+- 7,000 CLIP ViT-B/32 zero-shot predictions.
+- 7,000 OpenCLIP ViT-B/32 LAION2B zero-shot predictions.
+- Clean accuracy: 0.8280.
+- Largest high-severity drop: `low_light_upload`, 0.1720 below clean accuracy.
+
+Local Kaggle package:
+
+- `kaggle/cure-or-plus-plus-v01`
+- `notebooks/cure_or_pp_kaggle_v01.ipynb`
+
+Serious-level work has started:
+
+- CLIP ViT-B/32 zero-shot baseline.
+- CLIP ViT-B/16 zero-shot baseline.
+- OpenCLIP ViT-B/32 LAION2B zero-shot baseline.
+- SigLIP Base P16 224 zero-shot diagnostic baseline.
+- HGNetV2-B0 clean-train prototype baseline.
+- MobileNetV3-Small clean-train prototype baseline.
+- Cross-model comparison and per-class failure tables.
+- Combined high-severity comparison figure.
+- Confidence shift table and high-severity confidence figure.
+- Related-work positioning notes.
+- Real transfer validation protocol and manifest builder.
+- Native mini-CURE-OR challenge pilot toward Full-CURE-OR.
+- Expanded native mini-CURE-OR test-grid evaluation.
+- Official native CURE-OR challenge type mapping.
+- Official Full-CURE-OR 100-object label mapping.
+- Full-CURE-OR ingestion checklist and dataset probe script.
+- Full-CURE-OR zero-shot probe configs for OpenCLIP and CLIP ViT-B/16.
+- First extracted-folder Full-CURE-OR probe with CLIP ViT-B/16 and OpenCLIP.
+- All-challenge Full-CURE-OR probe v0.4 across challenge types 02-09 and
+  11-18.
+- Expanded Full-CURE-OR v0.4 model pass with CLIP ViT-B/32 and a SigLIP
+  diagnostic run.
+- Full-CURE-OR v0.4 type-10 grayscale no-challenge control.
+- Full-CURE-OR v0.4 leave-clean-condition-out prototype baselines with
+  HGNetV2-B0 and MobileNetV3-Small.
+
+Corrected test-split headline:
+
+| Model | Clean accuracy | Worst high-severity recipe | Worst accuracy |
+| --- | ---: | --- | ---: |
+| CLIP ViT-B/16 | 0.9000 | low_light_upload | 0.7800 |
+| OpenCLIP ViT-B/32 LAION2B | 0.8500 | low_light_upload | 0.6300 |
+| HGNetV2-B0 Prototype | 0.8400 | low_light_upload | 0.6400 |
+| CLIP ViT-B/32 | 0.7900 | low_light_upload | 0.6400 |
+| MobileNetV3-Small Prototype | 0.5600 | video_call_frame | 0.4600 |
+| SigLIP Base P16 224 | 0.1900 | video_call_frame | 0.1500 |
+
+OpenCLIP now provides a usable non-OpenAI contrastive baseline. SigLIP is still
+included as a diagnostic run, but its clean accuracy is too low under the
+current prompt protocol for strong robustness claims.
+
+Expanded native mini-CURE-OR test grid:
+
+- 100 clean test images.
+- 6,400 native challenge images.
+- 16 available native challenge types: 2-9 and 11-18.
+- 4 challenge levels per type.
+
+| Model | Worst native level-4 challenge | Worst accuracy | Drop vs clean |
+| --- | --- | ---: | ---: |
+| CLIP ViT-B/16 | type 14, grayscale gaussian blur | 0.1000 | 0.8000 |
+| OpenCLIP ViT-B/32 LAION2B | type 14, grayscale gaussian blur | 0.1000 | 0.7500 |
+
+Mean level-4 native accuracy is 0.5163 for CLIP ViT-B/16 and 0.4325 for
+OpenCLIP ViT-B/32 LAION2B. OpenCLIP also reaches 0.1000 accuracy on type 18,
+grayscale salt and pepper noise, with 0.9730 mean confidence. This native grid
+is not packaged into the first Kaggle dataset yet. It is the bridge toward a
+broader Full-CURE-OR evaluation.
+
+Full-CURE-OR staged probe:
+
+- all 18 official extracted folders staged on the external disk.
+- v0.1: 100 clean probe images and 2,000 native challenge images.
+- v0.2: 500 clean probe images and 10,000 native challenge images, with five
+  paired acquisition-condition samples per object/challenge/level.
+- v0.3: 500 clean probe images and 12,000 native challenge images, adding
+  official level-5 rows for challenge types 05, 09, 14, and 18.
+- v0.4: 500 clean probe images and 38,999 native challenge images across
+  challenge types 02-09 and 11-18.
+
+| Model | Clean accuracy | Mean native accuracy | Mean level-4 native accuracy | Mean level-5 native accuracy | Worst level-5 challenge | Worst level-5 accuracy |
+| --- | ---: | ---: | ---: | ---: | --- | ---: |
+| CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | type 09, salt and pepper noise; tied with type 18 | 0.0100 |
+| HGNetV2-B0 Prototype | 0.6240 | 0.2547 | 0.2045 | 0.1219 | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
+| MobileNetV3-Small Prototype | 0.5560 | 0.1936 | 0.1631 | 0.0960 | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
+| OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.1705 | 0.1400 | 0.0890 | type 18, grayscale salt and pepper noise | 0.0080 |
+| CLIP ViT-B/32 | 0.3500 | 0.1532 | 0.1249 | 0.0741 | type 09, salt and pepper noise | 0.0060 |
+| SigLIP Base P16 224 | 0.0120 | 0.0103 | 0.0096 | 0.0084 | type 03, underexposure | 0.0060 |
+
+The latest full-probe status is in `reports/full_cure_or_probe_v04_status.md`,
+with expanded-model details in
+`reports/full_cure_or_probe_v04_expanded_models.md`, prototype-baseline details
+in `reports/full_cure_or_prototype_v04.md`, and confidence/calibration details
+in `reports/full_cure_or_confidence_v04.md`. The type-10 grayscale control is
+in `reports/full_cure_or_grayscale_control_v04.md`. This is now our
+strongest evidence that the native CURE-OR failure pattern survives outside
+mini-CURE-OR and across the full challenge-type grid. The confidence pass adds a
+second paper-level finding: OpenCLIP reaches only 0.0890 mean level-5 accuracy
+while retaining 0.4781 mean confidence. The grayscale control adds a third
+guardrail: grayscale alone hurts, but it does not explain level-5 collapse.
+The prototype pass adds a fourth finding: non-CLIP frozen-feature classifiers
+produce a different level-5 worst-case ranking, with gaussian blur becoming the
+top collapse case. It is still a controlled probe rather than a full paper-scale
+evaluation because stronger pretrained model diversity and real transfer
+validation are not complete.
+SigLIP is listed as a diagnostic failure under the current zero-shot prompt
+protocol, not as a strong robustness baseline.

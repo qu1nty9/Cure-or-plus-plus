@@ -1,0 +1,28 @@
+{
+  "model_name": "ViT-B-32",
+  "pretrained": "laion2b_s34b_b79k",
+  "model_id": "openclip_vit_b32_laion2b_s34b_b79k",
+  "clean_manifest_path": "data/interim/cure_or_clean_test_manifest.csv",
+  "distorted_manifest_path": "data/interim/mini_cure_or_native_pilot_v01_manifest.csv",
+  "predictions_path": "results/openclip_vit_b32_laion2b_native_pilot_v01_predictions.csv",
+  "summary_path": "results/openclip_vit_b32_laion2b_native_pilot_v01_summary.csv",
+  "batch_size": 16,
+  "prompt_templates": [
+    "a photo of a {}.",
+    "a photo of the {}.",
+    "a close-up photo of a {}.",
+    "a product photo of a {}."
+  ],
+  "labels": {
+    "canon_camera": "Canon camera",
+    "training_marker_cone": "training marker cone",
+    "baseball": "baseball",
+    "pan": "pan",
+    "toy": "toy",
+    "lg_cell_phone": "LG cell phone",
+    "hair_brush": "hair brush",
+    "dymo_label_maker": "DYMO label maker",
+    "calcium_bottle": "calcium bottle",
+    "shoes": "shoes"
+  }
+}
