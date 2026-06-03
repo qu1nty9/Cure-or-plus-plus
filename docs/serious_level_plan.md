@@ -199,6 +199,14 @@ Do not publish the main Kaggle version until these are done:
   - conclusion: grayscale/channel removal acts as an interaction term, while
     blur/noise floor effects can hide paired gaps because both variants are
     already near chance.
+- Full-CURE-OR v0.4 consensus failure pass, completed:
+  - seven usable baselines analyzed;
+  - top four consensus level-5 failures: grayscale salt-and-pepper noise,
+    grayscale gaussian blur, salt-and-pepper noise, and gaussian blur;
+  - all seven usable baselines are at the floor threshold on all four;
+  - pairwise level-5 rank correlations range from 0.892 to 0.988;
+  - conclusion: the hardest level-5 failure ordering has a stable consensus
+    core, with secondary model-family differences.
 - OpenCLIP ViT-B/16 DataComp XL stronger-baseline candidate, prepared but not
   evaluated:
   - config exists at
@@ -225,6 +233,8 @@ For arXiv or workshop seriousness, add:
 - model cards and dataset card;
 - related-work table with exact benchmark differences.
 - challenge-family/channel-effect analysis, completed for current seven usable
+  v0.4 baselines.
+- consensus failure/rank-stability analysis, completed for current seven usable
   v0.4 baselines.
 
 ## Immediate Next Steps

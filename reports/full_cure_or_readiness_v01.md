@@ -30,6 +30,7 @@ Completed locally:
 - v0.4 leave-clean-condition-out prototype baselines with HGNetV2-B0,
   MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 - v0.4 challenge-family/channel-effect analysis for seven usable baselines.
+- v0.4 consensus failure analysis for seven usable baselines.
 
 ## Mini Probe Result
 
@@ -187,6 +188,20 @@ often appear in dirty-lens, contrast, and exposure distortions; blur/noise pairs
 can show small gaps because both color and grayscale variants are already near
 chance.
 
+Consensus failure result:
+
+| Consensus rank | Challenge | Mean accuracy | Floor models |
+| ---: | --- | ---: | ---: |
+| 1 | Grayscale salt & pepper noise | 0.0091 | 7 / 7 |
+| 2 | Grayscale gaussian blur | 0.0109 | 7 / 7 |
+| 3 | Salt & pepper noise | 0.0106 | 7 / 7 |
+| 4 | Gaussian blur | 0.0131 | 7 / 7 |
+
+Pairwise level-5 rank correlations across the seven usable baselines range from
+0.892 to 0.988. This makes the current v0.4 evidence stronger: the worst
+challenge ordering has a stable consensus core, not only isolated per-model
+worst cases.
+
 Config validation status:
 
 - OpenCLIP Full-CURE v0.4 probe config loads 100 label keys.
@@ -257,6 +272,10 @@ Artifacts:
 - `results/full_cure_or_probe_v04_with_prototypes_channel_effects.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_paired_channel_gaps.csv`
 - `reports/full_cure_or_challenge_family_v04.md`
+- `scripts/analyze_full_cure_or_consensus.py`
+- `results/full_cure_or_probe_v04_with_prototypes_level5_consensus.csv`
+- `results/full_cure_or_probe_v04_with_prototypes_level5_rank_correlations.csv`
+- `reports/full_cure_or_consensus_v04.md`
 
 ## Remaining Limitation
 

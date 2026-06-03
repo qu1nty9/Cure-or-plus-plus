@@ -94,6 +94,7 @@ Serious-level work has started:
   HGNetV2-B0, MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 - Full-CURE-OR v0.4 challenge-family/channel-effect analysis across seven
   usable baselines.
+- Full-CURE-OR v0.4 consensus failure analysis across seven usable baselines.
 
 Corrected test-split headline:
 
@@ -175,6 +176,9 @@ The challenge-family analysis in
 usable model is worse on paired grayscale level-5 challenges than on the
 corresponding color level-5 challenges, while some blur/noise pairs are already
 near chance on both sides.
+The consensus analysis in `reports/full_cure_or_consensus_v04.md` adds a sixth
+finding: the top four level-5 failure types are at floor accuracy for all seven
+usable baselines, and pairwise level-5 rank correlations stay high.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

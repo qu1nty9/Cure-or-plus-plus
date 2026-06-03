@@ -137,6 +137,14 @@ challenges. DINOv2 remains strongest in absolute accuracy, but still drops from
 0.3071 color level-5 mean accuracy to 0.2460 grayscale level-5 mean accuracy.
 Details are in `reports/full_cure_or_challenge_family_v04.md`.
 
+The consensus failure pass is complete as well. The top four level-5 challenges
+by mean damaging rank are grayscale salt-and-pepper noise, grayscale gaussian
+blur, salt-and-pepper noise, and gaussian blur; all seven usable baselines are
+at the floor threshold on all four. Pairwise level-5 rank correlations range
+from 0.892 to 0.988, so the hard-challenge ordering is broadly stable while
+still leaving room for model-family differences. Details are in
+`reports/full_cure_or_consensus_v04.md`.
+
 ## Artifacts
 
 - `data/interim/full_cure_or_clean_probe_v04_manifest.csv`
@@ -201,6 +209,10 @@ Details are in `reports/full_cure_or_challenge_family_v04.md`.
 - `results/full_cure_or_probe_v04_with_prototypes_channel_effects.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_paired_channel_gaps.csv`
 - `reports/full_cure_or_challenge_family_v04.md`
+- `scripts/analyze_full_cure_or_consensus.py`
+- `results/full_cure_or_probe_v04_with_prototypes_level5_consensus.csv`
+- `results/full_cure_or_probe_v04_with_prototypes_level5_rank_correlations.csv`
+- `reports/full_cure_or_consensus_v04.md`
 
 ## Next Step
 

@@ -28,6 +28,8 @@ results/*
 !results/*ranking*.csv
 !results/*confidence*.csv
 !results/*overconfidence*.csv
+!results/*consensus*.csv
+!results/*correlation*.csv
 !results/*effects*.csv
 !results/*gaps*.csv
 !results/per_class_failures*.csv
