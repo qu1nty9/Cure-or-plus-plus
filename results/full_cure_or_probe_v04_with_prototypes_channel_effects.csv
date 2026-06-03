@@ -1,0 +1,71 @@
+model_name,model_slug,severity,channel,n,weighted_accuracy,weighted_mean_confidence,challenge_count
+CLIP ViT-B/16,clip_vit_b16,level_1,color,4000,0.33875,0.43990005921479314,8
+CLIP ViT-B/16,clip_vit_b16,level_1,grayscale,3999,0.21555388847211804,0.353844914484744,8
+CLIP ViT-B/16,clip_vit_b16,level_2,color,4000,0.2835,0.39067567174043505,8
+CLIP ViT-B/16,clip_vit_b16,level_2,grayscale,4000,0.1655,0.31540088849235326,8
+CLIP ViT-B/16,clip_vit_b16,level_3,color,4000,0.242,0.354633832343854,8
+CLIP ViT-B/16,clip_vit_b16,level_3,grayscale,4000,0.14225,0.2922034827377647,8
+CLIP ViT-B/16,clip_vit_b16,level_4,color,4000,0.2,0.3280755009977147,8
+CLIP ViT-B/16,clip_vit_b16,level_4,grayscale,4000,0.11925,0.2828113061422482,8
+CLIP ViT-B/16,clip_vit_b16,level_5,color,3500,0.13057142857142856,0.2632294665692108,7
+CLIP ViT-B/16,clip_vit_b16,level_5,grayscale,3500,0.06828571428571428,0.2587695440394538,7
+CLIP ViT-B/32,clip_vit_b32,level_1,color,4000,0.29025,0.4118493609800935,8
+CLIP ViT-B/32,clip_vit_b32,level_1,grayscale,3999,0.15378844711177794,0.33303844123877535,8
+CLIP ViT-B/32,clip_vit_b32,level_2,color,4000,0.23925,0.3612058664411306,8
+CLIP ViT-B/32,clip_vit_b32,level_2,grayscale,4000,0.12575,0.30294652572274205,8
+CLIP ViT-B/32,clip_vit_b32,level_3,color,4000,0.20375,0.33242854168545455,8
+CLIP ViT-B/32,clip_vit_b32,level_3,grayscale,4000,0.10175,0.29842781101260335,8
+CLIP ViT-B/32,clip_vit_b32,level_4,color,4000,0.166,0.3120678554037586,8
+CLIP ViT-B/32,clip_vit_b32,level_4,grayscale,4000,0.08375,0.29820361072663215,8
+CLIP ViT-B/32,clip_vit_b32,level_5,color,3500,0.09628571428571428,0.2536613601350359,7
+CLIP ViT-B/32,clip_vit_b32,level_5,grayscale,3500,0.052,0.2894855267650315,7
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_1,color,4000,0.51975,0.013217566474108025,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_1,grayscale,3999,0.3763440860215054,0.012744080843313108,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_2,color,4000,0.465,0.012911173013504595,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_2,grayscale,4000,0.31775,0.012401528591755778,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_3,color,4000,0.41325,0.012675492974696681,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_3,grayscale,4000,0.27375,0.012215406234143302,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_4,color,4000,0.357,0.012444284653756767,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_4,grayscale,4000,0.236,0.012041593656176701,8
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_5,color,3500,0.2742857142857143,0.01205204159181033,7
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,level_5,grayscale,3500,0.17342857142857143,0.011730431008019617,7
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_1,color,4000,0.625,0.014756342864129692,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_1,grayscale,3999,0.5518879719929982,0.014274237419414085,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_2,color,4000,0.52425,0.014151263346429915,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_2,grayscale,4000,0.46375,0.013669305376242846,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_3,color,4000,0.46875,0.013796228056307883,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_3,grayscale,4000,0.402,0.01333829759247601,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_4,color,4000,0.4145,0.013398327549220995,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_4,grayscale,4000,0.34925,0.013008046235190704,8
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_5,color,3500,0.30714285714285716,0.01271056562449251,7
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,level_5,grayscale,3500,0.246,0.012386095830638493,7
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_1,color,4000,0.45825,0.012894958851626143,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_1,grayscale,3999,0.3003250812703176,0.012614106139478817,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_2,color,4000,0.373,0.012787307945312932,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_2,grayscale,4000,0.22825,0.012613955000881106,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_3,color,4000,0.3095,0.012717655228683724,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_3,grayscale,4000,0.1915,0.012613928123842925,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_4,color,4000,0.24975,0.012718676603864878,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_4,grayscale,4000,0.15925,0.012655248746508732,8
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_5,color,3500,0.15057142857142858,0.01262852118909359,7
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,level_5,grayscale,3500,0.09314285714285714,0.012613765855718936,7
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_1,color,4000,0.38525,0.011823983253911138,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_1,grayscale,3999,0.18579644911227808,0.011673042180622614,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_2,color,4000,0.30475,0.011854728241451085,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_2,grayscale,4000,0.143,0.011738855165895075,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_3,color,4000,0.2565,0.011922085263067856,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_3,grayscale,4000,0.118,0.0118292491347529,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_4,color,4000,0.222,0.012014222226571291,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_4,grayscale,4000,0.10425,0.011941648200619966,8
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,color,3500,0.12742857142857142,0.012039404768496752,7
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,grayscale,3500,0.06457142857142857,0.01202419498216893,7
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_1,color,4000,0.31875,0.6017010517343879,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_1,grayscale,3999,0.1757939484871218,0.5700252526240607,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_2,color,4000,0.266,0.5587346477545798,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_2,grayscale,4000,0.134,0.5488380662081763,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_3,color,4000,0.21875,0.5295532765788957,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_3,grayscale,4000,0.113,0.5394914894858375,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_4,color,4000,0.1855,0.5114575363136828,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_4,grayscale,4000,0.0945,0.540386369840242,8
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_5,color,3500,0.12028571428571429,0.47372050558349915,7
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_5,grayscale,3500,0.05771428571428571,0.4825010721949594,7

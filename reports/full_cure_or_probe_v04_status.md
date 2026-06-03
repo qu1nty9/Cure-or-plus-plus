@@ -130,6 +130,13 @@ first on gaussian blur ties, while ConvNeXt-Tiny and DINOv2 are worst on
 grayscale salt-and-pepper noise. Details are in
 `reports/full_cure_or_prototype_v04.md`.
 
+The challenge-family/channel-effect pass is also complete for the same seven
+usable v0.4 baselines. It shows that every model has lower mean level-5 accuracy
+on paired grayscale native challenges than on the corresponding color native
+challenges. DINOv2 remains strongest in absolute accuracy, but still drops from
+0.3071 color level-5 mean accuracy to 0.2460 grayscale level-5 mean accuracy.
+Details are in `reports/full_cure_or_challenge_family_v04.md`.
+
 ## Artifacts
 
 - `data/interim/full_cure_or_clean_probe_v04_manifest.csv`
@@ -190,6 +197,10 @@ grayscale salt-and-pepper noise. Details are in
 - `results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.png`
 - `reports/full_cure_or_prototype_v04.md`
+- `scripts/analyze_full_cure_or_challenge_families.py`
+- `results/full_cure_or_probe_v04_with_prototypes_channel_effects.csv`
+- `results/full_cure_or_probe_v04_with_prototypes_paired_channel_gaps.csv`
+- `reports/full_cure_or_challenge_family_v04.md`
 
 ## Next Step
 

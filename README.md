@@ -92,6 +92,8 @@ Serious-level work has started:
 - Full-CURE-OR v0.4 type-10 grayscale no-challenge control.
 - Full-CURE-OR v0.4 leave-clean-condition-out prototype baselines with
   HGNetV2-B0, MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
+- Full-CURE-OR v0.4 challenge-family/channel-effect analysis across seven
+  usable baselines.
 
 Corrected test-split headline:
 
@@ -168,6 +170,11 @@ current v0.4 row, but it does not remove the severe native-failure pattern. It
 is still a controlled probe rather than a full paper-scale evaluation because
 stronger pretrained model diversity and real transfer validation are not
 complete.
+The challenge-family analysis in
+`reports/full_cure_or_challenge_family_v04.md` adds a fifth finding: every
+usable model is worse on paired grayscale level-5 challenges than on the
+corresponding color level-5 challenges, while some blur/noise pairs are already
+near chance on both sides.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

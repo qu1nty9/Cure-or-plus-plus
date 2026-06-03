@@ -29,6 +29,7 @@ Completed locally:
   baselines.
 - v0.4 leave-clean-condition-out prototype baselines with HGNetV2-B0,
   MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
+- v0.4 challenge-family/channel-effect analysis for seven usable baselines.
 
 ## Mini Probe Result
 
@@ -171,6 +172,21 @@ Grayscale control result:
 This separates grayscale/channel loss from full native severity: grayscale
 alone hurts, but it does not explain level-5 collapse.
 
+Challenge-family result:
+
+| Model | Color level 5 | Grayscale level 5 | Grayscale minus color |
+| --- | ---: | ---: | ---: |
+| DINOv2 ViT-S/14 Prototype | 0.3071 | 0.2460 | -0.0611 |
+| ConvNeXt-Tiny Prototype | 0.2743 | 0.1734 | -0.1009 |
+| CLIP ViT-B/16 | 0.1306 | 0.0683 | -0.0623 |
+| OpenCLIP ViT-B/32 LAION2B | 0.1203 | 0.0577 | -0.0626 |
+
+Every usable model is worse on paired grayscale level-5 native challenges than
+on the corresponding color level-5 challenges. The largest paired penalties
+often appear in dirty-lens, contrast, and exposure distortions; blur/noise pairs
+can show small gaps because both color and grayscale variants are already near
+chance.
+
 Config validation status:
 
 - OpenCLIP Full-CURE v0.4 probe config loads 100 label keys.
@@ -237,6 +253,10 @@ Artifacts:
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png`
 - `results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.png`
+- `scripts/analyze_full_cure_or_challenge_families.py`
+- `results/full_cure_or_probe_v04_with_prototypes_channel_effects.csv`
+- `results/full_cure_or_probe_v04_with_prototypes_paired_channel_gaps.csv`
+- `reports/full_cure_or_challenge_family_v04.md`
 
 ## Remaining Limitation
 

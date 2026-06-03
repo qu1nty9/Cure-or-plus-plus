@@ -188,6 +188,23 @@ Do not publish the main Kaggle version until these are done:
     type 05, gaussian blur ties, while ConvNeXt-Tiny and DINOv2 become much
     stronger native-severity baselines but still collapse near chance on type
     18, grayscale salt-and-pepper noise.
+- Full-CURE-OR v0.4 challenge-family/channel-effect pass, completed:
+  - seven usable baselines analyzed;
+  - every usable model has lower level-5 mean accuracy on paired grayscale
+    native challenges than on corresponding color native challenges;
+  - DINOv2 ViT-S/14 color level-5 mean accuracy: 0.3071;
+  - DINOv2 ViT-S/14 grayscale level-5 mean accuracy: 0.2460;
+  - ConvNeXt-Tiny has the largest level-5 grayscale penalty, from 0.2743 color
+    mean accuracy to 0.1734 grayscale mean accuracy;
+  - conclusion: grayscale/channel removal acts as an interaction term, while
+    blur/noise floor effects can hide paired gaps because both variants are
+    already near chance.
+- OpenCLIP ViT-B/16 DataComp XL stronger-baseline candidate, prepared but not
+  evaluated:
+  - config exists at
+    `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`;
+  - two smoke-run attempts were blocked by incomplete Hugging Face download;
+  - no summary/prediction CSV was produced, so this is not a reported result.
 
 ## Stretch Gate For arXiv/Workshop
 
@@ -207,6 +224,8 @@ For arXiv or workshop seriousness, add:
 - release scripts that regenerate all distortions deterministically;
 - model cards and dataset card;
 - related-work table with exact benchmark differences.
+- challenge-family/channel-effect analysis, completed for current seven usable
+  v0.4 baselines.
 
 ## Immediate Next Steps
 
