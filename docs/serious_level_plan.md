@@ -213,6 +213,13 @@ Do not publish the main Kaggle version until these are done:
     `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`;
   - two smoke-run attempts were blocked by incomplete Hugging Face download;
   - no summary/prediction CSV was produced, so this is not a reported result.
+- Real-transfer validation v0.1 scaffold, prepared but not evaluated:
+  - 10 clean mini-CURE-OR test source images pinned in
+    `data/real_transfer/v01/source_selection_v01.csv`;
+  - preflight validator added at `scripts/validate_real_transfer_pairs.py`;
+  - CLIP ViT-B/16 and OpenCLIP ViT-B/32 evaluation configs prepared;
+  - remaining blocker: real transferred outputs and filled
+    `data/real_transfer/v01/pairs.csv`.
 
 ## Stretch Gate For arXiv/Workshop
 
@@ -241,7 +248,9 @@ For arXiv or workshop seriousness, add:
 
 1. Collect one small real app-transfer validation sample using
    `docs/real_transfer_validation_protocol.md`.
-2. Evaluate the real-transfer manifest with CLIP ViT-B/16 and OpenCLIP.
+2. Validate `data/real_transfer/v01/pairs.csv`, build
+   `data/real_transfer/v01/manifest.csv`, and evaluate it with CLIP ViT-B/16
+   and OpenCLIP.
 3. Add another strong pretrained model family or variant on the v0.4
    Full-CURE-OR manifest, preferably a stronger contrastive/VLM baseline rather
    than another nearest-centroid prototype.

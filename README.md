@@ -95,6 +95,8 @@ Serious-level work has started:
 - Full-CURE-OR v0.4 challenge-family/channel-effect analysis across seven
   usable baselines.
 - Full-CURE-OR v0.4 consensus failure analysis across seven usable baselines.
+- Real-transfer validation v0.1 source selection, preflight validator, and
+  evaluation configs.
 
 Corrected test-split headline:
 
@@ -179,6 +181,9 @@ near chance on both sides.
 The consensus analysis in `reports/full_cure_or_consensus_v04.md` adds a sixth
 finding: the top four level-5 failure types are at floor accuracy for all seven
 usable baselines, and pairwise level-5 rank correlations stay high.
+The real-transfer validation scaffold in `reports/real_transfer_v01_readiness.md`
+is prepared but not yet evaluated; it needs real transferred images and a filled
+`data/real_transfer/v01/pairs.csv`.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

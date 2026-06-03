@@ -27,7 +27,7 @@ OUTPUT_FIELDNAMES = [
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build a manifest for real CURE-OR++ transfer samples.")
     parser.add_argument("--pairs", default="data/real_transfer/v01/pairs.csv")
-    parser.add_argument("--clean-manifest", default="data/interim/cure_or_clean_manifest.csv")
+    parser.add_argument("--clean-manifest", default="data/interim/cure_or_clean_test_manifest.csv")
     parser.add_argument("--output", default="data/real_transfer/v01/manifest.csv")
     parser.add_argument("--allow-missing", action="store_true", help="Write rows even if referenced files are missing.")
     args = parser.parse_args()
@@ -118,7 +118,7 @@ def build_rows(pairs_path: Path, clean_by_path: dict[str, dict]) -> tuple[list[d
 
 def write_csv(path: Path, rows: list[dict]) -> None:
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=OUTPUT_FIELDNAMES)
+        writer = csv.DictWriter(handle, fieldnames=OUTPUT_FIELDNAMES, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

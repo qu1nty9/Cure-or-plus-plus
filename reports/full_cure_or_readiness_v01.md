@@ -31,6 +31,8 @@ Completed locally:
   MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 - v0.4 challenge-family/channel-effect analysis for seven usable baselines.
 - v0.4 consensus failure analysis for seven usable baselines.
+- real-transfer validation v0.1 source selection, validator, and evaluation
+  configs prepared.
 
 ## Mini Probe Result
 
@@ -276,6 +278,11 @@ Artifacts:
 - `results/full_cure_or_probe_v04_with_prototypes_level5_consensus.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_rank_correlations.csv`
 - `reports/full_cure_or_consensus_v04.md`
+- `data/real_transfer/v01/source_selection_v01.csv`
+- `scripts/validate_real_transfer_pairs.py`
+- `configs/clip_vit_b16_real_transfer_v01.json`
+- `configs/openclip_vit_b32_laion2b_real_transfer_v01.json`
+- `reports/real_transfer_v01_readiness.md`
 
 ## Remaining Limitation
 
@@ -285,7 +292,8 @@ usable zero-shot CLIP-family baselines, four usable frozen-feature prototype
 baselines including self-supervised DINOv2, and one SigLIP diagnostic failure.
 It still needs stronger pretrained model-family diversity, uses five paired
 samples per object/challenge group, and does not yet include a real transfer
-validation sample.
+validation result. The v0.1 real-transfer scaffold is ready, but actual
+transferred images have not been collected yet.
 
 The next step is to add stronger usable pretrained model families or collect
 the first real transfer validation sample before scaling beyond five paired

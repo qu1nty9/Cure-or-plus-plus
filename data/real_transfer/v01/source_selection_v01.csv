@@ -1,0 +1,11 @@
+label,image_path,object_id,image_id
+baseball,data/raw/mini_cure_or/test/10183.jpg,3,10183
+calcium_bottle,data/raw/mini_cure_or/test/11247.jpg,9,11247
+canon_camera,data/raw/mini_cure_or/test/10243.jpg,1,10243
+dymo_label_maker,data/raw/mini_cure_or/test/09958.jpg,8,9958
+hair_brush,data/raw/mini_cure_or/test/11335.jpg,7,11335
+lg_cell_phone,data/raw/mini_cure_or/test/09904.jpg,6,9904
+pan,data/raw/mini_cure_or/test/10714.jpg,4,10714
+shoes,data/raw/mini_cure_or/test/10640.jpg,10,10640
+toy,data/raw/mini_cure_or/test/11716.jpg,5,11716
+training_marker_cone,data/raw/mini_cure_or/test/10457.jpg,2,10457

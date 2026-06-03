@@ -6,10 +6,20 @@ the simulated ranking is not completely detached from actual app pipelines.
 
 ## Minimum Useful Pilot
 
-- 10 to 30 source images from the current mini-CURE-OR clean subset.
+- 10 to 30 source images from the current mini-CURE-OR clean test subset.
 - 2 or 3 real transfer pipelines.
 - The same source image should be paired with every collected transfer output.
 - Keep original files unchanged; store transferred outputs separately.
+
+The v0.1 source selection is pinned in:
+
+```text
+data/real_transfer/v01/source_selection_v01.csv
+```
+
+It contains one clean test source image for each of the 10 mini-CURE-OR object
+classes. A minimum useful pilot is therefore 20 rows: 10 source images across 2
+real transfer pipelines.
 
 Recommended first pipelines:
 
@@ -53,6 +63,9 @@ Optional but useful:
 ## Build Manifest
 
 ```bash
+.venv/bin/python scripts/validate_real_transfer_pairs.py \
+  --pairs data/real_transfer/v01/pairs.csv
+
 .venv/bin/python scripts/build_real_transfer_manifest.py \
   --pairs data/real_transfer/v01/pairs.csv \
   --output data/real_transfer/v01/manifest.csv
@@ -61,6 +74,11 @@ Optional but useful:
 The output manifest uses the same core columns as the simulated distortion
 manifest, so the existing zero-shot evaluators can consume it by pointing a
 config's `distorted_manifest_path` at the real-transfer manifest.
+
+Prepared evaluation configs:
+
+- `configs/clip_vit_b16_real_transfer_v01.json`
+- `configs/openclip_vit_b32_laion2b_real_transfer_v01.json`
 
 ## Success Criterion
 
