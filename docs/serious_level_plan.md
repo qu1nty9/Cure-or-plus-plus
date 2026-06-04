@@ -154,13 +154,19 @@ Do not publish the main Kaggle version until these are done:
   - CLIP ViT-B/32 mean level-5 native accuracy: 0.0741;
   - SigLIP Base P16 224 mean native accuracy: 0.0103;
   - conclusion: there are three usable zero-shot CLIP-family baselines and one
-    documented SigLIP protocol mismatch before adding the non-CLIP prototype
-    block.
+    documented SigLIP protocol mismatch before adding the DataComp XL and
+    non-CLIP prototype blocks.
 - Full-CURE-OR v0.4 confidence/calibration pass, completed:
-  - usable models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B, CLIP ViT-B/32;
+  - usable models: CLIP ViT-B/16, OpenCLIP ViT-B/32 LAION2B,
+    OpenCLIP ViT-B/16 DataComp XL, CLIP ViT-B/32;
   - OpenCLIP level-5 accuracy: 0.0890;
   - OpenCLIP level-5 mean confidence: 0.4781;
   - OpenCLIP level-5 calibration gap: 0.3891;
+  - DataComp XL level-5 accuracy: 0.1451;
+  - DataComp XL level-5 mean confidence: 0.4997;
+  - DataComp XL level-5 calibration gap: 0.3545;
+  - strongest DataComp XL level-5 overconfidence case: type 18, grayscale
+    salt-and-pepper noise, with 0.0100 accuracy and 0.7393 mean confidence;
   - strongest OpenCLIP level-5 overconfidence case: type 07, dirty lens 1,
     with 0.0480 accuracy and 0.5972 mean confidence.
 - Full-CURE-OR v0.4 type-10 grayscale control, completed:
@@ -242,8 +248,8 @@ For arXiv or workshop seriousness, add:
   pretrained family diversity because four rows are CLIP/OpenCLIP-family zero-shot
   models and four rows are frozen-feature prototype classifiers;
 - confidence calibration or confidence-collapse analysis on the v0.4 probe,
-  completed for current usable zero-shot baselines and still required for new
-  models;
+  completed for the current four usable CLIP/OpenCLIP-family zero-shot
+  baselines and still required for new models;
 - release scripts that regenerate all distortions deterministically;
 - model cards and dataset card;
 - related-work table with exact benchmark differences.
@@ -262,7 +268,8 @@ For arXiv or workshop seriousness, add:
 3. Add another strong pretrained model family on the v0.4 Full-CURE-OR
    manifest, preferably a non-CLIP/OpenCLIP VLM family rather than another
    nearby CLIP variant or nearest-centroid prototype.
-4. Add confidence-collapse and calibration tables for each new usable
+4. Add confidence-collapse and calibration tables for each further usable
    zero-shot/VLM Full-CURE-OR model.
 5. Add type 10, grayscale no-challenge, as a separate control condition,
-   completed for current usable zero-shot baselines.
+   completed for the first three CLIP/OpenCLIP zero-shot baselines and still
+   open for DataComp XL.

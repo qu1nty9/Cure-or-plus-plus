@@ -64,10 +64,11 @@ manifest using frozen pretrained features and a leave-clean-condition-out
 nearest-centroid protocol. Details are in
 `reports/full_cure_or_prototype_v04.md`.
 
-The first confidence/calibration pass is now complete for the three usable
-zero-shot baselines. OpenCLIP is the clearest overconfidence case: at level 5,
-mean accuracy is 0.0890 but mean confidence is 0.4781. See
-`reports/full_cure_or_confidence_v04.md`.
+The first confidence/calibration pass was initially completed for the three
+usable zero-shot baselines in this expanded-model block and has since been
+extended to OpenCLIP ViT-B/16 DataComp XL. See
+`reports/full_cure_or_confidence_v04.md` for the current four-model confidence
+table.
 
 ## Artifacts
 

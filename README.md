@@ -163,8 +163,10 @@ in `reports/full_cure_or_confidence_v04.md`. The type-10 grayscale control is
 in `reports/full_cure_or_grayscale_control_v04.md`. This is now our
 strongest evidence that the native CURE-OR failure pattern survives outside
 mini-CURE-OR and across the full challenge-type grid. The confidence pass adds a
-second paper-level finding: OpenCLIP reaches only 0.0890 mean level-5 accuracy
-while retaining 0.4781 mean confidence. The grayscale control adds a third
+second paper-level finding: the stronger DataComp XL row reaches 0.1451 mean
+level-5 accuracy but still retains 0.4997 mean confidence, while OpenCLIP
+ViT-B/32 LAION2B reaches 0.0890 accuracy with 0.4781 confidence. The grayscale
+control adds a third
 guardrail: grayscale alone hurts, but it does not explain level-5 collapse.
 The prototype pass adds a fourth finding: non-CLIP frozen-feature classifiers
 produce different level-5 robustness rankings. HGNetV2-B0 and

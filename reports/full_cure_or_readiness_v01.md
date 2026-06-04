@@ -23,10 +23,10 @@ Completed locally:
   11-18.
 - expanded v0.4 local-cache model pass with CLIP ViT-B/32 and a SigLIP
   diagnostic result.
-- v0.4 confidence-collapse and calibration analysis for the three usable
+- v0.4 confidence-collapse and calibration analysis for the four usable
+  CLIP/OpenCLIP-family zero-shot baselines.
+- v0.4 type-10 grayscale no-challenge control for the first three usable
   zero-shot baselines.
-- v0.4 type-10 grayscale no-challenge control for the three usable zero-shot
-  baselines.
 - v0.4 leave-clean-condition-out prototype baselines with HGNetV2-B0,
   MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 - v0.4 OpenCLIP ViT-B/16 DataComp XL stronger-baseline run.
@@ -156,10 +156,12 @@ Confidence/calibration result:
 | --- | ---: | ---: | ---: | ---: |
 | CLIP ViT-B/16 | 0.0994 | 0.2610 | 0.1616 | 0.0439 |
 | OpenCLIP ViT-B/32 LAION2B | 0.0890 | 0.4781 | 0.3891 | 0.3141 |
+| OpenCLIP ViT-B/16 DataComp XL | 0.1451 | 0.4997 | 0.3545 | 0.3240 |
 | CLIP ViT-B/32 | 0.0741 | 0.2716 | 0.1974 | 0.0700 |
 
 This adds an arXiv-relevant failure mode: native distortions can produce
-low-accuracy, high-confidence predictions, especially for OpenCLIP.
+low-accuracy, high-confidence predictions, including in the stronger DataComp
+XL row.
 
 Grayscale control result:
 
@@ -292,10 +294,10 @@ Artifacts:
 ## Remaining Limitation
 
 The complete 18-folder release is now staged and probed, so the remaining
-limitation is no longer folder availability. The v0.4 probe now has three
-usable zero-shot CLIP-family baselines, one stronger OpenCLIP DataComp XL
-zero-shot baseline, four usable frozen-feature prototype baselines including
-self-supervised DINOv2, and one SigLIP diagnostic failure. It still needs
+limitation is no longer folder availability. The v0.4 probe now has four usable
+CLIP/OpenCLIP-family zero-shot baselines including DataComp XL, four usable
+frozen-feature prototype baselines including self-supervised DINOv2, and one
+SigLIP diagnostic failure. It still needs
 non-CLIP/OpenCLIP pretrained VLM family diversity, uses five paired samples per
 object/challenge group, and does not yet include a real transfer validation
 result. The v0.1 real-transfer scaffold is ready, but actual transferred images

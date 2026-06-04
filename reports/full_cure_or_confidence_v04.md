@@ -3,10 +3,11 @@
 ## Scope
 
 This analysis uses the unchanged Full-CURE-OR v0.4 probe predictions for the
-three usable zero-shot baselines:
+four usable CLIP/OpenCLIP-family zero-shot baselines:
 
 - CLIP ViT-B/16;
 - OpenCLIP ViT-B/32 LAION2B;
+- OpenCLIP ViT-B/16 DataComp XL;
 - CLIP ViT-B/32.
 
 SigLIP Base P16 224 is excluded from the main confidence interpretation because
@@ -35,24 +36,29 @@ For each model/challenge/level group, the analysis reports:
 | --- | ---: | ---: | ---: | ---: | ---: |
 | CLIP ViT-B/16 | 0.0994 | 0.2610 | 0.1616 | 0.1616 | 0.0439 |
 | OpenCLIP ViT-B/32 LAION2B | 0.0890 | 0.4781 | 0.3891 | 0.3891 | 0.3141 |
+| OpenCLIP ViT-B/16 DataComp XL | 0.1451 | 0.4997 | 0.3545 | 0.3545 | 0.3240 |
 | CLIP ViT-B/32 | 0.0741 | 0.2716 | 0.1974 | 0.1974 | 0.0700 |
 
 The most important result is that confidence does not collapse at the same rate
-as accuracy. OpenCLIP is the clearest case: at level 5, mean accuracy is 0.0890
-while mean confidence is still 0.4781. That creates a calibration gap of 0.3891
-and a high-confidence wrong rate of 0.3141.
+as accuracy. DataComp XL improves mean level-5 accuracy to 0.1451, but still
+keeps 0.4997 mean confidence and a 0.3545 calibration gap. OpenCLIP ViT-B/32
+LAION2B is similarly miscalibrated at level 5: mean accuracy is 0.0890 while
+mean confidence is 0.4781, with a 0.3141 high-confidence wrong rate.
 
 ## Worst Level-5 Overconfidence Cases
 
 | Model | Challenge | Accuracy | Mean confidence | Calibration gap | High-conf wrong rate |
 | --- | --- | ---: | ---: | ---: | ---: |
-| CLIP ViT-B/16 | type 18, grayscale salt and pepper noise | 0.0100 | 0.2613 | 0.2513 | 0.0000 |
-| CLIP ViT-B/32 | type 18, grayscale salt and pepper noise | 0.0100 | 0.4188 | 0.4088 | 0.2680 |
+| OpenCLIP ViT-B/16 DataComp XL | type 18, grayscale salt and pepper noise | 0.0100 | 0.7393 | 0.7293 | 0.9760 |
 | OpenCLIP ViT-B/32 LAION2B | type 07, dirty lens 1 | 0.0480 | 0.5972 | 0.5492 | 0.6240 |
+| CLIP ViT-B/32 | type 18, grayscale salt and pepper noise | 0.0100 | 0.4188 | 0.4088 | 0.2680 |
+| CLIP ViT-B/16 | type 18, grayscale salt and pepper noise | 0.0100 | 0.2613 | 0.2513 | 0.0000 |
 
 This gives the writeup a stronger claim than "accuracy drops under native
 distortions." Some native distortions produce low-accuracy, high-confidence
-failure modes, and the pattern differs by model.
+failure modes, and the pattern differs by model. DataComp XL is the strongest
+zero-shot row by accuracy, but its worst level-5 overconfidence case is also the
+most severe one in this confidence table.
 
 ## Clean Calibration Context
 
@@ -60,12 +66,13 @@ failure modes, and the pattern differs by model.
 | --- | ---: | ---: | ---: | ---: | ---: |
 | CLIP ViT-B/16 | 0.4440 | 0.5248 | 0.0808 | 0.0808 | 0.1340 |
 | OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.6648 | 0.2528 | 0.2528 | 0.3320 |
+| OpenCLIP ViT-B/16 DataComp XL | 0.5460 | 0.7046 | 0.1586 | 0.1586 | 0.2080 |
 | CLIP ViT-B/32 | 0.3500 | 0.4644 | 0.1144 | 0.1171 | 0.1220 |
 
-OpenCLIP is already overconfident on clean Full-CURE-OR images, but the gap
-widens under native challenge severity. This matters for any deployment framing:
-the model does not merely fail more often; it can fail while preserving
-substantial confidence.
+OpenCLIP-family models are already overconfident on clean Full-CURE-OR images,
+and the gap widens under native challenge severity. This matters for any
+deployment framing: the model does not merely fail more often; it can fail while
+preserving substantial confidence.
 
 ## Artifacts
 
@@ -100,6 +107,6 @@ MPLCONFIGDIR=/private/tmp/cure_or_pp_mpl MPLBACKEND=Agg \
 
 ## Next Step
 
-Add the same confidence/calibration tables to any new usable model family before
-expanding the v0.4 row count. Otherwise, model additions will improve the
-leaderboard but not the paper-level failure analysis.
+Add the same confidence/calibration tables to any new usable pretrained VLM
+family before expanding the v0.4 row count. Otherwise, model additions will
+improve the leaderboard but not the paper-level failure analysis.

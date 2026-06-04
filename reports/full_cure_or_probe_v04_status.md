@@ -95,18 +95,18 @@ also near chance. This supports a stronger research claim than a single
 produce challenge-specific and model-specific robustness rankings.
 
 This is still a probe, not the final arXiv-scale benchmark. The main remaining
-gaps are more usable pretrained model families, extending
-confidence/calibration analysis to every new zero-shot/VLM model, and a real
-transfer validation sample. The v0.4 block now has eight usable baseline rows
-across four CLIP/OpenCLIP-family zero-shot models and four frozen-feature prototype
-classifiers, plus one SigLIP diagnostic failure under the current prompt
-protocol.
+gaps are more usable pretrained model families outside nearby CLIP/OpenCLIP
+variants and a real transfer validation sample. The v0.4 block now has eight
+usable baseline rows across four CLIP/OpenCLIP-family zero-shot models and four
+frozen-feature prototype classifiers, plus one SigLIP diagnostic failure under
+the current prompt protocol.
 
-The confidence/calibration pass for the three usable zero-shot baselines is now
-complete. It shows that OpenCLIP has the strongest overconfidence failure at
-level 5: mean accuracy is 0.0890 while mean confidence remains 0.4781, with a
-0.3141 high-confidence wrong rate. Details are in
-`reports/full_cure_or_confidence_v04.md`.
+The confidence/calibration pass for the four usable CLIP/OpenCLIP-family
+zero-shot baselines is now complete. DataComp XL improves mean level-5 accuracy
+to 0.1451 but still retains 0.4997 mean confidence, with a 0.3545 calibration
+gap and a 0.3240 high-confidence wrong rate. Its worst level-5 overconfidence
+case is type 18, grayscale salt-and-pepper noise: 0.0100 accuracy with 0.7393
+mean confidence. Details are in `reports/full_cure_or_confidence_v04.md`.
 
 The type-10 grayscale no-challenge control is also complete. It uses 499 paired
 control rows and shows that grayscale alone is damaging but cannot explain the
@@ -231,7 +231,7 @@ strong pretrained model family on the same v0.4 manifest before expanding row
 count. Candidate directions:
 
 1. add at least one non-CLIP/OpenCLIP VLM family with usable clean accuracy;
-2. extend confidence-collapse and calibration tables to each new usable
+2. extend confidence-collapse and calibration tables to any further usable
    zero-shot/VLM model;
 3. collect a small real transfer validation sample and compare its ranking
    against native CURE-OR severity rankings.
