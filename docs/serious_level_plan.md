@@ -189,30 +189,38 @@ Do not publish the main Kaggle version until these are done:
     stronger native-severity baselines but still collapse near chance on type
     18, grayscale salt-and-pepper noise.
 - Full-CURE-OR v0.4 challenge-family/channel-effect pass, completed:
-  - seven usable baselines analyzed;
+  - eight usable baselines analyzed;
   - every usable model has lower level-5 mean accuracy on paired grayscale
     native challenges than on corresponding color native challenges;
   - DINOv2 ViT-S/14 color level-5 mean accuracy: 0.3071;
   - DINOv2 ViT-S/14 grayscale level-5 mean accuracy: 0.2460;
+  - OpenCLIP ViT-B/16 DataComp XL color level-5 mean accuracy: 0.1791;
+  - OpenCLIP ViT-B/16 DataComp XL grayscale level-5 mean accuracy: 0.1111;
   - ConvNeXt-Tiny has the largest level-5 grayscale penalty, from 0.2743 color
     mean accuracy to 0.1734 grayscale mean accuracy;
   - conclusion: grayscale/channel removal acts as an interaction term, while
     blur/noise floor effects can hide paired gaps because both variants are
     already near chance.
 - Full-CURE-OR v0.4 consensus failure pass, completed:
-  - seven usable baselines analyzed;
+  - eight usable baselines analyzed;
   - top four consensus level-5 failures: grayscale salt-and-pepper noise,
-    grayscale gaussian blur, salt-and-pepper noise, and gaussian blur;
-  - all seven usable baselines are at the floor threshold on all four;
+    salt-and-pepper noise, grayscale gaussian blur, and gaussian blur;
+  - all eight usable baselines are at the floor threshold on the top three;
+  - gaussian blur is near-floor for all eight, with seven of eight at the floor
+    threshold;
   - pairwise level-5 rank correlations range from 0.892 to 0.988;
   - conclusion: the hardest level-5 failure ordering has a stable consensus
     core, with secondary model-family differences.
-- OpenCLIP ViT-B/16 DataComp XL stronger-baseline candidate, prepared but not
-  evaluated:
+- OpenCLIP ViT-B/16 DataComp XL stronger-baseline pass, completed:
   - config exists at
     `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`;
-  - two smoke-run attempts were blocked by incomplete Hugging Face download;
-  - no summary/prediction CSV was produced, so this is not a reported result.
+  - direct checkpoint download completed after Hugging Face CLI download stalled;
+  - clean accuracy: 0.5460;
+  - mean native accuracy: 0.2561;
+  - mean level-5 native accuracy: 0.1451;
+  - conclusion: DataComp XL improves on smaller CLIP/OpenCLIP zero-shot rows
+    and is third by mean native accuracy, but still collapses near chance on
+    salt-and-pepper and grayscale salt-and-pepper noise.
 - Real-transfer validation v0.1 scaffold, prepared but not evaluated:
   - 10 clean mini-CURE-OR test source images pinned in
     `data/real_transfer/v01/source_selection_v01.csv`;
@@ -230,8 +238,8 @@ For arXiv or workshop seriousness, add:
   - actual screenshot/resave chain;
   - actual video-call frame capture or screen recording compression;
 - at least 5 usable model families or pretrained variants on the v0.4
-  Full-CURE-OR probe, satisfied by seven usable baseline rows but still weak on
-  pretrained family diversity because three rows are CLIP-family zero-shot
+  Full-CURE-OR probe, satisfied by eight usable baseline rows but still weak on
+  pretrained family diversity because four rows are CLIP/OpenCLIP-family zero-shot
   models and four rows are frozen-feature prototype classifiers;
 - confidence calibration or confidence-collapse analysis on the v0.4 probe,
   completed for current usable zero-shot baselines and still required for new
@@ -239,9 +247,9 @@ For arXiv or workshop seriousness, add:
 - release scripts that regenerate all distortions deterministically;
 - model cards and dataset card;
 - related-work table with exact benchmark differences.
-- challenge-family/channel-effect analysis, completed for current seven usable
+- challenge-family/channel-effect analysis, completed for current eight usable
   v0.4 baselines.
-- consensus failure/rank-stability analysis, completed for current seven usable
+- consensus failure/rank-stability analysis, completed for current eight usable
   v0.4 baselines.
 
 ## Immediate Next Steps
@@ -251,9 +259,9 @@ For arXiv or workshop seriousness, add:
 2. Validate `data/real_transfer/v01/pairs.csv`, build
    `data/real_transfer/v01/manifest.csv`, and evaluate it with CLIP ViT-B/16
    and OpenCLIP.
-3. Add another strong pretrained model family or variant on the v0.4
-   Full-CURE-OR manifest, preferably a stronger contrastive/VLM baseline rather
-   than another nearest-centroid prototype.
+3. Add another strong pretrained model family on the v0.4 Full-CURE-OR
+   manifest, preferably a non-CLIP/OpenCLIP VLM family rather than another
+   nearby CLIP variant or nearest-centroid prototype.
 4. Add confidence-collapse and calibration tables for each new usable
    zero-shot/VLM Full-CURE-OR model.
 5. Add type 10, grayscale no-challenge, as a separate control condition,

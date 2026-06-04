@@ -233,6 +233,45 @@ MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,05,gaussian_blu
 MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,04,overexposure,Overexposure,0.132,0.068,-0.064,0.011664067735895515,0.01191053607314825,0.00024646833725273584
 MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,09,salt_pepper_noise,Salt & pepper noise,0.01,0.01,0.0,0.01269876492023468,0.012127131516113877,-0.000571633404120803
 MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,03,underexposure,Underexposure,0.166,0.126,-0.04000000000000001,0.012225281186401845,0.012149545913562178,-7.573527283966618e-05
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,06,contrast,Contrast,0.508,0.36,-0.14800000000000002,0.6649542954415083,0.5906111844927072,-0.07434311094880108
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,07,dirty_lens_1,Dirty lens 1,0.44,0.252,-0.188,0.6104068872034549,0.5152722527831792,-0.0951346344202757
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,08,dirty_lens_2,Dirty lens 2,0.348,0.224,-0.12399999999999997,0.6000567926615477,0.5200784821808339,-0.0799783104807138
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,05,gaussian_blur,Gaussian blur,0.288,0.124,-0.16399999999999998,0.5331381084620953,0.43500833047926424,-0.09812977798283107
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,04,overexposure,Overexposure,0.538,0.382,-0.15600000000000003,0.6891254991292953,0.6239247931092977,-0.06520070601999761
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,02,resize,Resize,0.548,0.388,-0.16000000000000003,0.698967978656292,0.6314081665426493,-0.0675598121136427
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,09,salt_pepper_noise,Salt & pepper noise,0.324,0.164,-0.16,0.5298911244422198,0.42733078357577325,-0.1025603408664465
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,03,underexposure,Underexposure,0.528,0.37675350701402804,-0.15124649298597198,0.6791090834438801,0.6182317342123909,-0.06087734923148924
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,06,contrast,Contrast,0.49,0.304,-0.186,0.6366625735461712,0.5625752288252115,-0.07408734472095968
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,07,dirty_lens_1,Dirty lens 1,0.328,0.188,-0.14,0.5629422361254692,0.45548191213607786,-0.10746032398939137
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,08,dirty_lens_2,Dirty lens 2,0.318,0.174,-0.14400000000000002,0.5631994047909975,0.4914860589653254,-0.07171334582567213
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,05,gaussian_blur,Gaussian blur,0.14,0.032,-0.10800000000000001,0.42625533939898014,0.41559718146920205,-0.01065815792977809
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,04,overexposure,Overexposure,0.416,0.244,-0.172,0.6005910799205303,0.5643849254846572,-0.03620615443587305
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,02,resize,Resize,0.544,0.384,-0.16000000000000003,0.6943603493571281,0.6341576628834009,-0.060202686473727174
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,09,salt_pepper_noise,Salt & pepper noise,0.184,0.078,-0.106,0.4429081794321537,0.39782487881183626,-0.04508330062031746
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,03,underexposure,Underexposure,0.522,0.376,-0.14600000000000002,0.6760292550921441,0.6123950753509998,-0.06363417974114427
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,06,contrast,Contrast,0.426,0.276,-0.14999999999999997,0.608115764439106,0.5454035175293684,-0.06271224690973753
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,07,dirty_lens_1,Dirty lens 1,0.246,0.104,-0.14200000000000002,0.5188689737766982,0.4354228793978691,-0.08344609437882905
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,08,dirty_lens_2,Dirty lens 2,0.292,0.158,-0.13399999999999998,0.5732617412507534,0.5175983162224292,-0.05566342502832411
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,05,gaussian_blur,Gaussian blur,0.092,0.026,-0.066,0.30817260774970057,0.38476069788634776,0.07658809013664719
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,04,overexposure,Overexposure,0.278,0.178,-0.10000000000000003,0.5541345088481903,0.6046338998824358,0.0504993910342455
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,02,resize,Resize,0.544,0.382,-0.16200000000000003,0.6944518537521363,0.6301628792583942,-0.06428897449374205
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,09,salt_pepper_noise,Salt & pepper noise,0.086,0.022,-0.064,0.36362632976472375,0.39917354410886763,0.035547214344143874
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,03,underexposure,Underexposure,0.506,0.368,-0.138,0.6606785805672407,0.602418857499957,-0.058259723067283664
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,06,contrast,Contrast,0.394,0.254,-0.14,0.5913664419502019,0.5391418391317129,-0.05222460281848906
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,07,dirty_lens_1,Dirty lens 1,0.156,0.048,-0.108,0.4967363130897284,0.4177309085279703,-0.07900540456175809
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,08,dirty_lens_2,Dirty lens 2,0.25,0.136,-0.11399999999999999,0.5818683402836323,0.5187629271298647,-0.06310541315376761
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,05,gaussian_blur,Gaussian blur,0.074,0.018,-0.055999999999999994,0.24020203065127135,0.31718542326986787,0.07698339261859652
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,04,overexposure,Overexposure,0.232,0.134,-0.098,0.5106728147864342,0.6283161355555058,0.11764332076907158
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,02,resize,Resize,0.528,0.372,-0.15600000000000003,0.6878336199820042,0.6244974690675735,-0.06333615091443068
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,09,salt_pepper_noise,Salt & pepper noise,0.016,0.01,-0.006,0.38127678526937964,0.45223190957307813,0.07095512430369849
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,03,underexposure,Underexposure,0.474,0.348,-0.126,0.6320000936537981,0.5914842922240495,-0.04051580142974853
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,06,contrast,Contrast,0.362,0.234,-0.12799999999999997,0.5794003892540932,0.5359462122321129,-0.04345417702198029
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,07,dirty_lens_1,Dirty lens 1,0.07,0.02,-0.05,0.5259913793951273,0.4494712501168251,-0.0765201292783022
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,08,dirty_lens_2,Dirty lens 2,0.19,0.08,-0.11,0.5083575337976217,0.49697766710817814,-0.011379866689443574
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,05,gaussian_blur,Gaussian blur,0.028,0.016,-0.012,0.26545551262050865,0.29985691061615943,0.034401397995650784
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,04,overexposure,Overexposure,0.194,0.112,-0.082,0.48212280052900314,0.6163391537964344,0.1342163532674313
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,09,salt_pepper_noise,Salt & pepper noise,0.008,0.01,0.002,0.381703360080719,0.7392940828204155,0.35759072273969655
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,03,underexposure,Underexposure,0.402,0.306,-0.09600000000000003,0.5748489312231541,0.5396542078107596,-0.03519472341239449
 OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_1,06,contrast,Contrast,0.372,0.224,-0.148,0.6177948833107948,0.5546792310327292,-0.06311565227806559
 OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_1,07,dirty_lens_1,Dirty lens 1,0.326,0.17,-0.156,0.5909928081929684,0.5488609217405319,-0.042131886452436484
 OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_1,08,dirty_lens_2,Dirty lens 2,0.258,0.126,-0.132,0.6021144775152206,0.588874580770731,-0.013239896744489665

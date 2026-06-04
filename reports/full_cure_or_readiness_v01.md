@@ -29,8 +29,9 @@ Completed locally:
   baselines.
 - v0.4 leave-clean-condition-out prototype baselines with HGNetV2-B0,
   MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
-- v0.4 challenge-family/channel-effect analysis for seven usable baselines.
-- v0.4 consensus failure analysis for seven usable baselines.
+- v0.4 OpenCLIP ViT-B/16 DataComp XL stronger-baseline run.
+- v0.4 challenge-family/channel-effect analysis for eight usable baselines.
+- v0.4 consensus failure analysis for eight usable baselines.
 - real-transfer validation v0.1 source selection, validator, and evaluation
   configs prepared.
 
@@ -194,12 +195,12 @@ Consensus failure result:
 
 | Consensus rank | Challenge | Mean accuracy | Floor models |
 | ---: | --- | ---: | ---: |
-| 1 | Grayscale salt & pepper noise | 0.0091 | 7 / 7 |
-| 2 | Grayscale gaussian blur | 0.0109 | 7 / 7 |
-| 3 | Salt & pepper noise | 0.0106 | 7 / 7 |
-| 4 | Gaussian blur | 0.0131 | 7 / 7 |
+| 1 | Grayscale salt & pepper noise | 0.0092 | 8 / 8 |
+| 2 | Salt & pepper noise | 0.0103 | 8 / 8 |
+| 3 | Grayscale gaussian blur | 0.0115 | 8 / 8 |
+| 4 | Gaussian blur | 0.0150 | 7 / 8 |
 
-Pairwise level-5 rank correlations across the seven usable baselines range from
+Pairwise level-5 rank correlations across the eight usable baselines range from
 0.892 to 0.988. This makes the current v0.4 evidence stronger: the worst
 challenge ordering has a stable consensus core, not only isolated per-model
 worst cases.
@@ -209,6 +210,8 @@ Config validation status:
 - OpenCLIP Full-CURE v0.4 probe config loads 100 label keys.
 - CLIP ViT-B/16 Full-CURE v0.4 probe config loads 100 label keys.
 - CLIP ViT-B/32 Full-CURE v0.4 probe config loads 100 label keys.
+- OpenCLIP ViT-B/16 DataComp XL Full-CURE v0.4 probe config loads 100 label
+  keys.
 - SigLIP Base P16 224 Full-CURE v0.4 probe config loads 100 label keys.
 - All configs warn that `Calculator` is a duplicate display name in the
   official object list.
@@ -264,6 +267,8 @@ Artifacts:
 - `configs/dinov2_vit_small_patch14_full_cure_or_prototype_v04.json`
 - `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv`
 - `results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_summary.csv`
+- `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`
+- `results/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
@@ -288,13 +293,14 @@ Artifacts:
 
 The complete 18-folder release is now staged and probed, so the remaining
 limitation is no longer folder availability. The v0.4 probe now has three
-usable zero-shot CLIP-family baselines, four usable frozen-feature prototype
-baselines including self-supervised DINOv2, and one SigLIP diagnostic failure.
-It still needs stronger pretrained model-family diversity, uses five paired
-samples per object/challenge group, and does not yet include a real transfer
-validation result. The v0.1 real-transfer scaffold is ready, but actual
-transferred images have not been collected yet.
+usable zero-shot CLIP-family baselines, one stronger OpenCLIP DataComp XL
+zero-shot baseline, four usable frozen-feature prototype baselines including
+self-supervised DINOv2, and one SigLIP diagnostic failure. It still needs
+non-CLIP/OpenCLIP pretrained VLM family diversity, uses five paired samples per
+object/challenge group, and does not yet include a real transfer validation
+result. The v0.1 real-transfer scaffold is ready, but actual transferred images
+have not been collected yet.
 
-The next step is to add stronger usable pretrained model families or collect
-the first real transfer validation sample before scaling beyond five paired
-samples per group.
+The next step is to collect the first real transfer validation sample or add a
+usable pretrained VLM family outside nearby CLIP/OpenCLIP variants before
+scaling beyond five paired samples per group.

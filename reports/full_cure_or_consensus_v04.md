@@ -3,7 +3,7 @@
 ## Summary
 
 This pass analyzes whether Full-CURE-OR level-5 failures are stable across the
-seven usable v0.4 baselines or mostly model-specific. It uses
+eight usable v0.4 baselines or mostly model-specific. It uses
 `results/full_cure_or_probe_v04_with_prototypes_comparison.csv` and focuses on
 the 14 official challenge types that provide level-5 rows.
 
@@ -21,15 +21,17 @@ approximately 0.01, so this threshold captures near-chance collapse.
 
 | Rank | Challenge | Mean rank | Mean accuracy | Floor models |
 | ---: | --- | ---: | ---: | ---: |
-| 1 | Grayscale salt & pepper noise | 1.71 | 0.0091 | 7 / 7 |
-| 2 | Grayscale gaussian blur | 2.50 | 0.0109 | 7 / 7 |
-| 3 | Salt & pepper noise | 2.64 | 0.0106 | 7 / 7 |
-| 4 | Gaussian blur | 3.43 | 0.0131 | 7 / 7 |
-| 5 | Grayscale dirty lens 1 | 4.71 | 0.0263 | 4 / 7 |
+| 1 | Grayscale salt & pepper noise | 1.75 | 0.0092 | 8 / 8 |
+| 2 | Salt & pepper noise | 2.44 | 0.0103 | 8 / 8 |
+| 3 | Grayscale gaussian blur | 2.56 | 0.0115 | 8 / 8 |
+| 4 | Gaussian blur | 3.62 | 0.0150 | 7 / 8 |
+| 5 | Grayscale dirty lens 1 | 4.62 | 0.0255 | 5 / 8 |
 
-This is a paper-level finding: the top four hardest level-5 challenges are not
+This is a paper-level finding: the top three hardest level-5 challenges are not
 only low on average, they are at the floor for every usable baseline, including
-DINOv2 ViT-S/14 and ConvNeXt-Tiny.
+OpenCLIP ViT-B/16 DataComp XL, DINOv2 ViT-S/14, and ConvNeXt-Tiny. Gaussian
+blur is also near-floor for all eight models, with seven of eight at the floor
+threshold.
 
 ## Model-Ranking Stability
 
@@ -38,10 +40,10 @@ Pairwise Spearman rank correlations over the 14 level-5 challenges are high:
 | Pair | Spearman rho | Mean absolute rank delta |
 | --- | ---: | ---: |
 | HGNetV2-B0 Prototype vs OpenCLIP ViT-B/32 LAION2B | 0.892 | 1.57 |
+| MobileNetV3-Small Prototype vs OpenCLIP ViT-B/16 DataComp XL | 0.898 | 1.43 |
 | DINOv2 ViT-S/14 Prototype vs MobileNetV3-Small Prototype | 0.900 | 1.36 |
+| HGNetV2-B0 Prototype vs OpenCLIP ViT-B/16 DataComp XL | 0.902 | 1.43 |
 | MobileNetV3-Small Prototype vs OpenCLIP ViT-B/32 LAION2B | 0.905 | 1.57 |
-| CLIP ViT-B/16 vs DINOv2 ViT-S/14 Prototype | 0.908 | 1.36 |
-| DINOv2 ViT-S/14 Prototype vs HGNetV2-B0 Prototype | 0.909 | 1.21 |
 
 The lowest observed correlation is still 0.892. This means the benchmark is not
 just producing arbitrary model-specific failure lists. There are model-family
@@ -60,9 +62,9 @@ families:
 
 The consensus analysis strengthens the benchmark claim in two directions:
 
-1. robust consensus failure exists: grayscale salt-and-pepper noise, grayscale
-   gaussian blur, salt-and-pepper noise, and gaussian blur collapse all seven
-   usable baselines at level 5;
+1. robust consensus failure exists: grayscale salt-and-pepper noise,
+   salt-and-pepper noise, and grayscale gaussian blur collapse all eight usable
+   baselines at level 5, while gaussian blur is near-floor for all eight;
 2. model-family differences still matter: some middle-ranked challenges move
    by several rank positions, especially across CLIP/OpenCLIP and prototype
    backbones.
@@ -82,10 +84,10 @@ secondary region where model-family robustness profiles diverge.
 - `python scripts/analyze_full_cure_or_consensus.py`
 - output rows:
   - consensus rows: 14;
-  - rank-correlation rows: 21.
+  - rank-correlation rows: 28.
 
 ## Next Step
 
 The remaining paper-level gap is not more aggregate analysis on the same rows.
-The next high-value step is either a real transfer validation sample or a
-stronger contrastive/VLM baseline once model downloads are stable.
+The next high-value step is either a real transfer validation sample or another
+stronger pretrained VLM family that is not just a nearby CLIP/OpenCLIP variant.

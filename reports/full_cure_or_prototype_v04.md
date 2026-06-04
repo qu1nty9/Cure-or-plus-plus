@@ -107,10 +107,10 @@ near chance, and types 05, 09, and 14 are also near chance at level 5.
 ## Next Step
 
 The prototype block makes the benchmark stronger, but it does not replace the
-need for stronger pretrained VLMs or real transfer validation. The next
+need for broader pretrained VLM coverage or real transfer validation. The next
 research step should be either:
 
-1. evaluate one stronger pretrained contrastive/VLM family if weights are
-   available;
+1. evaluate a usable pretrained VLM family outside nearby CLIP/OpenCLIP
+   variants;
 2. collect the first real app-transfer validation sample and compare its
    ranking against native CURE-OR level-5 rankings.

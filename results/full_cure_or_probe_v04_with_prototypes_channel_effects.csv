@@ -59,6 +59,16 @@ MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_4,color,4000,0.22
 MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_4,grayscale,4000,0.10425,0.011941648200619966,8
 MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,color,3500,0.12742857142857142,0.012039404768496752,7
 MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,level_5,grayscale,3500,0.06457142857142857,0.01202419498216893,7
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,color,4000,0.44025,0.6257062211800367,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_1,grayscale,3999,0.2838209552388097,0.5452149617288911,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,color,4000,0.36775,0.5753685522079468,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_2,grayscale,4000,0.2225,0.5167378654908389,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,color,4000,0.30875,0.5351637950185686,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_3,grayscale,4000,0.18925,0.5149468239732087,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,color,4000,0.2655,0.5152445549583062,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_4,grayscale,4000,0.165,0.5111688630599529,8
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,color,3500,0.17914285714285713,0.4739828438428896,7
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,level_5,grayscale,3500,0.11114285714285714,0.5253627835001264,7
 OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_1,color,4000,0.31875,0.6017010517343879,8
 OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_1,grayscale,3999,0.1757939484871218,0.5700252526240607,8
 OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,level_2,color,4000,0.266,0.5587346477545798,8

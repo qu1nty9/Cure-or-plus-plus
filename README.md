@@ -92,9 +92,10 @@ Serious-level work has started:
 - Full-CURE-OR v0.4 type-10 grayscale no-challenge control.
 - Full-CURE-OR v0.4 leave-clean-condition-out prototype baselines with
   HGNetV2-B0, MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
-- Full-CURE-OR v0.4 challenge-family/channel-effect analysis across seven
+- Full-CURE-OR v0.4 OpenCLIP ViT-B/16 DataComp XL stronger-baseline run.
+- Full-CURE-OR v0.4 challenge-family/channel-effect analysis across eight
   usable baselines.
-- Full-CURE-OR v0.4 consensus failure analysis across seven usable baselines.
+- Full-CURE-OR v0.4 consensus failure analysis across eight usable baselines.
 - Real-transfer validation v0.1 source selection, preflight validator, and
   evaluation configs.
 
@@ -146,9 +147,10 @@ Full-CURE-OR staged probe:
 | --- | ---: | ---: | ---: | ---: | --- | ---: |
 | DINOv2 ViT-S/14 Prototype | 0.7520 | 0.4393 | 0.3819 | 0.2766 | type 18, grayscale salt and pepper noise | 0.0080 |
 | ConvNeXt-Tiny Prototype | 0.6160 | 0.3436 | 0.2965 | 0.2239 | type 18, grayscale salt and pepper noise | 0.0080 |
-| CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | type 09, salt and pepper noise; tied with type 18 | 0.0100 |
+| OpenCLIP ViT-B/16 DataComp XL | 0.5460 | 0.2561 | 0.2153 | 0.1451 | type 09, salt and pepper noise | 0.0080 |
 | HGNetV2-B0 Prototype | 0.6240 | 0.2547 | 0.2045 | 0.1219 | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
 | MobileNetV3-Small Prototype | 0.5560 | 0.1936 | 0.1631 | 0.0960 | type 05, gaussian blur; tied with types 09, 14, and 18 | 0.0100 |
+| CLIP ViT-B/16 | 0.4440 | 0.1929 | 0.1596 | 0.0994 | type 09, salt and pepper noise; tied with type 18 | 0.0100 |
 | OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.1705 | 0.1400 | 0.0890 | type 18, grayscale salt and pepper noise | 0.0080 |
 | CLIP ViT-B/32 | 0.3500 | 0.1532 | 0.1249 | 0.0741 | type 09, salt and pepper noise | 0.0060 |
 | SigLIP Base P16 224 | 0.0120 | 0.0103 | 0.0096 | 0.0084 | type 03, underexposure | 0.0060 |
@@ -169,17 +171,18 @@ produce different level-5 robustness rankings. HGNetV2-B0 and
 MobileNetV3-Small make gaussian blur a top collapse case, while ConvNeXt-Tiny
 and DINOv2 substantially improve mean native and level-5 accuracy but still
 fail near chance on grayscale salt-and-pepper noise. DINOv2 is the strongest
-current v0.4 row, but it does not remove the severe native-failure pattern. It
-is still a controlled probe rather than a full paper-scale evaluation because
-stronger pretrained model diversity and real transfer validation are not
-complete.
+current v0.4 row. The DataComp XL run adds a stronger OpenCLIP pretrained
+variant and lands third by mean native accuracy, but it also collapses near
+chance on salt-and-pepper and grayscale salt-and-pepper noise. This is still a
+controlled probe rather than a full paper-scale evaluation because real transfer
+validation is not complete.
 The challenge-family analysis in
 `reports/full_cure_or_challenge_family_v04.md` adds a fifth finding: every
 usable model is worse on paired grayscale level-5 challenges than on the
 corresponding color level-5 challenges, while some blur/noise pairs are already
 near chance on both sides.
 The consensus analysis in `reports/full_cure_or_consensus_v04.md` adds a sixth
-finding: the top four level-5 failure types are at floor accuracy for all seven
+finding: the top three level-5 failure types are at floor accuracy for all eight
 usable baselines, and pairwise level-5 rank correlations stay high.
 The real-transfer validation scaffold in `reports/real_transfer_v01_readiness.md`
 is prepared but not yet evaluated; it needs real transferred images and a filled

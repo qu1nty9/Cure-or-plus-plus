@@ -97,8 +97,8 @@ produce challenge-specific and model-specific robustness rankings.
 This is still a probe, not the final arXiv-scale benchmark. The main remaining
 gaps are more usable pretrained model families, extending
 confidence/calibration analysis to every new zero-shot/VLM model, and a real
-transfer validation sample. The v0.4 block now has seven usable baseline rows
-across three CLIP-family zero-shot models and four frozen-feature prototype
+transfer validation sample. The v0.4 block now has eight usable baseline rows
+across four CLIP/OpenCLIP-family zero-shot models and four frozen-feature prototype
 classifiers, plus one SigLIP diagnostic failure under the current prompt
 protocol.
 
@@ -130,7 +130,14 @@ first on gaussian blur ties, while ConvNeXt-Tiny and DINOv2 are worst on
 grayscale salt-and-pepper noise. Details are in
 `reports/full_cure_or_prototype_v04.md`.
 
-The challenge-family/channel-effect pass is also complete for the same seven
+The stronger OpenCLIP ViT-B/16 DataComp XL pass is now complete. It reaches
+0.5460 clean accuracy, 0.2561 mean native accuracy, and 0.1451 mean native
+level-5 accuracy, ranking third by mean native accuracy behind DINOv2 and
+ConvNeXt-Tiny. Its worst level-5 challenge is type 09, salt-and-pepper noise,
+at 0.0080, so the stronger pretrained variant improves the baseline set but
+does not remove the severe level-5 collapse.
+
+The challenge-family/channel-effect pass is also complete for the same eight
 usable v0.4 baselines. It shows that every model has lower mean level-5 accuracy
 on paired grayscale native challenges than on the corresponding color native
 challenges. DINOv2 remains strongest in absolute accuracy, but still drops from
@@ -138,11 +145,12 @@ challenges. DINOv2 remains strongest in absolute accuracy, but still drops from
 Details are in `reports/full_cure_or_challenge_family_v04.md`.
 
 The consensus failure pass is complete as well. The top four level-5 challenges
-by mean damaging rank are grayscale salt-and-pepper noise, grayscale gaussian
-blur, salt-and-pepper noise, and gaussian blur; all seven usable baselines are
-at the floor threshold on all four. Pairwise level-5 rank correlations range
-from 0.892 to 0.988, so the hard-challenge ordering is broadly stable while
-still leaving room for model-family differences. Details are in
+by mean damaging rank are grayscale salt-and-pepper noise, salt-and-pepper
+noise, grayscale gaussian blur, and gaussian blur; all eight usable baselines
+are at the floor threshold on the top three, and gaussian blur is near-floor for
+all eight. Pairwise level-5 rank correlations range from 0.892 to 0.988, so the
+hard-challenge ordering is broadly stable while still leaving room for
+model-family differences. Details are in
 `reports/full_cure_or_consensus_v04.md`.
 
 ## Artifacts
@@ -188,6 +196,7 @@ still leaving room for model-family differences. Details are in
 - `configs/mobilenet_v3_small_full_cure_or_prototype_v04.json`
 - `configs/convnext_tiny_fb_in1k_full_cure_or_prototype_v04.json`
 - `configs/dinov2_vit_small_patch14_full_cure_or_prototype_v04.json`
+- `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`
 - `configs/full_cure_or_probe_summaries_v04_with_prototypes.json`
 - `configs/full_cure_or_grayscale_control_summaries_v04_with_prototypes.json`
 - `results/hgnetv2_b0_full_cure_or_prototype_v04_predictions.csv`
@@ -198,6 +207,7 @@ still leaving room for model-family differences. Details are in
 - `results/convnext_tiny_fb_in1k_full_cure_or_prototype_v04_summary.csv`
 - `results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_predictions.csv`
 - `results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_summary.csv`
+- `results/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
@@ -216,13 +226,11 @@ still leaving room for model-family differences. Details are in
 
 ## Next Step
 
-The next research step should be to add stronger pretrained model families or a
-real transfer validation sample on the same v0.4 manifest before expanding row
-count. Candidate
-directions:
+The next research step should be a real transfer validation sample or another
+strong pretrained model family on the same v0.4 manifest before expanding row
+count. Candidate directions:
 
-1. add at least one larger OpenCLIP, EVA-CLIP, or SigLIP-family model with
-   usable clean accuracy;
+1. add at least one non-CLIP/OpenCLIP VLM family with usable clean accuracy;
 2. extend confidence-collapse and calibration tables to each new usable
    zero-shot/VLM model;
 3. collect a small real transfer validation sample and compare its ranking
