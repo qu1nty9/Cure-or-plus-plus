@@ -12,6 +12,7 @@ Use v0.2 for the serious writeup path:
 - `data/real_transfer/v02/source_selection_v02.csv`
 - `data/real_transfer/v02/pairs_template.csv`
 - `scripts/build_real_transfer_collection_pack.py`
+- `scripts/activate_real_transfer_protocol.py`
 
 v0.2 pins 30 clean mini-CURE-OR test images, three per object class, across
 three real pipelines and two repeats. The older v0.1 folder remains as a
@@ -24,4 +25,10 @@ For collection, build the ignored local helper pack:
   --source-selection data/real_transfer/v02/source_selection_v02.csv \
   --pairs-template data/real_transfer/v02/pairs_template.csv \
   --output-dir data/real_transfer/v02/collection_pack
+```
+
+After real transferred outputs are present, activate the protocol:
+
+```bash
+.venv/bin/python scripts/activate_real_transfer_protocol.py --require-ready
 ```

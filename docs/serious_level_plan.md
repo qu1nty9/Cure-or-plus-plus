@@ -268,8 +268,9 @@ For arXiv or workshop seriousness, add:
 
 1. Collect the v0.2 real app-transfer validation sample using
    `docs/real_transfer_validation_protocol_v02.md`.
-2. Validate `data/real_transfer/v02/pairs.csv`, build
-   `data/real_transfer/v02/manifest.csv`, and evaluate it with the four
+2. Run `scripts/activate_real_transfer_protocol.py --require-ready` to create
+   `data/real_transfer/v02/pairs.csv`, validate file completeness, build
+   `data/real_transfer/v02/manifest.csv`, and then evaluate it with the four
    prepared zero-shot configs.
 3. Add another strong pretrained model family on the v0.4 Full-CURE-OR
    manifest, preferably a non-CLIP/OpenCLIP VLM family rather than another

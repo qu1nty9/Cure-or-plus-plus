@@ -190,7 +190,7 @@ finding: the top three level-5 failure types are at floor accuracy for all eight
 usable baselines, and pairwise level-5 rank correlations stay high.
 The real-transfer validation scaffold in `reports/real_transfer_v02_readiness.md`
 is prepared but not yet evaluated; it needs 180 real transferred output images
-and a filled `data/real_transfer/v02/pairs.csv`.
+and activation through `scripts/activate_real_transfer_protocol.py`.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

@@ -34,6 +34,7 @@ pack and future real-transfer image payloads are intentionally ignored by Git.
 - `docs/real_transfer_validation_protocol_v02.md`
 - `scripts/prepare_real_transfer_protocol.py`
 - `scripts/build_real_transfer_collection_pack.py`
+- `scripts/activate_real_transfer_protocol.py`
 - `scripts/validate_real_transfer_pairs.py`
 - `scripts/build_real_transfer_manifest.py`
 - `data/real_transfer/v02/source_selection_v02.csv`
@@ -63,6 +64,7 @@ Collect the 180 real transferred outputs at the paths pinned in
 `data/real_transfer/v02/pairs_template.csv`, using
 `data/real_transfer/v02/collection_pack/index.html` and
 `data/real_transfer/v02/collection_pack/collection_checklist.csv` as the
-collection guide. Then copy the template to `data/real_transfer/v02/pairs.csv`,
-fill metadata columns, run strict validation, and run the four prepared
-zero-shot configs.
+collection guide. Then run `scripts/activate_real_transfer_protocol.py` to
+materialize `data/real_transfer/v02/pairs.csv`, validate file completeness, and
+build `data/real_transfer/v02/manifest.csv` once all outputs exist. After that,
+run the four prepared zero-shot configs.
