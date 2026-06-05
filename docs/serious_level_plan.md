@@ -232,6 +232,12 @@ Do not publish the main Kaggle version until these are done:
     real-transfer placeholder, and public-claim discipline;
   - explicitly blocks final public-paper claims until real-transfer v0.2 is
     evaluated.
+- Release documentation v0.4, completed:
+  - dataset card: `docs/dataset_card_cure_or_pp_v04.md`;
+  - evaluation card: `docs/evaluation_card_full_cure_or_v04.md`;
+  - arXiv readiness matrix: `reports/arxiv_readiness_matrix_v04.md`;
+  - current recommendation: strong pre-paper benchmark artifact, not final
+    arXiv submission until real-transfer v0.2 is evaluated.
 - OpenCLIP ViT-B/16 DataComp XL stronger-baseline pass, completed:
   - config exists at
     `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`;
@@ -280,6 +286,8 @@ For arXiv or workshop seriousness, add:
 - paper-ready benchmark table pack, completed for current eight usable v0.4
   baselines.
 - technical report draft, completed but still pending real-transfer results.
+- dataset/evaluation cards and arXiv readiness matrix, completed for the
+  current v0.4 state.
 
 ## Immediate Next Steps
 

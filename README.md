@@ -99,6 +99,8 @@ Serious-level work has started:
 - Full-CURE-OR v0.4 paper-table pack with Markdown, CSV, and LaTeX outputs.
 - Full-CURE-OR v0.4 technical report draft with claims, limitations, and a
   real-transfer placeholder.
+- Dataset card, evaluation card, and arXiv readiness matrix for the current
+  v0.4 benchmark state.
 - Real-transfer validation v0.2 protocol: 30 sources, 3 real pipelines, 2
   repeats, 180 planned outputs, and four zero-shot evaluation configs.
 
@@ -197,6 +199,10 @@ Markdown plus CSV and LaTeX artifacts for the technical writeup.
 The current technical report draft is in
 `reports/cure_or_pp_technical_report_draft_v04.md`; it is suitable for internal
 iteration but still marks real-transfer v0.2 as pending.
+Release-quality documentation is now split into
+`docs/dataset_card_cure_or_pp_v04.md`,
+`docs/evaluation_card_full_cure_or_v04.md`, and
+`reports/arxiv_readiness_matrix_v04.md`.
 The real-transfer validation scaffold in `reports/real_transfer_v02_readiness.md`
 is prepared but not yet evaluated; it needs 180 real transferred output images
 and activation through `scripts/activate_real_transfer_protocol.py`.
