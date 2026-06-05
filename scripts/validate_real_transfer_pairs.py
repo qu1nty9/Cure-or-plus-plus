@@ -17,6 +17,8 @@ def main() -> int:
     parser.add_argument("--min-rows", type=int, default=20)
     parser.add_argument("--min-recipes", type=int, default=2)
     parser.add_argument("--min-labels", type=int, default=10)
+    parser.add_argument("--min-repeats-per-source-recipe", type=int, default=1)
+    parser.add_argument("--max-warning-details", type=int, default=50)
     parser.add_argument("--allow-empty", action="store_true", help="Allow empty or missing pairs for dry schema checks.")
     parser.add_argument("--allow-missing-files", action="store_true", help="Report missing files without failing.")
     args = parser.parse_args()
@@ -46,10 +48,18 @@ def main() -> int:
     source_counts = count_by(rows, "source_path")
     output_counts = count_by(rows, "output_path")
     duplicate_pairs = duplicate_count(rows, ["source_path", "output_path", "recipe"])
+    repeat_summary = summarize_repeats(rows)
+    missing_source_file_count = count_missing_files(rows, "source_path")
+    missing_output_file_count = count_missing_files(rows, "output_path")
 
-    ready = not problems and bool(rows)
+    schema_ready = not problems and bool(rows)
+    files_ready = missing_source_file_count == 0 and missing_output_file_count == 0
+    ready = schema_ready and files_ready
+    warning_details = warnings[: args.max_warning_details]
     report = {
         "ready_for_eval": ready,
+        "schema_ready": schema_ready,
+        "files_ready": files_ready,
         "pairs_path": str(relative(pairs_path)),
         "clean_manifest_path": str(relative(clean_manifest_path)),
         "row_count": len(rows),
@@ -58,14 +68,24 @@ def main() -> int:
         "source_count": len(source_counts),
         "output_count": len(output_counts),
         "duplicate_pair_count": duplicate_pairs,
+        "missing_source_file_count": missing_source_file_count,
+        "missing_output_file_count": missing_output_file_count,
+        "source_recipe_count": repeat_summary["source_recipe_count"],
+        "source_recipe_min_repeat_count": repeat_summary["min_repeat_count"],
+        "source_recipe_max_repeat_count": repeat_summary["max_repeat_count"],
+        "source_recipe_repeat_counts": repeat_summary["repeat_counts"],
         "recipe_counts": recipe_counts,
         "label_counts": label_counts,
         "problems": problems,
-        "warnings": warnings,
+        "warnings": warning_details,
+        "warning_count": len(warnings),
+        "warnings_truncated_count": max(0, len(warnings) - len(warning_details)),
         "thresholds": {
             "min_rows": args.min_rows,
             "min_recipes": args.min_recipes,
             "min_labels": args.min_labels,
+            "min_repeats_per_source_recipe": args.min_repeats_per_source_recipe,
+            "max_warning_details": args.max_warning_details,
         },
     }
     report_path.parent.mkdir(parents=True, exist_ok=True)
@@ -74,13 +94,17 @@ def main() -> int:
     print(f"Rows: {len(rows)}")
     print(f"Recipes: {len(recipe_counts)}")
     print(f"Labels: {len(label_counts)}")
+    print(f"Schema ready: {schema_ready}")
+    print(f"Files ready: {files_ready}")
     print(f"Ready for eval: {ready}")
     print(f"Report: {report_path}")
     for problem in problems:
         print(f"ERROR: {problem}")
-    for warning in warnings:
+    for warning in warning_details:
         print(f"WARNING: {warning}")
-    return 0 if ready or args.allow_empty else 1
+    if len(warnings) > len(warning_details):
+        print(f"WARNING: {len(warnings) - len(warning_details)} additional warnings omitted from console output.")
+    return 0 if ready or args.allow_empty or args.allow_missing_files else 1
 
 
 def load_clean_manifest(path: Path) -> list[dict]:
@@ -114,6 +138,15 @@ def validate_rows(rows: list[dict], clean_by_path: dict[str, dict], args, proble
     duplicate_pairs = duplicate_count(rows, ["source_path", "output_path", "recipe"])
     if duplicate_pairs:
         problems.append(f"Found {duplicate_pairs} duplicate source/output/recipe rows.")
+
+    if args.min_repeats_per_source_recipe > 1:
+        repeat_summary = summarize_repeats(rows)
+        if repeat_summary["min_repeat_count"] < args.min_repeats_per_source_recipe:
+            problems.append(
+                "Expected at least "
+                f"{args.min_repeats_per_source_recipe} repeats per source/recipe, "
+                f"found a minimum of {repeat_summary['min_repeat_count']}."
+            )
 
     for index, row in enumerate(rows, start=2):
         source_path = value(row, "source_path")
@@ -178,6 +211,35 @@ def duplicate_count(rows: list[dict], keys: list[str]) -> int:
             duplicates += 1
         seen.add(item)
     return duplicates
+
+
+def count_missing_files(rows: list[dict], key: str) -> int:
+    missing = 0
+    for row in rows:
+        path_text = value(row, key)
+        if path_text and not resolve_project_path(path_text).exists():
+            missing += 1
+    return missing
+
+
+def summarize_repeats(rows: list[dict]) -> dict:
+    repeat_sets: dict[tuple[str, str], set[str]] = {}
+    for row in rows:
+        source_path = value(row, "source_path")
+        recipe = value(row, "recipe")
+        repeat_id = value(row, "repeat_id") or value(row, "output_path")
+        if not source_path or not recipe:
+            continue
+        repeat_sets.setdefault((source_path, recipe), set()).add(repeat_id)
+
+    counts = {f"{source_path}|{recipe}": len(repeats) for (source_path, recipe), repeats in repeat_sets.items()}
+    values = list(counts.values())
+    return {
+        "source_recipe_count": len(counts),
+        "min_repeat_count": min(values) if values else 0,
+        "max_repeat_count": max(values) if values else 0,
+        "repeat_counts": dict(sorted(counts.items())),
+    }
 
 
 def value(row: dict, key: str) -> str:

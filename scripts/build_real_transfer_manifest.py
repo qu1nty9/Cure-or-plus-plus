@@ -20,6 +20,19 @@ OUTPUT_FIELDNAMES = [
     "app_or_pipeline",
     "capture_device",
     "capture_date",
+    "repeat_id",
+    "pipeline_variant",
+    "source_selection_id",
+    "notes",
+]
+
+PARAM_FIELDS = [
+    "app_or_pipeline",
+    "capture_device",
+    "capture_date",
+    "repeat_id",
+    "pipeline_variant",
+    "source_selection_id",
     "notes",
 ]
 
@@ -88,15 +101,7 @@ def build_rows(pairs_path: Path, clean_by_path: dict[str, dict]) -> tuple[list[d
                 if not resolve_project_path(path_text).exists():
                     problems.append(f"Line {line_number}: {column_name} does not exist: {path_text}")
 
-            capture_device = value(pair, "capture_device")
-            capture_date = value(pair, "capture_date")
-            notes = value(pair, "notes")
-            params = {
-                "app_or_pipeline": app_or_pipeline,
-                "capture_device": capture_device,
-                "capture_date": capture_date,
-                "notes": notes,
-            }
+            params = {field: value(pair, field) for field in PARAM_FIELDS}
             rows.append(
                 {
                     "source_path": source_path,
@@ -108,9 +113,12 @@ def build_rows(pairs_path: Path, clean_by_path: dict[str, dict]) -> tuple[list[d
                     "params_json": json.dumps(params, sort_keys=True),
                     "source_metadata_json": json.dumps(source_metadata, sort_keys=True) if source_metadata else "",
                     "app_or_pipeline": app_or_pipeline,
-                    "capture_device": capture_device,
-                    "capture_date": capture_date,
-                    "notes": notes,
+                    "capture_device": params["capture_device"],
+                    "capture_date": params["capture_date"],
+                    "repeat_id": params["repeat_id"],
+                    "pipeline_variant": params["pipeline_variant"],
+                    "source_selection_id": params["source_selection_id"],
+                    "notes": params["notes"],
                 }
             )
     return rows, problems

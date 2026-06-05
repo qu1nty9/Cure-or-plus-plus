@@ -210,12 +210,12 @@ limited:
 > robustness rankings, not just generic image difficulty.
 
 This should not yet be framed as a universal VLM finding. It becomes stronger
-after adding a real app-transfer validation sample and a larger Full-CURE-OR
-pilot.
+after adding the v0.2 real app-transfer validation block and a larger
+Full-CURE-OR pilot.
 
 The related-work positioning is tracked in `docs/related_work_v01.md`. The
-real-transfer pilot protocol is tracked in
-`docs/real_transfer_validation_protocol.md`.
+stronger real-transfer validation protocol is tracked in
+`docs/real_transfer_validation_protocol_v02.md`.
 
 ## Native CURE-OR Pilot Link
 

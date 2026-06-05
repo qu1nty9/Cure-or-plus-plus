@@ -89,5 +89,6 @@ secondary region where model-family robustness profiles diverge.
 ## Next Step
 
 The remaining paper-level gap is not more aggregate analysis on the same rows.
-The next high-value step is either a real transfer validation sample or another
-stronger pretrained VLM family that is not just a nearby CLIP/OpenCLIP variant.
+The next high-value step is either the 180-output v0.2 real transfer validation
+block or another stronger pretrained VLM family that is not just a nearby
+CLIP/OpenCLIP variant.

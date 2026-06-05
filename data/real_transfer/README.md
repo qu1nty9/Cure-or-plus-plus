@@ -1,13 +1,17 @@
 # Real Transfer Data
 
-This folder is reserved for small real app-transfer validation pilots.
+This folder is reserved for real app-transfer validation pilots.
 
 Do not edit clean CURE-OR source images in place. Add transferred outputs under
-`data/real_transfer/v01/images/`, then record source/output pairs in
-`data/real_transfer/v01/pairs.csv`.
+the matching `data/real_transfer/<version>/images/` folder, then record
+source/output pairs in `pairs.csv`.
 
-See `docs/real_transfer_validation_protocol.md` for the full protocol.
+Use v0.2 for the serious writeup path:
 
-For v0.1, start from `data/real_transfer/v01/source_selection_v01.csv`. It pins
-10 clean mini-CURE-OR test images, one per object class, for the first real
-transfer pilot.
+- `docs/real_transfer_validation_protocol_v02.md`
+- `data/real_transfer/v02/source_selection_v02.csv`
+- `data/real_transfer/v02/pairs_template.csv`
+
+v0.2 pins 30 clean mini-CURE-OR test images, three per object class, across
+three real pipelines and two repeats. The older v0.1 folder remains as a
+minimal pilot scaffold.

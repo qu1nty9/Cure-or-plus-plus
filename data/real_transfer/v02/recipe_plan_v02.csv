@@ -1,0 +1,4 @@
+recipe,app_or_pipeline,required_rows,expected_folder,capture_notes
+messenger_upload_download,Messenger upload/download,60,data/real_transfer/v02/images/messenger_upload_download,"Send the clean image through a messenger, then download the received image."
+phone_screenshot_resave,Phone screenshot/resave,60,data/real_transfer/v02/images/phone_screenshot_resave,"Open the clean image on a phone, take a screenshot, crop only if needed, then resave/export."
+video_call_frame_capture,Video-call or screen-share frame capture,60,data/real_transfer/v02/images/video_call_frame_capture,Show the clean image through a call or screen share and save a captured frame.

@@ -226,12 +226,12 @@ model-family differences. Details are in
 
 ## Next Step
 
-The next research step should be a real transfer validation sample or another
-strong pretrained model family on the same v0.4 manifest before expanding row
-count. Candidate directions:
+The next research step should be the v0.2 real transfer validation block or
+another strong pretrained model family on the same v0.4 manifest before
+expanding row count. Candidate directions:
 
 1. add at least one non-CLIP/OpenCLIP VLM family with usable clean accuracy;
 2. extend confidence-collapse and calibration tables to any further usable
    zero-shot/VLM model;
-3. collect a small real transfer validation sample and compare its ranking
-   against native CURE-OR severity rankings.
+3. collect the 180-output v0.2 real transfer validation sample and compare its
+   ranking against native CURE-OR severity rankings.

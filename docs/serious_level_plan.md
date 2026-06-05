@@ -227,13 +227,18 @@ Do not publish the main Kaggle version until these are done:
   - conclusion: DataComp XL improves on smaller CLIP/OpenCLIP zero-shot rows
     and is third by mean native accuracy, but still collapses near chance on
     salt-and-pepper and grayscale salt-and-pepper noise.
-- Real-transfer validation v0.1 scaffold, prepared but not evaluated:
-  - 10 clean mini-CURE-OR test source images pinned in
-    `data/real_transfer/v01/source_selection_v01.csv`;
-  - preflight validator added at `scripts/validate_real_transfer_pairs.py`;
-  - CLIP ViT-B/16 and OpenCLIP ViT-B/32 evaluation configs prepared;
+- Real-transfer validation v0.2 scaffold, prepared but not evaluated:
+  - 30 clean mini-CURE-OR test source images pinned in
+    `data/real_transfer/v02/source_selection_v02.csv`;
+  - 3 real transfer pipelines and 2 repeats per source/pipeline;
+  - 180 planned real transferred outputs in
+    `data/real_transfer/v02/pairs_template.csv`;
+  - preflight validator checks row count, label coverage, recipe coverage, and
+    repeat coverage;
+  - CLIP ViT-B/16, CLIP ViT-B/32, OpenCLIP ViT-B/32 LAION2B, and DataComp XL
+    evaluation configs prepared;
   - remaining blocker: real transferred outputs and filled
-    `data/real_transfer/v01/pairs.csv`.
+    `data/real_transfer/v02/pairs.csv`.
 
 ## Stretch Gate For arXiv/Workshop
 
@@ -260,11 +265,11 @@ For arXiv or workshop seriousness, add:
 
 ## Immediate Next Steps
 
-1. Collect one small real app-transfer validation sample using
-   `docs/real_transfer_validation_protocol.md`.
-2. Validate `data/real_transfer/v01/pairs.csv`, build
-   `data/real_transfer/v01/manifest.csv`, and evaluate it with CLIP ViT-B/16
-   and OpenCLIP.
+1. Collect the v0.2 real app-transfer validation sample using
+   `docs/real_transfer_validation_protocol_v02.md`.
+2. Validate `data/real_transfer/v02/pairs.csv`, build
+   `data/real_transfer/v02/manifest.csv`, and evaluate it with the four
+   prepared zero-shot configs.
 3. Add another strong pretrained model family on the v0.4 Full-CURE-OR
    manifest, preferably a non-CLIP/OpenCLIP VLM family rather than another
    nearby CLIP variant or nearest-centroid prototype.

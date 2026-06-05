@@ -127,5 +127,6 @@ pattern.
 
 ## Next Step
 
-The next high-value step is a real transfer validation sample or another
-stronger pretrained VLM family that is not just a nearby CLIP/OpenCLIP variant.
+The next high-value step is the 180-output v0.2 real transfer validation block
+or another stronger pretrained VLM family that is not just a nearby
+CLIP/OpenCLIP variant.
