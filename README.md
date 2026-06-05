@@ -168,6 +168,8 @@ level-5 accuracy but still retains 0.4997 mean confidence, while OpenCLIP
 ViT-B/32 LAION2B reaches 0.0890 accuracy with 0.4781 confidence. The grayscale
 control adds a third
 guardrail: grayscale alone hurts, but it does not explain level-5 collapse.
+DataComp XL reaches 0.3908 on grayscale no-challenge control while falling to
+0.1451 on native level 5.
 The prototype pass adds a fourth finding: non-CLIP frozen-feature classifiers
 produce different level-5 robustness rankings. HGNetV2-B0 and
 MobileNetV3-Small make gaussian blur a top collapse case, while ConvNeXt-Tiny

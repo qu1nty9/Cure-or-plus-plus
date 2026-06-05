@@ -108,10 +108,12 @@ gap and a 0.3240 high-confidence wrong rate. Its worst level-5 overconfidence
 case is type 18, grayscale salt-and-pepper noise: 0.0100 accuracy with 0.7393
 mean confidence. Details are in `reports/full_cure_or_confidence_v04.md`.
 
-The type-10 grayscale no-challenge control is also complete. It uses 499 paired
-control rows and shows that grayscale alone is damaging but cannot explain the
-native level-5 collapse. CLIP ViT-B/16 accuracy is 0.3166 on grayscale control
-versus 0.0994 on native level 5. Details are in
+The type-10 grayscale no-challenge control is also complete for the four usable
+CLIP/OpenCLIP-family zero-shot baselines. It uses 499 paired control rows and
+shows that grayscale alone is damaging but cannot explain the native level-5
+collapse. CLIP ViT-B/16 accuracy is 0.3166 on grayscale control versus 0.0994
+on native level 5. DataComp XL accuracy is 0.3908 on grayscale control versus
+0.1451 on native level 5. Details are in
 `reports/full_cure_or_grayscale_control_v04.md`.
 
 The non-CLIP prototype pass is also complete. It adds HGNetV2-B0,

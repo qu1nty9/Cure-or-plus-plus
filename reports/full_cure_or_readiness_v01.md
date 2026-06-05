@@ -25,8 +25,8 @@ Completed locally:
   diagnostic result.
 - v0.4 confidence-collapse and calibration analysis for the four usable
   CLIP/OpenCLIP-family zero-shot baselines.
-- v0.4 type-10 grayscale no-challenge control for the first three usable
-  zero-shot baselines.
+- v0.4 type-10 grayscale no-challenge control for the four usable
+  CLIP/OpenCLIP-family zero-shot baselines.
 - v0.4 leave-clean-condition-out prototype baselines with HGNetV2-B0,
   MobileNetV3-Small, ConvNeXt-Tiny, and DINOv2 ViT-S/14.
 - v0.4 OpenCLIP ViT-B/16 DataComp XL stronger-baseline run.
@@ -169,6 +169,7 @@ Grayscale control result:
 | --- | ---: | ---: | ---: | ---: |
 | CLIP ViT-B/16 | 0.4440 | 0.3166 | 0.1274 | 0.0994 |
 | OpenCLIP ViT-B/32 LAION2B | 0.4120 | 0.2465 | 0.1655 | 0.0890 |
+| OpenCLIP ViT-B/16 DataComp XL | 0.5460 | 0.3908 | 0.1552 | 0.1451 |
 | CLIP ViT-B/32 | 0.3500 | 0.2244 | 0.1256 | 0.0741 |
 | HGNetV2-B0 Prototype | 0.6240 | 0.4429 | 0.1811 | 0.1219 |
 | MobileNetV3-Small Prototype | 0.5560 | 0.2846 | 0.2714 | 0.0960 |
@@ -271,6 +272,8 @@ Artifacts:
 - `results/dinov2_vit_small_patch14_full_cure_or_prototype_v04_summary.csv`
 - `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`
 - `results/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04_summary.csv`
+- `configs/openclip_vit_b16_datacomp_xl_full_cure_or_grayscale_control_v04.json`
+- `results/openclip_vit_b16_datacomp_xl_full_cure_or_grayscale_control_v04_summary.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_comparison.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`

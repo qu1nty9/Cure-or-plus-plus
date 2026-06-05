@@ -46,9 +46,10 @@ disk.
 | DINOv2 ViT-S/14 Prototype | 0.7520 | 0.7415 | 0.4393 | 0.5884 | 0.4940 | 0.4354 | 0.3819 | 0.2766 |
 
 For context, the strongest zero-shot baseline in the current v0.4 block is
-CLIP ViT-B/16 with clean accuracy 0.4440 and mean level-5 native accuracy
-0.0994. DINOv2 ViT-S/14 is the strongest current baseline on clean accuracy,
-grayscale control, mean native accuracy, and every native challenge level.
+OpenCLIP ViT-B/16 DataComp XL with clean accuracy 0.5460, grayscale-control
+accuracy 0.3908, and mean level-5 native accuracy 0.1451. DINOv2 ViT-S/14 is
+the strongest current baseline on clean accuracy, grayscale control, mean native
+accuracy, and every native challenge level.
 ConvNeXt-Tiny is the second strongest prototype on mean native and level-5
 native accuracy. MobileNetV3-Small is weaker than HGNetV2-B0, ConvNeXt-Tiny,
 and DINOv2, but its mean native accuracy is close to CLIP ViT-B/16 while using a

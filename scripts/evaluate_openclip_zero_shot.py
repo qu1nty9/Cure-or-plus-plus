@@ -46,10 +46,16 @@ def main() -> int:
         rows = rows[: args.limit]
 
     device = choose_device(args.device, torch)
+    pretrained_source = config["pretrained"]
+    if config.get("pretrained_path"):
+        pretrained_source = str(resolve_project_path(config["pretrained_path"]))
+
     print(f"Loading {config['model_name']} {config['pretrained']} on {device}")
+    if pretrained_source != config["pretrained"]:
+        print(f"Using local checkpoint: {pretrained_source}")
     model, _, preprocess = open_clip.create_model_and_transforms(
         config["model_name"],
-        pretrained=config["pretrained"],
+        pretrained=pretrained_source,
     )
     tokenizer = open_clip.get_tokenizer(config["model_name"])
     model = model.to(device)
@@ -182,7 +188,7 @@ def write_csv(path: Path, rows: list[dict]) -> None:
         path.write_text("", encoding="utf-8")
         return
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

@@ -173,6 +173,7 @@ Do not publish the main Kaggle version until these are done:
   - paired grayscale control rows: 499;
   - CLIP ViT-B/16 grayscale control accuracy: 0.3166;
   - OpenCLIP grayscale control accuracy: 0.2465;
+  - DataComp XL grayscale control accuracy: 0.3908;
   - CLIP ViT-B/32 grayscale control accuracy: 0.2244;
   - conclusion: grayscale alone is damaging but does not explain native
     level-5 collapse.
@@ -276,5 +277,4 @@ For arXiv or workshop seriousness, add:
 4. Add confidence-collapse and calibration tables for each further usable
    zero-shot/VLM Full-CURE-OR model.
 5. Add type 10, grayscale no-challenge, as a separate control condition,
-   completed for the first three CLIP/OpenCLIP zero-shot baselines and still
-   open for DataComp XL.
+   completed for the current four CLIP/OpenCLIP-family zero-shot baselines.

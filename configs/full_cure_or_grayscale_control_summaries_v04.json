@@ -11,6 +11,11 @@
       "summary_path": "results/openclip_vit_b32_laion2b_full_cure_or_grayscale_control_v04_summary.csv"
     },
     {
+      "name": "OpenCLIP ViT-B/16 DataComp XL",
+      "slug": "openclip_vit_b16_datacomp_xl",
+      "summary_path": "results/openclip_vit_b16_datacomp_xl_full_cure_or_grayscale_control_v04_summary.csv"
+    },
+    {
       "name": "CLIP ViT-B/32",
       "slug": "clip_vit_b32",
       "summary_path": "results/clip_vit_b32_full_cure_or_grayscale_control_v04_summary.csv"
