@@ -38,6 +38,7 @@ Completed locally:
   placeholder.
 - dataset card, evaluation card, and arXiv readiness matrix drafted for the
   current v0.4 state.
+- LaTeX paper scaffold prepared under `paper/`.
 - real-transfer validation v0.2 source selection, validator, and four
   zero-shot evaluation configs prepared.
 
@@ -304,6 +305,9 @@ Artifacts:
 - `docs/dataset_card_cure_or_pp_v04.md`
 - `docs/evaluation_card_full_cure_or_v04.md`
 - `reports/arxiv_readiness_matrix_v04.md`
+- `paper/main.tex`
+- `paper/references.bib`
+- `paper/README.md`
 - `data/real_transfer/v02/source_selection_v02.csv`
 - `data/real_transfer/v02/recipe_plan_v02.csv`
 - `data/real_transfer/v02/pairs_template.csv`

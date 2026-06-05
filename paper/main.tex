@@ -1,0 +1,105 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+
+\title{CURE-OR++: Object Recognition Robustness Under Native CURE-OR Challenges and Digital Transfer Pipelines}
+\author{CURE-OR++ Project}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Object-recognition systems are often evaluated on clean or synthetically corrupted images, but practical image use also includes acquisition artifacts, digital transfer, recompression, screenshots, and channel changes. CURE-OR++ builds a compact, reproducible benchmark layer around CURE-OR for measuring how vision models fail under object-centric native challenge conditions and planned real transfer pipelines. On the Full-CURE-OR v0.4 probe, eight usable baselines cover CLIP/OpenCLIP zero-shot models and frozen-feature prototype classifiers. The strongest current level-5 baseline, DINOv2 ViT-S/14 Prototype, reaches only 0.2766 mean level-5 accuracy despite 0.7520 clean accuracy. Across all eight usable baselines, grayscale salt-and-pepper noise, salt-and-pepper noise, and grayscale gaussian blur collapse to near-chance accuracy, with all models at the floor threshold. Confidence analysis shows that stronger zero-shot models can remain substantially overconfident under severe native challenges: OpenCLIP ViT-B/16 DataComp XL reaches 0.1451 level-5 accuracy while retaining 0.4997 mean confidence. A type-10 grayscale control confirms that grayscale conversion alone is damaging but does not explain the full native level-5 collapse. The remaining validation step is a 180-output real-transfer block covering messenger upload/download, phone screenshot/resave, and video-call frame capture pipelines.
+\end{abstract}
+
+\section{Introduction}
+
+Robustness benchmarks often study isolated corruptions such as blur, noise, compression, or exposure shifts. Real image use is frequently more operational: images are captured, resized, recompressed, screenshotted, shared through applications, restored, or viewed through video-call pipelines. CURE-OR++ is designed around that narrower operational question: how do object-recognition baselines fail under reproducible object-centric challenge and transfer conditions?
+
+This draft focuses on the Full-CURE-OR v0.4 controlled probe. The current repository also contains a smaller CURE-OR++ v0.1 Kaggle-ready artifact and a prepared real-transfer v0.2 protocol. The latter is the main remaining external-validity gap before a final public paper.
+
+\paragraph{Current contributions.}
+The current artifact provides:
+\begin{enumerate}
+  \item a manifest-driven Full-CURE-OR v0.4 probe over clean rows and native challenge rows;
+  \item a multi-family baseline comparison covering CLIP/OpenCLIP zero-shot models, a stronger DataComp XL OpenCLIP variant, and four non-CLIP prototype classifiers;
+  \item a level-5 consensus failure analysis across eight usable baselines;
+  \item confidence and calibration analysis for the usable CLIP/OpenCLIP-family zero-shot rows;
+  \item a type-10 grayscale control and paired color-versus-grayscale challenge-family analysis;
+  \item a prepared real-transfer v0.2 protocol for messenger, screenshot, and video-call pipelines.
+\end{enumerate}
+
+\section{Benchmark Design}
+
+CURE-OR++ uses manifest-driven evaluation. Each row links a source image, output image, object label, challenge family, recipe, severity, and metadata. This keeps aggregate results traceable to well-defined image groups and makes the benchmark easy to audit.
+
+The Full-CURE-OR v0.4 track uses 500 clean probe rows and 38,999 native challenge probe rows across official challenge types 02-09 and 11-18. It also includes a type-10 grayscale no-challenge control. The real-transfer v0.2 track is prepared but not evaluated: it pins 30 clean mini-CURE-OR sources, three pipelines, two repeats per source and pipeline, and 180 expected transferred outputs.
+
+\section{Models}
+
+The current main table excludes the SigLIP Base P16 224 diagnostic row because the present zero-shot prompt protocol produced a clean-accuracy failure. The eight usable baseline rows are DINOv2 ViT-S/14 Prototype, ConvNeXt-Tiny Prototype, OpenCLIP ViT-B/16 DataComp XL, HGNetV2-B0 Prototype, CLIP ViT-B/16, MobileNetV3-Small Prototype, OpenCLIP ViT-B/32 LAION2B, and CLIP ViT-B/32.
+
+\section{Results}
+
+The paper-ready tables below are generated from tracked aggregate CSV files by
+\path{scripts/build_paper_tables.py}. Native means are weighted by row count.
+
+{\small
+\input{../reports/full_cure_or_paper_tables_v04.tex}
+}
+
+\subsection{Level-5 Robustness}
+
+The strongest current level-5 row is DINOv2 ViT-S/14 Prototype: 0.7520 clean accuracy, 0.4393 native mean accuracy, and 0.2766 native level-5 mean accuracy. The strongest zero-shot contrastive row is OpenCLIP ViT-B/16 DataComp XL: 0.5460 clean accuracy, 0.2561 native mean accuracy, and 0.1451 native level-5 mean accuracy. Stronger features and pretraining improve the leaderboard, but they do not remove the severe native challenge collapse.
+
+\subsection{Consensus Failure Ordering}
+
+The top three consensus level-5 failures are grayscale salt-and-pepper noise, salt-and-pepper noise, and grayscale gaussian blur. All eight usable baselines are at the floor threshold on these three challenges. Pairwise level-5 rank correlations range from 0.892 to 0.988, suggesting a stable severe-challenge hardness core rather than arbitrary per-model failure lists.
+
+\subsection{Confidence and Calibration}
+
+The confidence pass currently covers the usable CLIP/OpenCLIP-family zero-shot rows. OpenCLIP ViT-B/16 DataComp XL reaches 0.1451 level-5 accuracy while retaining 0.4997 mean confidence. Its worst level-5 overconfidence case is grayscale salt-and-pepper noise, with 0.0100 accuracy, 0.7393 mean confidence, and a 0.9760 high-confidence wrong rate. Severe native challenge failure can therefore preserve high confidence.
+
+\subsection{Grayscale Control}
+
+The type-10 grayscale no-challenge control is damaging but does not explain the full level-5 collapse. For OpenCLIP ViT-B/16 DataComp XL, grayscale control accuracy is 0.3908 while native level-5 mean accuracy is 0.1451. Paired channel-effect analysis also shows that every usable model is worse on grayscale level-5 native challenges than on paired color level-5 native challenges.
+
+\section{Related Work}
+
+CURE-OR++ should be positioned as a compact, object-centric robustness artifact rather than a replacement for broad VLM robustness suites. Nearby benchmarks include R-Bench~\cite{rbench}, MLLM-IC~\cite{mllmic}, VLM-RobustBench~\cite{vlmrobustbench}, and MMD-Bench/CLEAR~\cite{mmdbenchclear}. The intended differentiator is not scale, but transparent generation, paired metadata, small object-recognition scope, and failure tables that are easy to inspect by object class, challenge recipe, severity, and model family.
+
+\section{Limitations}
+
+Real-transfer v0.2 is prepared but not yet evaluated. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row.
+
+\section{Real-Transfer Placeholder}
+
+This section should be replaced after the 180-output real-transfer v0.2 block is collected, activated, and evaluated. The prepared command is:
+
+\begin{verbatim}
+.venv/bin/python scripts/activate_real_transfer_protocol.py --require-ready
+\end{verbatim}
+
+The planned real-transfer rows evaluate:
+
+\begin{itemize}
+  \item CLIP ViT-B/16;
+  \item CLIP ViT-B/32;
+  \item OpenCLIP ViT-B/32 LAION2B;
+  \item OpenCLIP ViT-B/16 DataComp XL.
+\end{itemize}
+
+\section{Conclusion}
+
+CURE-OR++ currently provides a strong pre-paper benchmark artifact. The Full-CURE-OR v0.4 probe shows severe native challenge failures across model families, consensus floor failures under salt-and-pepper and blur variants, and confidence-preserving errors in stronger zero-shot models. The critical next step is real-transfer v0.2, which will test whether actual app and device transfer pipelines reproduce related failure behavior.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

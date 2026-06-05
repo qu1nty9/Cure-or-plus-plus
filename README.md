@@ -101,6 +101,7 @@ Serious-level work has started:
   real-transfer placeholder.
 - Dataset card, evaluation card, and arXiv readiness matrix for the current
   v0.4 benchmark state.
+- LaTeX paper scaffold under `paper/` with generated table input.
 - Real-transfer validation v0.2 protocol: 30 sources, 3 real pipelines, 2
   repeats, 180 planned outputs, and four zero-shot evaluation configs.
 
@@ -203,6 +204,8 @@ Release-quality documentation is now split into
 `docs/dataset_card_cure_or_pp_v04.md`,
 `docs/evaluation_card_full_cure_or_v04.md`, and
 `reports/arxiv_readiness_matrix_v04.md`.
+The LaTeX paper scaffold is in `paper/main.tex` and currently compiles as a
+draft against the generated table pack.
 The real-transfer validation scaffold in `reports/real_transfer_v02_readiness.md`
 is prepared but not yet evaluated; it needs 180 real transferred output images
 and activation through `scripts/activate_real_transfer_protocol.py`.

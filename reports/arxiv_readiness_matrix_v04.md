@@ -18,6 +18,7 @@ substantial. The main remaining blocker is real-transfer v0.2.
 | Consensus analysis | Ready | top three level-5 failures floor 8/8; rank correlations 0.892-0.988 | none before draft |
 | Paper tables | Ready | Markdown, CSV, and LaTeX paper-table pack generated | final formatting in paper source |
 | Technical report draft | Draft-ready | `reports/cure_or_pp_technical_report_draft_v04.md` | convert to final paper structure |
+| LaTeX paper source | Draft-ready | `paper/main.tex`, `paper/references.bib` | update after real-transfer v0.2 and final citation verification |
 | Dataset card | Draft-ready | `docs/dataset_card_cure_or_pp_v04.md` | update if public release packaging changes |
 | Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after real-transfer v0.2 |
 | Related work | Partial | `docs/related_work_v01.md` | turn notes into final related-work prose/table |

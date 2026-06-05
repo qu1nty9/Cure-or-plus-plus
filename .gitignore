@@ -44,3 +44,15 @@ data/real_transfer/**/images/**/*.HEIC
 data/real_transfer/**/collection_pack/
 data/real_transfer/**/pairs.csv
 data/real_transfer/**/manifest.csv
+
+# Local LaTeX build artifacts.
+paper/build/
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz

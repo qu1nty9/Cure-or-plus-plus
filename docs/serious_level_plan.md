@@ -238,6 +238,13 @@ Do not publish the main Kaggle version until these are done:
   - arXiv readiness matrix: `reports/arxiv_readiness_matrix_v04.md`;
   - current recommendation: strong pre-paper benchmark artifact, not final
     arXiv submission until real-transfer v0.2 is evaluated.
+- LaTeX paper scaffold, completed:
+  - source: `paper/main.tex`;
+  - bibliography placeholders: `paper/references.bib`;
+  - generated tables are included from
+    `reports/full_cure_or_paper_tables_v04.tex`;
+  - PDF compiles locally through bundled Tectonic, with remaining layout
+    warnings limited to draft table/reference formatting.
 - OpenCLIP ViT-B/16 DataComp XL stronger-baseline pass, completed:
   - config exists at
     `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`;
@@ -288,6 +295,7 @@ For arXiv or workshop seriousness, add:
 - technical report draft, completed but still pending real-transfer results.
 - dataset/evaluation cards and arXiv readiness matrix, completed for the
   current v0.4 state.
+- LaTeX paper scaffold, completed as a draft source.
 
 ## Immediate Next Steps
 
