@@ -24,10 +24,16 @@ Current template validation:
 `files_ready` is false because the actual real-transfer output images have not
 been collected yet.
 
+A local collection pack has been generated at
+`data/real_transfer/v02/collection_pack/`. It contains the 30 selected source
+images, an HTML index, a contact sheet, and a 180-row collection checklist. The
+pack and future real-transfer image payloads are intentionally ignored by Git.
+
 ## Artifacts
 
 - `docs/real_transfer_validation_protocol_v02.md`
 - `scripts/prepare_real_transfer_protocol.py`
+- `scripts/build_real_transfer_collection_pack.py`
 - `scripts/validate_real_transfer_pairs.py`
 - `scripts/build_real_transfer_manifest.py`
 - `data/real_transfer/v02/source_selection_v02.csv`
@@ -54,6 +60,9 @@ repeat captures rather than a single fragile sample per source.
 ## Next Step
 
 Collect the 180 real transferred outputs at the paths pinned in
-`data/real_transfer/v02/pairs_template.csv`, copy the template to
-`data/real_transfer/v02/pairs.csv`, fill metadata columns, then run strict
-validation and the four prepared zero-shot configs.
+`data/real_transfer/v02/pairs_template.csv`, using
+`data/real_transfer/v02/collection_pack/index.html` and
+`data/real_transfer/v02/collection_pack/collection_checklist.csv` as the
+collection guide. Then copy the template to `data/real_transfer/v02/pairs.csv`,
+fill metadata columns, run strict validation, and run the four prepared
+zero-shot configs.

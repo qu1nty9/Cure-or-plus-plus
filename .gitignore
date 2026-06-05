@@ -34,3 +34,13 @@ results/*
 !results/*gaps*.csv
 !results/per_class_failures*.csv
 results/*_predictions.csv
+
+# Real-transfer payloads are collected locally and must not be committed.
+data/real_transfer/**/images/**/*.jpg
+data/real_transfer/**/images/**/*.jpeg
+data/real_transfer/**/images/**/*.png
+data/real_transfer/**/images/**/*.heic
+data/real_transfer/**/images/**/*.HEIC
+data/real_transfer/**/collection_pack/
+data/real_transfer/**/pairs.csv
+data/real_transfer/**/manifest.csv
