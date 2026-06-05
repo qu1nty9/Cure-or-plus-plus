@@ -34,6 +34,8 @@ Completed locally:
 - v0.4 consensus failure analysis for eight usable baselines.
 - v0.4 paper-table pack for leaderboard, consensus failures, and grayscale
   guardrail tables.
+- v0.4 technical report draft with claim discipline and real-transfer
+  placeholder.
 - real-transfer validation v0.2 source selection, validator, and four
   zero-shot evaluation configs prepared.
 
@@ -296,6 +298,7 @@ Artifacts:
 - `reports/full_cure_or_paper_control_table_v04.csv`
 - `reports/full_cure_or_paper_tables_v04.md`
 - `reports/full_cure_or_paper_tables_v04.tex`
+- `reports/cure_or_pp_technical_report_draft_v04.md`
 - `data/real_transfer/v02/source_selection_v02.csv`
 - `data/real_transfer/v02/recipe_plan_v02.csv`
 - `data/real_transfer/v02/pairs_template.csv`

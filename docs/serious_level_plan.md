@@ -226,6 +226,12 @@ Do not publish the main Kaggle version until these are done:
   - strongest current level-5 row: DINOv2 ViT-S/14 Prototype at 0.2766;
   - top consensus failure: grayscale salt-and-pepper noise, mean accuracy
     0.0092 with all eight usable baselines at the floor threshold.
+- Full-CURE-OR v0.4 technical report draft, completed:
+  - draft report: `reports/cure_or_pp_technical_report_draft_v04.md`;
+  - includes abstract, contributions, method summary, main results, limitations,
+    real-transfer placeholder, and public-claim discipline;
+  - explicitly blocks final public-paper claims until real-transfer v0.2 is
+    evaluated.
 - OpenCLIP ViT-B/16 DataComp XL stronger-baseline pass, completed:
   - config exists at
     `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`;
@@ -273,6 +279,7 @@ For arXiv or workshop seriousness, add:
   v0.4 baselines.
 - paper-ready benchmark table pack, completed for current eight usable v0.4
   baselines.
+- technical report draft, completed but still pending real-transfer results.
 
 ## Immediate Next Steps
 
