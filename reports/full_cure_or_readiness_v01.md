@@ -32,6 +32,8 @@ Completed locally:
 - v0.4 OpenCLIP ViT-B/16 DataComp XL stronger-baseline run.
 - v0.4 challenge-family/channel-effect analysis for eight usable baselines.
 - v0.4 consensus failure analysis for eight usable baselines.
+- v0.4 paper-table pack for leaderboard, consensus failures, and grayscale
+  guardrail tables.
 - real-transfer validation v0.2 source selection, validator, and four
   zero-shot evaluation configs prepared.
 
@@ -288,6 +290,12 @@ Artifacts:
 - `results/full_cure_or_probe_v04_with_prototypes_level5_consensus.csv`
 - `results/full_cure_or_probe_v04_with_prototypes_level5_rank_correlations.csv`
 - `reports/full_cure_or_consensus_v04.md`
+- `scripts/build_paper_tables.py`
+- `reports/full_cure_or_paper_model_table_v04.csv`
+- `reports/full_cure_or_paper_failure_table_v04.csv`
+- `reports/full_cure_or_paper_control_table_v04.csv`
+- `reports/full_cure_or_paper_tables_v04.md`
+- `reports/full_cure_or_paper_tables_v04.tex`
 - `data/real_transfer/v02/source_selection_v02.csv`
 - `data/real_transfer/v02/recipe_plan_v02.csv`
 - `data/real_transfer/v02/pairs_template.csv`

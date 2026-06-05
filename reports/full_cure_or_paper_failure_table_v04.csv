@@ -1,0 +1,7 @@
+rank,challenge_type,display_name,mean_accuracy,median_accuracy,floor_count,near_floor_count,top3_count,model_count,mean_rank_most_damaging
+1,18,Grayscale salt & pepper noise,0.00925,0.01,8,8,8,8,1.75
+2,09,Salt & pepper noise,0.01025,0.01,8,8,6,8,2.4375
+3,14,Grayscale gaussian blur,0.0115,0.01,8,8,8,8,2.5625
+4,05,Gaussian blur,0.015,0.014,7,8,3,8,3.625
+5,16,Grayscale dirty lens 1,0.025500000000000002,0.018000000000000002,5,7,1,8,4.625
+6,07,Dirty lens 1,0.08875,0.07500000000000001,0,2,0,8,6.75

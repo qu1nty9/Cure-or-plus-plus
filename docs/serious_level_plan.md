@@ -218,6 +218,14 @@ Do not publish the main Kaggle version until these are done:
   - pairwise level-5 rank correlations range from 0.892 to 0.988;
   - conclusion: the hardest level-5 failure ordering has a stable consensus
     core, with secondary model-family differences.
+- Full-CURE-OR v0.4 paper-table pack, completed:
+  - leaderboard, consensus failure, and grayscale-control guardrail tables
+    generated from tracked aggregate CSVs;
+  - Markdown report: `reports/full_cure_or_paper_tables_v04.md`;
+  - LaTeX snippets: `reports/full_cure_or_paper_tables_v04.tex`;
+  - strongest current level-5 row: DINOv2 ViT-S/14 Prototype at 0.2766;
+  - top consensus failure: grayscale salt-and-pepper noise, mean accuracy
+    0.0092 with all eight usable baselines at the floor threshold.
 - OpenCLIP ViT-B/16 DataComp XL stronger-baseline pass, completed:
   - config exists at
     `configs/openclip_vit_b16_datacomp_xl_full_cure_or_probe_v04.json`;
@@ -263,6 +271,8 @@ For arXiv or workshop seriousness, add:
   v0.4 baselines.
 - consensus failure/rank-stability analysis, completed for current eight usable
   v0.4 baselines.
+- paper-ready benchmark table pack, completed for current eight usable v0.4
+  baselines.
 
 ## Immediate Next Steps
 

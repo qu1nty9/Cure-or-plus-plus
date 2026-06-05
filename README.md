@@ -96,6 +96,7 @@ Serious-level work has started:
 - Full-CURE-OR v0.4 challenge-family/channel-effect analysis across eight
   usable baselines.
 - Full-CURE-OR v0.4 consensus failure analysis across eight usable baselines.
+- Full-CURE-OR v0.4 paper-table pack with Markdown, CSV, and LaTeX outputs.
 - Real-transfer validation v0.2 protocol: 30 sources, 3 real pipelines, 2
   repeats, 180 planned outputs, and four zero-shot evaluation configs.
 
@@ -188,6 +189,9 @@ near chance on both sides.
 The consensus analysis in `reports/full_cure_or_consensus_v04.md` adds a sixth
 finding: the top three level-5 failure types are at floor accuracy for all eight
 usable baselines, and pairwise level-5 rank correlations stay high.
+The paper-table pack in `reports/full_cure_or_paper_tables_v04.md` collects the
+main leaderboard, consensus failure table, and grayscale-control guardrail into
+Markdown plus CSV and LaTeX artifacts for the technical writeup.
 The real-transfer validation scaffold in `reports/real_transfer_v02_readiness.md`
 is prepared but not yet evaluated; it needs 180 real transferred output images
 and activation through `scripts/activate_real_transfer_protocol.py`.
