@@ -23,6 +23,12 @@ REQUIRED_FILES = [
     "docs/dataset_card_cure_or_pp_v04.md",
     "docs/evaluation_card_full_cure_or_v04.md",
     "reports/arxiv_readiness_matrix_v04.md",
+    "configs/vlm_api_track_v01.json",
+    "docs/vlm_api_track_plan_v01.md",
+    "reports/vlm_api_track_v01_prompt_pack.jsonl",
+    "reports/vlm_api_track_v01_prompt_pack_summary.json",
+    "scripts/build_vlm_prompt_pack.py",
+    "scripts/evaluate_vlm_response_pack.py",
 ]
 
 SUMMARY_FILES = [
@@ -57,6 +63,7 @@ def main() -> int:
     checks.extend(check_real_transfer_tables())
     checks.extend(check_summary_files())
     checks.extend(check_paper_links())
+    checks.extend(check_vlm_prompt_pack())
     checks.extend(check_forbidden_public_strings())
 
     failed = [check for check in checks if not check["passed"]]
@@ -168,6 +175,27 @@ def check_paper_links() -> list[dict]:
     ]
 
 
+def check_vlm_prompt_pack() -> list[dict]:
+    summary_path = resolve_project_path("reports/vlm_api_track_v01_prompt_pack_summary.json")
+    pack_path = resolve_project_path("reports/vlm_api_track_v01_prompt_pack.jsonl")
+    if not summary_path.exists() or not pack_path.exists():
+        return [check("vlm_prompt_pack", False, "missing prompt pack or summary")]
+
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    prompt_rows = load_jsonl(pack_path)
+    checks = [
+        check("vlm_prompt_pack_rows", len(prompt_rows) == 210, f"rows={len(prompt_rows)} expected=210"),
+        check("vlm_prompt_pack_summary_rows", summary.get("row_count") == 210, f"row_count={summary.get('row_count')} expected=210"),
+        check("vlm_prompt_pack_clean_rows", summary.get("family_counts", {}).get("clean") == 30, f"clean={summary.get('family_counts', {}).get('clean')} expected=30"),
+        check("vlm_prompt_pack_real_rows", summary.get("family_counts", {}).get("real_transfer") == 180, f"real_transfer={summary.get('family_counts', {}).get('real_transfer')} expected=180"),
+        check("vlm_prompt_pack_option_count", summary.get("option_count") == 10, f"option_count={summary.get('option_count')} expected=10"),
+    ]
+    required_fields = {"sample_id", "image_path", "label", "answer_letter", "prompt", "options"}
+    present_fields = set(prompt_rows[0].keys()) if prompt_rows else set()
+    checks.append(check("vlm_prompt_pack_fields", required_fields.issubset(present_fields), f"missing={sorted(required_fields - present_fields)}"))
+    return checks
+
+
 def check_forbidden_public_strings() -> list[dict]:
     files = []
     for base in TEXT_SCAN_PATHS:
@@ -197,6 +225,17 @@ def load_csv(path: Path) -> list[dict[str, str]]:
         return []
     with path.open("r", newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def load_jsonl(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    rows = []
+    with path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            if line.strip():
+                rows.append(json.loads(line))
+    return rows
 
 
 def check(name: str, passed: bool, detail: str) -> dict:

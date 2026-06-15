@@ -50,6 +50,9 @@ Real-transfer confidence intervals use source-level bootstrap resampling over th
 \paragraph{Release boundary.}
 The repository tracks code, configs, aggregate reports, paper tables, and generated figures. Raw CURE-OR images, local real-transfer payloads, per-image prediction dumps, and source-dataset archives remain excluded from Git and are governed by the upstream dataset terms.
 
+\paragraph{Planned VLM/API track.}
+The repository also defines a separate multiple-choice visual QA prompt pack for a future VLM/API evaluation over the same real-transfer v0.2 source set. This track is intentionally kept outside the CLIP/OpenCLIP/prototype leaderboard: provider models produce text responses, have provider-specific versioning, and require answer extraction and raw-response auditing. The initial prompt pack contains 210 image-question rows per model, covering 30 clean source images and 180 transferred outputs.
+
 \section{Models}
 
 The current main table excludes the SigLIP Base P16 224 diagnostic row because the present zero-shot prompt protocol produced a clean-accuracy failure. The eight usable baseline rows are DINOv2 ViT-S/14 Prototype, ConvNeXt-Tiny Prototype, OpenCLIP ViT-B/16 DataComp XL, HGNetV2-B0 Prototype, CLIP ViT-B/16, MobileNetV3-Small Prototype, OpenCLIP ViT-B/32 LAION2B, and CLIP ViT-B/32.
@@ -99,11 +102,13 @@ Real-transfer v0.2 evaluates 30 clean mini-CURE-OR sources across 10 labels, thr
 
 \section{Related Work}
 
-CURE-OR++ should be positioned as a compact, object-centric robustness artifact rather than a replacement for broad VLM robustness suites. Nearby benchmarks include R-Bench~\cite{rbench}, MLLM-IC~\cite{mllmic}, VLM-RobustBench~\cite{vlmrobustbench}, and MMD-Bench/CLEAR~\cite{mmdbenchclear}. The intended differentiator is not scale, but transparent generation, paired metadata, small object-recognition scope, and failure tables that are easy to inspect by object class, challenge recipe, severity, and model family.
+CURE-OR++ should be positioned as a compact, object-centric robustness artifact rather than a replacement for broad VLM robustness suites. Nearby benchmarks include R-Bench~\cite{rbench}, which studies real-world corruptions for large multimodal models; MLLM-IC~\cite{mllmic}, which benchmarks multimodal models against image corruptions; VLM-RobustBench~\cite{vlmrobustbench}, which aggregates many corrupted settings over standard multimodal benchmarks; and MMD-Bench/CLEAR~\cite{mmdbenchclear}, which studies degraded-image understanding and restoration-oriented training. These works are broader than CURE-OR++ in model scope, task scope, or corruption coverage.
+
+The intended differentiator is not scale, but transparent generation, paired metadata, small object-recognition scope, and failure tables that are easy to inspect by object class, challenge recipe, severity, and model family. The planned VLM/API track should therefore be interpreted as a bridge to modern multimodal assistants rather than as the central benchmark contribution of the current artifact.
 
 \section{Limitations}
 
-Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The current VLM/API-style evaluation track is not yet included, so results should be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
+Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API prompt pack is prepared, but no provider-model results are reported in this draft; results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
 
 \section{Conclusion}
 

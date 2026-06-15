@@ -6,7 +6,8 @@ CURE-OR++ is currently a strong pre-paper benchmark artifact, not a final
 arXiv-ready paper. The Full-CURE-OR v0.4 controlled benchmark evidence is
 substantial, and the real-transfer v0.2 external-validity guardrail has now
 been collected and evaluated. The remaining work is paper integration,
-metadata cleanup, and optional broader VLM/model-family coverage.
+metadata cleanup, optional broader VLM/model-family coverage, and execution of
+the newly scaffolded VLM/API prompt pack if we want modern assistant results.
 
 ## Readiness Matrix
 
@@ -23,8 +24,9 @@ metadata cleanup, and optional broader VLM/model-family coverage.
 | LaTeX paper source | Draft-ready | `paper/main.tex`, `paper/references.bib` | update after real-transfer v0.2 and final citation verification |
 | Dataset card | Draft-ready | `docs/dataset_card_cure_or_pp_v04.md` | update if public release packaging changes |
 | Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after any added VLM/model rows |
-| Related work | Partial | `docs/related_work_v01.md` | turn notes into final related-work prose/table |
+| Related work | Draft-ready | `docs/related_work_v01.md`, expanded LaTeX related-work paragraph | verify final citations before public submission |
 | Real-transfer validation | Ready for draft | 180 outputs, activation status, four summaries, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
+| VLM/API track | Scaffolded, not executed | `configs/vlm_api_track_v01.json`, `reports/vlm_api_track_v01_prompt_pack.jsonl`, `scripts/evaluate_vlm_response_pack.py`, 210 prompt rows/model | run selected provider/open-weight models and report raw-response audit rules |
 | Public release | Not final | Kaggle v0.1 package exists locally | decide Kaggle/HF release boundary and license text |
 
 ## Minimum Path To A Serious Public Draft
@@ -41,6 +43,7 @@ metadata cleanup, and optional broader VLM/model-family coverage.
 The ideal version adds:
 
 - one additional usable pretrained VLM/model-family row if practical;
+- execution of the VLM/API prompt pack on selected frontier and open-weight VLMs;
 - confidence/calibration for any added zero-shot/VLM row;
 - final related-work table;
 - final dataset card and evaluation card;
@@ -51,5 +54,6 @@ The ideal version adds:
 Do not submit as a final arXiv paper yet. The work is strong enough for an
 internal technical report and close to a workshop-style benchmark draft. The
 critical external-validity gap is now reduced by real-transfer v0.2; the next
-bar is final paper integration, capture metadata, and optionally one more
-pretrained non-CLIP/OpenCLIP model family.
+bar is final paper integration, capture metadata, and optionally executing the
+VLM/API prompt pack or adding one more pretrained non-CLIP/OpenCLIP model
+family.

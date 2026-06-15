@@ -101,6 +101,16 @@ Real-transfer validation:
 - The result is best treated as an external-validity guardrail for the larger
   simulated and native CURE-OR findings, not as a broad deployment claim.
 
+VLM/API prompt-pack status:
+
+- A separate multiple-choice VLM/API prompt pack is prepared for real-transfer
+  v0.2.
+- It contains 210 image-question rows per model: 30 clean source rows and 180
+  transferred rows.
+- It is intentionally not mixed into the current CLIP/OpenCLIP/prototype
+  leaderboard because provider VLMs require text-answer extraction, exact model
+  versioning, and raw-response audit handling.
+
 ## Reproducibility Artifacts
 
 Paper-level outputs:
@@ -119,6 +129,7 @@ Primary aggregate reports:
 - `reports/full_cure_or_challenge_family_v04.md`
 - `reports/full_cure_or_consensus_v04.md`
 - `reports/real_transfer_v02_results.md`
+- `reports/vlm_api_track_v01_prompt_pack_summary.json`
 
 Primary scripts:
 
@@ -129,6 +140,8 @@ Primary scripts:
 - `scripts/compare_full_cure_or_control.py`
 - `scripts/import_real_transfer_clean_pack.py`
 - `scripts/build_real_transfer_report.py`
+- `scripts/build_vlm_prompt_pack.py`
+- `scripts/evaluate_vlm_response_pack.py`
 
 ## Interpretation Rules
 
@@ -155,7 +168,9 @@ Avoid:
 Before a final public paper:
 
 1. Integrate real-transfer v0.2 results into the final paper prose.
-2. Add confidence/calibration tables for any further usable zero-shot or VLM
+2. Execute the VLM/API prompt pack if modern assistant results are needed for
+   the first public paper.
+3. Add confidence/calibration tables for any further usable zero-shot or VLM
    families.
-3. Decide whether to add one additional pretrained non-CLIP/OpenCLIP VLM family
+4. Decide whether to add one additional pretrained non-CLIP/OpenCLIP VLM family
    or keep the current model set and focus on real-transfer validation.

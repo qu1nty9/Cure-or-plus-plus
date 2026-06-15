@@ -104,6 +104,9 @@ Serious-level work has started:
 - LaTeX paper scaffold under `paper/` with generated table input.
 - Real-transfer validation v0.2 protocol: 30 sources, 3 real pipelines, 2
   repeats, 180 planned outputs, and four zero-shot evaluation configs.
+- Real-transfer VLM/API prompt pack v0.1: 30 clean source rows and 180
+  transferred rows per model, designed for separate multiple-choice VLM
+  evaluation rather than direct mixing into the classifier leaderboard.
 
 Corrected test-split headline:
 
@@ -210,6 +213,10 @@ The real-transfer validation block is collected and evaluated. The activation
 status is in `reports/real_transfer_v02_activation_status.json`, and the
 source-matched results with bootstrap intervals and figures are in
 `reports/real_transfer_v02_results.md`.
+The VLM/API extension is scaffolded but not executed. The prompt pack summary
+is in `reports/vlm_api_track_v01_prompt_pack_summary.json`, and the planned
+protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can
+be evaluated with `scripts/evaluate_vlm_response_pack.py`.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

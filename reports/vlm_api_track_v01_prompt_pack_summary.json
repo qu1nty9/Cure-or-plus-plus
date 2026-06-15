@@ -1,0 +1,35 @@
+{
+  "family_counts": {
+    "clean": 30,
+    "real_transfer": 180
+  },
+  "label_counts": {
+    "baseball": 21,
+    "calcium_bottle": 21,
+    "canon_camera": 21,
+    "dymo_label_maker": 21,
+    "hair_brush": 21,
+    "lg_cell_phone": 21,
+    "pan": 21,
+    "shoes": 21,
+    "toy": 21,
+    "training_marker_cone": 21
+  },
+  "option_count": 10,
+  "provider_model_slots": [
+    "openai_frontier_vlm",
+    "anthropic_frontier_vlm",
+    "google_frontier_vlm",
+    "xai_frontier_vlm",
+    "open_weight_vlm_large",
+    "open_weight_vlm_small"
+  ],
+  "recipe_counts": {
+    "clean": 30,
+    "messenger_upload_download": 60,
+    "phone_screenshot_resave": 60,
+    "video_call_frame_capture": 60
+  },
+  "row_count": 210,
+  "track_id": "vlm_api_real_transfer_v01"
+}

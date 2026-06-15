@@ -1,5 +1,5 @@
 {
-  "check_count": 32,
+  "check_count": 44,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -47,7 +47,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=11431 min_size=1",
+      "detail": "exists=True size=12555 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -57,13 +57,43 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=5593 min_size=1",
+      "detail": "exists=True size=6247 min_size=1",
       "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=3527 min_size=1",
+      "detail": "exists=True size=4058 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1024 min_size=1",
+      "name": "required_file:configs/vlm_api_track_v01.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3560 min_size=1",
+      "name": "required_file:docs/vlm_api_track_plan_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=317772 min_size=1",
+      "name": "required_file:reports/vlm_api_track_v01_prompt_pack.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=752 min_size=1",
+      "name": "required_file:reports/vlm_api_track_v01_prompt_pack_summary.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=5777 min_size=1",
+      "name": "required_file:scripts/build_vlm_prompt_pack.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=14081 min_size=1",
+      "name": "required_file:scripts/evaluate_vlm_response_pack.py",
       "passed": true
     },
     {
@@ -149,6 +179,36 @@
     {
       "detail": "needle='source-level bootstrap confidence intervals'",
       "name": "paper_contains:source-level bootstrap confidence intervals",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_prompt_pack_rows",
+      "passed": true
+    },
+    {
+      "detail": "row_count=210 expected=210",
+      "name": "vlm_prompt_pack_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean=30 expected=30",
+      "name": "vlm_prompt_pack_clean_rows",
+      "passed": true
+    },
+    {
+      "detail": "real_transfer=180 expected=180",
+      "name": "vlm_prompt_pack_real_rows",
+      "passed": true
+    },
+    {
+      "detail": "option_count=10 expected=10",
+      "name": "vlm_prompt_pack_option_count",
+      "passed": true
+    },
+    {
+      "detail": "missing=[]",
+      "name": "vlm_prompt_pack_fields",
       "passed": true
     },
     {
