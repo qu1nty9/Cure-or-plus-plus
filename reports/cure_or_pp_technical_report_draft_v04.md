@@ -83,10 +83,13 @@ The Full-CURE-OR v0.4 track uses:
 - separate type-10 grayscale no-challenge control rows;
 - aggregate summaries for accuracy and mean confidence.
 
-The real-transfer v0.2 track is prepared but not evaluated. It pins 30 clean
+The real-transfer v0.2 track is now collected and evaluated. It pins 30 clean
 mini-CURE-OR source images, three real transfer pipelines, two repeats per
-source/pipeline, and 180 expected output images. Activation is handled by
-`scripts/activate_real_transfer_protocol.py` after the real outputs are present.
+source/pipeline, and 180 real transferred output images. Activation is handled
+by `scripts/activate_real_transfer_protocol.py`; the source-matched aggregate
+report is `reports/real_transfer_v02_results.md`. Collector-supplied metadata
+identifies iPhone 15 Pro as the capture device, WhatsApp as the messenger
+pipeline, and FaceTime as the video-call/video-transmission pipeline.
 
 ## Current Baselines
 
@@ -191,7 +194,9 @@ model family.
 
 ## Current Limitations
 
-- Real-transfer v0.2 is prepared but not yet evaluated.
+- Real-transfer v0.2 is small: 30 source images, three pipelines, and two
+  repeats per source/pipeline. It is an external-validity guardrail, not a
+  comprehensive real-world transfer benchmark.
 - Full-CURE-OR v0.4 is a controlled probe, not an exhaustive evaluation of all
   images in the original dataset.
 - SigLIP is currently a diagnostic prompt-protocol failure rather than a usable

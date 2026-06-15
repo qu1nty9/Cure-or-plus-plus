@@ -1,0 +1,95 @@
+{
+  "by_label": {
+    "baseball": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "calcium_bottle": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "canon_camera": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "dymo_label_maker": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "hair_brush": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "lg_cell_phone": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "pan": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "shoes": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "toy": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    },
+    "training_marker_cone": {
+      "expected": 18,
+      "missing": 0,
+      "present": 18
+    }
+  },
+  "by_recipe": {
+    "messenger_upload_download": {
+      "expected": 60,
+      "missing": 0,
+      "present": 60
+    },
+    "phone_screenshot_resave": {
+      "expected": 60,
+      "missing": 0,
+      "present": 60
+    },
+    "video_call_frame_capture": {
+      "expected": 60,
+      "missing": 0,
+      "present": 60
+    }
+  },
+  "by_repeat": {
+    "rep_01": {
+      "expected": 90,
+      "missing": 0,
+      "present": 90
+    },
+    "rep_02": {
+      "expected": 90,
+      "missing": 0,
+      "present": 90
+    }
+  },
+  "expected_output_count": 180,
+  "files_ready": true,
+  "first_missing_output_paths": [],
+  "manifest_build_skipped_reason": "",
+  "manifest_path": "data/real_transfer/v02/manifest.csv",
+  "manifest_written": true,
+  "missing_output_count": 0,
+  "pairs_path": "data/real_transfer/v02/pairs.csv",
+  "present_output_count": 180,
+  "ready_for_eval": true,
+  "schema_ready": true,
+  "validation_report_path": "reports/real_transfer_pairs_v02_validation.json"
+}

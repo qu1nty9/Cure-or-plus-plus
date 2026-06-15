@@ -255,24 +255,24 @@ Do not publish the main Kaggle version until these are done:
   - conclusion: DataComp XL improves on smaller CLIP/OpenCLIP zero-shot rows
     and is third by mean native accuracy, but still collapses near chance on
     salt-and-pepper and grayscale salt-and-pepper noise.
-- Real-transfer validation v0.2 scaffold, prepared but not evaluated:
+- Real-transfer validation v0.2, collected and evaluated:
   - 30 clean mini-CURE-OR test source images pinned in
     `data/real_transfer/v02/source_selection_v02.csv`;
   - 3 real transfer pipelines and 2 repeats per source/pipeline;
-  - 180 planned real transferred outputs in
-    `data/real_transfer/v02/pairs_template.csv`;
-  - preflight validator checks row count, label coverage, recipe coverage, and
-    repeat coverage;
+  - 180 real transferred outputs activated into the local ignored manifest;
+  - validator checks row count, label coverage, recipe coverage, repeat
+    coverage, and file completeness;
   - CLIP ViT-B/16, CLIP ViT-B/32, OpenCLIP ViT-B/32 LAION2B, and DataComp XL
-    evaluation configs prepared;
-  - remaining blocker: real transferred outputs and filled
-    `data/real_transfer/v02/pairs.csv`.
+    evaluated;
+  - source-matched report available at `reports/real_transfer_v02_results.md`;
+  - collector-supplied metadata identifies iPhone 15 Pro, WhatsApp, and
+    FaceTime as the real transfer device/app context.
 
 ## Stretch Gate For arXiv/Workshop
 
 For arXiv or workshop seriousness, add:
 
-- real app transfer validation:
+- real app transfer validation, completed at v0.2 scale:
   - actual messenger recompression samples;
   - actual screenshot/resave chain;
   - actual video-call frame capture or screen recording compression;
@@ -292,19 +292,17 @@ For arXiv or workshop seriousness, add:
   v0.4 baselines.
 - paper-ready benchmark table pack, completed for current eight usable v0.4
   baselines.
-- technical report draft, completed but still pending real-transfer results.
+- technical report draft, completed but still needs final integration of
+  real-transfer results.
 - dataset/evaluation cards and arXiv readiness matrix, completed for the
   current v0.4 state.
 - LaTeX paper scaffold, completed as a draft source.
 
 ## Immediate Next Steps
 
-1. Collect the v0.2 real app-transfer validation sample using
-   `docs/real_transfer_validation_protocol_v02.md`.
-2. Run `scripts/activate_real_transfer_protocol.py --require-ready` to create
-   `data/real_transfer/v02/pairs.csv`, validate file completeness, build
-   `data/real_transfer/v02/manifest.csv`, and then evaluate it with the four
-   prepared zero-shot configs.
+1. Integrate `reports/real_transfer_v02_results.md` into the final technical
+   report and LaTeX paper source.
+2. Optionally extract per-file capture dates from EXIF where present.
 3. Add another strong pretrained model family on the v0.4 Full-CURE-OR
    manifest, preferably a non-CLIP/OpenCLIP VLM family rather than another
    nearby CLIP variant or nearest-centroid prototype.

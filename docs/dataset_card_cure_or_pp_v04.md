@@ -4,7 +4,7 @@
 
 CURE-OR++ is a benchmark layer for evaluating object-recognition robustness
 under clean images, simulated transfer distortions, native CURE-OR challenge
-conditions, and planned real app/device transfer pipelines.
+conditions, and real app/device transfer pipelines.
 
 This repository does not redistribute raw CURE-OR or mini-CURE-OR images. It
 contains code, configs, manifests where appropriate, aggregate reports, and
@@ -53,15 +53,19 @@ available Full-CURE-OR image.
 
 ### Real-Transfer v0.2
 
-Prepared but not evaluated:
+Current real-transfer validation block:
 
 - 30 clean mini-CURE-OR source images;
 - 3 real transfer pipelines;
 - 2 repeats per source and pipeline;
-- 180 planned real transferred output images.
+- 180 collected real transferred output images;
+- four zero-shot CLIP/OpenCLIP-family baselines evaluated;
+- collector-supplied metadata identifies iPhone 15 Pro as the capture device,
+  WhatsApp as the messenger pipeline, and FaceTime as the video-call pipeline.
 
-The collection pack and activation workflow are ready. The actual transferred
-outputs still need to be collected before evaluation.
+The raw transferred image payloads, `pairs.csv`, and `manifest.csv` are local
+ignored artifacts. Tracked aggregate outputs include the validation reports,
+summary CSVs, and `reports/real_transfer_v02_results.md`.
 
 ## Data Fields
 
@@ -99,15 +103,16 @@ Appropriate uses:
 Out-of-scope uses:
 
 - training or certifying production safety-critical systems;
-- claiming full real-world transfer robustness before real-transfer v0.2 is
-  evaluated;
+- claiming broad real-world transfer robustness from this small v0.2 validation
+  block alone;
 - treating the v0.4 controlled probe as an exhaustive Full-CURE-OR evaluation;
 - redistributing upstream raw data outside the original dataset terms.
 
 ## Known Limitations
 
 - The v0.4 Full-CURE-OR track is sampled and manifest-driven, not exhaustive.
-- Real-transfer v0.2 is prepared but not yet evaluated.
+- Real-transfer v0.2 is a small source-matched validation block: 30 sources,
+  three pipelines, and two repeats per source/pipeline.
 - The object set follows the source CURE-OR labels and is not a general
   open-world recognition dataset.
 - Some model rows use zero-shot prompts, while prototype rows use

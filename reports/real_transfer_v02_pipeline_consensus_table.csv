@@ -1,0 +1,4 @@
+pipeline,pipeline_name,model_count,mean_real_accuracy,mean_accuracy_drop_vs_matched_clean,min_real_accuracy,max_accuracy_drop_vs_matched_clean,worst_model
+video_call_frame_capture,Video-call frame capture,4,0.7958333333333334,0.020833333333333343,0.7333333333333333,0.050000000000000044,OpenCLIP ViT-B/16 DataComp-XL
+messenger_upload_download,Messenger upload/download,4,0.8,0.016666666666666663,0.7,0.033333333333333326,CLIP ViT-B/16
+phone_screenshot_resave,Phone screenshot/resave,4,0.825,-0.008333333333333331,0.7166666666666667,0.033333333333333326,OpenCLIP ViT-B/16 DataComp-XL

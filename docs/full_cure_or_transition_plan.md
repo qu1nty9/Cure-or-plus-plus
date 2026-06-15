@@ -79,7 +79,8 @@ Next:
    on the v0.4 manifest.
 2. Extend confidence-collapse and calibration analysis to each new usable
    model.
-3. Collect and evaluate the v0.2 real transfer validation block.
+3. Integrate the evaluated v0.2 real transfer validation block into the final
+   report/paper narrative.
 
 ## Why The Staged Probe Still Matters
 

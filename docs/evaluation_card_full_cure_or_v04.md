@@ -12,7 +12,8 @@ Core evaluated conditions:
 - native challenge types 02-09 and 11-18;
 - severity levels 1-5 where available;
 - type-10 grayscale no-challenge control;
-- planned real-transfer v0.2 validation, not yet evaluated.
+- real-transfer v0.2 validation over messenger upload/download, phone
+  screenshot/resave, and video-call frame capture.
 
 ## Main Metrics
 
@@ -84,6 +85,22 @@ Grayscale-control guardrail:
 - This supports the claim that grayscale alone is damaging but does not explain
   the full native level-5 collapse.
 
+Real-transfer validation:
+
+- 180 real transferred outputs were collected from 30 source images, 10 labels,
+  three pipelines, and two repeats per source/pipeline.
+- Collector-supplied metadata identifies iPhone 15 Pro as the capture device,
+  WhatsApp as the messenger pipeline, and FaceTime as the video-call pipeline.
+- The source-matched consensus table shows moderate rather than catastrophic
+  effects: video-call frame capture has the largest mean drop at 2.1 percentage
+  points, messenger upload/download drops 1.7 points, and phone
+  screenshot/resave is +0.8 points versus matched clean source accuracy.
+- Source-level bootstrap intervals are reported in
+  `reports/real_transfer_v02_model_pipeline_table.csv`; they are intentionally
+  wide because the validation block uses 30 source images.
+- The result is best treated as an external-validity guardrail for the larger
+  simulated and native CURE-OR findings, not as a broad deployment claim.
+
 ## Reproducibility Artifacts
 
 Paper-level outputs:
@@ -101,6 +118,7 @@ Primary aggregate reports:
 - `reports/full_cure_or_grayscale_control_v04.md`
 - `reports/full_cure_or_challenge_family_v04.md`
 - `reports/full_cure_or_consensus_v04.md`
+- `reports/real_transfer_v02_results.md`
 
 Primary scripts:
 
@@ -109,6 +127,8 @@ Primary scripts:
 - `scripts/analyze_full_cure_or_challenge_families.py`
 - `scripts/analyze_full_cure_or_consensus.py`
 - `scripts/compare_full_cure_or_control.py`
+- `scripts/import_real_transfer_clean_pack.py`
+- `scripts/build_real_transfer_report.py`
 
 ## Interpretation Rules
 
@@ -120,10 +140,11 @@ Safe interpretation:
   fail near chance on salt-and-pepper and blur variants;
 - use grayscale control as a guardrail, not as a replacement for native
   challenge analysis.
+- use real-transfer v0.2 as a small external-validity guardrail, not as a claim
+  that all app/device transfer behavior is covered.
 
 Avoid:
 
-- claiming that real app-transfer failures are proven before v0.2 is evaluated;
 - mixing SigLIP diagnostic results into the main robustness ranking;
 - comparing prototype classifiers and zero-shot contrastive models as if they
   were the same training/evaluation protocol;
@@ -133,7 +154,7 @@ Avoid:
 
 Before a final public paper:
 
-1. Collect and evaluate real-transfer v0.2.
+1. Integrate real-transfer v0.2 results into the final paper prose.
 2. Add confidence/calibration tables for any further usable zero-shot or VLM
    families.
 3. Decide whether to add one additional pretrained non-CLIP/OpenCLIP VLM family

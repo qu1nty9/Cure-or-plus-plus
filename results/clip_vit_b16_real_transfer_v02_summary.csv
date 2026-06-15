@@ -1,0 +1,5 @@
+family,recipe,severity,n,accuracy,mean_confidence,relative_accuracy_drop
+clean,clean,clean,100,0.9,0.8785907267034054,0.0
+real_transfer,messenger_upload_download,real,60,0.8333333333333334,0.811120464404424,0.06666666666666665
+real_transfer,phone_screenshot_resave,real,60,0.8833333333333333,0.8366602351268132,0.01666666666666672
+real_transfer,video_call_frame_capture,real,60,0.8333333333333334,0.8055351456006368,0.06666666666666665

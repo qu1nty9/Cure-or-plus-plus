@@ -1,0 +1,167 @@
+{
+  "check_count": 32,
+  "checks": [
+    {
+      "detail": "exists=True size=2501 min_size=1",
+      "name": "required_file:reports/full_cure_or_paper_tables_v04.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2097 min_size=1",
+      "name": "required_file:reports/full_cure_or_paper_tables_v04.tex",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=5017 min_size=1",
+      "name": "required_file:reports/real_transfer_v02_results.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=4498 min_size=1",
+      "name": "required_file:reports/real_transfer_v02_model_pipeline_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=583 min_size=1",
+      "name": "required_file:reports/real_transfer_v02_pipeline_consensus_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3544 min_size=1",
+      "name": "required_file:reports/real_transfer_v02_label_failure_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1895 min_size=1",
+      "name": "required_file:reports/real_transfer_v02_activation_status.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=82828 min_size=10000",
+      "name": "required_file:results/real_transfer_v02_source_matched_drops.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=119395 min_size=10000",
+      "name": "required_file:results/real_transfer_v02_accuracy_heatmap.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=9738 min_size=1",
+      "name": "required_file:paper/main.tex",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=4911 min_size=1",
+      "name": "required_file:docs/dataset_card_cure_or_pp_v04.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=5593 min_size=1",
+      "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3527 min_size=1",
+      "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
+      "passed": true
+    },
+    {
+      "detail": "actual=True expected=True",
+      "name": "real_transfer_status:ready_for_eval",
+      "passed": true
+    },
+    {
+      "detail": "actual=True expected=True",
+      "name": "real_transfer_status:schema_ready",
+      "passed": true
+    },
+    {
+      "detail": "actual=True expected=True",
+      "name": "real_transfer_status:files_ready",
+      "passed": true
+    },
+    {
+      "detail": "actual=180 expected=180",
+      "name": "real_transfer_status:expected_output_count",
+      "passed": true
+    },
+    {
+      "detail": "actual=180 expected=180",
+      "name": "real_transfer_status:present_output_count",
+      "passed": true
+    },
+    {
+      "detail": "actual=0 expected=0",
+      "name": "real_transfer_status:missing_output_count",
+      "passed": true
+    },
+    {
+      "detail": "rows=12 expected=12",
+      "name": "row_count:reports/real_transfer_v02_model_pipeline_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "row_count:reports/real_transfer_v02_pipeline_consensus_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=40 expected=40",
+      "name": "row_count:reports/real_transfer_v02_label_failure_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "missing=[]",
+      "name": "real_transfer_bootstrap_columns",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "summary_rows:results/clip_vit_b16_real_transfer_v02_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "summary_rows:results/clip_vit_b32_real_transfer_v02_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "summary_rows:results/openclip_vit_b32_laion2b_real_transfer_v02_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "summary_rows:results/openclip_vit_b16_datacomp_xl_real_transfer_v02_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "needle='real_transfer_v02_source_matched_drops.png'",
+      "name": "paper_contains:real_transfer_v02_source_matched_drops.png",
+      "passed": true
+    },
+    {
+      "detail": "needle='real_transfer_v02_accuracy_heatmap.png'",
+      "name": "paper_contains:real_transfer_v02_accuracy_heatmap.png",
+      "passed": true
+    },
+    {
+      "detail": "needle='source-level bootstrap confidence intervals'",
+      "name": "paper_contains:source-level bootstrap confidence intervals",
+      "passed": true
+    },
+    {
+      "detail": "hits=[]",
+      "name": "forbidden_string:desktop_path",
+      "passed": true
+    },
+    {
+      "detail": "hits=[]",
+      "name": "forbidden_string:downloads_path",
+      "passed": true
+    }
+  ],
+  "failed_count": 0,
+  "passed": true
+}

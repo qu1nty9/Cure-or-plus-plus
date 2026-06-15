@@ -4,7 +4,9 @@
 
 CURE-OR++ is currently a strong pre-paper benchmark artifact, not a final
 arXiv-ready paper. The Full-CURE-OR v0.4 controlled benchmark evidence is
-substantial. The main remaining blocker is real-transfer v0.2.
+substantial, and the real-transfer v0.2 external-validity guardrail has now
+been collected and evaluated. The remaining work is paper integration,
+metadata cleanup, and optional broader VLM/model-family coverage.
 
 ## Readiness Matrix
 
@@ -20,30 +22,24 @@ substantial. The main remaining blocker is real-transfer v0.2.
 | Technical report draft | Draft-ready | `reports/cure_or_pp_technical_report_draft_v04.md` | convert to final paper structure |
 | LaTeX paper source | Draft-ready | `paper/main.tex`, `paper/references.bib` | update after real-transfer v0.2 and final citation verification |
 | Dataset card | Draft-ready | `docs/dataset_card_cure_or_pp_v04.md` | update if public release packaging changes |
-| Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after real-transfer v0.2 |
+| Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after any added VLM/model rows |
 | Related work | Partial | `docs/related_work_v01.md` | turn notes into final related-work prose/table |
-| Real-transfer validation | Blocked | v0.2 protocol, collection pack, activation script, configs ready | collect 180 real transferred outputs and evaluate |
+| Real-transfer validation | Ready for draft | 180 outputs, activation status, four summaries, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
 | Public release | Not final | Kaggle v0.1 package exists locally | decide Kaggle/HF release boundary and license text |
 
 ## Minimum Path To A Serious Public Draft
 
-1. Collect the 180 real-transfer v0.2 outputs.
-2. Run:
-
-```bash
-.venv/bin/python scripts/activate_real_transfer_protocol.py --require-ready
-```
-
-3. Evaluate the four prepared real-transfer configs.
-4. Add a real-transfer results report and update the technical draft.
-5. Convert the technical draft into final paper prose with tables from
+1. Integrate `reports/real_transfer_v02_results.md` into the technical draft
+   and LaTeX paper source.
+2. Fill capture metadata in the real-transfer checklist if the device/app
+   details are available.
+3. Convert the technical draft into final paper prose with tables from
    `reports/full_cure_or_paper_tables_v04.tex`.
 
 ## Ideal Path
 
 The ideal version adds:
 
-- real-transfer v0.2 results;
 - one additional usable pretrained VLM/model-family row if practical;
 - confidence/calibration for any added zero-shot/VLM row;
 - final related-work table;
@@ -53,5 +49,7 @@ The ideal version adds:
 ## Current Publication Recommendation
 
 Do not submit as a final arXiv paper yet. The work is strong enough for an
-internal technical report and close to a workshop-style benchmark draft, but
-real-transfer v0.2 is the critical external-validity gap.
+internal technical report and close to a workshop-style benchmark draft. The
+critical external-validity gap is now reduced by real-transfer v0.2; the next
+bar is final paper integration, capture metadata, and optionally one more
+pretrained non-CLIP/OpenCLIP model family.

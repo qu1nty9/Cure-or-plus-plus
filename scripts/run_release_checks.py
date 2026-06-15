@@ -1,0 +1,221 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+REQUIRED_FILES = [
+    "reports/full_cure_or_paper_tables_v04.md",
+    "reports/full_cure_or_paper_tables_v04.tex",
+    "reports/real_transfer_v02_results.md",
+    "reports/real_transfer_v02_model_pipeline_table.csv",
+    "reports/real_transfer_v02_pipeline_consensus_table.csv",
+    "reports/real_transfer_v02_label_failure_table.csv",
+    "reports/real_transfer_v02_activation_status.json",
+    "results/real_transfer_v02_source_matched_drops.png",
+    "results/real_transfer_v02_accuracy_heatmap.png",
+    "paper/main.tex",
+    "docs/dataset_card_cure_or_pp_v04.md",
+    "docs/evaluation_card_full_cure_or_v04.md",
+    "reports/arxiv_readiness_matrix_v04.md",
+]
+
+SUMMARY_FILES = [
+    "results/clip_vit_b16_real_transfer_v02_summary.csv",
+    "results/clip_vit_b32_real_transfer_v02_summary.csv",
+    "results/openclip_vit_b32_laion2b_real_transfer_v02_summary.csv",
+    "results/openclip_vit_b16_datacomp_xl_real_transfer_v02_summary.csv",
+]
+
+FORBIDDEN_PUBLIC_STRINGS = {
+    "desktop_path": "/Users/" + "yaroslav/Desktop",
+    "downloads_path": "/Users/" + "yaroslav/Downloads",
+}
+
+TEXT_SCAN_PATHS = [
+    "README.md",
+    "docs",
+    "paper",
+    "reports",
+    "scripts",
+]
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Run release-readiness checks for the current CURE-OR++ draft state.")
+    parser.add_argument("--report", default="reports/release_check_v04.json")
+    args = parser.parse_args()
+
+    checks = []
+    checks.extend(check_required_files())
+    checks.extend(check_real_transfer_status())
+    checks.extend(check_real_transfer_tables())
+    checks.extend(check_summary_files())
+    checks.extend(check_paper_links())
+    checks.extend(check_forbidden_public_strings())
+
+    failed = [check for check in checks if not check["passed"]]
+    report = {
+        "passed": not failed,
+        "check_count": len(checks),
+        "failed_count": len(failed),
+        "checks": checks,
+    }
+    report_path = resolve_project_path(args.report)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    print(f"Checks: {len(checks)}")
+    print(f"Failed: {len(failed)}")
+    print(f"Report: {report_path}")
+    for check in failed:
+        print(f"FAIL: {check['name']}: {check['detail']}")
+    return 1 if failed else 0
+
+
+def check_required_files() -> list[dict]:
+    checks = []
+    for path_text in REQUIRED_FILES:
+        path = resolve_project_path(path_text)
+        min_size = 10_000 if path.suffix.lower() == ".png" else 1
+        checks.append(
+            check(
+                name=f"required_file:{path_text}",
+                passed=path.exists() and path.stat().st_size >= min_size,
+                detail=f"exists={path.exists()} size={path.stat().st_size if path.exists() else 0} min_size={min_size}",
+            )
+        )
+    return checks
+
+
+def check_real_transfer_status() -> list[dict]:
+    path = resolve_project_path("reports/real_transfer_v02_activation_status.json")
+    if not path.exists():
+        return [check("real_transfer_status", False, "missing activation status")]
+    status = json.loads(path.read_text(encoding="utf-8"))
+    expected = {
+        "ready_for_eval": True,
+        "schema_ready": True,
+        "files_ready": True,
+        "expected_output_count": 180,
+        "present_output_count": 180,
+        "missing_output_count": 0,
+    }
+    return [
+        check(
+            name=f"real_transfer_status:{key}",
+            passed=status.get(key) == expected_value,
+            detail=f"actual={status.get(key)!r} expected={expected_value!r}",
+        )
+        for key, expected_value in expected.items()
+    ]
+
+
+def check_real_transfer_tables() -> list[dict]:
+    checks = []
+    table_expectations = {
+        "reports/real_transfer_v02_model_pipeline_table.csv": 12,
+        "reports/real_transfer_v02_pipeline_consensus_table.csv": 3,
+        "reports/real_transfer_v02_label_failure_table.csv": 40,
+    }
+    for path_text, expected_rows in table_expectations.items():
+        rows = load_csv(resolve_project_path(path_text))
+        checks.append(check(f"row_count:{path_text}", len(rows) == expected_rows, f"rows={len(rows)} expected={expected_rows}"))
+
+    model_rows = load_csv(resolve_project_path("reports/real_transfer_v02_model_pipeline_table.csv"))
+    required_columns = {
+        "matched_clean_accuracy_ci_low",
+        "matched_clean_accuracy_ci_high",
+        "real_accuracy_ci_low",
+        "real_accuracy_ci_high",
+        "accuracy_drop_ci_low",
+        "accuracy_drop_ci_high",
+    }
+    columns = set(model_rows[0].keys()) if model_rows else set()
+    checks.append(
+        check(
+            "real_transfer_bootstrap_columns",
+            required_columns.issubset(columns),
+            f"missing={sorted(required_columns - columns)}",
+        )
+    )
+    return checks
+
+
+def check_summary_files() -> list[dict]:
+    checks = []
+    for path_text in SUMMARY_FILES:
+        rows = load_csv(resolve_project_path(path_text))
+        checks.append(check(f"summary_rows:{path_text}", len(rows) == 4, f"rows={len(rows)} expected=4"))
+    return checks
+
+
+def check_paper_links() -> list[dict]:
+    paper = resolve_project_path("paper/main.tex").read_text(encoding="utf-8")
+    required = [
+        "real_transfer_v02_source_matched_drops.png",
+        "real_transfer_v02_accuracy_heatmap.png",
+        "source-level bootstrap confidence intervals",
+    ]
+    return [
+        check(f"paper_contains:{text}", text in paper, f"needle={text!r}")
+        for text in required
+    ]
+
+
+def check_forbidden_public_strings() -> list[dict]:
+    files = []
+    for base in TEXT_SCAN_PATHS:
+        path = resolve_project_path(base)
+        if path.is_file():
+            files.append(path)
+        elif path.is_dir():
+            files.extend(item for item in path.rglob("*") if item.is_file() and item.suffix.lower() in {".md", ".tex", ".py", ".json", ".csv"})
+    files = [path for path in files if relative_text(path) != "reports/release_check_v04.json"]
+
+    checks = []
+    for label, forbidden in FORBIDDEN_PUBLIC_STRINGS.items():
+        hits = []
+        for path in files:
+            try:
+                text = path.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                continue
+            if forbidden in text:
+                hits.append(relative_text(path))
+        checks.append(check(f"forbidden_string:{label}", not hits, f"hits={hits[:10]}"))
+    return checks
+
+
+def load_csv(path: Path) -> list[dict[str, str]]:
+    if not path.exists():
+        return []
+    with path.open("r", newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
+def check(name: str, passed: bool, detail: str) -> dict:
+    return {"name": name, "passed": bool(passed), "detail": detail}
+
+
+def resolve_project_path(path: str | Path) -> Path:
+    candidate = Path(path)
+    if candidate.is_absolute():
+        return candidate
+    return ROOT / candidate
+
+
+def relative_text(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
