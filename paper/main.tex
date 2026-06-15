@@ -41,6 +41,15 @@ CURE-OR++ uses manifest-driven evaluation. Each row links a source image, output
 
 The Full-CURE-OR v0.4 track uses 500 clean probe rows and 38,999 native challenge probe rows across official challenge types 02-09 and 11-18. It also includes a type-10 grayscale no-challenge control. The real-transfer v0.2 track pins 30 clean mini-CURE-OR sources, three pipelines, two repeats per source and pipeline, and 180 collected transferred outputs. Collector-supplied metadata identifies iPhone 15 Pro as the capture device, WhatsApp as the messenger pipeline, and FaceTime as the video-call pipeline.
 
+\paragraph{Evaluation protocol.}
+All reported native CURE-OR means are computed from aggregate prediction rows and weighted by row count. The level-5 consensus analysis ranks each official challenge type by mean severe-condition accuracy across usable baselines, then reports both floor counts and cross-model rank stability. The real-transfer block is evaluated with a source-matched protocol: each transferred output is compared against the same 30 clean source images used to create the real transferred samples. Confidence and calibration metrics are reported for the CLIP/OpenCLIP-family zero-shot rows where model probabilities are comparable under the shared prompt protocol.
+
+\paragraph{Statistical treatment.}
+Real-transfer confidence intervals use source-level bootstrap resampling over the 30 selected source images. This intentionally treats repeated transferred outputs from the same source as dependent measurements rather than as independent test examples. The intervals are therefore wide, and the real-transfer result is interpreted as an external-validity guardrail rather than as a precise ranking of small app-specific effects.
+
+\paragraph{Release boundary.}
+The repository tracks code, configs, aggregate reports, paper tables, and generated figures. Raw CURE-OR images, local real-transfer payloads, per-image prediction dumps, and source-dataset archives remain excluded from Git and are governed by the upstream dataset terms.
+
 \section{Models}
 
 The current main table excludes the SigLIP Base P16 224 diagnostic row because the present zero-shot prompt protocol produced a clean-accuracy failure. The eight usable baseline rows are DINOv2 ViT-S/14 Prototype, ConvNeXt-Tiny Prototype, OpenCLIP ViT-B/16 DataComp XL, HGNetV2-B0 Prototype, CLIP ViT-B/16, MobileNetV3-Small Prototype, OpenCLIP ViT-B/32 LAION2B, and CLIP ViT-B/32.
@@ -94,7 +103,7 @@ CURE-OR++ should be positioned as a compact, object-centric robustness artifact 
 
 \section{Limitations}
 
-Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row.
+Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The current VLM/API-style evaluation track is not yet included, so results should be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
 
 \section{Conclusion}
 

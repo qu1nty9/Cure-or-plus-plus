@@ -7,7 +7,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=2097 min_size=1",
+      "detail": "exists=True size=2187 min_size=1",
       "name": "required_file:reports/full_cure_or_paper_tables_v04.tex",
       "passed": true
     },
@@ -47,7 +47,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=9738 min_size=1",
+      "detail": "exists=True size=11431 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },

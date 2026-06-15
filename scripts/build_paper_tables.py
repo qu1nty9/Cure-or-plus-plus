@@ -304,6 +304,7 @@ def latex_table(caption: str, label: str, headers: list[str], rows: list[list]) 
         "\\centering",
         f"\\caption{{{latex_escape(caption)}}}",
         f"\\label{{{latex_escape(label)}}}",
+        "\\resizebox{\\linewidth}{!}{%",
         f"\\begin{{tabular}}{{{column_spec}}}",
         "\\hline",
         " & ".join(latex_escape(str(header)) for header in headers) + " \\\\",
@@ -311,7 +312,7 @@ def latex_table(caption: str, label: str, headers: list[str], rows: list[list]) 
     ]
     for row in rows:
         lines.append(" & ".join(latex_escape(str(value)) for value in row) + " \\\\")
-    lines.extend(["\\hline", "\\end{tabular}", "\\end{table}"])
+    lines.extend(["\\hline", "\\end{tabular}", "}", "\\end{table}"])
     return "\n".join(lines)
 
 
