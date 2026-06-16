@@ -45,6 +45,12 @@ data/real_transfer/**/collection_pack/
 data/real_transfer/**/pairs.csv
 data/real_transfer/**/manifest.csv
 
+# VLM/API provider responses and caches are local run artifacts.
+data/vlm_api_cache/
+reports/vlm_api_track_*_responses*.jsonl
+reports/vlm_api_track_*_raw*.jsonl
+reports/vlm_api_track_*_response_audit.csv
+
 # Local LaTeX build artifacts.
 paper/build/
 paper/*.aux

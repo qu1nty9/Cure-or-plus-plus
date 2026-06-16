@@ -78,6 +78,56 @@ Recommended fields:
 Raw provider payloads should stay outside Git unless explicitly sanitized.
 The tracked evaluator reads only sanitized text responses.
 
+## OpenAI-Compatible Runner
+
+The repository includes a provider-agnostic runner for APIs that follow the
+OpenAI Chat Completions or Responses image-input shape:
+
+```bash
+OPENAI_API_KEY=... .venv/bin/python scripts/run_openai_compatible_vlm.py \
+  --provider openai \
+  --model MODEL_ID_FROM_PROVIDER \
+  --model-version YYYY-MM-DD_OR_PROVIDER_VERSION \
+  --output reports/vlm_api_track_v01_responses_MODEL_ID.jsonl
+```
+
+Useful smoke-test commands:
+
+```bash
+.venv/bin/python scripts/run_openai_compatible_vlm.py \
+  --provider smoke \
+  --model oracle_smoke \
+  --output /private/tmp/cure_or_pp_vlm_runner_smoke.jsonl \
+  --limit 5 \
+  --mock-oracle
+
+.venv/bin/python scripts/evaluate_vlm_response_pack.py \
+  --responses /private/tmp/cure_or_pp_vlm_runner_smoke.jsonl \
+  --model-summary /private/tmp/cure_or_pp_vlm_runner_smoke_model_summary.csv \
+  --recipe-table /private/tmp/cure_or_pp_vlm_runner_smoke_recipe_table.csv \
+  --label-table /private/tmp/cure_or_pp_vlm_runner_smoke_label_table.csv \
+  --audit-table /private/tmp/cure_or_pp_vlm_runner_smoke_audit.csv
+```
+
+For non-OpenAI providers that expose an OpenAI-compatible endpoint, set
+`OPENAI_BASE_URL` and use the provider's API-key environment variable:
+
+```bash
+PROVIDER_API_KEY=... OPENAI_BASE_URL=https://provider.example/v1 \
+  .venv/bin/python scripts/run_openai_compatible_vlm.py \
+  --api-key-env PROVIDER_API_KEY \
+  --provider provider_name \
+  --model MODEL_ID_FROM_PROVIDER \
+  --output reports/vlm_api_track_v01_responses_PROVIDER_MODEL.jsonl
+```
+
+If a provider still requires `max_tokens` instead of `max_completion_tokens`,
+add:
+
+```bash
+--chat-token-parameter max_tokens
+```
+
 ## Guardrails
 
 - Keep raw provider responses and request metadata outside Git unless explicitly
@@ -88,6 +138,8 @@ The tracked evaluator reads only sanitized text responses.
 - Use zero temperature unless the provider does not allow it.
 - Keep prompt text fixed across models.
 - Cache responses by image hash, prompt hash, and model id.
+- Keep local cache files under `data/vlm_api_cache/`; this path is ignored by
+  Git.
 
 ## Minimum Useful Pilot
 
@@ -114,5 +166,7 @@ The VLM/API track is useful if it shows one of:
 
 - `scripts/build_vlm_prompt_pack.py` builds the 210-row real-transfer v0.2
   prompt pack.
+- `scripts/run_openai_compatible_vlm.py` runs cached OpenAI-compatible
+  multimodal API calls and writes sanitized response JSONL files.
 - `scripts/evaluate_vlm_response_pack.py` evaluates sanitized response JSONL
   files and writes model, recipe, label, and audit tables.

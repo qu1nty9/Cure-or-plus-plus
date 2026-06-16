@@ -141,6 +141,7 @@ Primary scripts:
 - `scripts/import_real_transfer_clean_pack.py`
 - `scripts/build_real_transfer_report.py`
 - `scripts/build_vlm_prompt_pack.py`
+- `scripts/run_openai_compatible_vlm.py`
 - `scripts/evaluate_vlm_response_pack.py`
 
 ## Interpretation Rules
