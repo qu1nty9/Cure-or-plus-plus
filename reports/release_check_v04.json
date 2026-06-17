@@ -72,7 +72,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=5435 min_size=1",
+      "detail": "exists=True size=5880 min_size=1",
       "name": "required_file:docs/vlm_api_track_plan_v01.md",
       "passed": true
     },
@@ -92,7 +92,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=14770 min_size=1",
+      "detail": "exists=True size=15760 min_size=1",
       "name": "required_file:scripts/run_openai_compatible_vlm.py",
       "passed": true
     },
