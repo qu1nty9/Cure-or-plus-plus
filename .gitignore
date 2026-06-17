@@ -9,6 +9,7 @@ __pycache__/
 .venv/
 .obsidian/
 .omx/
+.secrets/
 
 *.docx
 ~$*.docx

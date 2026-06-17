@@ -91,6 +91,22 @@ OPENAI_API_KEY=... .venv/bin/python scripts/run_openai_compatible_vlm.py \
   --output reports/vlm_api_track_v01_responses_MODEL_ID.jsonl
 ```
 
+If the Codex App does not inherit shell environment variables, put the key in a
+local ignored file instead:
+
+```bash
+mkdir -p .secrets
+printf 'OPENAI_API_KEY=YOUR_KEY_HERE\n' > .secrets/openai.env
+
+.venv/bin/python scripts/run_openai_compatible_vlm.py \
+  --env-file .secrets/openai.env \
+  --provider openai \
+  --model MODEL_ID_FROM_PROVIDER \
+  --output reports/vlm_api_track_v01_responses_MODEL_ID.jsonl
+```
+
+`.secrets/` is ignored by Git.
+
 Useful smoke-test commands:
 
 ```bash

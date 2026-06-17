@@ -35,6 +35,7 @@ def main() -> int:
     parser.add_argument("--model-version", default="", help="Exact provider model version/date if known.")
     parser.add_argument("--base-url", default=os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1"))
     parser.add_argument("--api-key-env", default="OPENAI_API_KEY")
+    parser.add_argument("--env-file", help="Optional local KEY=VALUE env file, for example .secrets/openai.env.")
     parser.add_argument("--endpoint", choices=["chat_completions", "responses"], default="chat_completions")
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--max-tokens", type=int, default=8)
@@ -88,6 +89,9 @@ def main() -> int:
 
     if args.force and output_path.exists():
         output_path.unlink()
+
+    if args.env_file:
+        load_env_file(resolve_project_path(args.env_file))
 
     api_key = "" if args.mock_oracle else os.environ.get(args.api_key_env, "")
     if not args.mock_oracle and not api_key:
@@ -352,6 +356,25 @@ def load_completed_sample_ids(path: Path) -> set[str]:
         for row in load_jsonl(path)
         if row.get("sample_id")
     }
+
+
+def load_env_file(path: Path) -> None:
+    if not path.exists():
+        raise FileNotFoundError(f"Env file not found: {path}")
+    for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[len("export "):].strip()
+        if "=" not in line:
+            raise ValueError(f"Invalid env line {path}:{line_number}; expected KEY=VALUE")
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip("'").strip('"')
+        if not key:
+            raise ValueError(f"Invalid empty env key at {path}:{line_number}")
+        os.environ.setdefault(key, value)
 
 
 def load_jsonl(path: Path) -> list[dict]:
