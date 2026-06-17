@@ -142,6 +142,7 @@ Primary scripts:
 - `scripts/build_real_transfer_report.py`
 - `scripts/build_vlm_prompt_pack.py`
 - `scripts/run_openai_compatible_vlm.py`
+- `scripts/run_gemini_vlm.py`
 - `scripts/evaluate_vlm_response_pack.py`
 
 ## Interpretation Rules

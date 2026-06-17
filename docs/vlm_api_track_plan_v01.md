@@ -144,6 +144,35 @@ add:
 --chat-token-parameter max_tokens
 ```
 
+## Gemini Free-Tier Runner
+
+Google's Gemini API currently documents a free tier for selected models and
+supports inline image data through `generateContent`. Use this runner first
+when the goal is to minimize cost:
+
+```bash
+mkdir -p .secrets
+printf 'GEMINI_API_KEY=YOUR_KEY_HERE\n' > .secrets/gemini.env
+
+.venv/bin/python scripts/run_gemini_vlm.py \
+  --env-file .secrets/gemini.env \
+  --model gemini-3.5-flash \
+  --output reports/vlm_api_track_v01_responses_gemini_3_5_flash.jsonl \
+  --limit 5
+```
+
+The output uses the same sanitized JSONL schema as the OpenAI-compatible
+runner, so the existing evaluator can consume it directly:
+
+```bash
+.venv/bin/python scripts/evaluate_vlm_response_pack.py \
+  --responses reports/vlm_api_track_v01_responses_gemini_3_5_flash.jsonl
+```
+
+Free-tier Gemini requests may be used by Google to improve products; this is
+acceptable for the current public CURE-OR++ prompt pack but should be noted in
+the final limitations if we report free-tier results.
+
 ## Guardrails
 
 - Keep raw provider responses and request metadata outside Git unless explicitly
@@ -184,5 +213,7 @@ The VLM/API track is useful if it shows one of:
   prompt pack.
 - `scripts/run_openai_compatible_vlm.py` runs cached OpenAI-compatible
   multimodal API calls and writes sanitized response JSONL files.
+- `scripts/run_gemini_vlm.py` runs cached Gemini `generateContent` calls and
+  writes the same sanitized response JSONL schema.
 - `scripts/evaluate_vlm_response_pack.py` evaluates sanitized response JSONL
   files and writes model, recipe, label, and audit tables.

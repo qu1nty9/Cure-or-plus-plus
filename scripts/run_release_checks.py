@@ -29,6 +29,7 @@ REQUIRED_FILES = [
     "reports/vlm_api_track_v01_prompt_pack_summary.json",
     "scripts/build_vlm_prompt_pack.py",
     "scripts/run_openai_compatible_vlm.py",
+    "scripts/run_gemini_vlm.py",
     "scripts/evaluate_vlm_response_pack.py",
 ]
 
