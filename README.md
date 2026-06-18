@@ -217,7 +217,9 @@ The VLM/API extension is scaffolded but not executed. The prompt pack summary
 is in `reports/vlm_api_track_v01_prompt_pack_summary.json`, and the planned
 protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can
 be collected with `scripts/run_openai_compatible_vlm.py` or
-`scripts/run_gemini_vlm.py` and evaluated with `scripts/evaluate_vlm_response_pack.py`.
+`scripts/run_gemini_vlm.py`; open-weight local VLMs can be collected with
+`scripts/run_hf_vlm.py`. All VLM rows can be evaluated with
+`scripts/evaluate_vlm_response_pack.py`.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

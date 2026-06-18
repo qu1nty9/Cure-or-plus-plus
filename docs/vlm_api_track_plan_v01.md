@@ -173,6 +173,43 @@ Free-tier Gemini requests may be used by Google to improve products; this is
 acceptable for the current public CURE-OR++ prompt pack but should be noted in
 the final limitations if we report free-tier results.
 
+## Open-Weight Hugging Face Runner
+
+When hosted APIs are unavailable or paid, use local/open-weight VLMs first.
+The initial target is SmolVLM2-500M because its model card documents a
+Transformers image-text-to-text path, Apache-2.0 licensing, and modest memory
+requirements.
+
+Smoke test without downloading a model:
+
+```bash
+.venv/bin/python scripts/run_hf_vlm.py \
+  --provider smoke \
+  --model hf_oracle_smoke \
+  --output /private/tmp/cure_or_pp_hf_runner_smoke.jsonl \
+  --limit 5 \
+  --mock-oracle
+```
+
+First real local pilot:
+
+```bash
+.venv/bin/python scripts/run_hf_vlm.py \
+  --model HuggingFaceTB/SmolVLM2-500M-Video-Instruct \
+  --output reports/vlm_api_track_v01_responses_smolvlm2_500m.jsonl \
+  --limit 5
+```
+
+If the chat template does not accept local image paths on a given model, retry
+with:
+
+```bash
+--image-content-key url
+```
+
+The output uses the same sanitized JSONL schema as the hosted runners, so it
+can be passed directly to `scripts/evaluate_vlm_response_pack.py`.
+
 ## Guardrails
 
 - Keep raw provider responses and request metadata outside Git unless explicitly
@@ -214,6 +251,8 @@ The VLM/API track is useful if it shows one of:
 - `scripts/run_openai_compatible_vlm.py` runs cached OpenAI-compatible
   multimodal API calls and writes sanitized response JSONL files.
 - `scripts/run_gemini_vlm.py` runs cached Gemini `generateContent` calls and
+  writes the same sanitized response JSONL schema.
+- `scripts/run_hf_vlm.py` runs cached local/open-weight Transformers VLMs and
   writes the same sanitized response JSONL schema.
 - `scripts/evaluate_vlm_response_pack.py` evaluates sanitized response JSONL
   files and writes model, recipe, label, and audit tables.

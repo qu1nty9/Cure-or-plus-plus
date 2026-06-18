@@ -4,6 +4,7 @@ pandas
 tqdm
 torch
 transformers
+num2words
 matplotlib
 sentencepiece
 protobuf

@@ -1,5 +1,5 @@
 {
-  "check_count": 46,
+  "check_count": 47,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -57,12 +57,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6318 min_size=1",
+      "detail": "exists=True size=6344 min_size=1",
       "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=4147 min_size=1",
+      "detail": "exists=True size=4172 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },
@@ -72,7 +72,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6998 min_size=1",
+      "detail": "exists=True size=8119 min_size=1",
       "name": "required_file:docs/vlm_api_track_plan_v01.md",
       "passed": true
     },
@@ -99,6 +99,11 @@
     {
       "detail": "exists=True size=14048 min_size=1",
       "name": "required_file:scripts/run_gemini_vlm.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=13580 min_size=1",
+      "name": "required_file:scripts/run_hf_vlm.py",
       "passed": true
     },
     {
