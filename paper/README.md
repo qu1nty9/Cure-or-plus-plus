@@ -1,8 +1,10 @@
 # CURE-OR++ Paper Scaffold
 
 This folder contains the working LaTeX scaffold for the serious CURE-OR++
-technical report. It is intentionally not final-publication ready yet:
-real-transfer v0.2 remains pending.
+technical report. It is intentionally not final-publication ready yet: the
+current draft now includes Full-CURE-OR v0.4, real-transfer v0.2, and the first
+open-weight VLM prompt-pack row, but still needs final citation/license checks,
+venue formatting, and optional broader VLM/model coverage.
 
 Compile locally with:
 
@@ -23,8 +25,9 @@ Inserted generated tables:
 
 Before public submission:
 
-- add real-transfer v0.2 results;
 - verify bibliography metadata;
 - decide final venue format;
+- decide public release boundary for raw CURE-OR and real-transfer payloads;
+- optionally add stronger/frontier VLM rows;
 - replace placeholder related-work prose with final citations;
-- update limitations after real-transfer evaluation.
+- update limitations after any added VLM/model rows.
