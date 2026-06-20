@@ -219,7 +219,8 @@ protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can
 be collected with `scripts/run_openai_compatible_vlm.py` or
 `scripts/run_gemini_vlm.py`; open-weight local VLMs can be collected with
 `scripts/run_hf_vlm.py`. All VLM rows can be evaluated with
-`scripts/evaluate_vlm_response_pack.py`.
+`scripts/evaluate_vlm_response_pack.py`. A Kaggle GPU path for the open-weight
+VLM pilot is documented in `docs/kaggle_vlm_gpu_plan.md`.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 

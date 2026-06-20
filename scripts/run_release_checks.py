@@ -32,6 +32,11 @@ REQUIRED_FILES = [
     "scripts/run_gemini_vlm.py",
     "scripts/run_hf_vlm.py",
     "scripts/evaluate_vlm_response_pack.py",
+    "scripts/build_kaggle_vlm_package.py",
+    "scripts/write_kaggle_vlm_notebook.py",
+    "notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
+    "kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
+    "kaggle/vlm_kernel/kernel-metadata.json",
 ]
 
 SUMMARY_FILES = [

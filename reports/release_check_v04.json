@@ -1,5 +1,5 @@
 {
-  "check_count": 47,
+  "check_count": 52,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -72,7 +72,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=8119 min_size=1",
+      "detail": "exists=True size=8206 min_size=1",
       "name": "required_file:docs/vlm_api_track_plan_v01.md",
       "passed": true
     },
@@ -109,6 +109,31 @@
     {
       "detail": "exists=True size=14081 min_size=1",
       "name": "required_file:scripts/evaluate_vlm_response_pack.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=4448 min_size=1",
+      "name": "required_file:scripts/build_kaggle_vlm_package.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=5029 min_size=1",
+      "name": "required_file:scripts/write_kaggle_vlm_notebook.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=4092 min_size=1",
+      "name": "required_file:notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=4092 min_size=1",
+      "name": "required_file:kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=416 min_size=1",
+      "name": "required_file:kaggle/vlm_kernel/kernel-metadata.json",
       "passed": true
     },
     {

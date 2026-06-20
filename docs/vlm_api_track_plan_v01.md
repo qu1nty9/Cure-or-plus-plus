@@ -210,6 +210,9 @@ with:
 The output uses the same sanitized JSONL schema as the hosted runners, so it
 can be passed directly to `scripts/evaluate_vlm_response_pack.py`.
 
+For longer runs, use the Kaggle GPU path documented in
+`docs/kaggle_vlm_gpu_plan.md`.
+
 ## Guardrails
 
 - Keep raw provider responses and request metadata outside Git unless explicitly
