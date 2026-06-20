@@ -4,7 +4,8 @@
 
 This is the current paper-draft layer for the serious benchmark track. It is
 ready for internal iteration, but it should not be treated as a final public
-paper until the v0.2 real-transfer validation block is collected and evaluated.
+paper until the real-transfer and VLM sections are integrated into final paper
+prose and citation/license checks are complete.
 
 Current strongest evidence:
 
@@ -17,12 +18,16 @@ Current strongest evidence:
 - paired color-vs-grayscale challenge-family analysis;
 - level-5 consensus failure and rank-stability analysis;
 - paper-ready Markdown, CSV, and LaTeX tables in
-  `reports/full_cure_or_paper_tables_v04.md`.
+  `reports/full_cure_or_paper_tables_v04.md`;
+- real-transfer v0.2 evaluation over 30 source images and 180 transferred
+  outputs collected with iPhone 15 Pro, WhatsApp, and FaceTime pipelines;
+- an open-weight VLM prompt-pack run using
+  `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` on Kaggle GPU.
 
 Main blocker:
 
-- real-transfer v0.2 still needs 180 real transferred output images before its
-  evaluation section can be written.
+- final paper integration, public-release boundary decisions, and optional
+  broader VLM/provider model coverage.
 
 ## Working Title
 
@@ -47,9 +52,10 @@ can remain substantially overconfident under severe native challenges: OpenCLIP
 ViT-B/16 DataComp XL reaches 0.1451 level-5 accuracy while retaining 0.4997
 mean confidence. A type-10 grayscale control confirms that grayscale conversion
 alone is damaging but does not explain the full native level-5 collapse. The
-remaining validation step is a 180-output real-transfer block covering
-messenger upload/download, phone screenshot/resave, and video-call frame
-capture pipelines.
+real-transfer v0.2 block now adds 180 transferred outputs covering messenger
+upload/download, phone screenshot/resave, and video-call frame capture
+pipelines. A first open-weight VLM row also validates the prompt-pack path for
+assistant-style vision-language models.
 
 ## Contributions
 
@@ -65,8 +71,11 @@ capture pipelines.
    accuracy.
 5. A grayscale-control and paired channel-effect analysis separating grayscale
    conversion from native challenge severity.
-6. A prepared real-transfer v0.2 validation protocol that will test whether
-   real app/device transfer pipelines reproduce related failure behavior.
+6. A real-transfer v0.2 validation block testing whether real app/device
+   transfer pipelines reproduce related failure behavior.
+7. A 210-row VLM prompt-pack/evaluator path with an executed open-weight
+   SmolVLM2-500M baseline, validating assistant-style vision-language
+   evaluation without paid API calls.
 
 ## Method Summary
 
@@ -90,6 +99,11 @@ by `scripts/activate_real_transfer_protocol.py`; the source-matched aggregate
 report is `reports/real_transfer_v02_results.md`. Collector-supplied metadata
 identifies iPhone 15 Pro as the capture device, WhatsApp as the messenger
 pipeline, and FaceTime as the video-call/video-transmission pipeline.
+
+The VLM/API track converts the same 30 clean source images and 180 transferred
+outputs into multiple-choice prompt rows. The first executed row is
+`HuggingFaceTB/SmolVLM2-500M-Video-Instruct`, run on Kaggle GPU with
+Transformers and evaluated by `scripts/evaluate_vlm_response_pack.py`.
 
 ## Current Baselines
 
@@ -166,6 +180,31 @@ noise:
 Interpretation: some severe native challenges do not merely reduce accuracy.
 They produce low-accuracy, high-confidence failures.
 
+### Real-Transfer and Open-Weight VLM Guardrail
+
+The source-matched real-transfer report covers 30 source images, three
+pipelines, and two repeats per source/pipeline. Across the four CLIP/OpenCLIP
+zero-shot rows, real-transfer drops are moderate rather than catastrophic. This
+supports using the real-transfer block as an external-validity guardrail rather
+than as the main native-challenge collapse claim.
+
+The first open-weight VLM row, SmolVLM2-500M-Video-Instruct, produced:
+
+- clean source accuracy: 0.6000 over 30 source rows;
+- real-transfer accuracy: 0.5556 over 180 transferred rows;
+- drop versus clean: 0.0444;
+- unparseable rate: 0.0000.
+
+By pipeline, its real-transfer accuracies were:
+
+- messenger upload/download: 0.6333;
+- phone screenshot/resave: 0.5000;
+- video-call frame capture: 0.5333.
+
+Interpretation: this row is weaker than the best CLIP/OpenCLIP real-transfer
+rows, but it proves the VLM prompt-pack and response-audit path is executable
+on open-weight models without paid APIs.
+
 ### Grayscale Control and Channel Effects
 
 The type-10 grayscale no-challenge control is damaging, but it does not explain
@@ -197,6 +236,8 @@ model family.
 - Real-transfer v0.2 is small: 30 source images, three pipelines, and two
   repeats per source/pipeline. It is an external-validity guardrail, not a
   comprehensive real-world transfer benchmark.
+- The current VLM evidence contains one open-weight assistant-style row, not a
+  broad frontier/provider VLM comparison.
 - Full-CURE-OR v0.4 is a controlled probe, not an exhaustive evaluation of all
   images in the original dataset.
 - SigLIP is currently a diagnostic prompt-protocol failure rather than a usable
@@ -207,29 +248,6 @@ model family.
   CLIP/OpenCLIP-family zero-shot rows, not every prototype row.
 - The current technical report does not yet include human study, deployment
   study, or cross-dataset transfer.
-
-## Real-Transfer Section Placeholder
-
-This section should be written after:
-
-```bash
-.venv/bin/python scripts/activate_real_transfer_protocol.py --require-ready
-```
-
-returns `ready_for_eval: true` and writes
-`data/real_transfer/v02/manifest.csv`.
-
-Planned evaluation rows:
-
-- CLIP ViT-B/16;
-- CLIP ViT-B/32;
-- OpenCLIP ViT-B/32 LAION2B;
-- OpenCLIP ViT-B/16 DataComp XL.
-
-The key question is whether messenger upload/download, phone screenshot/resave,
-and video-call frame capture reproduce related ranking shifts,
-confidence-preserving failures, or model-family sensitivity seen in the native
-and simulated probes.
 
 ## Reproducibility Pointers
 
@@ -242,6 +260,8 @@ Important tracked artifacts:
 - `reports/full_cure_or_consensus_v04.md`
 - `reports/full_cure_or_grayscale_control_v04.md`
 - `reports/real_transfer_v02_readiness.md`
+- `reports/real_transfer_v02_results.md`
+- `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`
 
 Important scripts:
 
@@ -250,6 +270,8 @@ Important scripts:
 - `scripts/analyze_full_cure_or_challenge_families.py`
 - `scripts/analyze_full_cure_or_consensus.py`
 - `scripts/activate_real_transfer_protocol.py`
+- `scripts/run_hf_vlm.py`
+- `scripts/evaluate_vlm_response_pack.py`
 
 ## Claim Discipline For Public Release
 
@@ -266,9 +288,9 @@ Safe current claims:
 - Some severe challenge failures are overconfident, especially for stronger
   OpenCLIP zero-shot rows.
 
-Claims to avoid until real-transfer v0.2 is evaluated:
+Claims to avoid until the final paper is complete:
 
-- real app-transfer failures are already proven;
 - CURE-OR++ fully models real messaging/video-call pipelines;
 - the benchmark is ready as a final arXiv paper rather than a strong
   pre-paper benchmark artifact.
+- the current open-weight VLM row represents frontier VLM behavior.

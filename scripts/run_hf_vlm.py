@@ -309,7 +309,9 @@ def choose_dtype(requested: str, device: str, torch):
         return torch.bfloat16
     if requested == "auto":
         if device == "cuda":
-            return torch.bfloat16
+            if hasattr(torch.cuda, "is_bf16_supported") and torch.cuda.is_bf16_supported():
+                return torch.bfloat16
+            return torch.float16
         return torch.float32
     return None
 

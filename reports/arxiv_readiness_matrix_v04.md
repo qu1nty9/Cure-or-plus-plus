@@ -26,7 +26,7 @@ the newly scaffolded VLM/API prompt pack if we want modern assistant results.
 | Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after any added VLM/model rows |
 | Related work | Draft-ready | `docs/related_work_v01.md`, expanded LaTeX related-work paragraph | verify final citations before public submission |
 | Real-transfer validation | Ready for draft | 180 outputs, activation status, four summaries, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
-| VLM/API track | Runner-ready, not executed on real providers | `configs/vlm_api_track_v01.json`, `reports/vlm_api_track_v01_prompt_pack.jsonl`, `scripts/run_openai_compatible_vlm.py`, `scripts/run_gemini_vlm.py`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`, 210 prompt rows/model | run selected provider/open-weight models and report raw-response audit rules |
+| VLM/API track | Open-weight row executed | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`; 210-row SmolVLM2-500M Kaggle GPU run complete | optionally add selected frontier/provider VLM rows and report raw-response audit rules |
 | Public release | Not final | Kaggle v0.1 package exists locally | decide Kaggle/HF release boundary and license text |
 
 ## Minimum Path To A Serious Public Draft
@@ -43,7 +43,7 @@ the newly scaffolded VLM/API prompt pack if we want modern assistant results.
 The ideal version adds:
 
 - one additional usable pretrained VLM/model-family row if practical;
-- execution of the VLM/API prompt pack on selected frontier and open-weight VLMs;
+- execution of the VLM/API prompt pack on selected frontier VLMs beyond the completed open-weight SmolVLM2 row;
 - confidence/calibration for any added zero-shot/VLM row;
 - final related-work table;
 - final dataset card and evaluation card;
@@ -53,7 +53,7 @@ The ideal version adds:
 
 Do not submit as a final arXiv paper yet. The work is strong enough for an
 internal technical report and close to a workshop-style benchmark draft. The
-critical external-validity gap is now reduced by real-transfer v0.2; the next
-bar is final paper integration, capture metadata, and optionally executing the
-VLM/API prompt pack or adding one more pretrained non-CLIP/OpenCLIP model
-family.
+critical external-validity gap is now reduced by real-transfer v0.2, and the
+open-weight VLM path is validated. The next bar is final paper integration,
+capture metadata, and optionally adding frontier/provider VLM rows or one more
+pretrained non-CLIP/OpenCLIP model family.

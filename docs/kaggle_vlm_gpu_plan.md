@@ -7,6 +7,10 @@ open-weight model, starting with `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`.
 
 This path avoids paid frontier APIs and avoids local CPU runtime bottlenecks.
 
+Status: complete for the first open-weight row. Kaggle kernel version 7 ran the
+full 210-row prompt pack and wrote tracked artifacts under
+`reports/vlm_open_weight_smolvlm2_kaggle_v01/`.
+
 ## What Codex Can Prepare Locally
 
 - Build a private Kaggle dataset folder with prompt pack, scripts, and image
@@ -15,7 +19,7 @@ This path avoids paid frontier APIs and avoids local CPU runtime bottlenecks.
 ```bash
 .venv/bin/python scripts/build_kaggle_vlm_package.py \
   --output-dir /Volumes/980PRO/CURE-OR++/kaggle_vlm/cure-or-pp-vlm-real-transfer-v02-private \
-  --kaggle-id YOUR_KAGGLE_USERNAME/cure-or-pp-vlm-real-transfer-v02-private
+  --kaggle-id yaroslavkholmirzayev/cure-or-pp-vlm-real-transfer-v02-private
 ```
 
 - Generate the GPU notebook and Kaggle kernel metadata:
@@ -30,12 +34,24 @@ Generated files:
 - `kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb`
 - `kaggle/vlm_kernel/kernel-metadata.json`
 
+The notebook pins `torch==2.5.1+cu121` and `torchvision==0.20.1+cu121`
+because the default Kaggle GPU resolved to Tesla P100, while newer Kaggle
+PyTorch images no longer supported P100 `sm_60`. The runner uses `float16` for
+that GPU.
+
 ## What Requires The User's Kaggle Account
 
 Codex cannot push or run the notebook unless Kaggle CLI credentials are
 configured locally.
 
-Required local credential file:
+Required local credential state, either OAuth cache:
+
+```text
+~/.kaggle/credentials.json
+~/.kaggle/access_token
+```
+
+or the legacy API token file:
 
 ```text
 ~/.kaggle/kaggle.json
@@ -57,6 +73,12 @@ Then push the GPU notebook:
 
 ```bash
 kaggle kernels push -p kaggle/vlm_kernel
+```
+
+If the CLI reports `Authentication required`, refresh the local OAuth session:
+
+```bash
+kaggle auth login
 ```
 
 ## Privacy Boundary

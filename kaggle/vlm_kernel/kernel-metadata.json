@@ -1,5 +1,5 @@
 {
-  "id": "YOUR_KAGGLE_USERNAME/cure-or-pp-vlm-open-weight-gpu-v01",
+  "id": "yaroslavkholmirzayev/cure-or-open-weight-vlm-real-transfer-gpu-pilot",
   "title": "CURE-OR++ Open-Weight VLM Real-Transfer GPU Pilot",
   "code_file": "cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
   "language": "python",
@@ -8,6 +8,6 @@
   "enable_gpu": true,
   "enable_internet": true,
   "dataset_sources": [
-    "YOUR_KAGGLE_USERNAME/cure-or-pp-vlm-real-transfer-v02-private"
+    "yaroslavkholmirzayev/cure-or-pp-vlm-real-transfer-v02-private"
   ]
 }

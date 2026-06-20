@@ -1,0 +1,4 @@
+model_id,provider,model_version,recipe,n,accuracy,accuracy_ci_low,accuracy_ci_high,unparseable_rate,abstention_rate,accuracy_drop_vs_clean,accuracy_drop_ci_low,accuracy_drop_ci_high
+HuggingFaceTB/SmolVLM2-500M-Video-Instruct,huggingface,,messenger_upload_download,60,0.633333,0.466667,0.800000,0.000000,0.000000,-0.033333,-0.100000,0.000000
+HuggingFaceTB/SmolVLM2-500M-Video-Instruct,huggingface,,phone_screenshot_resave,60,0.500000,0.333333,0.666667,0.000000,0.000000,0.100000,-0.033333,0.233333
+HuggingFaceTB/SmolVLM2-500M-Video-Instruct,huggingface,,video_call_frame_capture,60,0.533333,0.366667,0.700000,0.000000,0.000000,0.066667,-0.066667,0.200000

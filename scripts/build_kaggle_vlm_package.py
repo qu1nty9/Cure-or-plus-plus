@@ -52,12 +52,14 @@ def main() -> int:
 
     write_dataset_metadata(output_dir, args.kaggle_id, args.title)
     write_readme(output_dir, prompt_rows, copied_images)
+    removed_artifacts = remove_macos_artifacts(output_dir)
 
     print(f"Output dir: {output_dir}")
     print(f"Prompt rows: {len(prompt_rows)}")
     print(f"Unique images: {len(image_paths)}")
     print(f"Copied files: {len(copied_files)}")
     print(f"Copied images: {len(copied_images)}")
+    print(f"Removed macOS artifacts: {removed_artifacts}")
     print(f"dataset-metadata.json: {output_dir / 'dataset-metadata.json'}")
     return 0
 
@@ -97,6 +99,16 @@ This package is intended for private evaluation only. Do not publish raw CURE-OR
 or local real-transfer image payloads unless their upstream terms permit it.
 """
     (output_dir / "README.md").write_text(text, encoding="utf-8")
+
+
+def remove_macos_artifacts(output_dir: Path) -> int:
+    removed = 0
+    for path in output_dir.rglob("*"):
+        if path.name == ".DS_Store" or path.name.startswith("._"):
+            if path.is_file():
+                path.unlink()
+                removed += 1
+    return removed
 
 
 def load_jsonl(path: Path) -> list[dict]:

@@ -1,0 +1,2 @@
+model_id,provider,model_version,clean_n,clean_accuracy,clean_unparseable_rate,clean_abstention_rate,real_n,real_accuracy,real_unparseable_rate,real_abstention_rate,accuracy_drop_vs_clean
+HuggingFaceTB/SmolVLM2-500M-Video-Instruct,huggingface,,30,0.600000,0.000000,0.000000,180,0.555556,0.000000,0.000000,0.044444
