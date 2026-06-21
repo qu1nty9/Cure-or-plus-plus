@@ -137,7 +137,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=12513 min_size=1",
+      "detail": "exists=True size=12667 min_size=1",
       "name": "required_file:scripts/write_kaggle_vlm_notebook.py",
       "passed": true
     },
@@ -147,12 +147,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=11788 min_size=1",
+      "detail": "exists=True size=11758 min_size=1",
       "name": "required_file:notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
       "passed": true
     },
     {
-      "detail": "exists=True size=11788 min_size=1",
+      "detail": "exists=True size=11758 min_size=1",
       "name": "required_file:kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
       "passed": true
     },
