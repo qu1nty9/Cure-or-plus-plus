@@ -46,6 +46,13 @@ REQUIRED_FILES = [
     "reports/vlm_open_weight_internvl3_1b_kaggle_v01/audit.csv",
     "reports/vlm_open_weight_internvl3_1b_kaggle_v01/responses.jsonl",
     "reports/vlm_open_weight_internvl3_1b_kaggle_v01/kaggle_kernel.log",
+    "reports/vlm_open_weight_internvl3_2b_kaggle_v01/summary.md",
+    "reports/vlm_open_weight_internvl3_2b_kaggle_v01/model_summary.csv",
+    "reports/vlm_open_weight_internvl3_2b_kaggle_v01/recipe_table.csv",
+    "reports/vlm_open_weight_internvl3_2b_kaggle_v01/label_table.csv",
+    "reports/vlm_open_weight_internvl3_2b_kaggle_v01/audit.csv",
+    "reports/vlm_open_weight_internvl3_2b_kaggle_v01/responses.jsonl",
+    "reports/vlm_open_weight_internvl3_2b_kaggle_v01/kaggle_kernel.log",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/model_summary.csv",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/recipe_table.csv",
@@ -207,6 +214,7 @@ def check_paper_links() -> list[dict]:
         "SmolVLM2-500M",
         "SmolVLM2-2.2B",
         "InternVL3-1B",
+        "InternVL3-2B",
         "Qwen2.5-VL-3B",
     ]
     return [

@@ -107,13 +107,18 @@ VLM/API prompt-pack status:
   v0.2.
 - It contains 210 image-question rows per model: 30 clean source rows and 180
   transferred rows.
-- Four open-weight full rows are complete: `SmolVLM2-500M-Video-Instruct`,
-  `SmolVLM2-2.2B-Instruct`, `InternVL3-1B-hf`, and
+- Five open-weight full rows are complete: `SmolVLM2-500M-Video-Instruct`,
+  `SmolVLM2-2.2B-Instruct`, `InternVL3-1B-hf`, `InternVL3-2B-hf`, and
   `Qwen2.5-VL-3B-Instruct`. Their tracked artifacts are in
   `reports/vlm_open_weight_smolvlm2_kaggle_v01/`,
   `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`,
   `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, and
+  `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, plus
   `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`.
+- The strongest open-weight rows are now SmolVLM2-2.2B and InternVL3-1B at
+  93.3% on both clean-source and real-transfer splits, while InternVL3-2B
+  remains fully parseable but lands slightly lower at 92.8% real-transfer
+  accuracy.
 - It is intentionally not mixed into the current CLIP/OpenCLIP/prototype
   leaderboard because provider VLMs require text-answer extraction, exact model
   versioning, and raw-response audit handling.
@@ -178,9 +183,10 @@ Avoid:
 Before a final public paper:
 
 1. Integrate real-transfer v0.2 results into the final paper prose.
-2. Execute the VLM/API prompt pack if modern assistant results are needed for
-   the first public paper.
+2. Execute additional frontier/provider VLM rows if modern assistant
+   comparisons are needed for the first public paper.
 3. Add confidence/calibration tables for any further usable zero-shot or VLM
    families.
-4. Decide whether to add one additional pretrained non-CLIP/OpenCLIP VLM family
-   or keep the current model set and focus on real-transfer validation.
+4. Decide whether to retry a memory-constrained open-weight row such as
+   LLaVA-OneVision 0.5B or keep the current open-weight set and focus on paper
+   polish.

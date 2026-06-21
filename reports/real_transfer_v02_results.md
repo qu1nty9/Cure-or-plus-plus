@@ -59,6 +59,7 @@ because they use generated text answers and response parsing.
 | SmolVLM2-500M-Video-Instruct | 60.0% | 55.6% | 4.4% | 0.0% | 0.0% |
 | SmolVLM2-2.2B-Instruct | 93.3% | 93.3% | 0.0% | 0.0% | 0.0% |
 | InternVL3-1B-hf | 93.3% | 93.3% | 0.0% | 0.0% | 0.0% |
+| InternVL3-2B-hf | 93.3% | 92.8% | 0.6% | 0.0% | 0.0% |
 | Qwen2.5-VL-3B-Instruct | 90.0% | 63.9% | 26.1% | 32.8% | 0.0% |
 
 | Model | Pipeline | Real acc. (95% CI) | Drop (95% CI) |
@@ -72,6 +73,9 @@ because they use generated text answers and response parsing.
 | InternVL3-1B-hf | Messenger upload/download | 93.3% [83.3%, 100.0%] | 0.0% [0.0%, 0.0%] |
 | InternVL3-1B-hf | Phone screenshot/resave | 93.3% [83.3%, 100.0%] | 0.0% [0.0%, 0.0%] |
 | InternVL3-1B-hf | Video-call frame capture | 93.3% [85.0%, 100.0%] | 0.0% [-5.0%, 5.0%] |
+| InternVL3-2B-hf | Messenger upload/download | 96.7% [90.0%, 100.0%] | -3.3% [-10.0%, 0.0%] |
+| InternVL3-2B-hf | Phone screenshot/resave | 90.0% [80.0%, 100.0%] | 3.3% [0.0%, 10.0%] |
+| InternVL3-2B-hf | Video-call frame capture | 91.7% [81.7%, 100.0%] | 1.7% [0.0%, 5.0%] |
 | Qwen2.5-VL-3B-Instruct | Messenger upload/download | 71.7% [55.0%, 86.7%] | 18.3% [6.7%, 33.3%] |
 | Qwen2.5-VL-3B-Instruct | Phone screenshot/resave | 56.7% [41.7%, 71.7%] | 33.3% [18.3%, 48.3%] |
 | Qwen2.5-VL-3B-Instruct | Video-call frame capture | 63.3% [48.3%, 76.7%] | 26.7% [13.3%, 41.7%] |
@@ -79,6 +83,7 @@ because they use generated text answers and response parsing.
 Artifacts are tracked in `reports/vlm_open_weight_smolvlm2_kaggle_v01/`,
 `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`,
 `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, and
+`reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, plus
 `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`.
 
 ## Weakest Label Rows
@@ -109,5 +114,5 @@ Artifacts are tracked in `reports/vlm_open_weight_smolvlm2_kaggle_v01/`,
 - The observed drops are moderate rather than catastrophic, which is useful: the block acts as a realism guardrail for the larger simulated and native CURE-OR benchmark.
 - Source-level bootstrap intervals are wide because the real-transfer block intentionally uses 30 source images; this supports cautious interpretation rather than overclaiming small pipeline differences.
 - The strongest claim is model- and pipeline-dependent sensitivity, not a universal collapse under every real transfer pipeline.
-- The open-weight VLM track now includes a weak SmolVLM2-500M baseline, a scaled SmolVLM2-2.2B row and an InternVL3-1B row that both hold 93.3% on clean and real-transfer, and a Qwen2.5-VL-3B row that exposes generation instability under real-transfer images through literal `!!!!!!!!` outputs.
+- The open-weight VLM track now includes a weak SmolVLM2-500M baseline, two strong 93.3%-clean rows from SmolVLM2-2.2B and InternVL3-1B, an InternVL3-2B follow-up that remains fully parseable but drops slightly to 92.8% real-transfer accuracy, and a Qwen2.5-VL-3B row that exposes generation instability under real-transfer images through literal `!!!!!!!!` outputs.
 - Per-file capture dates are not manually asserted here; they can be extracted from image metadata where present if needed for the final release.

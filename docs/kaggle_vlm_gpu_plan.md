@@ -5,27 +5,29 @@
 Run the CURE-OR++ real-transfer v0.2 VLM prompt pack on Kaggle GPU with a
 tiered open-weight model matrix. Completed full rows now include
 `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` and
-`HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`, and
-`Qwen/Qwen2.5-VL-3B-Instruct`; the next step is promoting selected remaining
-smoke-passed candidates from
+`HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`,
+`OpenGVLab/InternVL3-2B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct`; the next step
+is promoting selected remaining smoke-passed candidates from
 `configs/vlm_open_weight_model_matrix_v01.json`.
 
 This path avoids paid frontier APIs and avoids local CPU runtime bottlenecks.
 
-Status: complete for four open-weight full rows. Kaggle kernel version 7 ran the
-SmolVLM2-500M 210-row prompt pack and wrote tracked artifacts under
+Status: complete for five open-weight full rows. Kaggle kernel version 7 ran
+the SmolVLM2-500M 210-row prompt pack and wrote tracked artifacts under
 `reports/vlm_open_weight_smolvlm2_kaggle_v01/`. Kaggle kernel version 12 ran
 the InternVL3-1B 210-row prompt pack and wrote tracked artifacts under
 `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`. Kaggle kernel version 13
 ran the Qwen2.5-VL-3B 210-row prompt pack and wrote tracked artifacts under
 `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`. Kaggle kernel version 14
 ran the SmolVLM2-2.2B 210-row prompt pack and wrote tracked artifacts under
-`reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`. The current notebook now
+`reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`. Kaggle kernel version 16
+ran the InternVL3-2B 210-row prompt pack and wrote tracked artifacts under
+`reports/vlm_open_weight_internvl3_2b_kaggle_v01/`. The current notebook now
 defaults to smoke mode for the remaining queue:
 
 - `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`
-- `OpenGVLab/InternVL3-2B-hf`
 - `Qwen/Qwen2.5-VL-7B-Instruct`
+- `llava-hf/llava-onevision-qwen2-7b-ov-hf`
 
 `llava-hf/llava-onevision-qwen2-0.5b-ov-hf` passed smoke but hit CUDA OOM in
 full mode on Kaggle P100, so it should be retried only after memory-specific

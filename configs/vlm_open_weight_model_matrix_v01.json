@@ -106,12 +106,13 @@
       "dtype": "float16",
       "image_content_key": "url_path",
       "max_tokens": 8,
-      "tier": "tier_2_after_smoke",
+      "tier": "completed_full",
       "enabled_by_default": false,
-      "status": "candidate_after_internvl3_1b_full_completed",
+      "status": "full_completed_kaggle_v16_small_real_drop",
+      "known_result_dir": "reports/vlm_open_weight_internvl3_2b_kaggle_v01",
       "license": "qwen",
       "hf_url": "https://huggingface.co/OpenGVLab/InternVL3-2B-hf",
-      "notes": "Natural follow-up now that the 1B row completed; smoke before any full run."
+      "notes": "Completed 210-row follow-up to the InternVL3-1B row on Kaggle P100. Remains fully parseable and strong, but shows a small real-transfer drop versus the 1B row."
     },
     {
       "slug": "qwen2_5_vl_7b",

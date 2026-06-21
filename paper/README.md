@@ -2,7 +2,7 @@
 
 This folder contains the working LaTeX scaffold for the serious CURE-OR++
 technical report. It is intentionally not final-publication ready yet: the
-current draft now includes Full-CURE-OR v0.4, real-transfer v0.2, and four
+current draft now includes Full-CURE-OR v0.4, real-transfer v0.2, and five
 open-weight VLM prompt-pack rows, but still needs final citation/license checks,
 venue formatting, and optional broader frontier/provider VLM coverage.
 

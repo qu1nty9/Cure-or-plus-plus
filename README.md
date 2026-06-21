@@ -215,23 +215,26 @@ The real-transfer validation block is collected and evaluated. The activation
 status is in `reports/real_transfer_v02_activation_status.json`, and the
 source-matched results with bootstrap intervals and figures are in
 `reports/real_transfer_v02_results.md`.
-The VLM/API extension now has four executed open-weight rows on the 210-row
+The VLM/API extension now has five executed open-weight rows on the 210-row
 prompt pack: `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`,
-`HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`, and
-`Qwen/Qwen2.5-VL-3B-Instruct`. Their summaries are in
+`HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`,
+`OpenGVLab/InternVL3-2B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct`. Their
+summaries are in
 `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`,
 `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/summary.md`,
 `reports/vlm_open_weight_internvl3_1b_kaggle_v01/summary.md`, and
+`reports/vlm_open_weight_internvl3_2b_kaggle_v01/summary.md`, plus
 `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md`. The
 open-weight expansion queue is tracked in
 `configs/vlm_open_weight_model_matrix_v01.json` and documented in
 `docs/vlm_open_weight_model_matrix_v01.md`; the next priority rows are
-InternVL3-2B, a memory-tuned retry path for LLaVA-OneVision 0.5B, and
-optional larger Qwen/frontier rows after that. Kaggle kernel version 9 passed
-the smoke gate for all four tier-1 candidates; kernel version 12 completed the
-InternVL3-1B full run; kernel version 13 completed the Qwen2.5-VL-3B full
-run; and kernel version 14 completed the SmolVLM2-2.2B full run. The smoke
-artifact is in
+a memory-tuned retry path for LLaVA-OneVision 0.5B, optional larger Qwen
+open-weight rows, and selected frontier/provider VLM rows after that. Kaggle
+kernel version 9 passed the smoke gate for all four tier-1 candidates; kernel
+version 12 completed the InternVL3-1B full run; kernel version 13 completed
+the Qwen2.5-VL-3B full run; kernel version 14 completed the SmolVLM2-2.2B
+full run; and kernel version 16 completed the InternVL3-2B full run. The
+smoke artifact is in
 `reports/vlm_open_weight_matrix_smoke_kaggle_v01/summary.md`. The prompt pack
 summary is in `reports/vlm_api_track_v01_prompt_pack_summary.json`, and the
 protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can
