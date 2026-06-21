@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -34,6 +35,7 @@ REQUIRED_FILES = [
     "scripts/evaluate_vlm_response_pack.py",
     "scripts/build_kaggle_vlm_package.py",
     "scripts/write_kaggle_vlm_notebook.py",
+    "scripts/check_paper_build.py",
     "notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
     "kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
     "kaggle/vlm_kernel/kernel-metadata.json",
@@ -71,6 +73,7 @@ def main() -> int:
     checks.extend(check_real_transfer_tables())
     checks.extend(check_summary_files())
     checks.extend(check_paper_links())
+    checks.extend(check_paper_preflight())
     checks.extend(check_vlm_prompt_pack())
     checks.extend(check_forbidden_public_strings())
 
@@ -176,11 +179,30 @@ def check_paper_links() -> list[dict]:
         "real_transfer_v02_source_matched_drops.png",
         "real_transfer_v02_accuracy_heatmap.png",
         "source-level bootstrap confidence intervals",
+        "SmolVLM2-500M",
     ]
     return [
         check(f"paper_contains:{text}", text in paper, f"needle={text!r}")
         for text in required
     ]
+
+
+def check_paper_preflight() -> list[dict]:
+    script = resolve_project_path("scripts/check_paper_build.py")
+    if not script.exists():
+        return [check("paper_preflight", False, "missing scripts/check_paper_build.py")]
+
+    result = subprocess.run(
+        [sys.executable, str(script), "--json"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    detail = f"exit_code={result.returncode}"
+    if result.returncode != 0:
+        detail += f" stderr={result.stderr[-500:]} stdout={result.stdout[-500:]}"
+    return [check("paper_preflight", result.returncode == 0, detail)]
 
 
 def check_vlm_prompt_pack() -> list[dict]:

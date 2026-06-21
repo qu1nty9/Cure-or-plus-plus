@@ -6,12 +6,18 @@ current draft now includes Full-CURE-OR v0.4, real-transfer v0.2, and the first
 open-weight VLM prompt-pack row, but still needs final citation/license checks,
 venue formatting, and optional broader VLM/model coverage.
 
-Compile locally with:
+Validate paper sources and referenced assets without requiring a local TeX
+runtime:
 
 ```bash
-python3 /Users/yaroslav/.codex/plugins/cache/openai-bundled/latex/0.2.2/scripts/compile_latex.py \
-  /Users/yaroslav/Documents/CURE-OR++/paper/main.tex \
-  --output-directory /private/tmp/cure_or_pp_paper_build
+python3 scripts/check_paper_build.py
+```
+
+Compile locally after installing TeX Live/MacTeX command-line tools
+(`latexmk`, `pdflatex`, and `kpsewhich`):
+
+```bash
+python3 scripts/check_paper_build.py --compile --require-tex --output-dir paper/build
 ```
 
 Main source:
@@ -22,6 +28,11 @@ Main source:
 Inserted generated tables:
 
 - `reports/full_cure_or_paper_tables_v04.tex`
+
+Inserted generated figures:
+
+- `results/real_transfer_v02_source_matched_drops.png`
+- `results/real_transfer_v02_accuracy_heatmap.png`
 
 Before public submission:
 

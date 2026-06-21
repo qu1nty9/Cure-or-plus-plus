@@ -1,5 +1,5 @@
 {
-  "check_count": 52,
+  "check_count": 55,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -122,6 +122,11 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=7464 min_size=1",
+      "name": "required_file:scripts/check_paper_build.py",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=6548 min_size=1",
       "name": "required_file:notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
       "passed": true
@@ -219,6 +224,16 @@
     {
       "detail": "needle='source-level bootstrap confidence intervals'",
       "name": "paper_contains:source-level bootstrap confidence intervals",
+      "passed": true
+    },
+    {
+      "detail": "needle='SmolVLM2-500M'",
+      "name": "paper_contains:SmolVLM2-500M",
+      "passed": true
+    },
+    {
+      "detail": "exit_code=0",
+      "name": "paper_preflight",
       "passed": true
     },
     {

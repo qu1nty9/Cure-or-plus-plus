@@ -207,20 +207,23 @@ Release-quality documentation is now split into
 `docs/dataset_card_cure_or_pp_v04.md`,
 `docs/evaluation_card_full_cure_or_v04.md`, and
 `reports/arxiv_readiness_matrix_v04.md`.
-The LaTeX paper scaffold is in `paper/main.tex` and currently compiles as a
-draft against the generated table pack.
+The LaTeX paper scaffold is in `paper/main.tex`; source references are checked
+by `scripts/check_paper_build.py`, and full PDF compilation requires
+TeX Live/MacTeX command-line tools.
 The real-transfer validation block is collected and evaluated. The activation
 status is in `reports/real_transfer_v02_activation_status.json`, and the
 source-matched results with bootstrap intervals and figures are in
 `reports/real_transfer_v02_results.md`.
-The VLM/API extension is scaffolded but not executed. The prompt pack summary
-is in `reports/vlm_api_track_v01_prompt_pack_summary.json`, and the planned
-protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can
-be collected with `scripts/run_openai_compatible_vlm.py` or
+The VLM/API extension now has one executed open-weight row:
+`HuggingFaceTB/SmolVLM2-500M-Video-Instruct` on the 210-row prompt pack. The
+summary is in `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`; the
+prompt pack summary is in `reports/vlm_api_track_v01_prompt_pack_summary.json`,
+and the protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model
+responses can be collected with `scripts/run_openai_compatible_vlm.py` or
 `scripts/run_gemini_vlm.py`; open-weight local VLMs can be collected with
 `scripts/run_hf_vlm.py`. All VLM rows can be evaluated with
-`scripts/evaluate_vlm_response_pack.py`. A Kaggle GPU path for the open-weight
-VLM pilot is documented in `docs/kaggle_vlm_gpu_plan.md`.
+`scripts/evaluate_vlm_response_pack.py`. A Kaggle GPU path for open-weight VLM
+runs is documented in `docs/kaggle_vlm_gpu_plan.md`.
 SigLIP is listed as a diagnostic failure under the current zero-shot prompt
 protocol, not as a strong robustness baseline.
 
