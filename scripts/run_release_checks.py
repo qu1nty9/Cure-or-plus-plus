@@ -32,6 +32,13 @@ REQUIRED_FILES = [
     "reports/vlm_api_track_v01_prompt_pack_summary.json",
     "reports/vlm_open_weight_matrix_smoke_kaggle_v01/summary.md",
     "reports/vlm_open_weight_matrix_smoke_kaggle_v01/model_summary.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_v01/summary.md",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_v01/model_summary.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_v01/recipe_table.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_v01/label_table.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_v01/audit.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_v01/responses.jsonl",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_v01/kaggle_kernel.log",
     "scripts/build_vlm_prompt_pack.py",
     "scripts/run_openai_compatible_vlm.py",
     "scripts/run_gemini_vlm.py",
@@ -184,6 +191,7 @@ def check_paper_links() -> list[dict]:
         "real_transfer_v02_accuracy_heatmap.png",
         "source-level bootstrap confidence intervals",
         "SmolVLM2-500M",
+        "InternVL3-1B",
     ]
     return [
         check(f"paper_contains:{text}", text in paper, f"needle={text!r}")

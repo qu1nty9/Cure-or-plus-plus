@@ -12,15 +12,20 @@ Run the matrix in two passes:
 2. Full mode: 210 rows only for models that pass smoke without load/generation
    failures.
 
-The completed baseline remains
-`HuggingFaceTB/SmolVLM2-500M-Video-Instruct`. The next default smoke queue is:
+Completed full rows:
+
+| slug | model | result dir | clean | real-transfer | note |
+| --- | --- | --- | ---: | ---: | --- |
+| `smolvlm2_500m` | `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` | `reports/vlm_open_weight_smolvlm2_kaggle_v01/` | 0.6000 | 0.5556 | Initial weak open-weight baseline. |
+| `internvl3_1b` | `OpenGVLab/InternVL3-1B-hf` | `reports/vlm_open_weight_internvl3_1b_kaggle_v01/` | 0.9333 | 0.9333 | First completed non-SmolVLM family-contrast row. |
+
+The next default smoke/full queue is:
 
 | slug | model | tier | reason |
 | --- | --- | --- | --- |
 | `smolvlm2_2b` | `HuggingFaceTB/SmolVLM2-2.2B-Instruct` | tier_1_next | Same family as completed baseline, stronger size. |
-| `llava_onevision_qwen2_0_5b` | `llava-hf/llava-onevision-qwen2-0.5b-ov-hf` | tier_1_next | Small LLaVA-OneVision family contrast. |
-| `internvl3_1b` | `OpenGVLab/InternVL3-1B-hf` | tier_1_next | Compact InternVL-family contrast. |
 | `qwen2_5_vl_3b` | `Qwen/Qwen2.5-VL-3B-Instruct` | tier_1_next | Strong 3B VLM candidate. |
+| `llava_onevision_qwen2_0_5b` | `llava-hf/llava-onevision-qwen2-0.5b-ov-hf` | tier_1_next | Smoke passed, but full v11 hit P100 CUDA OOM; retry only with memory-specific tuning. |
 
 Stretch rows are present but disabled by default:
 
@@ -60,17 +65,45 @@ Push the notebook after the private VLM dataset is attached:
 kaggle kernels push -p kaggle/vlm_kernel
 ```
 
-Notebook defaults to smoke mode. For full runs, edit the first configuration
-cell:
+Notebook defaults to smoke mode. For full model-by-model runs, generate a
+temporary full notebook:
 
-```python
-RUN_MODE = "full"
-SELECTED_MODEL_SLUGS = ["smolvlm2_2b"]
+```bash
+.venv/bin/python scripts/write_kaggle_vlm_notebook.py \
+  --run-mode full \
+  --selected-model-slug smolvlm2_2b
 ```
 
 Do not run all stretch candidates in one Kaggle session. The full 210-row pass
 should be model-by-model so failed large models do not invalidate successful
 smaller rows.
+
+After pushing a full-run notebook, regenerate the default smoke notebook before
+committing:
+
+```bash
+.venv/bin/python scripts/write_kaggle_vlm_notebook.py
+```
+
+## Version 12 Full Result
+
+Kaggle kernel version 12 completed the first non-SmolVLM full row:
+
+- model: `OpenGVLab/InternVL3-1B-hf`
+- rows: 210 total, 30 clean and 180 real-transfer
+- clean accuracy: 0.9333
+- real-transfer accuracy: 0.9333
+- unparseable rate: 0.0000
+
+The tracked full result is in
+`reports/vlm_open_weight_internvl3_1b_kaggle_v01/summary.md`.
+
+## Version 11 Full Notes
+
+Kaggle kernel version 11 attempted a full run for
+`llava-hf/llava-onevision-qwen2-0.5b-ov-hf`, but failed with CUDA OOM on the
+Tesla P100 during generation. The smoke result remains valid, but the model
+should not be promoted to full mode again without memory-specific tuning.
 
 ## Version 9 Smoke Result
 

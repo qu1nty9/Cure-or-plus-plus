@@ -47,24 +47,29 @@ This report uses the source-matched real-transfer comparison: each model's real-
 | Messenger upload/download | 80.0% | 1.7% | 70.0% | 3.3% | CLIP ViT-B/16 |
 | Phone screenshot/resave | 82.5% | -0.8% | 71.7% | 3.3% | OpenCLIP ViT-B/16 DataComp-XL |
 
-## Open-Weight VLM Baseline
+## Open-Weight VLM Rows
 
-The VLM prompt pack was also executed on Kaggle GPU with
-`HuggingFaceTB/SmolVLM2-500M-Video-Instruct`. This is not a frontier VLM row,
-but it is a useful open-weight assistant-style baseline over the same
-30-clean/180-real-transfer prompt pack.
+The VLM prompt pack was also executed on Kaggle GPU for open-weight
+assistant-style models over the same 30-clean/180-real-transfer prompt pack.
+These rows are reported separately from the CLIP/OpenCLIP/prototype tables
+because they use generated text answers and response parsing.
 
 | Model | Clean src. | Real acc. | Drop | Unparseable | Abstention |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | SmolVLM2-500M-Video-Instruct | 60.0% | 55.6% | 4.4% | 0.0% | 0.0% |
+| InternVL3-1B-hf | 93.3% | 93.3% | 0.0% | 0.0% | 0.0% |
 
-| Pipeline | Real acc. (95% CI) | Drop (95% CI) |
-| --- | ---: | ---: |
-| Messenger upload/download | 63.3% [46.7%, 80.0%] | -3.3% [-10.0%, 0.0%] |
-| Phone screenshot/resave | 50.0% [33.3%, 66.7%] | 10.0% [-3.3%, 23.3%] |
-| Video-call frame capture | 53.3% [36.7%, 70.0%] | 6.7% [-6.7%, 20.0%] |
+| Model | Pipeline | Real acc. (95% CI) | Drop (95% CI) |
+| --- | --- | ---: | ---: |
+| SmolVLM2-500M-Video-Instruct | Messenger upload/download | 63.3% [46.7%, 80.0%] | -3.3% [-10.0%, 0.0%] |
+| SmolVLM2-500M-Video-Instruct | Phone screenshot/resave | 50.0% [33.3%, 66.7%] | 10.0% [-3.3%, 23.3%] |
+| SmolVLM2-500M-Video-Instruct | Video-call frame capture | 53.3% [36.7%, 70.0%] | 6.7% [-6.7%, 20.0%] |
+| InternVL3-1B-hf | Messenger upload/download | 93.3% [83.3%, 100.0%] | 0.0% [0.0%, 0.0%] |
+| InternVL3-1B-hf | Phone screenshot/resave | 93.3% [83.3%, 100.0%] | 0.0% [0.0%, 0.0%] |
+| InternVL3-1B-hf | Video-call frame capture | 93.3% [85.0%, 100.0%] | 0.0% [-5.0%, 5.0%] |
 
-Artifacts are tracked in `reports/vlm_open_weight_smolvlm2_kaggle_v01/`.
+Artifacts are tracked in `reports/vlm_open_weight_smolvlm2_kaggle_v01/` and
+`reports/vlm_open_weight_internvl3_1b_kaggle_v01/`.
 
 ## Weakest Label Rows
 
@@ -94,5 +99,5 @@ Artifacts are tracked in `reports/vlm_open_weight_smolvlm2_kaggle_v01/`.
 - The observed drops are moderate rather than catastrophic, which is useful: the block acts as a realism guardrail for the larger simulated and native CURE-OR benchmark.
 - Source-level bootstrap intervals are wide because the real-transfer block intentionally uses 30 source images; this supports cautious interpretation rather than overclaiming small pipeline differences.
 - The strongest claim is model- and pipeline-dependent sensitivity, not a universal collapse under every real transfer pipeline.
-- The open-weight VLM row is substantially weaker than the best CLIP/OpenCLIP real-transfer rows, but it validates that the prompt-pack/evaluator path works for assistant-style vision-language models without paid APIs.
+- The open-weight VLM track now includes both a weak SmolVLM2 baseline and a much stronger InternVL3-1B row; this validates the prompt-pack/evaluator path and gives the paper a real model-family contrast without paid APIs.
 - Per-file capture dates are not manually asserted here; they can be extracted from image metadata where present if needed for the final release.

@@ -21,8 +21,9 @@ Current strongest evidence:
   `reports/full_cure_or_paper_tables_v04.md`;
 - real-transfer v0.2 evaluation over 30 source images and 180 transferred
   outputs collected with iPhone 15 Pro, WhatsApp, and FaceTime pipelines;
-- an open-weight VLM prompt-pack run using
-  `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` on Kaggle GPU.
+- open-weight VLM prompt-pack runs using
+  `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` and
+  `OpenGVLab/InternVL3-1B-hf` on Kaggle GPU.
 
 Main blocker:
 
@@ -54,8 +55,8 @@ mean confidence. A type-10 grayscale control confirms that grayscale conversion
 alone is damaging but does not explain the full native level-5 collapse. The
 real-transfer v0.2 block now adds 180 transferred outputs covering messenger
 upload/download, phone screenshot/resave, and video-call frame capture
-pipelines. A first open-weight VLM row also validates the prompt-pack path for
-assistant-style vision-language models.
+pipelines. Two open-weight VLM rows validate the prompt-pack path and provide
+an initial assistant-style model-family contrast.
 
 ## Contributions
 
@@ -73,9 +74,9 @@ assistant-style vision-language models.
    conversion from native challenge severity.
 6. A real-transfer v0.2 validation block testing whether real app/device
    transfer pipelines reproduce related failure behavior.
-7. A 210-row VLM prompt-pack/evaluator path with an executed open-weight
-   SmolVLM2-500M baseline, validating assistant-style vision-language
-   evaluation without paid API calls.
+7. A 210-row VLM prompt-pack/evaluator path with executed open-weight
+   SmolVLM2-500M and InternVL3-1B rows, validating assistant-style
+   vision-language evaluation without paid API calls.
 
 ## Method Summary
 
@@ -101,9 +102,10 @@ identifies iPhone 15 Pro as the capture device, WhatsApp as the messenger
 pipeline, and FaceTime as the video-call/video-transmission pipeline.
 
 The VLM/API track converts the same 30 clean source images and 180 transferred
-outputs into multiple-choice prompt rows. The first executed row is
-`HuggingFaceTB/SmolVLM2-500M-Video-Instruct`, run on Kaggle GPU with
-Transformers and evaluated by `scripts/evaluate_vlm_response_pack.py`.
+outputs into multiple-choice prompt rows. The completed open-weight rows are
+`HuggingFaceTB/SmolVLM2-500M-Video-Instruct` and
+`OpenGVLab/InternVL3-1B-hf`, both run on Kaggle GPU with Transformers and
+evaluated by `scripts/evaluate_vlm_response_pack.py`.
 
 ## Current Baselines
 
@@ -188,22 +190,26 @@ zero-shot rows, real-transfer drops are moderate rather than catastrophic. This
 supports using the real-transfer block as an external-validity guardrail rather
 than as the main native-challenge collapse claim.
 
-The first open-weight VLM row, SmolVLM2-500M-Video-Instruct, produced:
+The open-weight VLM rows produced:
 
-- clean source accuracy: 0.6000 over 30 source rows;
-- real-transfer accuracy: 0.5556 over 180 transferred rows;
-- drop versus clean: 0.0444;
-- unparseable rate: 0.0000.
+| Model | Clean source | Real-transfer | Drop | Unparseable |
+| --- | ---: | ---: | ---: | ---: |
+| SmolVLM2-500M-Video-Instruct | 0.6000 | 0.5556 | 0.0444 | 0.0000 |
+| InternVL3-1B-hf | 0.9333 | 0.9333 | 0.0000 | 0.0000 |
 
-By pipeline, its real-transfer accuracies were:
+By pipeline, SmolVLM2-500M real-transfer accuracies were:
 
 - messenger upload/download: 0.6333;
 - phone screenshot/resave: 0.5000;
 - video-call frame capture: 0.5333.
 
-Interpretation: this row is weaker than the best CLIP/OpenCLIP real-transfer
-rows, but it proves the VLM prompt-pack and response-audit path is executable
-on open-weight models without paid APIs.
+InternVL3-1B reached 0.9333 accuracy for all three real-transfer pipelines.
+
+Interpretation: SmolVLM2-500M is weaker than the best CLIP/OpenCLIP
+real-transfer rows, but it proves the VLM prompt-pack and response-audit path
+is executable on open-weight models without paid APIs. InternVL3-1B adds a
+substantially stronger model-family contrast while preserving zero unparseable
+responses.
 
 ### Grayscale Control and Channel Effects
 
@@ -236,7 +242,7 @@ model family.
 - Real-transfer v0.2 is small: 30 source images, three pipelines, and two
   repeats per source/pipeline. It is an external-validity guardrail, not a
   comprehensive real-world transfer benchmark.
-- The current VLM evidence contains one open-weight assistant-style row, not a
+- The current VLM evidence contains two open-weight assistant-style rows, not a
   broad frontier/provider VLM comparison.
 - Full-CURE-OR v0.4 is a controlled probe, not an exhaustive evaluation of all
   images in the original dataset.

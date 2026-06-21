@@ -15,14 +15,14 @@
 \maketitle
 
 \begin{abstract}
-Object-recognition systems are often evaluated on clean or synthetically corrupted images, but practical image use also includes acquisition artifacts, digital transfer, recompression, screenshots, and channel changes. CURE-OR++ builds a compact, reproducible benchmark layer around CURE-OR for measuring how vision models fail under object-centric native challenge conditions and real transfer pipelines. On the Full-CURE-OR v0.4 probe, eight usable baselines cover CLIP/OpenCLIP zero-shot models and frozen-feature prototype classifiers. The strongest current level-5 baseline, DINOv2 ViT-S/14 Prototype, reaches only 0.2766 mean level-5 accuracy despite 0.7520 clean accuracy. Across all eight usable baselines, grayscale salt-and-pepper noise, salt-and-pepper noise, and grayscale gaussian blur collapse to near-chance accuracy, with all models at the floor threshold. Confidence analysis shows that stronger zero-shot models can remain substantially overconfident under severe native challenges: OpenCLIP ViT-B/16 DataComp XL reaches 0.1451 level-5 accuracy while retaining 0.4997 mean confidence. A type-10 grayscale control confirms that grayscale conversion alone is damaging but does not explain the full native level-5 collapse. A 180-output real-transfer v0.2 block covers messenger upload/download, phone screenshot/resave, and video-call frame capture; source-matched drops are moderate, with video-call frame capture producing the largest mean drop at 2.1 percentage points. A first open-weight VLM run evaluates SmolVLM2-500M on the same 210-row prompt pack, reaching 0.6000 clean-source accuracy and 0.5556 real-transfer accuracy with no unparseable responses.
+Object-recognition systems are often evaluated on clean or synthetically corrupted images, but practical image use also includes acquisition artifacts, digital transfer, recompression, screenshots, and channel changes. CURE-OR++ builds a compact, reproducible benchmark layer around CURE-OR for measuring how vision models fail under object-centric native challenge conditions and real transfer pipelines. On the Full-CURE-OR v0.4 probe, eight usable baselines cover CLIP/OpenCLIP zero-shot models and frozen-feature prototype classifiers. The strongest current level-5 baseline, DINOv2 ViT-S/14 Prototype, reaches only 0.2766 mean level-5 accuracy despite 0.7520 clean accuracy. Across all eight usable baselines, grayscale salt-and-pepper noise, salt-and-pepper noise, and grayscale gaussian blur collapse to near-chance accuracy, with all models at the floor threshold. Confidence analysis shows that stronger zero-shot models can remain substantially overconfident under severe native challenges: OpenCLIP ViT-B/16 DataComp XL reaches 0.1451 level-5 accuracy while retaining 0.4997 mean confidence. A type-10 grayscale control confirms that grayscale conversion alone is damaging but does not explain the full native level-5 collapse. A 180-output real-transfer v0.2 block covers messenger upload/download, phone screenshot/resave, and video-call frame capture; source-matched drops are moderate, with video-call frame capture producing the largest mean drop at 2.1 percentage points. Two open-weight VLM rows evaluate the same 210-row prompt pack: SmolVLM2-500M reaches 0.6000 clean-source and 0.5556 real-transfer accuracy, while InternVL3-1B reaches 0.9333 on both splits with no unparseable responses.
 \end{abstract}
 
 \section{Introduction}
 
 Robustness benchmarks often study isolated corruptions such as blur, noise, compression, or exposure shifts. Real image use is frequently more operational: images are captured, resized, recompressed, screenshotted, shared through applications, restored, or viewed through video-call pipelines. CURE-OR++ is designed around that narrower operational question: how do object-recognition baselines fail under reproducible object-centric challenge and transfer conditions?
 
-This draft focuses on the Full-CURE-OR v0.4 controlled probe, the evaluated real-transfer v0.2 validation block, and the first executed open-weight VLM prompt-pack row. The current repository also contains a smaller CURE-OR++ v0.1 Kaggle-ready artifact. The real-transfer and VLM blocks reduce the main external-validity gap, but remain small and should be interpreted as guardrails rather than a comprehensive deployment or frontier-assistant study.
+This draft focuses on the Full-CURE-OR v0.4 controlled probe, the evaluated real-transfer v0.2 validation block, and executed open-weight VLM prompt-pack rows. The current repository also contains a smaller CURE-OR++ v0.1 Kaggle-ready artifact. The real-transfer and VLM blocks reduce the main external-validity gap, but remain small and should be interpreted as guardrails rather than a comprehensive deployment or frontier-assistant study.
 
 \paragraph{Current contributions.}
 The current artifact provides:
@@ -33,7 +33,7 @@ The current artifact provides:
   \item confidence and calibration analysis for the usable CLIP/OpenCLIP-family zero-shot rows;
   \item a type-10 grayscale control and paired color-versus-grayscale challenge-family analysis;
   \item an evaluated real-transfer v0.2 guardrail for messenger, screenshot, and video-call pipelines;
-  \item a 210-row VLM prompt-pack path with an executed open-weight SmolVLM2-500M baseline.
+  \item a 210-row VLM prompt-pack path with executed open-weight SmolVLM2-500M and InternVL3-1B rows.
 \end{enumerate}
 
 \section{Benchmark Design}
@@ -52,7 +52,7 @@ Real-transfer confidence intervals use source-level bootstrap resampling over th
 The repository tracks code, configs, aggregate reports, paper tables, and generated figures. Raw CURE-OR images, local real-transfer payloads, per-image prediction dumps, and source-dataset archives remain excluded from Git and are governed by the upstream dataset terms.
 
 \paragraph{VLM/API track.}
-The repository also defines a separate multiple-choice visual QA prompt pack over the same real-transfer v0.2 source set. This track is intentionally kept outside the CLIP/OpenCLIP/prototype leaderboard: VLMs produce text responses, have provider-specific versioning, and require answer extraction and raw-response auditing. The initial prompt pack contains 210 image-question rows per model, covering 30 clean source images and 180 transferred outputs. The first executed row uses \path{HuggingFaceTB/SmolVLM2-500M-Video-Instruct} on Kaggle GPU with the Hugging Face runner and response evaluator.
+The repository also defines a separate multiple-choice visual QA prompt pack over the same real-transfer v0.2 source set. This track is intentionally kept outside the CLIP/OpenCLIP/prototype leaderboard: VLMs produce text responses, have provider-specific versioning, and require answer extraction and raw-response auditing. The initial prompt pack contains 210 image-question rows per model, covering 30 clean source images and 180 transferred outputs. The executed open-weight rows use \path{HuggingFaceTB/SmolVLM2-500M-Video-Instruct} and \path{OpenGVLab/InternVL3-1B-hf} on Kaggle GPU with the Hugging Face runner and response evaluator.
 
 \section{Models}
 
@@ -101,28 +101,27 @@ Real-transfer v0.2 evaluates 30 clean mini-CURE-OR sources across 10 labels, thr
   \label{fig:real-transfer-heatmap}
 \end{figure}
 
-\subsection{Open-Weight VLM Prompt-Pack Run}
+\subsection{Open-Weight VLM Prompt-Pack Runs}
 
-To validate the assistant-style VLM path without relying on paid provider APIs, we ran \path{HuggingFaceTB/SmolVLM2-500M-Video-Instruct} on the 210-row prompt pack using Kaggle GPU. The Kaggle environment resolved to a Tesla P100, so the notebook pins a P100-compatible CUDA PyTorch stack and runs generation in float16. The model returned parseable option letters for all rows.
+To validate the assistant-style VLM path without relying on paid provider APIs, we ran two open-weight VLM rows on the 210-row prompt pack using Kaggle GPU. The Kaggle environment resolved to a Tesla P100, so the notebook pins a P100-compatible CUDA PyTorch stack and runs generation in float16. Both completed models returned parseable option letters for all rows.
 
 \begin{table}[t]
   \centering
-  \caption{Open-weight VLM real-transfer prompt-pack result.}
-  \label{tab:vlm-smolvlm2}
+  \caption{Open-weight VLM real-transfer prompt-pack results.}
+  \label{tab:vlm-open-weight}
   \begin{tabular}{lrrrr}
     \hline
-    Split / pipeline & $n$ & Accuracy & Unparseable & Drop vs. clean \\
+    Model / split & $n$ & Accuracy & Unparseable & Drop vs. clean \\
     \hline
-    Clean source & 30 & 0.6000 & 0.0000 & -- \\
-    Real-transfer overall & 180 & 0.5556 & 0.0000 & 0.0444 \\
-    Messenger upload/download & 60 & 0.6333 & 0.0000 & -0.0333 \\
-    Phone screenshot/resave & 60 & 0.5000 & 0.0000 & 0.1000 \\
-    Video-call frame capture & 60 & 0.5333 & 0.0000 & 0.0667 \\
+    SmolVLM2-500M clean source & 30 & 0.6000 & 0.0000 & -- \\
+    SmolVLM2-500M real-transfer & 180 & 0.5556 & 0.0000 & 0.0444 \\
+    InternVL3-1B clean source & 30 & 0.9333 & 0.0000 & -- \\
+    InternVL3-1B real-transfer & 180 & 0.9333 & 0.0000 & 0.0000 \\
     \hline
   \end{tabular}
 \end{table}
 
-This row is weaker than the best CLIP/OpenCLIP real-transfer rows, but it proves that the prompt-pack, generation runner, parsing audit, and Kaggle GPU path are executable for open-weight VLMs. It should therefore be read as infrastructure validation and an initial assistant-style baseline, not as a broad frontier-VLM claim.
+The SmolVLM2-500M row is weaker than the best CLIP/OpenCLIP real-transfer rows, but it proves that the prompt-pack, generation runner, parsing audit, and Kaggle GPU path are executable for open-weight VLMs. InternVL3-1B changes the VLM block from single-row infrastructure validation into an initial model-family contrast: it reaches 0.9333 accuracy on both the clean source and real-transfer splits, with recipe-level accuracy of 0.9333 for messenger upload/download, phone screenshot/resave, and video-call frame capture. This should still be read as an initial assistant-style guardrail, not as a broad frontier-VLM claim.
 
 \section{Related Work}
 
@@ -132,11 +131,11 @@ The intended differentiator is not scale, but transparent generation, paired met
 
 \section{Limitations}
 
-Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API track currently includes one open-weight assistant-style row, not a broad frontier/provider comparison; results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
+Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API track currently includes two open-weight assistant-style rows, not a broad frontier/provider comparison; results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
 
 \section{Conclusion}
 
-CURE-OR++ currently provides a strong pre-paper benchmark artifact. The Full-CURE-OR v0.4 probe shows severe native challenge failures across model families, consensus floor failures under salt-and-pepper and blur variants, and confidence-preserving errors in stronger zero-shot models. Real-transfer v0.2 adds a small external-validity guardrail: real app and device pipelines produce moderate, model-dependent effects rather than universal collapse. The completed SmolVLM2-500M prompt-pack run validates the open-weight VLM evaluation path and provides a first assistant-style baseline for the real-transfer block.
+CURE-OR++ currently provides a strong pre-paper benchmark artifact. The Full-CURE-OR v0.4 probe shows severe native challenge failures across model families, consensus floor failures under salt-and-pepper and blur variants, and confidence-preserving errors in stronger zero-shot models. Real-transfer v0.2 adds a small external-validity guardrail: real app and device pipelines produce moderate, model-dependent effects rather than universal collapse. The completed SmolVLM2-500M and InternVL3-1B prompt-pack runs validate the open-weight VLM evaluation path and provide an initial assistant-style model-family contrast for the real-transfer block.
 
 \bibliographystyle{plain}
 \bibliography{references}

@@ -3,22 +3,27 @@
 ## Goal
 
 Run the CURE-OR++ real-transfer v0.2 VLM prompt pack on Kaggle GPU with a
-tiered open-weight model matrix. The first completed row is
-`HuggingFaceTB/SmolVLM2-500M-Video-Instruct`; the next step is smoke-testing
-the stronger/alternate open-weight queue defined in
-`configs/vlm_open_weight_model_matrix_v01.json`.
+tiered open-weight model matrix. Completed full rows now include
+`HuggingFaceTB/SmolVLM2-500M-Video-Instruct` and
+`OpenGVLab/InternVL3-1B-hf`; the next step is promoting selected remaining
+smoke-passed candidates from `configs/vlm_open_weight_model_matrix_v01.json`.
 
 This path avoids paid frontier APIs and avoids local CPU runtime bottlenecks.
 
-Status: complete for the first open-weight row. Kaggle kernel version 7 ran the
-full 210-row prompt pack and wrote tracked artifacts under
-`reports/vlm_open_weight_smolvlm2_kaggle_v01/`. The current notebook now
-defaults to smoke mode for the tier-1 queue:
+Status: complete for two open-weight full rows. Kaggle kernel version 7 ran the
+SmolVLM2-500M 210-row prompt pack and wrote tracked artifacts under
+`reports/vlm_open_weight_smolvlm2_kaggle_v01/`. Kaggle kernel version 12 ran
+the InternVL3-1B 210-row prompt pack and wrote tracked artifacts under
+`reports/vlm_open_weight_internvl3_1b_kaggle_v01/`. The current notebook now
+defaults to smoke mode for the remaining tier-1 queue:
 
 - `HuggingFaceTB/SmolVLM2-2.2B-Instruct`
 - `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`
-- `OpenGVLab/InternVL3-1B-hf`
 - `Qwen/Qwen2.5-VL-3B-Instruct`
+
+`llava-hf/llava-onevision-qwen2-0.5b-ov-hf` passed smoke but hit CUDA OOM in
+full mode on Kaggle P100, so it should be retried only after memory-specific
+tuning.
 
 ## What Codex Can Prepare Locally
 
