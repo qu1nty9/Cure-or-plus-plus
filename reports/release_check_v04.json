@@ -1,5 +1,5 @@
 {
-  "check_count": 55,
+  "check_count": 59,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -72,8 +72,18 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=5821 min_size=1",
+      "name": "required_file:configs/vlm_open_weight_model_matrix_v01.json",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=8206 min_size=1",
       "name": "required_file:docs/vlm_api_track_plan_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3595 min_size=1",
+      "name": "required_file:docs/vlm_open_weight_model_matrix_v01.md",
       "passed": true
     },
     {
@@ -84,6 +94,16 @@
     {
       "detail": "exists=True size=752 min_size=1",
       "name": "required_file:reports/vlm_api_track_v01_prompt_pack_summary.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1544 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=574 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v01/model_summary.csv",
       "passed": true
     },
     {
@@ -102,7 +122,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=13709 min_size=1",
+      "detail": "exists=True size=16356 min_size=1",
       "name": "required_file:scripts/run_hf_vlm.py",
       "passed": true
     },
@@ -112,12 +132,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=4852 min_size=1",
+      "detail": "exists=True size=4905 min_size=1",
       "name": "required_file:scripts/build_kaggle_vlm_package.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=7675 min_size=1",
+      "detail": "exists=True size=12513 min_size=1",
       "name": "required_file:scripts/write_kaggle_vlm_notebook.py",
       "passed": true
     },
@@ -127,12 +147,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6548 min_size=1",
+      "detail": "exists=True size=11788 min_size=1",
       "name": "required_file:notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
       "passed": true
     },
     {
-      "detail": "exists=True size=6548 min_size=1",
+      "detail": "exists=True size=11788 min_size=1",
       "name": "required_file:kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
       "passed": true
     },

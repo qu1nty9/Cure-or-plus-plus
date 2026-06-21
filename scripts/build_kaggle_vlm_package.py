@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 DEFAULT_INCLUDE_FILES = [
     "configs/vlm_api_track_v01.json",
+    "configs/vlm_open_weight_model_matrix_v01.json",
     "reports/vlm_api_track_v01_prompt_pack.jsonl",
     "reports/vlm_api_track_v01_prompt_pack_summary.json",
     "scripts/run_hf_vlm.py",

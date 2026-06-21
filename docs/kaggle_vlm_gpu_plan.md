@@ -2,14 +2,23 @@
 
 ## Goal
 
-Run the CURE-OR++ real-transfer v0.2 VLM prompt pack on Kaggle GPU with an
-open-weight model, starting with `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`.
+Run the CURE-OR++ real-transfer v0.2 VLM prompt pack on Kaggle GPU with a
+tiered open-weight model matrix. The first completed row is
+`HuggingFaceTB/SmolVLM2-500M-Video-Instruct`; the next step is smoke-testing
+the stronger/alternate open-weight queue defined in
+`configs/vlm_open_weight_model_matrix_v01.json`.
 
 This path avoids paid frontier APIs and avoids local CPU runtime bottlenecks.
 
 Status: complete for the first open-weight row. Kaggle kernel version 7 ran the
 full 210-row prompt pack and wrote tracked artifacts under
-`reports/vlm_open_weight_smolvlm2_kaggle_v01/`.
+`reports/vlm_open_weight_smolvlm2_kaggle_v01/`. The current notebook now
+defaults to smoke mode for the tier-1 queue:
+
+- `HuggingFaceTB/SmolVLM2-2.2B-Instruct`
+- `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`
+- `OpenGVLab/InternVL3-1B-hf`
+- `Qwen/Qwen2.5-VL-3B-Instruct`
 
 ## What Codex Can Prepare Locally
 
@@ -38,6 +47,25 @@ The notebook pins `torch==2.5.1+cu121` and `torchvision==0.20.1+cu121`
 because the default Kaggle GPU resolved to Tesla P100, while newer Kaggle
 PyTorch images no longer supported P100 `sm_60`. The runner uses `float16` for
 that GPU.
+
+Default notebook settings:
+
+```python
+RUN_MODE = "smoke"
+SELECTED_MODEL_SLUGS = []
+```
+
+This runs enabled tier-1 models with fixed mixed clean/real-transfer smoke rows.
+After smoke succeeds, promote models one at a time:
+
+```python
+RUN_MODE = "full"
+SELECTED_MODEL_SLUGS = ["smolvlm2_2b"]
+```
+
+Do not run all large/stretch candidates in one session. Full 210-row runs
+should be model-by-model so one memory failure does not destroy successful
+rows.
 
 ## What Requires The User's Kaggle Account
 

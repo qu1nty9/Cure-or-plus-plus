@@ -1,0 +1,5 @@
+slug,run_dir
+smolvlm2_2b,/kaggle/working/vlm_open_weight_runs/smoke/smolvlm2_2b
+llava_onevision_qwen2_0_5b,/kaggle/working/vlm_open_weight_runs/smoke/llava_onevision_qwen2_0_5b
+internvl3_1b,/kaggle/working/vlm_open_weight_runs/smoke/internvl3_1b
+qwen2_5_vl_3b,/kaggle/working/vlm_open_weight_runs/smoke/qwen2_5_vl_3b

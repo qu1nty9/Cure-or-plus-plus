@@ -216,10 +216,16 @@ source-matched results with bootstrap intervals and figures are in
 `reports/real_transfer_v02_results.md`.
 The VLM/API extension now has one executed open-weight row:
 `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` on the 210-row prompt pack. The
-summary is in `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`; the
-prompt pack summary is in `reports/vlm_api_track_v01_prompt_pack_summary.json`,
-and the protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model
-responses can be collected with `scripts/run_openai_compatible_vlm.py` or
+summary is in `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`. The
+open-weight expansion queue is tracked in
+`configs/vlm_open_weight_model_matrix_v01.json` and documented in
+`docs/vlm_open_weight_model_matrix_v01.md`; it starts with SmolVLM2-2.2B,
+LLaVA-OneVision 0.5B, InternVL3-1B, and Qwen2.5-VL-3B. Kaggle kernel version 9
+passed the smoke gate for all four tier-1 candidates; the smoke artifact is in
+`reports/vlm_open_weight_matrix_smoke_kaggle_v01/summary.md`. The prompt pack
+summary is in `reports/vlm_api_track_v01_prompt_pack_summary.json`, and the
+protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can
+be collected with `scripts/run_openai_compatible_vlm.py` or
 `scripts/run_gemini_vlm.py`; open-weight local VLMs can be collected with
 `scripts/run_hf_vlm.py`. All VLM rows can be evaluated with
 `scripts/evaluate_vlm_response_pack.py`. A Kaggle GPU path for open-weight VLM

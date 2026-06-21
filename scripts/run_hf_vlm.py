@@ -25,17 +25,31 @@ def main() -> int:
     parser.add_argument("--model", default="HuggingFaceTB/SmolVLM2-500M-Video-Instruct")
     parser.add_argument("--model-version", default="", help="Revision, commit, or exact local model version if known.")
     parser.add_argument("--revision", default=None)
+    parser.add_argument("--processor-kwargs-json", default="{}", help="JSON object passed to AutoProcessor.from_pretrained.")
+    parser.add_argument("--model-kwargs-json", default="{}", help="JSON object merged into model from_pretrained kwargs.")
+    parser.add_argument("--device-map", default="", help="Optional Transformers device_map value, for example 'auto'.")
     parser.add_argument(
         "--model-class",
-        choices=["AutoModelForImageTextToText", "AutoModelForMultimodalLM"],
+        choices=[
+            "AutoModelForImageTextToText",
+            "AutoModelForVision2Seq",
+            "LlavaOnevisionForConditionalGeneration",
+            "Qwen2_5_VLForConditionalGeneration",
+        ],
         default="AutoModelForImageTextToText",
+    )
+    parser.add_argument(
+        "--generation-backend",
+        choices=["chat_template", "qwen_vl_utils"],
+        default="chat_template",
+        help="How to turn chat messages into model inputs.",
     )
     parser.add_argument("--trust-remote-code", action="store_true")
     parser.add_argument("--device", choices=["auto", "cpu", "cuda", "mps"], default="auto")
     parser.add_argument("--dtype", choices=["auto", "float32", "float16", "bfloat16"], default="auto")
     parser.add_argument(
         "--image-content-key",
-        choices=["path", "url"],
+        choices=["path", "url", "url_path", "image", "image_path"],
         default="path",
         help="How to reference local images inside the Transformers chat template.",
     )
@@ -54,6 +68,8 @@ def main() -> int:
         help="Write ground-truth letters as responses. For runner/evaluator smoke tests only.",
     )
     args = parser.parse_args()
+    args.processor_kwargs = parse_json_object(args.processor_kwargs_json, "--processor-kwargs-json")
+    args.model_kwargs = parse_json_object(args.model_kwargs_json, "--model-kwargs-json")
 
     prompt_rows = select_rows(load_jsonl(resolve_project_path(args.prompt_pack)), args)
     if args.limit is not None:
@@ -116,6 +132,7 @@ def load_runtime(args: argparse.Namespace) -> dict:
         args.model,
         revision=args.revision,
         trust_remote_code=args.trust_remote_code,
+        **args.processor_kwargs,
     )
     device = choose_device(args.device, torch)
     dtype = choose_dtype(args.dtype, device, torch)
@@ -124,8 +141,11 @@ def load_runtime(args: argparse.Namespace) -> dict:
         "revision": args.revision,
         "trust_remote_code": args.trust_remote_code,
     }
+    load_kwargs.update(args.model_kwargs)
     if dtype is not None:
         load_kwargs["torch_dtype"] = dtype
+    if args.device_map:
+        load_kwargs["device_map"] = args.device_map
     try:
         model = model_class.from_pretrained(args.model, **load_kwargs)
     except TypeError:
@@ -133,9 +153,10 @@ def load_runtime(args: argparse.Namespace) -> dict:
             load_kwargs["dtype"] = load_kwargs.pop("torch_dtype")
         model = model_class.from_pretrained(args.model, **load_kwargs)
 
-    model = model.to(device)
+    if not args.device_map:
+        model = model.to(device)
     model.eval()
-    print(f"Loaded model on device={device} dtype={dtype}")
+    print(f"Loaded model on device={device} dtype={dtype} device_map={args.device_map or 'none'}")
     return {
         "torch": torch,
         "processor": processor,
@@ -191,13 +212,32 @@ def generate_response(row: dict, args: argparse.Namespace, image_path: Path, run
     dtype = runtime["dtype"]
 
     messages = build_messages(row, args, image_path)
-    inputs = processor.apply_chat_template(
-        messages,
-        add_generation_prompt=True,
-        tokenize=True,
-        return_dict=True,
-        return_tensors="pt",
-    )
+    if args.generation_backend == "qwen_vl_utils":
+        try:
+            from qwen_vl_utils import process_vision_info
+        except ImportError as exc:
+            raise RuntimeError("Missing qwen-vl-utils. Install qwen-vl-utils for Qwen2.5-VL runs.") from exc
+        prompt_text = processor.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            tokenize=False,
+        )
+        image_inputs, video_inputs = process_vision_info(messages)
+        inputs = processor(
+            text=[prompt_text],
+            images=image_inputs,
+            videos=video_inputs,
+            padding=True,
+            return_tensors="pt",
+        )
+    else:
+        inputs = processor.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            tokenize=True,
+            return_dict=True,
+            return_tensors="pt",
+        )
     inputs = move_inputs(inputs, device=device, dtype=dtype, torch=torch)
     input_length = inputs["input_ids"].shape[-1]
     with torch.inference_mode():
@@ -215,6 +255,12 @@ def build_messages(row: dict, args: argparse.Namespace, image_path: Path) -> lis
     image_part: dict[str, str]
     if args.image_content_key == "url":
         image_part = {"type": "image", "url": image_path.resolve().as_uri()}
+    elif args.image_content_key == "url_path":
+        image_part = {"type": "image", "url": str(image_path.resolve())}
+    elif args.image_content_key == "image":
+        image_part = {"type": "image", "image": image_path.resolve().as_uri()}
+    elif args.image_content_key == "image_path":
+        image_part = {"type": "image", "image": str(image_path.resolve())}
     else:
         image_part = {"type": "image", "path": str(image_path.resolve())}
     content = [
@@ -282,6 +328,7 @@ def build_request_fingerprint(
         "revision": args.revision or "",
         "endpoint": "local_transformers",
         "model_class": args.model_class,
+        "generation_backend": args.generation_backend,
         "image_content_key": args.image_content_key,
         "image_sha256": image_hash,
         "prompt_sha256": prompt_hash,
@@ -349,6 +396,16 @@ def load_jsonl(path: Path) -> list[dict]:
                 except json.JSONDecodeError as exc:
                     raise ValueError(f"Invalid JSON on {path}:{line_number}") from exc
     return rows
+
+
+def parse_json_object(value: str, argument_name: str) -> dict:
+    try:
+        parsed = json.loads(value)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"{argument_name} must be valid JSON") from exc
+    if not isinstance(parsed, dict):
+        raise ValueError(f"{argument_name} must be a JSON object")
+    return parsed
 
 
 def sha256_file(path: Path) -> str:
