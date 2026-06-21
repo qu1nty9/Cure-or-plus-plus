@@ -5,10 +5,11 @@
 CURE-OR++ is currently a strong pre-paper benchmark artifact, not a final
 arXiv-ready paper. The Full-CURE-OR v0.4 controlled benchmark evidence is
 substantial, and the real-transfer v0.2 external-validity guardrail has now
-been collected and evaluated. The open-weight VLM/API path now has two full
-rows, including a stronger InternVL3-1B family-contrast row. The remaining work
-is paper polish, metadata cleanup, optional frontier/provider VLM coverage, and
-final release-boundary decisions.
+been collected and evaluated. The open-weight VLM/API path now has three full
+rows, including a stronger InternVL3-1B family-contrast row and a Qwen2.5-VL
+generation-instability row. The remaining work is paper polish, metadata
+cleanup, optional frontier/provider VLM coverage, and final release-boundary
+decisions.
 
 ## Readiness Matrix
 
@@ -16,7 +17,7 @@ final release-boundary decisions.
 | --- | --- | --- | --- |
 | Repository hygiene | Ready | code, configs, reports, aggregate tables tracked; raw payloads ignored | keep raw CURE-OR and prediction dumps out of Git |
 | Full-CURE-OR native probe | Ready for draft | 500 clean rows, 38,999 native challenge rows, all v0.4 reports | make clear this is a controlled probe |
-| Model coverage | Strong for draft | 8 usable rows across CLIP/OpenCLIP and prototype families, plus two completed open-weight VLM prompt-pack rows | optional frontier/provider VLM rows |
+| Model coverage | Strong for draft | 8 usable rows across CLIP/OpenCLIP and prototype families, plus three completed open-weight VLM prompt-pack rows | optional frontier/provider VLM rows |
 | Confidence analysis | Strong partial | CLIP/OpenCLIP-family confidence/calibration complete | extend if new VLM rows are added |
 | Grayscale control | Ready | type-10 control and paired channel-effect analysis complete | keep as guardrail, not main causal proof |
 | Consensus analysis | Ready | top three level-5 failures floor 8/8; rank correlations 0.892-0.988 | none before draft |
@@ -27,7 +28,7 @@ final release-boundary decisions.
 | Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after any added frontier/provider VLM rows |
 | Related work | Draft-ready | `docs/related_work_v01.md`, expanded LaTeX related-work paragraph | verify final citations before public submission |
 | Real-transfer validation | Ready for draft | 180 outputs, activation status, four summaries, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
-| VLM/API track | Two open-weight rows executed | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`; SmolVLM2-500M and InternVL3-1B full Kaggle GPU runs complete | optionally add selected frontier/provider VLM rows and report raw-response audit rules |
+| VLM/API track | Three open-weight rows executed | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`; SmolVLM2-500M, InternVL3-1B, and Qwen2.5-VL-3B full Kaggle GPU runs complete | optionally add selected frontier/provider VLM rows and report raw-response audit rules |
 | Public release | Not final | Kaggle v0.1 package exists locally | decide Kaggle/HF release boundary and license text |
 
 ## Minimum Path To A Serious Public Draft
@@ -57,4 +58,4 @@ internal technical report and close to a workshop-style benchmark draft. The
 critical external-validity gap is now reduced by real-transfer v0.2, and the
 open-weight VLM path has a real model-family contrast. The next bar is final
 paper polish, capture metadata, and optionally adding frontier/provider VLM
-rows.
+rows or one more open-weight full row such as SmolVLM2-2.2B.

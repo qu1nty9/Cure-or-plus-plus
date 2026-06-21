@@ -89,12 +89,13 @@
         "max_pixels": 1003520
       },
       "max_tokens": 8,
-      "tier": "tier_1_next",
-      "enabled_by_default": true,
-      "status": "smoke_passed_kaggle_v9",
+      "tier": "completed_full",
+      "enabled_by_default": false,
+      "status": "full_completed_kaggle_v13_high_real_unparseable",
+      "known_result_dir": "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01",
       "license": "unknown_from_hf_header",
       "hf_url": "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct",
-      "notes": "Strong 3B candidate. Uses reduced visual token bounds for Kaggle P100 feasibility."
+      "notes": "Completed 210-row run on Kaggle P100. Strong clean accuracy but high real-transfer unparseable rate from literal !!!!!!!! generations."
     },
     {
       "slug": "internvl3_2b",

@@ -1,5 +1,5 @@
 {
-  "check_count": 67,
+  "check_count": 75,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -12,7 +12,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6595 min_size=1",
+      "detail": "exists=True size=7018 min_size=1",
       "name": "required_file:reports/real_transfer_v02_results.md",
       "passed": true
     },
@@ -47,7 +47,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=14890 min_size=1",
+      "detail": "exists=True size=15510 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -57,12 +57,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6580 min_size=1",
+      "detail": "exists=True size=6668 min_size=1",
       "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=4290 min_size=1",
+      "detail": "exists=True size=4464 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },
@@ -72,7 +72,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6093 min_size=1",
+      "detail": "exists=True size=6252 min_size=1",
       "name": "required_file:configs/vlm_open_weight_model_matrix_v01.json",
       "passed": true
     },
@@ -82,7 +82,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=4831 min_size=1",
+      "detail": "exists=True size=5548 min_size=1",
       "name": "required_file:docs/vlm_open_weight_model_matrix_v01.md",
       "passed": true
     },
@@ -139,6 +139,41 @@
     {
       "detail": "exists=True size=223560 min_size=1",
       "name": "required_file:reports/vlm_open_weight_internvl3_1b_kaggle_v01/kaggle_kernel.log",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2052 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=298 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=605 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1061 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=34436 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=122010 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=138531 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/kaggle_kernel.log",
       "passed": true
     },
     {
@@ -289,6 +324,11 @@
     {
       "detail": "needle='InternVL3-1B'",
       "name": "paper_contains:InternVL3-1B",
+      "passed": true
+    },
+    {
+      "detail": "needle='Qwen2.5-VL-3B'",
+      "name": "paper_contains:Qwen2.5-VL-3B",
       "passed": true
     },
     {
