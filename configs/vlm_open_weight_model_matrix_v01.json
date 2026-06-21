@@ -38,12 +38,13 @@
       "dtype": "float16",
       "image_content_key": "path",
       "max_tokens": 8,
-      "tier": "tier_1_next",
-      "enabled_by_default": true,
-      "status": "smoke_passed_kaggle_v9",
+      "tier": "completed_full",
+      "enabled_by_default": false,
+      "status": "full_completed_kaggle_v14",
+      "known_result_dir": "reports/vlm_open_weight_smolvlm2_2b_kaggle_v01",
       "license": "apache-2.0",
       "hf_url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct",
-      "notes": "Direct larger-family follow-up to the completed SmolVLM2-500M row."
+      "notes": "Direct larger-family follow-up to the completed SmolVLM2-500M row. Kaggle v14 reaches 0.9333 on both clean and real-transfer with zero unparseable responses."
     },
     {
       "slug": "llava_onevision_qwen2_0_5b",

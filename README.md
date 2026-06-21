@@ -187,8 +187,9 @@ fail near chance on grayscale salt-and-pepper noise. DINOv2 is the strongest
 current v0.4 row. The DataComp XL run adds a stronger OpenCLIP pretrained
 variant and lands third by mean native accuracy, but it also collapses near
 chance on salt-and-pepper and grayscale salt-and-pepper noise. This is still a
-controlled probe rather than a full paper-scale evaluation because real transfer
-validation is not complete.
+controlled probe rather than a full paper-scale evaluation; the remaining gaps
+are broader frontier/provider VLM coverage, final paper polish, and
+release-boundary decisions.
 The challenge-family analysis in
 `reports/full_cure_or_challenge_family_v04.md` adds a fifth finding: every
 usable model is worse on paired grayscale level-5 challenges than on the
@@ -214,19 +215,23 @@ The real-transfer validation block is collected and evaluated. The activation
 status is in `reports/real_transfer_v02_activation_status.json`, and the
 source-matched results with bootstrap intervals and figures are in
 `reports/real_transfer_v02_results.md`.
-The VLM/API extension now has three executed open-weight rows on the 210-row
+The VLM/API extension now has four executed open-weight rows on the 210-row
 prompt pack: `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`,
-`OpenGVLab/InternVL3-1B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct`. Their
-summaries are in `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`,
+`HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`, and
+`Qwen/Qwen2.5-VL-3B-Instruct`. Their summaries are in
+`reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`,
+`reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/summary.md`,
 `reports/vlm_open_weight_internvl3_1b_kaggle_v01/summary.md`, and
 `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md`. The
 open-weight expansion queue is tracked in
 `configs/vlm_open_weight_model_matrix_v01.json` and documented in
 `docs/vlm_open_weight_model_matrix_v01.md`; the next priority rows are
-SmolVLM2-2.2B, InternVL3-2B, and a memory-tuned retry path for LLaVA-OneVision
-0.5B. Kaggle kernel version 9 passed the smoke gate for all four tier-1
-candidates; kernel version 12 completed the InternVL3-1B full run; and kernel
-version 13 completed the Qwen2.5-VL-3B full run. The smoke artifact is in
+InternVL3-2B, a memory-tuned retry path for LLaVA-OneVision 0.5B, and
+optional larger Qwen/frontier rows after that. Kaggle kernel version 9 passed
+the smoke gate for all four tier-1 candidates; kernel version 12 completed the
+InternVL3-1B full run; kernel version 13 completed the Qwen2.5-VL-3B full
+run; and kernel version 14 completed the SmolVLM2-2.2B full run. The smoke
+artifact is in
 `reports/vlm_open_weight_matrix_smoke_kaggle_v01/summary.md`. The prompt pack
 summary is in `reports/vlm_api_track_v01_prompt_pack_summary.json`, and the
 protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can

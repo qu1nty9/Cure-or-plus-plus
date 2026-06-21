@@ -107,9 +107,11 @@ VLM/API prompt-pack status:
   v0.2.
 - It contains 210 image-question rows per model: 30 clean source rows and 180
   transferred rows.
-- Three open-weight full rows are complete: `SmolVLM2-500M-Video-Instruct`,
-  `InternVL3-1B-hf`, and `Qwen2.5-VL-3B-Instruct`. Their tracked artifacts are in
-  `reports/vlm_open_weight_smolvlm2_kaggle_v01/` and
+- Four open-weight full rows are complete: `SmolVLM2-500M-Video-Instruct`,
+  `SmolVLM2-2.2B-Instruct`, `InternVL3-1B-hf`, and
+  `Qwen2.5-VL-3B-Instruct`. Their tracked artifacts are in
+  `reports/vlm_open_weight_smolvlm2_kaggle_v01/`,
+  `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`,
   `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, and
   `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`.
 - It is intentionally not mixed into the current CLIP/OpenCLIP/prototype

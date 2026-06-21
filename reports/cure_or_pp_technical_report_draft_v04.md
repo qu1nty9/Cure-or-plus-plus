@@ -22,9 +22,9 @@ Current strongest evidence:
 - real-transfer v0.2 evaluation over 30 source images and 180 transferred
   outputs collected with iPhone 15 Pro, WhatsApp, and FaceTime pipelines;
 - open-weight VLM prompt-pack runs using
-  `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` and
-  `OpenGVLab/InternVL3-1B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct` on Kaggle
-  GPU.
+  `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`,
+  `HuggingFaceTB/SmolVLM2-2.2B-Instruct`,
+  `OpenGVLab/InternVL3-1B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct` on Kaggle GPU.
 
 Main blocker:
 
@@ -56,9 +56,9 @@ mean confidence. A type-10 grayscale control confirms that grayscale conversion
 alone is damaging but does not explain the full native level-5 collapse. The
 real-transfer v0.2 block now adds 180 transferred outputs covering messenger
 upload/download, phone screenshot/resave, and video-call frame capture
-pipelines. Three open-weight VLM rows validate the prompt-pack path and provide
-an initial assistant-style model-family contrast, including a Qwen generation
-instability case.
+pipelines. Four open-weight VLM rows validate the prompt-pack path and provide
+an initial assistant-style model-family contrast, including both a strong
+same-family SmolVLM scale-up and a Qwen generation-instability case.
 
 ## Contributions
 
@@ -77,8 +77,8 @@ instability case.
 6. A real-transfer v0.2 validation block testing whether real app/device
    transfer pipelines reproduce related failure behavior.
 7. A 210-row VLM prompt-pack/evaluator path with executed open-weight
-   SmolVLM2-500M, InternVL3-1B, and Qwen2.5-VL-3B rows, validating
-   assistant-style vision-language evaluation without paid API calls.
+   SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, and Qwen2.5-VL-3B rows,
+   validating assistant-style vision-language evaluation without paid API calls.
 
 ## Method Summary
 
@@ -105,8 +105,9 @@ pipeline, and FaceTime as the video-call/video-transmission pipeline.
 
 The VLM/API track converts the same 30 clean source images and 180 transferred
 outputs into multiple-choice prompt rows. The completed open-weight rows are
-`HuggingFaceTB/SmolVLM2-500M-Video-Instruct` and
-`OpenGVLab/InternVL3-1B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct`, all run on
+`HuggingFaceTB/SmolVLM2-500M-Video-Instruct`,
+`HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`, and
+`Qwen/Qwen2.5-VL-3B-Instruct`, all run on
 Kaggle GPU with Transformers and evaluated by
 `scripts/evaluate_vlm_response_pack.py`.
 
@@ -198,6 +199,7 @@ The open-weight VLM rows produced:
 | Model | Clean source | Real-transfer | Drop | Unparseable |
 | --- | ---: | ---: | ---: | ---: |
 | SmolVLM2-500M-Video-Instruct | 0.6000 | 0.5556 | 0.0444 | 0.0000 |
+| SmolVLM2-2.2B-Instruct | 0.9333 | 0.9333 | 0.0000 | 0.0000 |
 | InternVL3-1B-hf | 0.9333 | 0.9333 | 0.0000 | 0.0000 |
 | Qwen2.5-VL-3B-Instruct | 0.9000 | 0.6389 | 0.2611 | 0.3278 |
 
@@ -207,17 +209,20 @@ By pipeline, SmolVLM2-500M real-transfer accuracies were:
 - phone screenshot/resave: 0.5000;
 - video-call frame capture: 0.5333.
 
-InternVL3-1B reached 0.9333 accuracy for all three real-transfer pipelines.
+SmolVLM2-2.2B reached 0.9333 for messenger upload/download, 0.9167 for phone
+screenshot/resave, and 0.9500 for video-call frame capture. InternVL3-1B
+reached 0.9333 accuracy for all three real-transfer pipelines.
 Qwen2.5-VL-3B reached 0.9000 clean accuracy, but on real-transfer rows it
 often generated the literal string `!!!!!!!!`, producing a 0.3278 unparseable
 rate and a 0.2611 accuracy drop.
 
 Interpretation: SmolVLM2-500M is weaker than the best CLIP/OpenCLIP
 real-transfer rows, but it proves the VLM prompt-pack and response-audit path
-is executable on open-weight models without paid APIs. InternVL3-1B adds a
-substantially stronger model-family contrast while preserving zero unparseable
-responses. Qwen2.5-VL-3B adds a separate generation-stability failure mode
-under transfer pipelines.
+is executable on open-weight models without paid APIs. SmolVLM2-2.2B then
+shows a strong within-family scaling effect: unlike the 500M row, it preserves
+0.9333 accuracy on both clean and real-transfer. InternVL3-1B matches that
+strong result while preserving zero unparseable responses. Qwen2.5-VL-3B adds
+a separate generation-stability failure mode under transfer pipelines.
 
 ### Grayscale Control and Channel Effects
 
@@ -250,7 +255,7 @@ model family.
 - Real-transfer v0.2 is small: 30 source images, three pipelines, and two
   repeats per source/pipeline. It is an external-validity guardrail, not a
   comprehensive real-world transfer benchmark.
-- The current VLM evidence contains three open-weight assistant-style rows, not a
+- The current VLM evidence contains four open-weight assistant-style rows, not a
   broad frontier/provider VLM comparison.
 - Full-CURE-OR v0.4 is a controlled probe, not an exhaustive evaluation of all
   images in the original dataset.

@@ -17,16 +17,17 @@ Completed full rows:
 | slug | model | result dir | clean | real-transfer | note |
 | --- | --- | --- | ---: | ---: | --- |
 | `smolvlm2_500m` | `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` | `reports/vlm_open_weight_smolvlm2_kaggle_v01/` | 0.6000 | 0.5556 | Initial weak open-weight baseline. |
+| `smolvlm2_2b` | `HuggingFaceTB/SmolVLM2-2.2B-Instruct` | `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/` | 0.9333 | 0.9333 | Same-family scale-up that removes the observed real-transfer drop. |
 | `internvl3_1b` | `OpenGVLab/InternVL3-1B-hf` | `reports/vlm_open_weight_internvl3_1b_kaggle_v01/` | 0.9333 | 0.9333 | First completed non-SmolVLM family-contrast row. |
 | `qwen2_5_vl_3b` | `Qwen/Qwen2.5-VL-3B-Instruct` | `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/` | 0.9000 | 0.6389 | Strong clean row with high real-transfer unparseable rate. |
 
-The next default smoke/full queue is:
+The next queue is:
 
 | slug | model | tier | reason |
 | --- | --- | --- | --- |
-| `smolvlm2_2b` | `HuggingFaceTB/SmolVLM2-2.2B-Instruct` | tier_1_next | Same family as completed baseline, stronger size. |
 | `llava_onevision_qwen2_0_5b` | `llava-hf/llava-onevision-qwen2-0.5b-ov-hf` | tier_1_next | Smoke passed, but full v11 hit P100 CUDA OOM; retry only with memory-specific tuning. |
 | `internvl3_2b` | `OpenGVLab/InternVL3-2B-hf` | tier_2_after_smoke | Natural follow-up after the strong InternVL3-1B row; smoke before full. |
+| `qwen2_5_vl_7b` | `Qwen/Qwen2.5-VL-7B-Instruct` | tier_3_stretch | Scientifically useful larger-Qwen follow-up, but memory-sensitive on Kaggle P100. |
 
 Stretch rows are present but disabled by default:
 
@@ -71,7 +72,7 @@ temporary full notebook:
 ```bash
 .venv/bin/python scripts/write_kaggle_vlm_notebook.py \
   --run-mode full \
-  --selected-model-slug smolvlm2_2b
+  --selected-model-slug internvl3_2b
 ```
 
 Do not run all stretch candidates in one Kaggle session. The full 210-row pass
@@ -113,6 +114,22 @@ The tracked full result is in
 unparseable rate is caused by literal `!!!!!!!!` generations on many
 real-transfer images, so this row is evidence of generation instability under
 transfer rather than a parser failure.
+
+## Version 14 Full Result
+
+Kaggle kernel version 14 completed the SmolVLM2 2.2B full row:
+
+- model: `HuggingFaceTB/SmolVLM2-2.2B-Instruct`
+- rows: 210 total, 30 clean and 180 real-transfer
+- clean accuracy: 0.9333
+- real-transfer accuracy: 0.9333
+- unparseable rate: 0.0000
+
+The tracked full result is in
+`reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/summary.md`. This is the
+strongest same-family scaling result so far: compared with SmolVLM2-500M,
+moving to 2.2B removes the observed real-transfer drop on the current prompt
+pack and ties the strongest executed open-weight row.
 
 ## Version 11 Full Notes
 
