@@ -215,26 +215,38 @@ The real-transfer validation block is collected and evaluated. The activation
 status is in `reports/real_transfer_v02_activation_status.json`, and the
 source-matched results with bootstrap intervals and figures are in
 `reports/real_transfer_v02_results.md`.
-The VLM/API extension now has five executed open-weight rows on the 210-row
+The VLM/API extension now has eight executed open-weight rows on the 210-row
 prompt pack: `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`,
 `HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`,
-`OpenGVLab/InternVL3-2B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct`. Their
+`OpenGVLab/InternVL3-2B-hf`, `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`, and
+`Qwen/Qwen2.5-VL-3B-Instruct`, plus `Qwen/Qwen2.5-VL-7B-Instruct` and
+`llava-hf/llava-onevision-qwen2-7b-ov-hf`. Their
 summaries are in
 `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`,
 `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/summary.md`,
 `reports/vlm_open_weight_internvl3_1b_kaggle_v01/summary.md`, and
-`reports/vlm_open_weight_internvl3_2b_kaggle_v01/summary.md`, plus
-`reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md`. The
+`reports/vlm_open_weight_internvl3_2b_kaggle_v01/summary.md`,
+`reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/summary.md`,
+plus
+`reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md` and
+`reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/summary.md`, plus
+`reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/summary.md`. The
 open-weight expansion queue is tracked in
 `configs/vlm_open_weight_model_matrix_v01.json` and documented in
-`docs/vlm_open_weight_model_matrix_v01.md`; the next priority rows are
-a memory-tuned retry path for LLaVA-OneVision 0.5B, optional larger Qwen
-open-weight rows, and selected frontier/provider VLM rows after that. Kaggle
+`docs/vlm_open_weight_model_matrix_v01.md`; the open-weight queue is now clear
+for the current matrix, and the next priority rows are selected
+frontier/provider VLMs if that comparison is needed. Kaggle
 kernel version 9 passed the smoke gate for all four tier-1 candidates; kernel
 version 12 completed the InternVL3-1B full run; kernel version 13 completed
 the Qwen2.5-VL-3B full run; kernel version 14 completed the SmolVLM2-2.2B
-full run; and kernel version 16 completed the InternVL3-2B full run. The
-smoke artifact is in
+full run; kernel version 16 completed the InternVL3-2B full run; and kernel
+version 20 completed the LLaVA-OneVision 0.5B full run after a memory-safe
+input-resize retry. Kernel version 23 then completed the Qwen2.5-VL-7B full
+run after a version 21 CUDA-OOM smoke failure and a memory-controlled version
+22 retry. Kernel version 26 completed the LLaVA-OneVision Qwen2 7B full run
+after a version 24 CUDA-OOM smoke failure and a memory-controlled version 25
+retry, setting the strongest completed open-weight real-transfer split at
+0.9778 with zero unparseables. The smoke artifact is in
 `reports/vlm_open_weight_matrix_smoke_kaggle_v01/summary.md`. The prompt pack
 summary is in `reports/vlm_api_track_v01_prompt_pack_summary.json`, and the
 protocol is in `docs/vlm_api_track_plan_v01.md`. Sanitized model responses can

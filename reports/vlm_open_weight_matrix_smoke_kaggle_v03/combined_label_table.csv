@@ -1,0 +1,5 @@
+slug,model_id,provider,model_version,label,clean_n,clean_accuracy,real_n,real_accuracy,real_unparseable_rate,accuracy_drop_vs_clean
+qwen2_5_vl_7b,Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,lg_cell_phone,1,1.0,0,0.0,0.0,1.0
+qwen2_5_vl_7b,Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,baseball,1,1.0,4,1.0,0.0,0.0
+llava_onevision_qwen2_7b,llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,lg_cell_phone,1,1.0,0,0.0,0.0,1.0
+llava_onevision_qwen2_7b,llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,baseball,1,1.0,4,1.0,0.0,0.0

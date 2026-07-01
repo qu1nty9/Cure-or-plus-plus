@@ -37,6 +37,12 @@ def main() -> int:
     parser.add_argument("--api-key-env", default="OPENAI_API_KEY")
     parser.add_argument("--env-file", help="Optional local KEY=VALUE env file, for example .secrets/openai.env.")
     parser.add_argument("--endpoint", choices=["chat_completions", "responses"], default="chat_completions")
+    parser.add_argument(
+        "--response-store",
+        choices=["true", "false"],
+        default="false",
+        help="Responses endpoint only. Send store=false by default to avoid provider-side response retention when supported.",
+    )
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--max-tokens", type=int, default=8)
     parser.add_argument(
@@ -183,6 +189,7 @@ def build_payload(row: dict, args: argparse.Namespace, image_path: Path) -> dict
             "temperature": args.temperature,
             "max_output_tokens": args.max_tokens,
         }
+        payload["store"] = args.response_store == "true"
         if args.system_prompt:
             payload["instructions"] = args.system_prompt
         return payload
@@ -319,6 +326,7 @@ def build_request_fingerprint(
         "max_tokens": args.max_tokens,
         "system_prompt_sha256": sha256_text(args.system_prompt or ""),
         "chat_token_parameter": args.chat_token_parameter if args.endpoint == "chat_completions" else "",
+        "response_store": args.response_store if args.endpoint == "responses" else "",
     }
 
 

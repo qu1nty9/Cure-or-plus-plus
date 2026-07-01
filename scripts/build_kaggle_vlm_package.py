@@ -8,11 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-DEFAULT_INCLUDE_FILES = [
-    "configs/vlm_api_track_v01.json",
-    "configs/vlm_open_weight_model_matrix_v01.json",
-    "reports/vlm_api_track_v01_prompt_pack.jsonl",
-    "reports/vlm_api_track_v01_prompt_pack_summary.json",
+DEFAULT_SCRIPT_FILES = [
     "scripts/run_hf_vlm.py",
     "scripts/evaluate_vlm_response_pack.py",
 ]
@@ -23,19 +19,33 @@ def main() -> int:
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--kaggle-id", default="YOUR_KAGGLE_USERNAME/cure-or-pp-vlm-real-transfer-v02-private")
     parser.add_argument("--title", default="CURE-OR++ VLM Real-Transfer v0.2 Private Pack")
-    parser.add_argument("--prompt-pack", default="reports/vlm_api_track_v01_prompt_pack.jsonl")
+    parser.add_argument("--api-config", default="configs/vlm_api_track_v01.json")
+    parser.add_argument("--model-matrix", default="configs/vlm_open_weight_model_matrix_v01.json")
+    parser.add_argument("--prompt-pack", default="")
     parser.add_argument("--no-images", action="store_true", help="Only copy metadata/scripts; skip image payloads.")
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir).expanduser().resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    api_config_path = resolve_project_path(args.api_config)
+    api_config = json.loads(api_config_path.read_text(encoding="utf-8"))
+    prompt_pack_text = args.prompt_pack or api_config["prompt_pack_path"]
     prompt_pack_path = resolve_project_path(args.prompt_pack)
+    if not args.prompt_pack:
+        prompt_pack_path = resolve_project_path(prompt_pack_text)
     prompt_rows = load_jsonl(prompt_pack_path)
     image_paths = sorted({row["image_path"] for row in prompt_rows})
 
     copied_files = []
-    for path_text in DEFAULT_INCLUDE_FILES:
+    include_files = [
+        args.api_config,
+        args.model_matrix,
+        prompt_pack_text,
+        api_config["summary_path"],
+        *DEFAULT_SCRIPT_FILES,
+    ]
+    for path_text in include_files:
         copied_files.append(copy_project_file(path_text, output_dir))
 
     copied_images = []
@@ -52,7 +62,7 @@ def main() -> int:
         raise FileNotFoundError(f"Missing images: {missing_images[:10]} total={len(missing_images)}")
 
     write_dataset_metadata(output_dir, args.kaggle_id, args.title)
-    write_readme(output_dir, prompt_rows, copied_images)
+    write_readme(output_dir, args.title, prompt_rows, copied_images)
     removed_artifacts = remove_macos_artifacts(output_dir)
 
     print(f"Output dir: {output_dir}")
@@ -87,8 +97,8 @@ def write_dataset_metadata(output_dir: Path, kaggle_id: str, title: str) -> None
     )
 
 
-def write_readme(output_dir: Path, prompt_rows: list[dict], copied_images: list[Path]) -> None:
-    text = f"""# CURE-OR++ VLM Real-Transfer v0.2 Private Pack
+def write_readme(output_dir: Path, title: str, prompt_rows: list[dict], copied_images: list[Path]) -> None:
+    text = f"""# {title}
 
 This private Kaggle dataset folder contains the prompt pack, local scripts, and
 image payloads needed to run the CURE-OR++ VLM real-transfer pilot on Kaggle GPU.

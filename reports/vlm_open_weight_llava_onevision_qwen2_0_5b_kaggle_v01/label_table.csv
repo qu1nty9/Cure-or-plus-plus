@@ -1,0 +1,11 @@
+model_id,provider,model_version,label,clean_n,clean_accuracy,real_n,real_accuracy,real_unparseable_rate,accuracy_drop_vs_clean
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,dymo_label_maker,3,0.666667,18,0.388889,0.000000,0.277778
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,calcium_bottle,3,1.000000,18,0.944444,0.000000,0.055556
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,baseball,3,1.000000,18,1.000000,0.000000,0.000000
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,canon_camera,3,1.000000,18,1.000000,0.000000,0.000000
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,hair_brush,3,1.000000,18,1.000000,0.000000,0.000000
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,lg_cell_phone,3,1.000000,18,1.000000,0.000000,0.000000
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,pan,3,1.000000,18,1.000000,0.000000,0.000000
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,shoes,3,1.000000,18,1.000000,0.000000,0.000000
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,toy,3,1.000000,18,1.000000,0.000000,0.000000
+llava-hf/llava-onevision-qwen2-0.5b-ov-hf,huggingface,,training_marker_cone,3,1.000000,18,1.000000,0.000000,0.000000

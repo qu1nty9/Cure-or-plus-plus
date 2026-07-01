@@ -33,6 +33,7 @@ def main() -> int:
     parser.add_argument("--source-selection", default="data/real_transfer/v02/source_selection_v02.csv")
     parser.add_argument("--pairs-template", default="data/real_transfer/v02/pairs_template.csv")
     parser.add_argument("--output-dir", default="data/real_transfer/v02/collection_pack")
+    parser.add_argument("--title", default="CURE-OR++ Real Transfer Collection Pack")
     parser.add_argument("--thumb-size", type=int, default=220)
     args = parser.parse_args()
 
@@ -51,7 +52,7 @@ def main() -> int:
     checklist_rows = build_checklist_rows(pair_rows, source_by_path, copied_sources)
 
     write_csv(output_dir / "collection_checklist.csv", checklist_rows, CHECKLIST_FIELDNAMES)
-    write_html_index(output_dir / "index.html", source_rows, pair_rows, copied_sources)
+    write_html_index(output_dir / "index.html", source_rows, pair_rows, copied_sources, args.title)
     write_contact_sheet(output_dir / "source_contact_sheet.jpg", source_rows, copied_sources, args.thumb_size)
 
     print(f"Sources copied: {len(copied_sources)}")
@@ -99,7 +100,7 @@ def build_checklist_rows(pair_rows: list[dict], source_by_path: dict[str, dict],
     return output
 
 
-def write_html_index(path: Path, source_rows: list[dict], pair_rows: list[dict], copied_sources: dict[str, Path]) -> None:
+def write_html_index(path: Path, source_rows: list[dict], pair_rows: list[dict], copied_sources: dict[str, Path], title: str) -> None:
     pairs_by_source: dict[str, list[dict]] = {}
     for row in pair_rows:
         pairs_by_source.setdefault(row["source_path"], []).append(row)
@@ -132,7 +133,7 @@ def write_html_index(path: Path, source_rows: list[dict], pair_rows: list[dict],
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CURE-OR++ Real Transfer v0.2 Collection Pack</title>
+  <title>{html.escape(title)}</title>
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 28px; color: #1f2933; }}
     h1 {{ margin-bottom: 4px; }}
@@ -146,8 +147,8 @@ def write_html_index(path: Path, source_rows: list[dict], pair_rows: list[dict],
   </style>
 </head>
 <body>
-  <h1>CURE-OR++ Real Transfer v0.2 Collection Pack</h1>
-  <p class="meta">30 sources · 3 pipelines · 2 repeats · 180 expected outputs</p>
+  <h1>{html.escape(title)}</h1>
+  <p class="meta">{len(source_rows)} sources · {len({row['recipe'] for row in pair_rows})} pipelines · {len(pair_rows)} expected outputs</p>
   {''.join(cards)}
 </body>
 </html>

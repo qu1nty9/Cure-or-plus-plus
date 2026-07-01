@@ -25,6 +25,14 @@ RECIPES = [
     },
 ]
 
+OPTIONAL_RECIPES = [
+    {
+        "recipe": "social_app_resave",
+        "app_or_pipeline": "Social-app upload/preview/resave",
+        "capture_notes": "Upload or preview the clean image in a social app, then save/download/export the resulting image.",
+    },
+]
+
 SOURCE_FIELDNAMES = [
     "selection_id",
     "label",
@@ -66,8 +74,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Prepare a balanced real-transfer validation protocol.")
     parser.add_argument("--clean-manifest", default="data/interim/cure_or_clean_test_manifest.csv")
     parser.add_argument("--output-dir", default="data/real_transfer/v02")
+    parser.add_argument("--protocol-version", default="v02")
     parser.add_argument("--sources-per-label", type=int, default=3)
     parser.add_argument("--repeats", type=int, default=2)
+    parser.add_argument("--include-social-app-resave", action="store_true")
     args = parser.parse_args()
 
     clean_manifest = resolve_project_path(args.clean_manifest)
@@ -79,23 +89,24 @@ def main() -> int:
 
     clean_rows = read_csv(clean_manifest)
     selected = select_sources(clean_rows, args.sources_per_label)
-    source_rows = build_source_rows(selected)
-    pair_rows = build_pair_rows(source_rows, output_dir, args.repeats)
-    recipe_rows = build_recipe_rows(output_dir, len(source_rows), args.repeats)
+    recipes = RECIPES + (OPTIONAL_RECIPES if args.include_social_app_resave else [])
+    source_rows = build_source_rows(selected, args.protocol_version)
+    pair_rows = build_pair_rows(source_rows, output_dir, args.repeats, recipes)
+    recipe_rows = build_recipe_rows(output_dir, len(source_rows), args.repeats, recipes)
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    write_csv(output_dir / "source_selection_v02.csv", source_rows, SOURCE_FIELDNAMES)
+    write_csv(output_dir / f"source_selection_{args.protocol_version}.csv", source_rows, SOURCE_FIELDNAMES)
     write_csv(output_dir / "pairs_template.csv", pair_rows, PAIR_FIELDNAMES)
-    write_csv(output_dir / "recipe_plan_v02.csv", recipe_rows, RECIPE_FIELDNAMES)
-    write_gitkeep_files(output_dir, args.repeats)
+    write_csv(output_dir / f"recipe_plan_{args.protocol_version}.csv", recipe_rows, RECIPE_FIELDNAMES)
+    write_gitkeep_files(output_dir, args.repeats, recipes)
 
     print(f"Sources: {len(source_rows)}")
-    print(f"Recipes: {len(RECIPES)}")
+    print(f"Recipes: {len(recipes)}")
     print(f"Repeats: {args.repeats}")
     print(f"Planned transfer rows: {len(pair_rows)}")
-    print(f"Wrote {output_dir / 'source_selection_v02.csv'}")
+    print(f"Wrote {output_dir / f'source_selection_{args.protocol_version}.csv'}")
     print(f"Wrote {output_dir / 'pairs_template.csv'}")
-    print(f"Wrote {output_dir / 'recipe_plan_v02.csv'}")
+    print(f"Wrote {output_dir / f'recipe_plan_{args.protocol_version}.csv'}")
     return 0
 
 
@@ -136,15 +147,16 @@ def select_sources(rows: list[dict], per_label: int) -> list[dict]:
     return selected
 
 
-def build_source_rows(rows: list[dict]) -> list[dict]:
+def build_source_rows(rows: list[dict], protocol_version: str) -> list[dict]:
     output = []
     rank_by_label: dict[str, int] = {}
+    prefix = "rt" + protocol_version
     for row in rows:
         label = row["label"]
         rank_by_label[label] = rank_by_label.get(label, 0) + 1
         output.append(
             {
-                "selection_id": f"rtv02_{label}_{rank_by_label[label]:02d}",
+                "selection_id": f"{prefix}_{label}_{rank_by_label[label]:02d}",
                 "label": label,
                 "image_path": row["image_path"],
                 "object_id": row["object_id"],
@@ -159,12 +171,12 @@ def build_source_rows(rows: list[dict]) -> list[dict]:
     return output
 
 
-def build_pair_rows(source_rows: list[dict], output_dir: Path, repeats: int) -> list[dict]:
+def build_pair_rows(source_rows: list[dict], output_dir: Path, repeats: int, recipes: list[dict]) -> list[dict]:
     output = []
     output_dir_text = relative_to_root(output_dir)
     for source in source_rows:
         source_stem = Path(source["image_path"]).stem
-        for recipe in RECIPES:
+        for recipe in recipes:
             for repeat in range(1, repeats + 1):
                 repeat_id = f"rep_{repeat:02d}"
                 output_path = output_dir_text / "images" / recipe["recipe"] / repeat_id / f"{source_stem}.jpg"
@@ -187,10 +199,10 @@ def build_pair_rows(source_rows: list[dict], output_dir: Path, repeats: int) -> 
     return output
 
 
-def build_recipe_rows(output_dir: Path, source_count: int, repeats: int) -> list[dict]:
+def build_recipe_rows(output_dir: Path, source_count: int, repeats: int, recipes: list[dict]) -> list[dict]:
     output_dir_text = relative_to_root(output_dir)
     rows = []
-    for recipe in RECIPES:
+    for recipe in recipes:
         rows.append(
             {
                 "recipe": recipe["recipe"],
@@ -203,8 +215,8 @@ def build_recipe_rows(output_dir: Path, source_count: int, repeats: int) -> list
     return rows
 
 
-def write_gitkeep_files(output_dir: Path, repeats: int) -> None:
-    for recipe in RECIPES:
+def write_gitkeep_files(output_dir: Path, repeats: int, recipes: list[dict]) -> None:
+    for recipe in recipes:
         for repeat in range(1, repeats + 1):
             folder = output_dir / "images" / recipe["recipe"] / f"rep_{repeat:02d}"
             folder.mkdir(parents=True, exist_ok=True)

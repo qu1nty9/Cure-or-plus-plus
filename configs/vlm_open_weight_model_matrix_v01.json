@@ -53,13 +53,22 @@
       "model_class": "LlavaOnevisionForConditionalGeneration",
       "dtype": "float16",
       "image_content_key": "url_path",
+      "model_kwargs": {
+        "low_cpu_mem_usage": true
+      },
+      "generate_kwargs": {
+        "use_cache": false
+      },
+      "device_map": "auto",
+      "image_max_side": 768,
       "max_tokens": 8,
-      "tier": "tier_1_next",
-      "enabled_by_default": true,
-      "status": "smoke_passed_kaggle_v9_full_oom_kaggle_v11",
+      "tier": "completed_full",
+      "enabled_by_default": false,
+      "status": "full_completed_kaggle_v20_resize_retry",
+      "known_result_dir": "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01",
       "license": "apache-2.0",
       "hf_url": "https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf",
-      "notes": "Small LLaVA-OneVision family contrast. Smoke passed, but full 210-row v11 hit CUDA OOM on Kaggle P100; retry only with memory-specific tuning."
+      "notes": "Completed 210-row LLaVA-OneVision contrast row on Kaggle P100 after a memory-safe retry path. The earlier full v11 attempt hit CUDA OOM, and a direct anyres patch-space reduction failed at v19 with a split_sizes mismatch inside Transformers; the successful v20 path keeps default OneVision processing and downsizes each input image to max_side=768 while retaining device_map auto and disabled generation cache."
     },
     {
       "slug": "internvl3_1b",
@@ -122,17 +131,25 @@
       "generation_backend": "qwen_vl_utils",
       "dtype": "float16",
       "image_content_key": "image",
-      "processor_kwargs": {
-        "min_pixels": 200704,
-        "max_pixels": 802816
+      "model_kwargs": {
+        "low_cpu_mem_usage": true
       },
+      "processor_kwargs": {
+        "min_pixels": 50176,
+        "max_pixels": 262144
+      },
+      "generate_kwargs": {
+        "use_cache": false
+      },
+      "image_max_side": 512,
       "max_tokens": 8,
-      "tier": "tier_3_stretch",
+      "tier": "completed_full",
       "enabled_by_default": false,
-      "status": "candidate_memory_risk",
+      "status": "full_completed_kaggle_v23_memory_controlled",
+      "known_result_dir": "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01",
       "license": "apache-2.0",
       "hf_url": "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct",
-      "notes": "Scientifically valuable but likely memory-sensitive on P100; smoke before any full run."
+      "notes": "Completed 210-row Qwen2.5-VL 7B row on Kaggle P100 after a memory-controlled path. The initial Kaggle v21 smoke attempt hit CUDA OOM, but the v22 retry succeeded after disabling generation cache, downsizing each input image to max_side=512, and reducing Qwen visual tokenization to min_pixels=50176 and max_pixels=262144; the same settings carried the successful v23 full run."
     },
     {
       "slug": "llava_onevision_qwen2_7b",
@@ -141,13 +158,23 @@
       "model_class": "LlavaOnevisionForConditionalGeneration",
       "dtype": "float16",
       "image_content_key": "url_path",
-      "max_tokens": 8,
-      "tier": "tier_3_stretch",
+      "model_kwargs": {
+        "low_cpu_mem_usage": true
+      },
+      "generate_kwargs": {
+        "use_cache": false
+      },
+      "device_map": "auto",
+      "image_max_side": 384,
+      "max_tokens": 2,
+      "tier": "completed_full",
       "enabled_by_default": false,
-      "status": "candidate_memory_risk",
+      "status": "full_completed_kaggle_v26_memory_controlled",
+      "known_result_dir": "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01",
+      "known_smoke_result_dir": "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_smoke_v01",
       "license": "apache-2.0",
       "hf_url": "https://huggingface.co/llava-hf/llava-onevision-qwen2-7b-ov-hf",
-      "notes": "Large LLaVA-OneVision contrast; run only if Kaggle GPU memory permits."
+      "notes": "Completed 210-row large LLaVA-OneVision row on Kaggle P100. Kaggle v24 smoke failed with CUDA OOM on P100 during generation. The v25 retry passed after disabling generation cache, enabling device_map auto, downsizing inputs to max_side=384, and limiting generation to two new tokens because the evaluator only needs a single option letter. Kaggle v26 completed the corresponding full run with 0.9667 clean accuracy, 0.9778 real-transfer accuracy, and zero unparseables."
     }
   ]
 }

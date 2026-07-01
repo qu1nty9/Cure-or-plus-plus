@@ -5,12 +5,14 @@
 CURE-OR++ is currently a strong pre-paper benchmark artifact, not a final
 arXiv-ready paper. The Full-CURE-OR v0.4 controlled benchmark evidence is
 substantial, and the real-transfer v0.2 external-validity guardrail has now
-been collected and evaluated. The open-weight VLM/API path now has five full
+been collected and evaluated. The open-weight VLM/API path now has eight full
 rows, including a strong SmolVLM2-2.2B same-family scale-up, two strong
-InternVL family rows with a slight non-monotonic 2B follow-up, and a
-Qwen2.5-VL generation-instability row. The remaining work is paper polish,
-metadata cleanup, optional
-frontier/provider VLM coverage, and final release-boundary decisions.
+InternVL family rows with a slight non-monotonic 2B follow-up, a completed
+LLaVA-OneVision 0.5B row after memory-safe retry, a memory-controlled
+Qwen2.5-VL-7B strong row, a completed memory-controlled LLaVA-OneVision 7B
+row, and a Qwen2.5-VL generation-instability row at 3B.
+The remaining work is paper polish, metadata cleanup, optional frontier/provider
+VLM coverage, and final release-boundary decisions.
 
 ## Readiness Matrix
 
@@ -18,7 +20,7 @@ frontier/provider VLM coverage, and final release-boundary decisions.
 | --- | --- | --- | --- |
 | Repository hygiene | Ready | code, configs, reports, aggregate tables tracked; raw payloads ignored | keep raw CURE-OR and prediction dumps out of Git |
 | Full-CURE-OR native probe | Ready for draft | 500 clean rows, 38,999 native challenge rows, all v0.4 reports | make clear this is a controlled probe |
-| Model coverage | Strong for draft | 8 usable rows across CLIP/OpenCLIP and prototype families, plus five completed open-weight VLM prompt-pack rows | optional frontier/provider VLM rows |
+| Model coverage | Strong for draft | 8 usable rows across CLIP/OpenCLIP and prototype families, plus eight completed open-weight VLM prompt-pack rows | optional frontier/provider VLM rows |
 | Confidence analysis | Strong partial | CLIP/OpenCLIP-family confidence/calibration complete | extend if new VLM rows are added |
 | Grayscale control | Ready | type-10 control and paired channel-effect analysis complete | keep as guardrail, not main causal proof |
 | Consensus analysis | Ready | top three level-5 failures floor 8/8; rank correlations 0.892-0.988 | none before draft |
@@ -29,7 +31,7 @@ frontier/provider VLM coverage, and final release-boundary decisions.
 | Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after any added frontier/provider VLM rows |
 | Related work | Draft-ready | `docs/related_work_v01.md`, expanded LaTeX related-work paragraph | verify final citations before public submission |
 | Real-transfer validation | Ready for draft | 180 outputs, activation status, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
-| VLM/API track | Five open-weight rows executed | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`; SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, and Qwen2.5-VL-3B full Kaggle GPU runs complete | optionally add selected frontier/provider VLM rows and report raw-response audit rules |
+| VLM/API track | Eight open-weight rows executed | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`; SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B full Kaggle GPU runs complete | optionally add selected frontier/provider VLM rows and report raw-response audit rules |
 | Public release | Not final | Kaggle v0.1 package exists locally | decide Kaggle/HF release boundary and license text |
 
 ## Minimum Path To A Serious Public Draft
@@ -45,8 +47,8 @@ frontier/provider VLM coverage, and final release-boundary decisions.
 
 The ideal version adds:
 
-- a memory-feasible retry for one additional open-weight family such as LLaVA-OneVision 0.5B, or a stronger frontier/provider VLM row;
 - execution of the VLM/API prompt pack on selected frontier VLMs beyond the completed open-weight rows;
+- repeatability reruns for the strongest open-weight rows if needed for final release confidence;
 - confidence/calibration for any added zero-shot/VLM row;
 - final related-work table;
 - final dataset card and evaluation card;
@@ -59,5 +61,4 @@ internal technical report and close to a workshop-style benchmark draft. The
 critical external-validity gap is now reduced by real-transfer v0.2, and the
 open-weight VLM path has a real model-family contrast. The next bar is final
 paper polish, capture metadata, and optionally adding frontier/provider VLM
-rows or a memory-tuned retry for a currently constrained open-weight row such
-as LLaVA-OneVision 0.5B.
+rows.

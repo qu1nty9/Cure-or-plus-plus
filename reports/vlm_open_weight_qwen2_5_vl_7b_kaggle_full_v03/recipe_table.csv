@@ -1,0 +1,5 @@
+model_id,provider,model_version,recipe,n,accuracy,accuracy_ci_low,accuracy_ci_high,unparseable_rate,abstention_rate,accuracy_drop_vs_clean,accuracy_drop_ci_low,accuracy_drop_ci_high
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,messenger_upload_download,200,0.970000,0.930000,1.000000,0.000000,0.000000,0.010000,0.000000,0.030000
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,phone_screenshot_resave,200,0.965000,0.925000,0.995000,0.000000,0.000000,0.015000,0.000000,0.040000
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,social_app_resave,200,0.980000,0.950000,1.000000,0.000000,0.000000,0.000000,0.000000,0.000000
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,video_call_frame_capture,200,0.930000,0.880000,0.975000,0.000000,0.000000,0.050000,0.015000,0.095000

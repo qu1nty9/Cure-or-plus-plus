@@ -1,0 +1,102 @@
+{
+  "matrix_id": "vlm_frontier_provider_real_transfer_v01",
+  "description": "Provider VLM matrix for the CURE-OR++ 210-row real-transfer v0.2 prompt pack. Run smoke first; run full only after explicit approval to send images to an external API.",
+  "prompt_pack_path": "reports/vlm_api_track_v01_prompt_pack.jsonl",
+  "default_smoke_limit": 5,
+  "full_limit": 210,
+  "privacy_policy": "External provider runs send CURE-OR++ prompt-pack images to the provider API. Do not run full rows without explicit approval and a configured API key. Raw provider payloads remain outside Git; track only sanitized responses and aggregate reports.",
+  "recommended_order": [
+    "google_gemini_3_5_flash",
+    "openai_gpt_5_4_mini",
+    "xai_grok_4_3",
+    "anthropic_claude_sonnet_4_6",
+    "openai_gpt_5_5",
+    "anthropic_claude_fable_5"
+  ],
+  "models": [
+    {
+      "slug": "openai_gpt_5_5",
+      "provider": "openai",
+      "model_id": "gpt-5.5",
+      "runner": "scripts/run_openai_compatible_vlm.py",
+      "endpoint": "responses",
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url": "https://api.openai.com/v1",
+      "max_tokens": 8,
+      "temperature": 0.0,
+      "status": "ready_for_smoke_with_key",
+      "source": "https://developers.openai.com/api/docs/models",
+      "notes": "OpenAI docs list GPT-5.5 as the flagship model and state that latest OpenAI models support text and image input. Use the Responses endpoint with store=false."
+    },
+    {
+      "slug": "openai_gpt_5_4_mini",
+      "provider": "openai",
+      "model_id": "gpt-5.4-mini",
+      "runner": "scripts/run_openai_compatible_vlm.py",
+      "endpoint": "responses",
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url": "https://api.openai.com/v1",
+      "max_tokens": 8,
+      "temperature": 0.0,
+      "status": "ready_for_smoke_with_key",
+      "source": "https://developers.openai.com/api/docs/models",
+      "notes": "Cost/latency contrast row for the OpenAI provider block."
+    },
+    {
+      "slug": "google_gemini_3_5_flash",
+      "provider": "google_gemini",
+      "model_id": "gemini-3.5-flash",
+      "runner": "scripts/run_gemini_vlm.py",
+      "endpoint": "generateContent",
+      "api_key_env": "GEMINI_API_KEY",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta",
+      "max_tokens": 8,
+      "temperature": 0.0,
+      "status": "ready_for_smoke_with_key",
+      "source": "https://ai.google.dev/gemini-api/docs/models",
+      "notes": "Google docs list Gemini 3.5 Flash as the stable current model and document Gemini API image understanding."
+    },
+    {
+      "slug": "anthropic_claude_sonnet_4_6",
+      "provider": "anthropic",
+      "model_id": "claude-sonnet-4-6",
+      "runner": "scripts/run_anthropic_vlm.py",
+      "endpoint": "messages",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "base_url": "https://api.anthropic.com/v1",
+      "max_tokens": 8,
+      "temperature": 0.0,
+      "status": "ready_for_smoke_with_key",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "notes": "Practical Anthropic frontier row. Anthropic docs say current Claude models support image input and vision."
+    },
+    {
+      "slug": "anthropic_claude_fable_5",
+      "provider": "anthropic",
+      "model_id": "claude-fable-5",
+      "runner": "scripts/run_anthropic_vlm.py",
+      "endpoint": "messages",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "base_url": "https://api.anthropic.com/v1",
+      "max_tokens": 8,
+      "temperature": 0.0,
+      "status": "ready_for_smoke_if_account_has_access",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "notes": "Anthropic's strongest widely released model according to its model overview; access should be verified by smoke run."
+    },
+    {
+      "slug": "xai_grok_4_3",
+      "provider": "xai",
+      "model_id": "grok-4.3",
+      "runner": "scripts/run_openai_compatible_vlm.py",
+      "endpoint": "responses",
+      "api_key_env": "XAI_API_KEY",
+      "base_url": "https://api.x.ai/v1",
+      "max_tokens": 8,
+      "temperature": 0.0,
+      "status": "ready_for_smoke_with_key",
+      "source": "https://docs.x.ai/developers/models",
+      "notes": "xAI docs list Grok 4.3 as the default chat choice and document image input constraints. Use Responses API with store=false."
+    }
+  ]
+}

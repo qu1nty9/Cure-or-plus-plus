@@ -1,0 +1,6 @@
+model_id,provider,model_version,sample_id,family,recipe,label,answer_letter,parsed_letter,is_correct,is_unparseable,is_abstention,response_text
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,clean__clean__clean__09904,clean,clean,lg_cell_phone,F,F,True,False,False,F
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,clean__clean__clean__10183,clean,clean,baseball,A,A,True,False,False,A
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,real_transfer__messenger_upload_download__rep_01__10183,real_transfer,messenger_upload_download,baseball,A,A,True,False,False,A
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,real_transfer__phone_screenshot_resave__rep_01__10183,real_transfer,phone_screenshot_resave,baseball,A,A,True,False,False,A
+Qwen/Qwen2.5-VL-7B-Instruct,huggingface,,real_transfer__video_call_frame_capture__rep_01__10183,real_transfer,video_call_frame_capture,baseball,A,A,True,False,False,A

@@ -1,0 +1,5 @@
+pipeline,pipeline_name,model_count,mean_real_accuracy,mean_accuracy_drop_vs_matched_clean,min_real_accuracy,max_accuracy_drop_vs_matched_clean,worst_model
+video_call_frame_capture,Video-call frame capture,4,0.825,0.04500000000000001,0.79,0.10999999999999999,OpenCLIP ViT-B/16 DataComp-XL
+social_app_resave,Instagram social-app resave,4,0.855,0.014999999999999986,0.78,0.04999999999999993,OpenCLIP ViT-B/16 DataComp-XL
+messenger_upload_download,Messenger upload/download,4,0.86,0.009999999999999981,0.79,0.04999999999999993,OpenCLIP ViT-B/16 DataComp-XL
+phone_screenshot_resave,Phone screenshot/resave,4,0.86875,0.0012499999999999734,0.79,0.039999999999999925,OpenCLIP ViT-B/16 DataComp-XL

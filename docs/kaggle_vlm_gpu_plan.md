@@ -6,13 +6,16 @@ Run the CURE-OR++ real-transfer v0.2 VLM prompt pack on Kaggle GPU with a
 tiered open-weight model matrix. Completed full rows now include
 `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` and
 `HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`,
-`OpenGVLab/InternVL3-2B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct`; the next step
-is promoting selected remaining smoke-passed candidates from
-`configs/vlm_open_weight_model_matrix_v01.json`.
+`OpenGVLab/InternVL3-2B-hf`, `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`, and
+`Qwen/Qwen2.5-VL-3B-Instruct`, plus
+`Qwen/Qwen2.5-VL-7B-Instruct` and
+`llava-hf/llava-onevision-qwen2-7b-ov-hf`. The next step is using the same
+prompt-pack/evaluator path for selected frontier/provider VLM rows or
+repeatability reruns.
 
 This path avoids paid frontier APIs and avoids local CPU runtime bottlenecks.
 
-Status: complete for five open-weight full rows. Kaggle kernel version 7 ran
+Status: complete for eight open-weight full rows. Kaggle kernel version 7 ran
 the SmolVLM2-500M 210-row prompt pack and wrote tracked artifacts under
 `reports/vlm_open_weight_smolvlm2_kaggle_v01/`. Kaggle kernel version 12 ran
 the InternVL3-1B 210-row prompt pack and wrote tracked artifacts under
@@ -22,16 +25,27 @@ ran the Qwen2.5-VL-3B 210-row prompt pack and wrote tracked artifacts under
 ran the SmolVLM2-2.2B 210-row prompt pack and wrote tracked artifacts under
 `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`. Kaggle kernel version 16
 ran the InternVL3-2B 210-row prompt pack and wrote tracked artifacts under
-`reports/vlm_open_weight_internvl3_2b_kaggle_v01/`. The current notebook now
-defaults to smoke mode for the remaining queue:
+`reports/vlm_open_weight_internvl3_2b_kaggle_v01/`. Kaggle kernel version 20
+ran the LLaVA-OneVision 0.5B 210-row prompt pack and wrote tracked artifacts
+under `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/`. The
+Qwen2.5-VL-7B then failed an initial smoke attempt at Kaggle kernel version 21
+with CUDA OOM, passed a memory-controlled smoke retry at Kaggle kernel version
+22, and completed a full 210-row pass at Kaggle kernel version 23 under
+`reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/`.
 
-- `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`
-- `Qwen/Qwen2.5-VL-7B-Instruct`
-- `llava-hf/llava-onevision-qwen2-7b-ov-hf`
+`llava-hf/llava-onevision-qwen2-7b-ov-hf` failed the first smoke attempt at
+Kaggle kernel version 24 with CUDA OOM during generation on P100. Kernel
+version 25 passed a memory-controlled smoke retry with `device_map=auto`,
+`low_cpu_mem_usage=true`, `use_cache=false`, input resize to `max_side=384`,
+and `max_tokens=2`. Kaggle kernel version 26 completed the corresponding
+model-by-model full run under
+`reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/`.
 
-`llava-hf/llava-onevision-qwen2-0.5b-ov-hf` passed smoke but hit CUDA OOM in
-full mode on Kaggle P100, so it should be retried only after memory-specific
-tuning.
+`llava-hf/llava-onevision-qwen2-0.5b-ov-hf` originally passed smoke, then hit
+CUDA OOM in full mode on Kaggle P100, and then failed once more under unsafe
+`anyres` processor overrides. The successful completion path keeps default
+OneVision processing and resizes each input image to `max_side=768` before
+preprocessing.
 
 ## What Codex Can Prepare Locally
 
@@ -73,12 +87,29 @@ After smoke succeeds, promote models one at a time:
 
 ```python
 RUN_MODE = "full"
-SELECTED_MODEL_SLUGS = ["internvl3_2b"]
+SELECTED_MODEL_SLUGS = ["llava_onevision_qwen2_7b"]
 ```
 
 Do not run all large/stretch candidates in one session. Full 210-row runs
 should be model-by-model so one memory failure does not destroy successful
 rows.
+
+For Qwen2.5-VL-7B specifically, the successful path on Kaggle P100 required:
+
+- `processor_kwargs.min_pixels=50176`
+- `processor_kwargs.max_pixels=262144`
+- `image_max_side=512`
+- `generate_kwargs.use_cache=false`
+- `model_kwargs.low_cpu_mem_usage=true`
+
+For LLaVA-OneVision Qwen2 7B specifically, the successful path on Kaggle P100
+required:
+
+- `device_map=auto`
+- `model_kwargs.low_cpu_mem_usage=true`
+- `generate_kwargs.use_cache=false`
+- `image_max_side=384`
+- `max_tokens=2`
 
 ## What Requires The User's Kaggle Account
 

@@ -19,6 +19,7 @@ data/raw/
 data/interim/
 data/processed/
 kaggle/cure-or-plus-plus-v01/
+kaggle/vlm_private_dataset*/
 
 # Keep aggregate result tables and figures, but not per-image prediction dumps.
 results/*
@@ -42,12 +43,20 @@ data/real_transfer/**/images/**/*.jpeg
 data/real_transfer/**/images/**/*.png
 data/real_transfer/**/images/**/*.heic
 data/real_transfer/**/images/**/*.HEIC
-data/real_transfer/**/collection_pack/
+data/real_transfer/**/collection_pack*/
 data/real_transfer/**/pairs.csv
 data/real_transfer/**/manifest.csv
+data/real_transfer/**/source_images_to_process*/**/*.jpg
+data/real_transfer/**/source_images_to_process*/**/*.jpeg
+data/real_transfer/**/source_images_to_process*/**/*.png
+data/real_transfer/**/source_images_to_process*/**/*.heic
+data/real_transfer/**/source_images_to_process*/**/*.HEIC
 
 # VLM/API provider responses and caches are local run artifacts.
 data/vlm_api_cache/
+reports/**/cache/
+reports/**/cure_or_pp_runtime_pack/
+reports/**/vlm_open_weight_runs/
 reports/vlm_api_track_*_responses*.jsonl
 reports/vlm_api_track_*_raw*.jsonl
 reports/vlm_api_track_*_response_audit.csv

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import random
 import math
 from collections import defaultdict
@@ -55,7 +56,31 @@ def main() -> int:
     parser.add_argument("--pipeline-table", default="reports/real_transfer_v02_pipeline_consensus_table.csv")
     parser.add_argument("--label-table", default="reports/real_transfer_v02_label_failure_table.csv")
     parser.add_argument("--markdown", default="reports/real_transfer_v02_results.md")
+    parser.add_argument("--model-specs-json", default="")
+    parser.add_argument("--pipeline-specs-json", default="")
+    parser.add_argument("--report-title", default="Real-Transfer v0.2 Results")
+    parser.add_argument(
+        "--protocol-description",
+        default=(
+            "This report uses the source-matched real-transfer comparison: each model's "
+            "real-transfer accuracy is compared against its clean accuracy on the source "
+            "images used to create the transferred outputs."
+        ),
+    )
+    parser.add_argument(
+        "--drop-figure",
+        default="../results/real_transfer_v02_source_matched_drops.png",
+    )
+    parser.add_argument(
+        "--heatmap-figure",
+        default="../results/real_transfer_v02_accuracy_heatmap.png",
+    )
     args = parser.parse_args()
+
+    model_specs = load_specs(args.model_specs_json, MODEL_SPECS)
+    pipeline_specs = load_specs(args.pipeline_specs_json, default_pipeline_specs())
+    pipeline_order = [row["pipeline"] for row in pipeline_specs]
+    pipeline_display = {row["pipeline"]: row["pipeline_name"] for row in pipeline_specs}
 
     manifest_rows = load_csv(resolve_project_path(args.manifest))
     source_paths = sorted({row["source_path"] for row in manifest_rows})
@@ -63,13 +88,13 @@ def main() -> int:
 
     model_rows = []
     label_rows = []
-    for spec in MODEL_SPECS:
+    for spec in model_specs:
         predictions_path = resolve_project_path(spec["predictions"])
         predictions = load_csv(predictions_path)
-        model_rows.extend(build_model_rows(spec, predictions, source_paths))
+        model_rows.extend(build_model_rows(spec, predictions, source_paths, pipeline_order, pipeline_display))
         label_rows.extend(build_label_rows(spec, predictions, source_paths))
 
-    pipeline_rows = build_pipeline_rows(model_rows)
+    pipeline_rows = build_pipeline_rows(model_rows, pipeline_order, pipeline_display)
 
     write_csv(resolve_project_path(args.model_table), model_rows, MODEL_TABLE_FIELDS)
     write_csv(resolve_project_path(args.pipeline_table), pipeline_rows, PIPELINE_TABLE_FIELDS)
@@ -82,6 +107,12 @@ def main() -> int:
         model_rows,
         pipeline_rows,
         label_rows,
+        pipeline_order,
+        pipeline_display,
+        args.report_title,
+        args.protocol_description,
+        args.drop_figure,
+        args.heatmap_figure,
     )
 
     print(f"Manifest rows: {len(manifest_rows)}")
@@ -142,7 +173,13 @@ LABEL_TABLE_FIELDS = [
 ]
 
 
-def build_model_rows(spec: dict[str, str], predictions: list[dict[str, str]], source_paths: list[str]) -> list[dict]:
+def build_model_rows(
+    spec: dict[str, str],
+    predictions: list[dict[str, str]],
+    source_paths: list[str],
+    pipeline_order: list[str],
+    pipeline_display: dict[str, str],
+) -> list[dict]:
     source_set = set(map(normalize_path, source_paths))
     clean_rows = [
         row
@@ -153,7 +190,7 @@ def build_model_rows(spec: dict[str, str], predictions: list[dict[str, str]], so
     clean_confidence = mean_float(clean_rows, "confidence")
 
     output = []
-    for pipeline in PIPELINE_ORDER:
+    for pipeline in pipeline_order:
         real_rows = [row for row in predictions if row["family"] == "real_transfer" and row["recipe"] == pipeline]
         real_accuracy = accuracy(real_rows)
         real_confidence = mean_float(real_rows, "confidence")
@@ -169,7 +206,7 @@ def build_model_rows(spec: dict[str, str], predictions: list[dict[str, str]], so
                 "model_name": spec["model_name"],
                 "model_slug": spec["model_slug"],
                 "pipeline": pipeline,
-                "pipeline_name": PIPELINE_DISPLAY[pipeline],
+                "pipeline_name": pipeline_display[pipeline],
                 "matched_clean_n": len(clean_rows),
                 "matched_clean_accuracy": clean_accuracy,
                 "matched_clean_accuracy_ci_low": bootstrap["clean_accuracy_ci_low"],
@@ -218,15 +255,19 @@ def build_label_rows(spec: dict[str, str], predictions: list[dict[str, str]], so
     return sorted(output, key=lambda row: (float(row["real_accuracy"]), -float(row["accuracy_drop_vs_matched_clean"])))
 
 
-def build_pipeline_rows(model_rows: list[dict]) -> list[dict]:
+def build_pipeline_rows(
+    model_rows: list[dict],
+    pipeline_order: list[str],
+    pipeline_display: dict[str, str],
+) -> list[dict]:
     output = []
-    for pipeline in PIPELINE_ORDER:
+    for pipeline in pipeline_order:
         rows = [row for row in model_rows if row["pipeline"] == pipeline]
         worst = max(rows, key=lambda row: float(row["accuracy_drop_vs_matched_clean"]))
         output.append(
             {
                 "pipeline": pipeline,
-                "pipeline_name": PIPELINE_DISPLAY[pipeline],
+                "pipeline_name": pipeline_display[pipeline],
                 "model_count": len(rows),
                 "mean_real_accuracy": mean([float(row["real_accuracy"]) for row in rows]),
                 "mean_accuracy_drop_vs_matched_clean": mean(
@@ -320,12 +361,22 @@ def write_markdown(
     model_rows: list[dict],
     pipeline_rows: list[dict],
     label_rows: list[dict],
+    pipeline_order: list[str],
+    pipeline_display: dict[str, str],
+    report_title: str,
+    protocol_description: str,
+    drop_figure: str,
+    heatmap_figure: str,
 ) -> None:
-    metadata = summarize_capture_metadata(manifest_rows)
+    metadata = summarize_capture_metadata(manifest_rows, pipeline_order)
+    pipeline_metadata_rows = [
+        [f"{pipeline_display[pipeline]} pipeline", metadata["pipeline_variants"].get(pipeline, "")]
+        for pipeline in pipeline_order
+    ]
     lines = [
-        "# Real-Transfer v0.2 Results",
+        f"# {report_title}",
         "",
-        "This report uses the source-matched real-transfer comparison: each model's real-transfer accuracy is compared against its clean accuracy on the 30 source images used to create the transferred outputs.",
+        protocol_description,
         "",
         "## Protocol Status",
         "",
@@ -335,20 +386,18 @@ def write_markdown(
                 ["Transferred outputs", str(len(manifest_rows))],
                 ["Source images", str(len(source_paths))],
                 ["Labels", str(len(labels))],
-                ["Pipelines", str(len(PIPELINE_ORDER))],
+                ["Pipelines", str(len(pipeline_order))],
                 ["Repeats per source/pipeline", "2"],
                 ["Capture device", metadata["capture_device"]],
-                ["Messenger pipeline", metadata["pipeline_variants"].get("messenger_upload_download", "")],
-                ["Screenshot pipeline", metadata["pipeline_variants"].get("phone_screenshot_resave", "")],
-                ["Video-call pipeline", metadata["pipeline_variants"].get("video_call_frame_capture", "")],
-            ],
+            ]
+            + pipeline_metadata_rows,
         ),
         "",
         "## Figures",
         "",
-        "![Source-matched accuracy drops with bootstrap confidence intervals](../results/real_transfer_v02_source_matched_drops.png)",
+        f"![Source-matched accuracy drops with bootstrap confidence intervals]({drop_figure})",
         "",
-        "![Real-transfer accuracy heatmap](../results/real_transfer_v02_accuracy_heatmap.png)",
+        f"![Real-transfer accuracy heatmap]({heatmap_figure})",
         "",
         "## Model x Pipeline Results",
         "",
@@ -425,9 +474,9 @@ def write_markdown(
         "## Interpretation",
         "",
         "- Real app/device transfer is now evaluated, not only scaffolded.",
-        "- Collector-supplied metadata identifies the capture device as iPhone 15 Pro, the messenger pipeline as WhatsApp, and the video-call/video-transmission pipeline as FaceTime.",
+        "- Collector-supplied metadata identifies the capture device as iPhone 15 Pro, the messenger pipeline as WhatsApp, the video-call/video-transmission pipeline as FaceTime, and the social-app resave pipeline as Instagram.",
         "- The observed drops are moderate rather than catastrophic, which is useful: the block acts as a realism guardrail for the larger simulated and native CURE-OR benchmark.",
-        "- Source-level bootstrap intervals are wide because the real-transfer block intentionally uses 30 source images; this supports cautious interpretation rather than overclaiming small pipeline differences.",
+        f"- Source-level bootstrap intervals are source-matched over {len(source_paths)} source images; this supports cautious interpretation rather than overclaiming small pipeline differences.",
         "- The strongest claim is model- and pipeline-dependent sensitivity, not a universal collapse under every real transfer pipeline.",
         "- Per-file capture dates are not manually asserted here; they can be extracted from image metadata where present if needed for the final release.",
     ]
@@ -435,10 +484,10 @@ def write_markdown(
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def summarize_capture_metadata(rows: list[dict[str, str]]) -> dict:
+def summarize_capture_metadata(rows: list[dict[str, str]], pipeline_order: list[str]) -> dict:
     devices = sorted({row.get("capture_device", "").strip() for row in rows if row.get("capture_device", "").strip()})
     variants: dict[str, str] = {}
-    for recipe in PIPELINE_ORDER:
+    for recipe in pipeline_order:
         recipe_variants = sorted(
             {row.get("pipeline_variant", "").strip() for row in rows if row.get("recipe") == recipe and row.get("pipeline_variant", "").strip()}
         )
@@ -452,6 +501,19 @@ def summarize_capture_metadata(rows: list[dict[str, str]]) -> dict:
 def load_csv(path: Path) -> list[dict[str, str]]:
     with path.open("r", newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def load_specs(path: str, default: list[dict[str, str]]) -> list[dict[str, str]]:
+    if not path:
+        return default
+    return json.loads(resolve_project_path(path).read_text(encoding="utf-8"))
+
+
+def default_pipeline_specs() -> list[dict[str, str]]:
+    return [
+        {"pipeline": pipeline, "pipeline_name": PIPELINE_DISPLAY[pipeline]}
+        for pipeline in PIPELINE_ORDER
+    ]
 
 
 def write_csv(path: Path, rows: list[dict], fieldnames: list[str]) -> None:

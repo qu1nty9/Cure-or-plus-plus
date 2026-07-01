@@ -1,0 +1,41 @@
+model_name,model_slug,label,matched_clean_n,matched_clean_accuracy,real_n,real_accuracy,accuracy_drop_vs_matched_clean
+CLIP ViT-B/16,clip_vit_b16,canon_camera,10,0.6,80,0.525,0.07499999999999996
+CLIP ViT-B/16,clip_vit_b16,dymo_label_maker,10,0.8,80,0.7125,0.08750000000000002
+CLIP ViT-B/16,clip_vit_b16,calcium_bottle,10,0.8,80,0.8,0.0
+CLIP ViT-B/16,clip_vit_b16,hair_brush,10,0.9,80,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,lg_cell_phone,10,0.9,80,0.9,0.0
+CLIP ViT-B/16,clip_vit_b16,baseball,10,1.0,80,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,pan,10,1.0,80,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,shoes,10,1.0,80,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,toy,10,1.0,80,1.0,0.0
+CLIP ViT-B/16,clip_vit_b16,training_marker_cone,10,1.0,80,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,canon_camera,10,0.3,80,0.25,0.04999999999999999
+CLIP ViT-B/32,clip_vit_b32,dymo_label_maker,10,0.5,80,0.5,0.0
+CLIP ViT-B/32,clip_vit_b32,lg_cell_phone,10,0.7,80,0.6875,0.012499999999999956
+CLIP ViT-B/32,clip_vit_b32,hair_brush,10,0.7,80,0.75,-0.050000000000000044
+CLIP ViT-B/32,clip_vit_b32,calcium_bottle,10,0.8,80,0.7875,0.012500000000000067
+CLIP ViT-B/32,clip_vit_b32,baseball,10,0.9,80,0.925,-0.025000000000000022
+CLIP ViT-B/32,clip_vit_b32,training_marker_cone,10,1.0,80,0.975,0.025000000000000022
+CLIP ViT-B/32,clip_vit_b32,pan,10,1.0,80,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,shoes,10,1.0,80,1.0,0.0
+CLIP ViT-B/32,clip_vit_b32,toy,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,calcium_bottle,10,0.4,80,0.4125,-0.012499999999999956
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,dymo_label_maker,10,0.8,80,0.725,0.07500000000000007
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,canon_camera,10,0.7,80,0.7375,-0.03750000000000009
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,lg_cell_phone,10,0.7,80,0.8625,-0.1625000000000001
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,hair_brush,10,0.9,80,0.875,0.025000000000000022
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,baseball,10,1.0,80,0.9875,0.012499999999999956
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,pan,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,shoes,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,toy,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/32 LAION-2B,openclip_vit_b32_laion2b,training_marker_cone,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,canon_camera,10,0.6,80,0.4875,0.11249999999999999
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,calcium_bottle,10,0.8,80,0.675,0.125
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,lg_cell_phone,10,1.0,80,0.825,0.17500000000000004
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,hair_brush,10,1.0,80,0.9,0.09999999999999998
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,dymo_label_maker,10,1.0,80,0.9125,0.08750000000000002
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,training_marker_cone,10,1.0,80,0.975,0.025000000000000022
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,baseball,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,pan,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,shoes,10,1.0,80,1.0,0.0
+OpenCLIP ViT-B/16 DataComp-XL,openclip_vit_b16_datacomp_xl,toy,10,1.0,80,1.0,0.0

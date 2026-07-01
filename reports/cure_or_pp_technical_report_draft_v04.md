@@ -24,8 +24,11 @@ Current strongest evidence:
 - open-weight VLM prompt-pack runs using
   `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`,
   `HuggingFaceTB/SmolVLM2-2.2B-Instruct`,
-  `OpenGVLab/InternVL3-1B-hf`, `OpenGVLab/InternVL3-2B-hf`, and
-  `Qwen/Qwen2.5-VL-3B-Instruct` on Kaggle GPU.
+  `OpenGVLab/InternVL3-1B-hf`, `OpenGVLab/InternVL3-2B-hf`,
+  `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`, and
+  `Qwen/Qwen2.5-VL-3B-Instruct`, plus
+  `Qwen/Qwen2.5-VL-7B-Instruct` and
+  `llava-hf/llava-onevision-qwen2-7b-ov-hf` on Kaggle GPU.
 
 Main blocker:
 
@@ -57,10 +60,12 @@ mean confidence. A type-10 grayscale control confirms that grayscale conversion
 alone is damaging but does not explain the full native level-5 collapse. The
 real-transfer v0.2 block now adds 180 transferred outputs covering messenger
 upload/download, phone screenshot/resave, and video-call frame capture
-pipelines. Five open-weight VLM rows validate the prompt-pack path and provide
-an initial assistant-style model-family contrast, including both a strong
-same-family SmolVLM scale-up, a two-step InternVL family comparison, and a
-Qwen generation-instability case.
+pipelines. Eight open-weight VLM rows validate the prompt-pack path and
+provide an initial assistant-style model-family contrast, including both a
+strong same-family SmolVLM scale-up, a two-step InternVL family comparison, a
+completed LLaVA-OneVision 0.5B retry, memory-controlled Qwen2.5-VL-7B and
+LLaVA-OneVision 7B strong rows, and a separate Qwen2.5-VL-3B
+generation-instability case.
 
 ## Contributions
 
@@ -79,9 +84,10 @@ Qwen generation-instability case.
 6. A real-transfer v0.2 validation block testing whether real app/device
    transfer pipelines reproduce related failure behavior.
 7. A 210-row VLM prompt-pack/evaluator path with executed open-weight
-   SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, and
-   Qwen2.5-VL-3B rows, validating assistant-style vision-language evaluation
-   without paid API calls.
+   SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B,
+   LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and
+   LLaVA-OneVision 7B rows, validating assistant-style vision-language
+   evaluation without paid API calls.
 
 ## Method Summary
 
@@ -110,8 +116,10 @@ The VLM/API track converts the same 30 clean source images and 180 transferred
 outputs into multiple-choice prompt rows. The completed open-weight rows are
 `HuggingFaceTB/SmolVLM2-500M-Video-Instruct`,
 `HuggingFaceTB/SmolVLM2-2.2B-Instruct`, `OpenGVLab/InternVL3-1B-hf`,
-`OpenGVLab/InternVL3-2B-hf`, and `Qwen/Qwen2.5-VL-3B-Instruct`, all run on
-Kaggle GPU with Transformers and evaluated by
+`OpenGVLab/InternVL3-2B-hf`, `llava-hf/llava-onevision-qwen2-0.5b-ov-hf`, and
+`Qwen/Qwen2.5-VL-3B-Instruct`, plus `Qwen/Qwen2.5-VL-7B-Instruct` and
+`llava-hf/llava-onevision-qwen2-7b-ov-hf`, all run on Kaggle GPU with
+Transformers and evaluated by
 `scripts/evaluate_vlm_response_pack.py`.
 
 ## Current Baselines
@@ -205,7 +213,10 @@ The open-weight VLM rows produced:
 | SmolVLM2-2.2B-Instruct | 0.9333 | 0.9333 | 0.0000 | 0.0000 |
 | InternVL3-1B-hf | 0.9333 | 0.9333 | 0.0000 | 0.0000 |
 | InternVL3-2B-hf | 0.9333 | 0.9278 | 0.0056 | 0.0000 |
+| llava-onevision-qwen2-0.5b-ov-hf | 0.9667 | 0.9333 | 0.0333 | 0.0000 |
 | Qwen2.5-VL-3B-Instruct | 0.9000 | 0.6389 | 0.2611 | 0.3278 |
+| Qwen2.5-VL-7B-Instruct | 0.9667 | 0.9333 | 0.0333 | 0.0000 |
+| llava-onevision-qwen2-7b-ov-hf | 0.9667 | 0.9778 | -0.0111 | 0.0000 |
 
 By pipeline, SmolVLM2-500M real-transfer accuracies were:
 
@@ -217,10 +228,21 @@ SmolVLM2-2.2B reached 0.9333 for messenger upload/download, 0.9167 for phone
 screenshot/resave, and 0.9500 for video-call frame capture. InternVL3-1B
 reached 0.9333 accuracy for all three real-transfer pipelines. InternVL3-2B
 reached 0.9667 for messenger upload/download, 0.9000 for phone
-screenshot/resave, and 0.9167 for video-call frame capture.
+screenshot/resave, and 0.9167 for video-call frame capture. LLaVA-OneVision
+0.5B reached 0.9667 for messenger upload/download, 0.9333 for phone
+screenshot/resave, and 0.9000 for video-call frame capture.
 Qwen2.5-VL-3B reached 0.9000 clean accuracy, but on real-transfer rows it
 often generated the literal string `!!!!!!!!`, producing a 0.3278 unparseable
 rate and a 0.2611 accuracy drop.
+Qwen2.5-VL-7B reached 0.9667 clean accuracy and 0.9333 real-transfer accuracy
+with zero unparseables after a memory-controlled Kaggle path that reduced the
+visual-token budget and resized inputs to `max_side=512`.
+LLaVA-OneVision Qwen2 7B reached 0.9667 clean accuracy and 0.9778
+real-transfer accuracy with zero unparseables after a memory-controlled Kaggle
+path that disabled generation cache, used `device_map=auto`, resized inputs to
+`max_side=384`, and limited generation to two new tokens. Its real-transfer
+recipe accuracies were 1.0000 for messenger upload/download, 1.0000 for phone
+screenshot/resave, and 0.9333 for video-call frame capture.
 
 Interpretation: SmolVLM2-500M is weaker than the best CLIP/OpenCLIP
 real-transfer rows, but it proves the VLM prompt-pack and response-audit path
@@ -229,8 +251,19 @@ shows a strong within-family scaling effect: unlike the 500M row, it preserves
 0.9333 accuracy on both clean and real-transfer. InternVL3-1B matches that
 strong result while preserving zero unparseable responses. InternVL3-2B stays
 fully parseable and very strong, but its small 0.0056 drop shows that scaling
-within the InternVL family is not monotonic on the current prompt pack. Qwen2.5-VL-3B
-adds a separate generation-stability failure mode under transfer pipelines.
+within the InternVL family is not monotonic on the current prompt pack.
+LLaVA-OneVision 0.5B adds a different contrast: after a memory-safe input
+resize path, it ties the best executed real-transfer accuracy at 0.9333 while
+setting the strongest clean split at 0.9667, but it still shows a concentrated
+`dymo_label_maker` weakness and a larger drop on video-call frame capture.
+Qwen2.5-VL-3B adds a separate generation-stability failure mode under transfer
+pipelines. Qwen2.5-VL-7B shows that the stronger Qwen family member is
+executable on Kaggle P100 under explicit memory controls and can match the
+best completed open-weight headline result while staying fully parseable across
+all 210 examples. LLaVA-OneVision Qwen2 7B closes the large LLaVA-family
+follow-up and raises the open-weight real-transfer headline result to 0.9778;
+the negative clean-to-real drop should be read as small-sample variation, not
+as evidence that transfer improves recognition.
 
 ### Grayscale Control and Channel Effects
 
@@ -263,7 +296,7 @@ model family.
 - Real-transfer v0.2 is small: 30 source images, three pipelines, and two
   repeats per source/pipeline. It is an external-validity guardrail, not a
   comprehensive real-world transfer benchmark.
-- The current VLM evidence contains five open-weight assistant-style rows, not a
+- The current VLM evidence contains eight open-weight assistant-style rows, not a
   broad frontier/provider VLM comparison.
 - Full-CURE-OR v0.4 is a controlled probe, not an exhaustive evaluation of all
   images in the original dataset.

@@ -107,18 +107,24 @@ VLM/API prompt-pack status:
   v0.2.
 - It contains 210 image-question rows per model: 30 clean source rows and 180
   transferred rows.
-- Five open-weight full rows are complete: `SmolVLM2-500M-Video-Instruct`,
-  `SmolVLM2-2.2B-Instruct`, `InternVL3-1B-hf`, `InternVL3-2B-hf`, and
-  `Qwen2.5-VL-3B-Instruct`. Their tracked artifacts are in
+- Eight open-weight full rows are complete: `SmolVLM2-500M-Video-Instruct`,
+  `SmolVLM2-2.2B-Instruct`, `InternVL3-1B-hf`, `InternVL3-2B-hf`,
+  `llava-onevision-qwen2-0.5b-ov-hf`, `Qwen2.5-VL-3B-Instruct`, and
+  `Qwen2.5-VL-7B-Instruct`, plus `llava-onevision-qwen2-7b-ov-hf`. Their
+  tracked artifacts are in
   `reports/vlm_open_weight_smolvlm2_kaggle_v01/`,
   `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`,
   `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, and
-  `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, plus
-  `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`.
-- The strongest open-weight rows are now SmolVLM2-2.2B and InternVL3-1B at
-  93.3% on both clean-source and real-transfer splits, while InternVL3-2B
-  remains fully parseable but lands slightly lower at 92.8% real-transfer
-  accuracy.
+  `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`,
+  `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/`, plus
+  `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/` and
+  `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/`, plus
+  `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/`.
+- The strongest real-transfer open-weight row is now LLaVA-OneVision Qwen2 7B
+  at 97.8% with zero unparseables. LLaVA-OneVision 0.5B, Qwen2.5-VL-7B, and
+  LLaVA-OneVision Qwen2 7B share the best clean split at 96.7%, while
+  SmolVLM2-2.2B, InternVL3-1B, LLaVA-OneVision 0.5B, and Qwen2.5-VL-7B remain
+  strong 93.3% real-transfer rows.
 - It is intentionally not mixed into the current CLIP/OpenCLIP/prototype
   leaderboard because provider VLMs require text-answer extraction, exact model
   versioning, and raw-response audit handling.
@@ -187,6 +193,5 @@ Before a final public paper:
    comparisons are needed for the first public paper.
 3. Add confidence/calibration tables for any further usable zero-shot or VLM
    families.
-4. Decide whether to retry a memory-constrained open-weight row such as
-   LLaVA-OneVision 0.5B or keep the current open-weight set and focus on paper
-   polish.
+4. Decide whether to pursue frontier/provider VLM rows or keep the current
+   open-weight set and focus on paper polish.

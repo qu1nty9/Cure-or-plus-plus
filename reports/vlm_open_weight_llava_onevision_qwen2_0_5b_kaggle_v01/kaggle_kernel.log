@@ -1,0 +1,48 @@
+# Extracted Kaggle session highlights for notebook session 329304109
+# Source: Kaggle MCP notebook-session output on 2026-06-21.
+# Note: this is a concise extracted log, not the full raw session stream.
+
+Prompt rows selected: 210
+Already completed: 0
+Pending rows: 210
+Backend: transformers
+Provider/model: huggingface/llava-hf/llava-onevision-qwen2-0.5b-ov-hf
+Model class: LlavaOnevisionForConditionalGeneration
+Output: /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/responses.jsonl
+Cache dir: /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/cache
+Loaded model on device=cuda dtype=torch.float16 device_map=auto
+Processed 10/210 pending rows
+Processed 20/210 pending rows
+Processed 30/210 pending rows
+Processed 40/210 pending rows
+Processed 50/210 pending rows
+Processed 60/210 pending rows
+Processed 70/210 pending rows
+Processed 80/210 pending rows
+Processed 90/210 pending rows
+Processed 100/210 pending rows
+Processed 110/210 pending rows
+Processed 120/210 pending rows
+Processed 130/210 pending rows
+Processed 140/210 pending rows
+Processed 150/210 pending rows
+Processed 160/210 pending rows
+Processed 170/210 pending rows
+Processed 180/210 pending rows
+Processed 190/210 pending rows
+Processed 200/210 pending rows
+Processed 210/210 pending rows
+Wrote rows: 210
+/usr/bin/python3 /kaggle/working/cure_or_pp_runtime_pack/scripts/evaluate_vlm_response_pack.py --prompt-pack /kaggle/working/cure_or_pp_runtime_pack/reports/vlm_api_track_v01_prompt_pack.jsonl --responses /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/responses.jsonl --model-summary /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/model_summary.csv --recipe-table /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/recipe_table.csv --label-table /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/label_table.csv --audit-table /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/audit.csv
+Prompt rows: 210
+Response rows: 210
+Joined rows: 210
+Models: 1
+Model summary: /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/model_summary.csv
+Recipe table: /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/recipe_table.csv
+Label table: /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/label_table.csv
+Audit table: /kaggle/working/vlm_open_weight_runs/full/llava_onevision_qwen2_0_5b/audit.csv
+Combined summary: /kaggle/working/vlm_open_weight_runs/full/combined_model_summary.csv
+Combined recipe: /kaggle/working/vlm_open_weight_runs/full/combined_recipe_table.csv
+Combined labels: /kaggle/working/vlm_open_weight_runs/full/combined_label_table.csv
+Manifest: /kaggle/working/vlm_open_weight_runs/full/run_manifest.csv

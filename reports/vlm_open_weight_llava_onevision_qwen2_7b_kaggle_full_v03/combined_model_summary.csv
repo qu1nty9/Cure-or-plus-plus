@@ -1,0 +1,2 @@
+slug,model_id,provider,model_version,clean_n,clean_accuracy,clean_unparseable_rate,clean_abstention_rate,real_n,real_accuracy,real_unparseable_rate,real_abstention_rate,accuracy_drop_vs_clean
+llava_onevision_qwen2_7b,llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,100,0.98,0.0,0.0,800,0.9775,0.0,0.0,0.0025

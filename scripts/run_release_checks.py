@@ -17,19 +17,71 @@ REQUIRED_FILES = [
     "reports/real_transfer_v02_model_pipeline_table.csv",
     "reports/real_transfer_v02_pipeline_consensus_table.csv",
     "reports/real_transfer_v02_label_failure_table.csv",
+    "reports/real_transfer_v03_results.md",
+    "reports/real_transfer_v03_model_pipeline_table.csv",
+    "reports/real_transfer_v03_pipeline_consensus_table.csv",
+    "reports/real_transfer_v03_label_failure_table.csv",
     "reports/real_transfer_v02_activation_status.json",
     "results/real_transfer_v02_source_matched_drops.png",
     "results/real_transfer_v02_accuracy_heatmap.png",
+    "results/real_transfer_v03_source_matched_drops.png",
+    "results/real_transfer_v03_accuracy_heatmap.png",
     "paper/main.tex",
     "docs/dataset_card_cure_or_pp_v04.md",
     "docs/evaluation_card_full_cure_or_v04.md",
     "reports/arxiv_readiness_matrix_v04.md",
     "configs/vlm_api_track_v01.json",
+    "configs/vlm_api_track_v03.json",
+    "configs/vlm_frontier_provider_matrix_v01.json",
     "configs/vlm_open_weight_model_matrix_v01.json",
+    "configs/vlm_open_weight_model_matrix_v03.json",
     "docs/vlm_api_track_plan_v01.md",
+    "docs/vlm_frontier_provider_block_v01.md",
     "docs/vlm_open_weight_model_matrix_v01.md",
     "reports/vlm_api_track_v01_prompt_pack.jsonl",
     "reports/vlm_api_track_v01_prompt_pack_summary.json",
+    "reports/vlm_api_track_v03_prompt_pack.jsonl",
+    "reports/vlm_api_track_v03_prompt_pack_summary.json",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/summary.md",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/combined_model_summary.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/combined_recipe_table.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/combined_label_table.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/run_manifest.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/kaggle_kernel.log",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/model_summary.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/recipe_table.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/label_table.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/audit.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/responses.jsonl",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/model_summary.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/recipe_table.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/label_table.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/audit.csv",
+    "reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/responses.jsonl",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/summary.md",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/model_summary.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/recipe_table.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/label_table.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/audit.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/responses.jsonl",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/combined_model_summary.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/combined_recipe_table.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/combined_label_table.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/run_manifest.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/kaggle_kernel.log",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/summary.md",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/model_summary.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/recipe_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/label_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/audit.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/responses.jsonl",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/combined_model_summary.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/combined_recipe_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/combined_label_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/run_manifest.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/kaggle_kernel.log",
+    "reports/vlm_open_weight_7b_full_v03_comparison.csv",
+    "reports/vlm_open_weight_7b_full_v03_comparison.md",
     "reports/vlm_open_weight_matrix_smoke_kaggle_v01/summary.md",
     "reports/vlm_open_weight_matrix_smoke_kaggle_v01/model_summary.csv",
     "reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/summary.md",
@@ -53,6 +105,13 @@ REQUIRED_FILES = [
     "reports/vlm_open_weight_internvl3_2b_kaggle_v01/audit.csv",
     "reports/vlm_open_weight_internvl3_2b_kaggle_v01/responses.jsonl",
     "reports/vlm_open_weight_internvl3_2b_kaggle_v01/kaggle_kernel.log",
+    "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/summary.md",
+    "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/model_summary.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/recipe_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/label_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/audit.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/responses.jsonl",
+    "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/kaggle_kernel.log",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/model_summary.csv",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/recipe_table.csv",
@@ -60,9 +119,24 @@ REQUIRED_FILES = [
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/audit.csv",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/responses.jsonl",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/kaggle_kernel.log",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/summary.md",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/model_summary.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/recipe_table.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/label_table.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/audit.csv",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/responses.jsonl",
+    "reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/kaggle_kernel.log",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/summary.md",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/model_summary.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/recipe_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/label_table.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/audit.csv",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/responses.jsonl",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/kaggle_kernel.log",
     "scripts/build_vlm_prompt_pack.py",
     "scripts/run_openai_compatible_vlm.py",
     "scripts/run_gemini_vlm.py",
+    "scripts/run_anthropic_vlm.py",
     "scripts/run_hf_vlm.py",
     "scripts/evaluate_vlm_response_pack.py",
     "scripts/build_kaggle_vlm_package.py",
@@ -71,14 +145,24 @@ REQUIRED_FILES = [
     "notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
     "kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
     "kaggle/vlm_kernel/kernel-metadata.json",
+    "notebooks/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
+    "notebooks/cure_or_pp_vlm_open_weight_kaggle_v03.ipynb",
+    "kaggle/vlm_kernel_v03/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
+    "kaggle/vlm_kernel_v03/cure_or_pp_vlm_open_weight_kaggle_v03.ipynb",
+    "kaggle/vlm_kernel_v03/kernel-metadata.json",
+    "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/launch.md",
 ]
 
-SUMMARY_FILES = [
-    "results/clip_vit_b16_real_transfer_v02_summary.csv",
-    "results/clip_vit_b32_real_transfer_v02_summary.csv",
-    "results/openclip_vit_b32_laion2b_real_transfer_v02_summary.csv",
-    "results/openclip_vit_b16_datacomp_xl_real_transfer_v02_summary.csv",
-]
+SUMMARY_FILE_EXPECTATIONS = {
+    "results/clip_vit_b16_real_transfer_v02_summary.csv": 4,
+    "results/clip_vit_b32_real_transfer_v02_summary.csv": 4,
+    "results/openclip_vit_b32_laion2b_real_transfer_v02_summary.csv": 4,
+    "results/openclip_vit_b16_datacomp_xl_real_transfer_v02_summary.csv": 4,
+    "results/clip_vit_b16_real_transfer_v03_summary.csv": 5,
+    "results/clip_vit_b32_real_transfer_v03_summary.csv": 5,
+    "results/openclip_vit_b32_laion2b_real_transfer_v03_summary.csv": 5,
+    "results/openclip_vit_b16_datacomp_xl_real_transfer_v03_summary.csv": 5,
+}
 
 FORBIDDEN_PUBLIC_STRINGS = {
     "desktop_path": "/Users/" + "yaroslav/Desktop",
@@ -107,6 +191,10 @@ def main() -> int:
     checks.extend(check_paper_links())
     checks.extend(check_paper_preflight())
     checks.extend(check_vlm_prompt_pack())
+    checks.extend(check_vlm_open_weight_smoke_v03())
+    checks.extend(check_vlm_open_weight_qwen_full_v03())
+    checks.extend(check_vlm_open_weight_llava_full_v03())
+    checks.extend(check_vlm_open_weight_7b_comparison_v03())
     checks.extend(check_forbidden_public_strings())
 
     failed = [check for check in checks if not check["passed"]]
@@ -172,6 +260,9 @@ def check_real_transfer_tables() -> list[dict]:
         "reports/real_transfer_v02_model_pipeline_table.csv": 12,
         "reports/real_transfer_v02_pipeline_consensus_table.csv": 3,
         "reports/real_transfer_v02_label_failure_table.csv": 40,
+        "reports/real_transfer_v03_model_pipeline_table.csv": 16,
+        "reports/real_transfer_v03_pipeline_consensus_table.csv": 4,
+        "reports/real_transfer_v03_label_failure_table.csv": 40,
     }
     for path_text, expected_rows in table_expectations.items():
         rows = load_csv(resolve_project_path(path_text))
@@ -194,14 +285,29 @@ def check_real_transfer_tables() -> list[dict]:
             f"missing={sorted(required_columns - columns)}",
         )
     )
+    v03_manifest_rows = load_csv(resolve_project_path("data/real_transfer/v03/manifest_full_4pipelines.csv"))
+    checks.append(check("real_transfer_v03_manifest_rows", len(v03_manifest_rows) == 800, f"rows={len(v03_manifest_rows)} expected=800"))
+    v03_recipes = sorted({row.get("recipe", "") for row in v03_manifest_rows})
+    checks.append(
+        check(
+            "real_transfer_v03_manifest_recipes",
+            v03_recipes == [
+                "messenger_upload_download",
+                "phone_screenshot_resave",
+                "social_app_resave",
+                "video_call_frame_capture",
+            ],
+            f"recipes={v03_recipes}",
+        )
+    )
     return checks
 
 
 def check_summary_files() -> list[dict]:
     checks = []
-    for path_text in SUMMARY_FILES:
+    for path_text, expected_rows in SUMMARY_FILE_EXPECTATIONS.items():
         rows = load_csv(resolve_project_path(path_text))
-        checks.append(check(f"summary_rows:{path_text}", len(rows) == 4, f"rows={len(rows)} expected=4"))
+        checks.append(check(f"summary_rows:{path_text}", len(rows) == expected_rows, f"rows={len(rows)} expected={expected_rows}"))
     return checks
 
 
@@ -215,7 +321,10 @@ def check_paper_links() -> list[dict]:
         "SmolVLM2-2.2B",
         "InternVL3-1B",
         "InternVL3-2B",
+        "LLaVA-OneVision 0.5B",
         "Qwen2.5-VL-3B",
+        "Qwen2.5-VL-7B",
+        "LLaVA-OneVision 7B",
     ]
     return [
         check(f"paper_contains:{text}", text in paper, f"needle={text!r}")
@@ -242,23 +351,302 @@ def check_paper_preflight() -> list[dict]:
 
 
 def check_vlm_prompt_pack() -> list[dict]:
-    summary_path = resolve_project_path("reports/vlm_api_track_v01_prompt_pack_summary.json")
-    pack_path = resolve_project_path("reports/vlm_api_track_v01_prompt_pack.jsonl")
+    checks = []
+    checks.extend(check_vlm_prompt_pack_file(
+        prefix="vlm_prompt_pack_v01",
+        summary_path=resolve_project_path("reports/vlm_api_track_v01_prompt_pack_summary.json"),
+        pack_path=resolve_project_path("reports/vlm_api_track_v01_prompt_pack.jsonl"),
+        expected_rows=210,
+        expected_clean=30,
+        expected_real=180,
+    ))
+    checks.extend(check_vlm_prompt_pack_file(
+        prefix="vlm_prompt_pack_v03",
+        summary_path=resolve_project_path("reports/vlm_api_track_v03_prompt_pack_summary.json"),
+        pack_path=resolve_project_path("reports/vlm_api_track_v03_prompt_pack.jsonl"),
+        expected_rows=900,
+        expected_clean=100,
+        expected_real=800,
+    ))
+    return checks
+
+
+def check_vlm_prompt_pack_file(
+    *,
+    prefix: str,
+    summary_path: Path,
+    pack_path: Path,
+    expected_rows: int,
+    expected_clean: int,
+    expected_real: int,
+) -> list[dict]:
     if not summary_path.exists() or not pack_path.exists():
-        return [check("vlm_prompt_pack", False, "missing prompt pack or summary")]
+        return [check(prefix, False, "missing prompt pack or summary")]
 
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
     prompt_rows = load_jsonl(pack_path)
     checks = [
-        check("vlm_prompt_pack_rows", len(prompt_rows) == 210, f"rows={len(prompt_rows)} expected=210"),
-        check("vlm_prompt_pack_summary_rows", summary.get("row_count") == 210, f"row_count={summary.get('row_count')} expected=210"),
-        check("vlm_prompt_pack_clean_rows", summary.get("family_counts", {}).get("clean") == 30, f"clean={summary.get('family_counts', {}).get('clean')} expected=30"),
-        check("vlm_prompt_pack_real_rows", summary.get("family_counts", {}).get("real_transfer") == 180, f"real_transfer={summary.get('family_counts', {}).get('real_transfer')} expected=180"),
-        check("vlm_prompt_pack_option_count", summary.get("option_count") == 10, f"option_count={summary.get('option_count')} expected=10"),
+        check(f"{prefix}_rows", len(prompt_rows) == expected_rows, f"rows={len(prompt_rows)} expected={expected_rows}"),
+        check(f"{prefix}_summary_rows", summary.get("row_count") == expected_rows, f"row_count={summary.get('row_count')} expected={expected_rows}"),
+        check(f"{prefix}_clean_rows", summary.get("family_counts", {}).get("clean") == expected_clean, f"clean={summary.get('family_counts', {}).get('clean')} expected={expected_clean}"),
+        check(f"{prefix}_real_rows", summary.get("family_counts", {}).get("real_transfer") == expected_real, f"real_transfer={summary.get('family_counts', {}).get('real_transfer')} expected={expected_real}"),
+        check(f"{prefix}_option_count", summary.get("option_count") == 10, f"option_count={summary.get('option_count')} expected=10"),
     ]
     required_fields = {"sample_id", "image_path", "label", "answer_letter", "prompt", "options"}
     present_fields = set(prompt_rows[0].keys()) if prompt_rows else set()
-    checks.append(check("vlm_prompt_pack_fields", required_fields.issubset(present_fields), f"missing={sorted(required_fields - present_fields)}"))
+    checks.append(check(f"{prefix}_fields", required_fields.issubset(present_fields), f"missing={sorted(required_fields - present_fields)}"))
+    return checks
+
+
+def check_vlm_open_weight_smoke_v03() -> list[dict]:
+    base = resolve_project_path("reports/vlm_open_weight_matrix_smoke_kaggle_v03")
+    expected_slugs = {"llava_onevision_qwen2_7b", "qwen2_5_vl_7b"}
+
+    combined_rows = load_csv(base / "combined_model_summary.csv")
+    combined_slugs = {row.get("slug", "") for row in combined_rows}
+    checks = [
+        check(
+            "vlm_open_weight_smoke_v03_combined_models",
+            combined_slugs == expected_slugs,
+            f"slugs={sorted(combined_slugs)} expected={sorted(expected_slugs)}",
+        ),
+        check(
+            "vlm_open_weight_smoke_v03_combined_model_rows",
+            len(combined_rows) == 2,
+            f"rows={len(combined_rows)} expected=2",
+        ),
+        check(
+            "vlm_open_weight_smoke_v03_recipe_rows",
+            len(load_csv(base / "combined_recipe_table.csv")) == 8,
+            f"rows={len(load_csv(base / 'combined_recipe_table.csv'))} expected=8",
+        ),
+        check(
+            "vlm_open_weight_smoke_v03_manifest_rows",
+            len(load_csv(base / "run_manifest.csv")) == 2,
+            f"rows={len(load_csv(base / 'run_manifest.csv'))} expected=2",
+        ),
+    ]
+
+    for slug in sorted(expected_slugs):
+        model_dir = base / slug
+        response_rows = load_jsonl(model_dir / "responses.jsonl")
+        audit_rows = load_csv(model_dir / "audit.csv")
+        summary_rows = load_csv(model_dir / "model_summary.csv")
+        checks.extend([
+            check(
+                f"vlm_open_weight_smoke_v03_{slug}_responses",
+                len(response_rows) == 6,
+                f"rows={len(response_rows)} expected=6",
+            ),
+            check(
+                f"vlm_open_weight_smoke_v03_{slug}_audit",
+                len(audit_rows) == 6,
+                f"rows={len(audit_rows)} expected=6",
+            ),
+            check(
+                f"vlm_open_weight_smoke_v03_{slug}_summary",
+                len(summary_rows) == 1,
+                f"rows={len(summary_rows)} expected=1",
+            ),
+        ])
+
+    return checks
+
+
+def check_vlm_open_weight_qwen_full_v03() -> list[dict]:
+    base = resolve_project_path("reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    response_rows = load_jsonl(base / "responses.jsonl")
+    audit_rows = load_csv(base / "audit.csv")
+    manifest_rows = load_csv(base / "run_manifest.csv")
+
+    checks = [
+        check(
+            "vlm_open_weight_qwen_full_v03_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_open_weight_qwen_full_v03_recipe_rows",
+            len(recipe_rows) == 4,
+            f"rows={len(recipe_rows)} expected=4",
+        ),
+        check(
+            "vlm_open_weight_qwen_full_v03_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_open_weight_qwen_full_v03_responses",
+            len(response_rows) == 900,
+            f"rows={len(response_rows)} expected=900",
+        ),
+        check(
+            "vlm_open_weight_qwen_full_v03_audit",
+            len(audit_rows) == 900,
+            f"rows={len(audit_rows)} expected=900",
+        ),
+        check(
+            "vlm_open_weight_qwen_full_v03_manifest",
+            len(manifest_rows) == 1 and manifest_rows[0].get("slug") == "qwen2_5_vl_7b",
+            f"rows={len(manifest_rows)} slugs={[row.get('slug') for row in manifest_rows]}",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_open_weight_qwen_full_v03_clean_n",
+                row.get("clean_n") == "100",
+                f"clean_n={row.get('clean_n')} expected=100",
+            ),
+            check(
+                "vlm_open_weight_qwen_full_v03_real_n",
+                row.get("real_n") == "800",
+                f"real_n={row.get('real_n')} expected=800",
+            ),
+            check(
+                "vlm_open_weight_qwen_full_v03_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.98),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.98",
+            ),
+            check(
+                "vlm_open_weight_qwen_full_v03_real_accuracy",
+                approx(row.get("real_accuracy"), 0.96125),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.96125",
+            ),
+            check(
+                "vlm_open_weight_qwen_full_v03_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.append(
+        check(
+            "vlm_open_weight_qwen_full_v03_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.93),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.93",
+        )
+    )
+    return checks
+
+
+def check_vlm_open_weight_llava_full_v03() -> list[dict]:
+    base = resolve_project_path("reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    response_rows = load_jsonl(base / "responses.jsonl")
+    audit_rows = load_csv(base / "audit.csv")
+    manifest_rows = load_csv(base / "run_manifest.csv")
+
+    checks = [
+        check(
+            "vlm_open_weight_llava_full_v03_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_open_weight_llava_full_v03_recipe_rows",
+            len(recipe_rows) == 4,
+            f"rows={len(recipe_rows)} expected=4",
+        ),
+        check(
+            "vlm_open_weight_llava_full_v03_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_open_weight_llava_full_v03_responses",
+            len(response_rows) == 900,
+            f"rows={len(response_rows)} expected=900",
+        ),
+        check(
+            "vlm_open_weight_llava_full_v03_audit",
+            len(audit_rows) == 900,
+            f"rows={len(audit_rows)} expected=900",
+        ),
+        check(
+            "vlm_open_weight_llava_full_v03_manifest",
+            len(manifest_rows) == 1 and manifest_rows[0].get("slug") == "llava_onevision_qwen2_7b",
+            f"rows={len(manifest_rows)} slugs={[row.get('slug') for row in manifest_rows]}",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_open_weight_llava_full_v03_clean_n",
+                row.get("clean_n") == "100",
+                f"clean_n={row.get('clean_n')} expected=100",
+            ),
+            check(
+                "vlm_open_weight_llava_full_v03_real_n",
+                row.get("real_n") == "800",
+                f"real_n={row.get('real_n')} expected=800",
+            ),
+            check(
+                "vlm_open_weight_llava_full_v03_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.98),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.98",
+            ),
+            check(
+                "vlm_open_weight_llava_full_v03_real_accuracy",
+                approx(row.get("real_accuracy"), 0.9775),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.9775",
+            ),
+            check(
+                "vlm_open_weight_llava_full_v03_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.append(
+        check(
+            "vlm_open_weight_llava_full_v03_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.955),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.955",
+        )
+    )
+    return checks
+
+
+def check_vlm_open_weight_7b_comparison_v03() -> list[dict]:
+    rows = load_csv(resolve_project_path("reports/vlm_open_weight_7b_full_v03_comparison.csv"))
+    slugs = {row.get("slug", "") for row in rows}
+    checks = [
+        check(
+            "vlm_open_weight_7b_comparison_v03_rows",
+            len(rows) == 2,
+            f"rows={len(rows)} expected=2",
+        ),
+        check(
+            "vlm_open_weight_7b_comparison_v03_slugs",
+            slugs == {"qwen2_5_vl_7b", "llava_onevision_qwen2_7b"},
+            f"slugs={sorted(slugs)}",
+        ),
+    ]
+    real_accuracy = {row.get("slug"): row.get("real_accuracy") for row in rows}
+    checks.extend([
+        check(
+            "vlm_open_weight_7b_comparison_v03_qwen_real_accuracy",
+            approx(real_accuracy.get("qwen2_5_vl_7b"), 0.96125),
+            f"accuracy={real_accuracy.get('qwen2_5_vl_7b')} expected=0.96125",
+        ),
+        check(
+            "vlm_open_weight_7b_comparison_v03_llava_real_accuracy",
+            approx(real_accuracy.get("llava_onevision_qwen2_7b"), 0.9775),
+            f"accuracy={real_accuracy.get('llava_onevision_qwen2_7b')} expected=0.9775",
+        ),
+    ])
     return checks
 
 
@@ -306,6 +694,12 @@ def load_jsonl(path: Path) -> list[dict]:
 
 def check(name: str, passed: bool, detail: str) -> dict:
     return {"name": name, "passed": bool(passed), "detail": detail}
+
+
+def approx(value: str | None, expected: float, tolerance: float = 1e-9) -> bool:
+    if value is None or value == "":
+        return False
+    return abs(float(value) - expected) <= tolerance
 
 
 def resolve_project_path(path: str | Path) -> Path:

@@ -1,0 +1,27 @@
+{
+  "model_type": "clip",
+  "model_id": "openai/clip-vit-base-patch32",
+  "clean_manifest_path": "data/interim/cure_or_clean_test_manifest.csv",
+  "distorted_manifest_path": "data/real_transfer/v03/manifest_full_4pipelines.csv",
+  "predictions_path": "results/clip_vit_b32_real_transfer_v03_predictions.csv",
+  "summary_path": "results/clip_vit_b32_real_transfer_v03_summary.csv",
+  "batch_size": 16,
+  "prompt_templates": [
+    "a photo of a {}.",
+    "a photo of the {}.",
+    "a close-up photo of a {}.",
+    "a product photo of a {}."
+  ],
+  "labels": {
+    "canon_camera": "Canon camera",
+    "training_marker_cone": "training marker cone",
+    "baseball": "baseball",
+    "pan": "pan",
+    "toy": "toy",
+    "lg_cell_phone": "LG cell phone",
+    "hair_brush": "hair brush",
+    "dymo_label_maker": "DYMO label maker",
+    "calcium_bottle": "calcium bottle",
+    "shoes": "shoes"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "check_count": 91,
+  "check_count": 227,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -32,6 +32,26 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=5760 min_size=1",
+      "name": "required_file:reports/real_transfer_v03_results.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=4640 min_size=1",
+      "name": "required_file:reports/real_transfer_v03_model_pipeline_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=689 min_size=1",
+      "name": "required_file:reports/real_transfer_v03_pipeline_consensus_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3309 min_size=1",
+      "name": "required_file:reports/real_transfer_v03_label_failure_table.csv",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=1895 min_size=1",
       "name": "required_file:reports/real_transfer_v02_activation_status.json",
       "passed": true
@@ -47,7 +67,17 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=16381 min_size=1",
+      "detail": "exists=True size=92310 min_size=10000",
+      "name": "required_file:results/real_transfer_v03_source_matched_drops.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=131115 min_size=10000",
+      "name": "required_file:results/real_transfer_v03_accuracy_heatmap.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=18289 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -57,12 +87,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7086 min_size=1",
+      "detail": "exists=True size=7450 min_size=1",
       "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=4721 min_size=1",
+      "detail": "exists=True size=4998 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },
@@ -72,8 +102,23 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6581 min_size=1",
+      "detail": "exists=True size=1040 min_size=1",
+      "name": "required_file:configs/vlm_api_track_v03.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=4341 min_size=1",
+      "name": "required_file:configs/vlm_frontier_provider_matrix_v01.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=8472 min_size=1",
       "name": "required_file:configs/vlm_open_weight_model_matrix_v01.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=6320 min_size=1",
+      "name": "required_file:configs/vlm_open_weight_model_matrix_v03.json",
       "passed": true
     },
     {
@@ -82,7 +127,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7321 min_size=1",
+      "detail": "exists=True size=5404 min_size=1",
+      "name": "required_file:docs/vlm_frontier_provider_block_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=11591 min_size=1",
       "name": "required_file:docs/vlm_open_weight_model_matrix_v01.md",
       "passed": true
     },
@@ -94,6 +144,216 @@
     {
       "detail": "exists=True size=752 min_size=1",
       "name": "required_file:reports/vlm_api_track_v01_prompt_pack_summary.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1360280 min_size=1",
+      "name": "required_file:reports/vlm_api_track_v03_prompt_pack.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=787 min_size=1",
+      "name": "required_file:reports/vlm_api_track_v03_prompt_pack_summary.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1789 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=389 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/combined_model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1177 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/combined_recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=524 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/combined_label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=177 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/run_manifest.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=158118 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/kaggle_kernel.log",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=297 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=740 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=315 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1034 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3435 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/qwen2_5_vl_7b/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=309 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=788 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=339 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1106 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3507 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_matrix_smoke_kaggle_v03/llava_onevision_qwen2_7b/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2324 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=301 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=748 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1082 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=145238 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=520500 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=292 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/combined_model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=668 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/combined_recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1030 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/combined_label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=83 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/run_manifest.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=148700 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/kaggle_kernel.log",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2391 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=313 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=801 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1203 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=156025 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=531300 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=313 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/combined_model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=766 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/combined_recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1271 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/combined_label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=105 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/run_manifest.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=572170 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/kaggle_kernel.log",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=537 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_7b_full_v03_comparison.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1491 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_7b_full_v03_comparison.md",
       "passed": true
     },
     {
@@ -212,6 +472,41 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=2491 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=314 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=653 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1212 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=39610 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=126908 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2780 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/kaggle_kernel.log",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=2052 min_size=1",
       "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/summary.md",
       "passed": true
@@ -247,12 +542,82 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=1920 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=300 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=609 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1072 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=34292 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=121590 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2035 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/kaggle_kernel.log",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2131 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=313 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=649 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1193 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=36804 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=124110 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=240488 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/kaggle_kernel.log",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=5777 min_size=1",
       "name": "required_file:scripts/build_vlm_prompt_pack.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=15760 min_size=1",
+      "detail": "exists=True size=16150 min_size=1",
       "name": "required_file:scripts/run_openai_compatible_vlm.py",
       "passed": true
     },
@@ -262,7 +627,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=16356 min_size=1",
+      "detail": "exists=True size=13839 min_size=1",
+      "name": "required_file:scripts/run_anthropic_vlm.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=18384 min_size=1",
       "name": "required_file:scripts/run_hf_vlm.py",
       "passed": true
     },
@@ -272,12 +642,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=4905 min_size=1",
+      "detail": "exists=True size=5295 min_size=1",
       "name": "required_file:scripts/build_kaggle_vlm_package.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=12667 min_size=1",
+      "detail": "exists=True size=18201 min_size=1",
       "name": "required_file:scripts/write_kaggle_vlm_notebook.py",
       "passed": true
     },
@@ -287,18 +657,48 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=11758 min_size=1",
+      "detail": "exists=True size=497521 min_size=1",
       "name": "required_file:notebooks/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
       "passed": true
     },
     {
-      "detail": "exists=True size=11758 min_size=1",
+      "detail": "exists=True size=497521 min_size=1",
       "name": "required_file:kaggle/vlm_kernel/cure_or_pp_vlm_open_weight_kaggle_v01.ipynb",
       "passed": true
     },
     {
       "detail": "exists=True size=429 min_size=1",
       "name": "required_file:kaggle/vlm_kernel/kernel-metadata.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=15583 min_size=1",
+      "name": "required_file:notebooks/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1923675 min_size=1",
+      "name": "required_file:notebooks/cure_or_pp_vlm_open_weight_kaggle_v03.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=15583 min_size=1",
+      "name": "required_file:kaggle/vlm_kernel_v03/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1923675 min_size=1",
+      "name": "required_file:kaggle/vlm_kernel_v03/cure_or_pp_vlm_open_weight_kaggle_v03.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=744 min_size=1",
+      "name": "required_file:kaggle/vlm_kernel_v03/kernel-metadata.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1501 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/launch.md",
       "passed": true
     },
     {
@@ -347,8 +747,33 @@
       "passed": true
     },
     {
+      "detail": "rows=16 expected=16",
+      "name": "row_count:reports/real_transfer_v03_model_pipeline_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "row_count:reports/real_transfer_v03_pipeline_consensus_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=40 expected=40",
+      "name": "row_count:reports/real_transfer_v03_label_failure_table.csv",
+      "passed": true
+    },
+    {
       "detail": "missing=[]",
       "name": "real_transfer_bootstrap_columns",
+      "passed": true
+    },
+    {
+      "detail": "rows=800 expected=800",
+      "name": "real_transfer_v03_manifest_rows",
+      "passed": true
+    },
+    {
+      "detail": "recipes=['messenger_upload_download', 'phone_screenshot_resave', 'social_app_resave', 'video_call_frame_capture']",
+      "name": "real_transfer_v03_manifest_recipes",
       "passed": true
     },
     {
@@ -369,6 +794,26 @@
     {
       "detail": "rows=4 expected=4",
       "name": "summary_rows:results/openclip_vit_b16_datacomp_xl_real_transfer_v02_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=5 expected=5",
+      "name": "summary_rows:results/clip_vit_b16_real_transfer_v03_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=5 expected=5",
+      "name": "summary_rows:results/clip_vit_b32_real_transfer_v03_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=5 expected=5",
+      "name": "summary_rows:results/openclip_vit_b32_laion2b_real_transfer_v03_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "rows=5 expected=5",
+      "name": "summary_rows:results/openclip_vit_b16_datacomp_xl_real_transfer_v03_summary.csv",
       "passed": true
     },
     {
@@ -407,8 +852,23 @@
       "passed": true
     },
     {
+      "detail": "needle='LLaVA-OneVision 0.5B'",
+      "name": "paper_contains:LLaVA-OneVision 0.5B",
+      "passed": true
+    },
+    {
       "detail": "needle='Qwen2.5-VL-3B'",
       "name": "paper_contains:Qwen2.5-VL-3B",
+      "passed": true
+    },
+    {
+      "detail": "needle='Qwen2.5-VL-7B'",
+      "name": "paper_contains:Qwen2.5-VL-7B",
+      "passed": true
+    },
+    {
+      "detail": "needle='LLaVA-OneVision 7B'",
+      "name": "paper_contains:LLaVA-OneVision 7B",
       "passed": true
     },
     {
@@ -418,32 +878,252 @@
     },
     {
       "detail": "rows=210 expected=210",
-      "name": "vlm_prompt_pack_rows",
+      "name": "vlm_prompt_pack_v01_rows",
       "passed": true
     },
     {
       "detail": "row_count=210 expected=210",
-      "name": "vlm_prompt_pack_summary_rows",
+      "name": "vlm_prompt_pack_v01_summary_rows",
       "passed": true
     },
     {
       "detail": "clean=30 expected=30",
-      "name": "vlm_prompt_pack_clean_rows",
+      "name": "vlm_prompt_pack_v01_clean_rows",
       "passed": true
     },
     {
       "detail": "real_transfer=180 expected=180",
-      "name": "vlm_prompt_pack_real_rows",
+      "name": "vlm_prompt_pack_v01_real_rows",
       "passed": true
     },
     {
       "detail": "option_count=10 expected=10",
-      "name": "vlm_prompt_pack_option_count",
+      "name": "vlm_prompt_pack_v01_option_count",
       "passed": true
     },
     {
       "detail": "missing=[]",
-      "name": "vlm_prompt_pack_fields",
+      "name": "vlm_prompt_pack_v01_fields",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_prompt_pack_v03_rows",
+      "passed": true
+    },
+    {
+      "detail": "row_count=900 expected=900",
+      "name": "vlm_prompt_pack_v03_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean=100 expected=100",
+      "name": "vlm_prompt_pack_v03_clean_rows",
+      "passed": true
+    },
+    {
+      "detail": "real_transfer=800 expected=800",
+      "name": "vlm_prompt_pack_v03_real_rows",
+      "passed": true
+    },
+    {
+      "detail": "option_count=10 expected=10",
+      "name": "vlm_prompt_pack_v03_option_count",
+      "passed": true
+    },
+    {
+      "detail": "missing=[]",
+      "name": "vlm_prompt_pack_v03_fields",
+      "passed": true
+    },
+    {
+      "detail": "slugs=['llava_onevision_qwen2_7b', 'qwen2_5_vl_7b'] expected=['llava_onevision_qwen2_7b', 'qwen2_5_vl_7b']",
+      "name": "vlm_open_weight_smoke_v03_combined_models",
+      "passed": true
+    },
+    {
+      "detail": "rows=2 expected=2",
+      "name": "vlm_open_weight_smoke_v03_combined_model_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=8 expected=8",
+      "name": "vlm_open_weight_smoke_v03_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=2 expected=2",
+      "name": "vlm_open_weight_smoke_v03_manifest_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=6 expected=6",
+      "name": "vlm_open_weight_smoke_v03_llava_onevision_qwen2_7b_responses",
+      "passed": true
+    },
+    {
+      "detail": "rows=6 expected=6",
+      "name": "vlm_open_weight_smoke_v03_llava_onevision_qwen2_7b_audit",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_open_weight_smoke_v03_llava_onevision_qwen2_7b_summary",
+      "passed": true
+    },
+    {
+      "detail": "rows=6 expected=6",
+      "name": "vlm_open_weight_smoke_v03_qwen2_5_vl_7b_responses",
+      "passed": true
+    },
+    {
+      "detail": "rows=6 expected=6",
+      "name": "vlm_open_weight_smoke_v03_qwen2_5_vl_7b_audit",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_open_weight_smoke_v03_qwen2_5_vl_7b_summary",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_open_weight_qwen_full_v03_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "vlm_open_weight_qwen_full_v03_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_open_weight_qwen_full_v03_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_qwen_full_v03_responses",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_qwen_full_v03_audit",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 slugs=['qwen2_5_vl_7b']",
+      "name": "vlm_open_weight_qwen_full_v03_manifest",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=100 expected=100",
+      "name": "vlm_open_weight_qwen_full_v03_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=800 expected=800",
+      "name": "vlm_open_weight_qwen_full_v03_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.980000 expected=0.98",
+      "name": "vlm_open_weight_qwen_full_v03_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.961250 expected=0.96125",
+      "name": "vlm_open_weight_qwen_full_v03_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_open_weight_qwen_full_v03_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.930000 expected=0.93",
+      "name": "vlm_open_weight_qwen_full_v03_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_open_weight_llava_full_v03_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "vlm_open_weight_llava_full_v03_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_open_weight_llava_full_v03_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_llava_full_v03_responses",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_llava_full_v03_audit",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 slugs=['llava_onevision_qwen2_7b']",
+      "name": "vlm_open_weight_llava_full_v03_manifest",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=100 expected=100",
+      "name": "vlm_open_weight_llava_full_v03_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=800 expected=800",
+      "name": "vlm_open_weight_llava_full_v03_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.980000 expected=0.98",
+      "name": "vlm_open_weight_llava_full_v03_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.977500 expected=0.9775",
+      "name": "vlm_open_weight_llava_full_v03_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_open_weight_llava_full_v03_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.955000 expected=0.955",
+      "name": "vlm_open_weight_llava_full_v03_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "rows=2 expected=2",
+      "name": "vlm_open_weight_7b_comparison_v03_rows",
+      "passed": true
+    },
+    {
+      "detail": "slugs=['llava_onevision_qwen2_7b', 'qwen2_5_vl_7b']",
+      "name": "vlm_open_weight_7b_comparison_v03_slugs",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.96125 expected=0.96125",
+      "name": "vlm_open_weight_7b_comparison_v03_qwen_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.97750 expected=0.9775",
+      "name": "vlm_open_weight_7b_comparison_v03_llava_real_accuracy",
       "passed": true
     },
     {

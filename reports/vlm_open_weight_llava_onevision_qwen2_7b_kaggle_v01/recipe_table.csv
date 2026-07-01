@@ -1,0 +1,4 @@
+model_id,provider,model_version,recipe,n,accuracy,accuracy_ci_low,accuracy_ci_high,unparseable_rate,abstention_rate,accuracy_drop_vs_clean,accuracy_drop_ci_low,accuracy_drop_ci_high
+llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,messenger_upload_download,60,1.000000,1.000000,1.000000,0.000000,0.000000,-0.033333,-0.100000,0.000000
+llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,phone_screenshot_resave,60,1.000000,1.000000,1.000000,0.000000,0.000000,-0.033333,-0.100000,0.000000
+llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,video_call_frame_capture,60,0.933333,0.850000,1.000000,0.000000,0.000000,0.033333,0.000000,0.083333

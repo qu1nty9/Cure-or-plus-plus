@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import gc
 import hashlib
 import json
 import os
@@ -27,6 +28,13 @@ def main() -> int:
     parser.add_argument("--revision", default=None)
     parser.add_argument("--processor-kwargs-json", default="{}", help="JSON object passed to AutoProcessor.from_pretrained.")
     parser.add_argument("--model-kwargs-json", default="{}", help="JSON object merged into model from_pretrained kwargs.")
+    parser.add_argument("--generate-kwargs-json", default="{}", help="JSON object merged into model.generate kwargs.")
+    parser.add_argument(
+        "--image-max-side",
+        type=int,
+        default=0,
+        help="If > 0, downscale each input image so its largest side is at most this many pixels before preprocessing.",
+    )
     parser.add_argument("--device-map", default="", help="Optional Transformers device_map value, for example 'auto'.")
     parser.add_argument(
         "--model-class",
@@ -70,6 +78,7 @@ def main() -> int:
     args = parser.parse_args()
     args.processor_kwargs = parse_json_object(args.processor_kwargs_json, "--processor-kwargs-json")
     args.model_kwargs = parse_json_object(args.model_kwargs_json, "--model-kwargs-json")
+    args.generate_kwargs = parse_json_object(args.generate_kwargs_json, "--generate-kwargs-json")
 
     prompt_rows = select_rows(load_jsonl(resolve_project_path(args.prompt_pack)), args)
     if args.limit is not None:
@@ -111,6 +120,7 @@ def main() -> int:
             output_handle.write(json.dumps(result, sort_keys=True) + "\n")
             output_handle.flush()
             written += 1
+            clear_runtime_memory(runtime)
             if index % 10 == 0 or index == len(pending_rows):
                 print(f"Processed {index}/{len(pending_rows)} pending rows")
             if args.request_sleep > 0 and index < len(pending_rows):
@@ -211,7 +221,8 @@ def generate_response(row: dict, args: argparse.Namespace, image_path: Path, run
     device = runtime["device"]
     dtype = runtime["dtype"]
 
-    messages = build_messages(row, args, image_path)
+    image_source = prepare_image_source(image_path, args)
+    messages = build_messages(row, args, image_source)
     if args.generation_backend == "qwen_vl_utils":
         try:
             from qwen_vl_utils import process_vision_info
@@ -241,28 +252,61 @@ def generate_response(row: dict, args: argparse.Namespace, image_path: Path, run
     inputs = move_inputs(inputs, device=device, dtype=dtype, torch=torch)
     input_length = inputs["input_ids"].shape[-1]
     with torch.inference_mode():
+        generate_kwargs = {
+            "do_sample": False,
+            "max_new_tokens": args.max_tokens,
+        }
+        generate_kwargs.update(args.generate_kwargs)
         generated_ids = model.generate(
             **inputs,
-            do_sample=False,
-            max_new_tokens=args.max_tokens,
+            **generate_kwargs,
         )
     new_tokens = generated_ids[:, input_length:]
     decoded = processor.batch_decode(new_tokens, skip_special_tokens=True)
     return decoded[0].strip() if decoded else ""
 
 
-def build_messages(row: dict, args: argparse.Namespace, image_path: Path) -> list[dict]:
-    image_part: dict[str, str]
-    if args.image_content_key == "url":
-        image_part = {"type": "image", "url": image_path.resolve().as_uri()}
-    elif args.image_content_key == "url_path":
-        image_part = {"type": "image", "url": str(image_path.resolve())}
-    elif args.image_content_key == "image":
-        image_part = {"type": "image", "image": image_path.resolve().as_uri()}
-    elif args.image_content_key == "image_path":
-        image_part = {"type": "image", "image": str(image_path.resolve())}
+def prepare_image_source(image_path: Path, args: argparse.Namespace):
+    if args.image_max_side <= 0:
+        return image_path
+
+    try:
+        from PIL import Image, ImageOps
+    except ImportError as exc:
+        raise RuntimeError("Missing Pillow. Install pillow to use --image-max-side.") from exc
+
+    with Image.open(image_path) as source_image:
+        image = ImageOps.exif_transpose(source_image).convert("RGB")
+        width, height = image.size
+        largest_side = max(width, height)
+        if largest_side <= args.image_max_side:
+            return image.copy()
+        scale = args.image_max_side / float(largest_side)
+        new_size = (
+            max(1, int(round(width * scale))),
+            max(1, int(round(height * scale))),
+        )
+        resampling = getattr(Image, "Resampling", Image).LANCZOS
+        return image.resize(new_size, resampling)
+
+
+def build_messages(row: dict, args: argparse.Namespace, image_source) -> list[dict]:
+    if isinstance(image_source, Path):
+        image_value = str(image_source.resolve())
+        image_uri = image_source.resolve().as_uri()
+        image_part: dict[str, object]
+        if args.image_content_key == "url":
+            image_part = {"type": "image", "url": image_uri}
+        elif args.image_content_key == "url_path":
+            image_part = {"type": "image", "url": image_value}
+        elif args.image_content_key == "image":
+            image_part = {"type": "image", "image": image_uri}
+        elif args.image_content_key == "image_path":
+            image_part = {"type": "image", "image": image_value}
+        else:
+            image_part = {"type": "image", "path": image_value}
     else:
-        image_part = {"type": "image", "path": str(image_path.resolve())}
+        image_part = {"type": "image", "image": image_source}
     content = [
         image_part,
         {"type": "text", "text": row["prompt"]},
@@ -330,6 +374,7 @@ def build_request_fingerprint(
         "model_class": args.model_class,
         "generation_backend": args.generation_backend,
         "image_content_key": args.image_content_key,
+        "image_max_side": args.image_max_side,
         "image_sha256": image_hash,
         "prompt_sha256": prompt_hash,
         "max_tokens": args.max_tokens,
@@ -406,6 +451,17 @@ def parse_json_object(value: str, argument_name: str) -> dict:
     if not isinstance(parsed, dict):
         raise ValueError(f"{argument_name} must be a JSON object")
     return parsed
+
+
+def clear_runtime_memory(runtime: dict | None) -> None:
+    if runtime is None:
+        return
+    torch = runtime.get("torch")
+    if torch is None:
+        return
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
 
 def sha256_file(path: Path) -> str:

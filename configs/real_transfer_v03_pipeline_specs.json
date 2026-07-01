@@ -1,0 +1,18 @@
+[
+  {
+    "pipeline": "messenger_upload_download",
+    "pipeline_name": "Messenger upload/download"
+  },
+  {
+    "pipeline": "phone_screenshot_resave",
+    "pipeline_name": "Phone screenshot/resave"
+  },
+  {
+    "pipeline": "video_call_frame_capture",
+    "pipeline_name": "Video-call frame capture"
+  },
+  {
+    "pipeline": "social_app_resave",
+    "pipeline_name": "Instagram social-app resave"
+  }
+]

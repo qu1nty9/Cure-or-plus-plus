@@ -1,0 +1,28 @@
+{
+  "track_id": "vlm_api_real_transfer_v03",
+  "description": "Multiple-choice visual QA prompt pack for the CURE-OR++ real-transfer v0.3 VLM/API track.",
+  "real_transfer_manifest_path": "data/real_transfer/v03/manifest_full_4pipelines.csv",
+  "prompt_pack_path": "reports/vlm_api_track_v03_prompt_pack.jsonl",
+  "summary_path": "reports/vlm_api_track_v03_prompt_pack_summary.json",
+  "question": "Which object category is shown in the image? Answer with exactly one letter from the options.",
+  "labels": {
+    "baseball": "baseball",
+    "calcium_bottle": "calcium bottle",
+    "canon_camera": "Canon camera",
+    "dymo_label_maker": "DYMO label maker",
+    "hair_brush": "hair brush",
+    "lg_cell_phone": "LG cell phone",
+    "pan": "pan",
+    "shoes": "shoes",
+    "toy": "toy",
+    "training_marker_cone": "training marker cone"
+  },
+  "provider_model_slots": [
+    "openai_frontier_vlm",
+    "anthropic_frontier_vlm",
+    "google_frontier_vlm",
+    "xai_frontier_vlm",
+    "open_weight_vlm_large",
+    "open_weight_vlm_small"
+  ]
+}

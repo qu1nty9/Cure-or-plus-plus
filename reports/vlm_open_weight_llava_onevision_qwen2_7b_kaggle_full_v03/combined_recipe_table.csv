@@ -1,0 +1,5 @@
+slug,model_id,provider,model_version,recipe,n,accuracy,accuracy_ci_low,accuracy_ci_high,unparseable_rate,abstention_rate,accuracy_drop_vs_clean,accuracy_drop_ci_low,accuracy_drop_ci_high
+llava_onevision_qwen2_7b,llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,messenger_upload_download,200,0.99,0.97,1.0,0.0,0.0,-0.01,-0.03,0.0
+llava_onevision_qwen2_7b,llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,phone_screenshot_resave,200,0.985,0.96,1.0,0.0,0.0,-0.005,-0.03,0.015
+llava_onevision_qwen2_7b,llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,social_app_resave,200,0.98,0.95,1.0,0.0,0.0,0.0,0.0,0.0
+llava_onevision_qwen2_7b,llava-hf/llava-onevision-qwen2-7b-ov-hf,huggingface,,video_call_frame_capture,200,0.955,0.915,0.985,0.0,0.0,0.025,-0.005,0.06
