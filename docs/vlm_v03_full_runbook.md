@@ -19,6 +19,7 @@ Completed full v0.3 rows:
 - `qwen2_5_vl_7b`: `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/`
 - `llava_onevision_qwen2_7b`: `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`
 - `smolvlm2_2b`: `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`
+- `qwen2_5_vl_3b`: `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`
 
 Generated comparison:
 
@@ -79,12 +80,11 @@ real-transfer rows, four pipeline rows, and ten label rows.
 
 ## Next Model Order
 
-After `smolvlm2_2b`, use this order unless a prior run fails:
+After `qwen2_5_vl_3b`, use this order unless a prior run fails:
 
-1. `qwen2_5_vl_3b`: checks whether the earlier generation-instability row repeats on the larger v0.3 protocol.
-2. `llava_onevision_qwen2_0_5b`: adds LLaVA-family scale contrast against the completed 7B row.
-3. `internvl3_1b`: adds a small InternVL family row.
-4. `internvl3_2b`: tests whether the earlier non-monotonic InternVL result persists.
+1. `llava_onevision_qwen2_0_5b`: adds LLaVA-family scale contrast against the completed 7B row.
+2. `internvl3_1b`: adds a small InternVL family row.
+3. `internvl3_2b`: tests whether the earlier non-monotonic InternVL result persists.
 
 Keep frontier/provider API models in a separate block. They should not be mixed
 into the open-weight Kaggle leaderboard because model versioning, API policy,

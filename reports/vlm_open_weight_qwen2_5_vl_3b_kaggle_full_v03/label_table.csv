@@ -1,0 +1,11 @@
+model_id,provider,model_version,label,clean_n,clean_accuracy,real_n,real_accuracy,real_unparseable_rate,accuracy_drop_vs_clean
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,calcium_bottle,10,0.900000,80,0.650000,0.237500,0.250000
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,lg_cell_phone,10,0.800000,80,0.687500,0.237500,0.112500
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,training_marker_cone,10,0.800000,80,0.712500,0.275000,0.087500
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,canon_camera,10,0.900000,80,0.737500,0.200000,0.162500
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,hair_brush,10,0.900000,80,0.762500,0.237500,0.137500
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,pan,10,0.900000,80,0.762500,0.237500,0.137500
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,shoes,10,1.000000,80,0.800000,0.200000,0.200000
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,baseball,10,1.000000,80,0.837500,0.162500,0.162500
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,toy,10,0.700000,80,0.837500,0.162500,-0.137500
+Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,dymo_label_maker,10,0.900000,80,0.862500,0.137500,0.037500

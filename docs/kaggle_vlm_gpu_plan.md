@@ -22,9 +22,13 @@ full 7B v0.3 rows are complete and tracked under
 `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/` and
 `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`.
 Kaggle kernel version 30 completed the SmolVLM2-2.2B full v0.3 run, tracked in
-`reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`. The generated
-comparison in `reports/vlm_open_weight_full_v03_comparison.md` is built from
-completed full v0.3 result directories.
+`reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`. Kaggle kernel version
+31 completed the Qwen2.5-VL-3B full v0.3 run, tracked in
+`reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`; it preserves the
+earlier generation-instability signal, with 0.2088 real-transfer unparseable
+rate. The generated comparison in
+`reports/vlm_open_weight_full_v03_comparison.md` is built from completed full
+v0.3 result directories.
 
 Status: complete for eight open-weight full rows. Kaggle kernel version 7 ran
 the SmolVLM2-500M 210-row prompt pack and wrote tracked artifacts under

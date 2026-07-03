@@ -1,0 +1,2 @@
+slug,model_id,provider,model_version,clean_n,clean_accuracy,clean_unparseable_rate,clean_abstention_rate,real_n,real_accuracy,real_unparseable_rate,real_abstention_rate,accuracy_drop_vs_clean
+qwen2_5_vl_3b,Qwen/Qwen2.5-VL-3B-Instruct,huggingface,,100,0.88,0.09,0.0,800,0.765,0.20875,0.0,0.115
