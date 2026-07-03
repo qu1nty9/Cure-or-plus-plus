@@ -76,10 +76,12 @@
       "max_tokens": 8,
       "tier": "v03_priority",
       "enabled_by_default": false,
-      "status": "v02_full_completed_v03_pending",
+      "status": "v03_full_running_kaggle_v31",
       "known_result_dir": "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01",
       "license": "unknown_from_hf_header",
-      "hf_url": "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct"
+      "hf_url": "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct",
+      "planned_v03_full_result_dir": "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03",
+      "active_v03_full_kernel_version": 31
     },
     {
       "slug": "qwen2_5_vl_7b",

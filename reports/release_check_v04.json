@@ -117,7 +117,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6409 min_size=1",
+      "detail": "exists=True size=6544 min_size=1",
       "name": "required_file:configs/vlm_open_weight_model_matrix_v03.json",
       "passed": true
     },
@@ -757,7 +757,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=15570 min_size=1",
+      "detail": "exists=True size=15572 min_size=1",
       "name": "required_file:notebooks/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
       "passed": true
     },
@@ -767,7 +767,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=15570 min_size=1",
+      "detail": "exists=True size=15572 min_size=1",
       "name": "required_file:kaggle/vlm_kernel_v03/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
       "passed": true
     },
