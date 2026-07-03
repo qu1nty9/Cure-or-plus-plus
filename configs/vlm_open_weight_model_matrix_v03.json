@@ -129,10 +129,12 @@
       "max_tokens": 8,
       "tier": "v03_family_contrast",
       "enabled_by_default": false,
-      "status": "v02_full_completed_v03_pending",
+      "status": "v03_full_running_kaggle_v32",
       "known_result_dir": "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01",
       "license": "apache-2.0",
-      "hf_url": "https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
+      "hf_url": "https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf",
+      "planned_v03_full_result_dir": "reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03",
+      "active_v03_full_kernel_version": 32
     },
     {
       "slug": "llava_onevision_qwen2_7b",
