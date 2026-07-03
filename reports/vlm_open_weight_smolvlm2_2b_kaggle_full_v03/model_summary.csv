@@ -1,0 +1,2 @@
+model_id,provider,model_version,clean_n,clean_accuracy,clean_unparseable_rate,clean_abstention_rate,real_n,real_accuracy,real_unparseable_rate,real_abstention_rate,accuracy_drop_vs_clean
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,100,0.960000,0.000000,0.000000,800,0.957500,0.000000,0.000000,0.002500

@@ -11,6 +11,8 @@ InternVL family rows with a slight non-monotonic 2B follow-up, a completed
 LLaVA-OneVision 0.5B row after memory-safe retry, a memory-controlled
 Qwen2.5-VL-7B strong row, a completed memory-controlled LLaVA-OneVision 7B
 row, and a Qwen2.5-VL generation-instability row at 3B.
+The v0.3 900-row VLM real-transfer extension now has three completed
+open-weight rows: Qwen2.5-VL-7B, LLaVA-OneVision Qwen2 7B, and SmolVLM2-2.2B.
 The remaining work is paper polish, metadata cleanup, optional frontier/provider
 VLM coverage, and final release-boundary decisions.
 
@@ -31,7 +33,7 @@ VLM coverage, and final release-boundary decisions.
 | Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after any added frontier/provider VLM rows |
 | Related work | Draft-ready | `docs/related_work_v01.md`, expanded LaTeX related-work paragraph | verify final citations before public submission |
 | Real-transfer validation | Ready for draft | 180 outputs, activation status, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
-| VLM/API track | Eight open-weight rows executed | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`; SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B full Kaggle GPU runs complete | optionally add selected frontier/provider VLM rows and report raw-response audit rules |
+| VLM/API track | Eight v0.2 open-weight rows executed; v0.3 900-row extension in progress | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/`, `reports/vlm_open_weight_full_v03_comparison.md`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`, `scripts/integrate_kaggle_vlm_output.py`; SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B full v0.2 Kaggle GPU runs complete; Qwen2.5-VL-7B, LLaVA-OneVision 7B, and SmolVLM2-2.2B full v0.3 runs complete | promote Qwen2.5-VL-3B or a small-family contrast to v0.3 full mode; optionally add selected frontier/provider VLM rows and report raw-response audit rules |
 | Public release | Not final | Kaggle v0.1 package exists locally | decide Kaggle/HF release boundary and license text |
 
 ## Minimum Path To A Serious Public Draft
@@ -48,6 +50,7 @@ VLM coverage, and final release-boundary decisions.
 The ideal version adds:
 
 - execution of the VLM/API prompt pack on selected frontier VLMs beyond the completed open-weight rows;
+- completion of the v0.3 900-row open-weight VLM scale/family extension beyond the first two 7B rows;
 - repeatability reruns for the strongest open-weight rows if needed for final release confidence;
 - confidence/calibration for any added zero-shot/VLM row;
 - final related-work table;

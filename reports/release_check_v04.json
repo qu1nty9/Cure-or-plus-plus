@@ -1,5 +1,5 @@
 {
-  "check_count": 227,
+  "check_count": 264,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -87,12 +87,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7450 min_size=1",
+      "detail": "exists=True size=7984 min_size=1",
       "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=4998 min_size=1",
+      "detail": "exists=True size=5714 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },
@@ -117,7 +117,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6320 min_size=1",
+      "detail": "exists=True size=6409 min_size=1",
       "name": "required_file:configs/vlm_open_weight_model_matrix_v03.json",
       "passed": true
     },
@@ -134,6 +134,11 @@
     {
       "detail": "exists=True size=11591 min_size=1",
       "name": "required_file:docs/vlm_open_weight_model_matrix_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2886 min_size=1",
+      "name": "required_file:docs/vlm_v03_full_runbook.md",
       "passed": true
     },
     {
@@ -344,6 +349,71 @@
     {
       "detail": "exists=True size=572170 min_size=1",
       "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/kaggle_kernel.log",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1935 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=310 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=787 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1173 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=153343 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=528600 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=297 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/combined_model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=705 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/combined_recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1095 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/combined_label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=79 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/run_manifest.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=143503 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/kaggle_kernel.log",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1319 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_full_v03_comparison.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1374 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_full_v03_comparison.md",
       "passed": true
     },
     {
@@ -637,6 +707,21 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=13898 min_size=1",
+      "name": "required_file:scripts/integrate_kaggle_vlm_output.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=9677 min_size=1",
+      "name": "required_file:scripts/build_vlm_open_weight_full_comparison.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=7053 min_size=1",
+      "name": "required_file:scripts/prepare_kaggle_vlm_full_run.py",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=14081 min_size=1",
       "name": "required_file:scripts/evaluate_vlm_response_pack.py",
       "passed": true
@@ -672,7 +757,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=15583 min_size=1",
+      "detail": "exists=True size=15570 min_size=1",
       "name": "required_file:notebooks/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
       "passed": true
     },
@@ -682,7 +767,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=15583 min_size=1",
+      "detail": "exists=True size=15570 min_size=1",
       "name": "required_file:kaggle/vlm_kernel_v03/cure-or-open-weight-vlm-real-transfer-gpu-pilot.ipynb",
       "passed": true
     },
@@ -1104,6 +1189,106 @@
     {
       "detail": "accuracy=0.955000 expected=0.955",
       "name": "vlm_open_weight_llava_full_v03_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_open_weight_smolvlm2_full_v03_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "vlm_open_weight_smolvlm2_full_v03_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_open_weight_smolvlm2_full_v03_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_smolvlm2_full_v03_responses",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_smolvlm2_full_v03_audit",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 slugs=['smolvlm2_2b']",
+      "name": "vlm_open_weight_smolvlm2_full_v03_manifest",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=100 expected=100",
+      "name": "vlm_open_weight_smolvlm2_full_v03_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=800 expected=800",
+      "name": "vlm_open_weight_smolvlm2_full_v03_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.960000 expected=0.96",
+      "name": "vlm_open_weight_smolvlm2_full_v03_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.957500 expected=0.9575",
+      "name": "vlm_open_weight_smolvlm2_full_v03_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_open_weight_smolvlm2_full_v03_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_open_weight_smolvlm2_full_v03_social_app_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected>=3",
+      "name": "vlm_open_weight_full_comparison_v03_min_rows",
+      "passed": true
+    },
+    {
+      "detail": "slugs=['llava_onevision_qwen2_7b', 'qwen2_5_vl_7b', 'smolvlm2_2b'] required=['llava_onevision_qwen2_7b', 'qwen2_5_vl_7b', 'smolvlm2_2b']",
+      "name": "vlm_open_weight_full_comparison_v03_required_slugs",
+      "passed": true
+    },
+    {
+      "detail": "leader=llava_onevision_qwen2_7b",
+      "name": "vlm_open_weight_full_comparison_v03_leader",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.96125 expected=0.96125",
+      "name": "vlm_open_weight_full_comparison_v03_qwen_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.97750 expected=0.9775",
+      "name": "vlm_open_weight_full_comparison_v03_llava_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.95750 expected=0.9575",
+      "name": "vlm_open_weight_full_comparison_v03_smolvlm2_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "hardest=[('llava_onevision_qwen2_7b', 'video_call_frame_capture'), ('qwen2_5_vl_7b', 'video_call_frame_capture'), ('smolvlm2_2b', 'social_app_resave')]",
+      "name": "vlm_open_weight_full_comparison_v03_hardest_pipeline",
+      "passed": true
+    },
+    {
+      "detail": "missing incomplete-result scope note",
+      "name": "vlm_open_weight_full_comparison_v03_markdown_scope",
       "passed": true
     },
     {

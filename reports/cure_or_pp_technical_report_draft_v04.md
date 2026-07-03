@@ -29,11 +29,16 @@ Current strongest evidence:
   `Qwen/Qwen2.5-VL-3B-Instruct`, plus
   `Qwen/Qwen2.5-VL-7B-Instruct` and
   `llava-hf/llava-onevision-qwen2-7b-ov-hf` on Kaggle GPU.
+- a newer 900-row VLM v0.3 extension with completed Qwen2.5-VL-7B,
+  LLaVA-OneVision Qwen2 7B, and SmolVLM2-2.2B rows plus a generated comparison
+  report.
 
 Main blocker:
 
 - final paper integration, public-release boundary decisions, and optional
   broader VLM/provider model coverage.
+- promotion of the completed three-row 900-row VLM extension into the main
+  paper tables after one or two additional family-contrast rows, if desired.
 
 ## Working Title
 

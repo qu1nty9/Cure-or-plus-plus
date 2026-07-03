@@ -15,6 +15,17 @@ repeatability reruns.
 
 This path avoids paid frontier APIs and avoids local CPU runtime bottlenecks.
 
+The v0.3 extension uses the same Kaggle GPU path on a larger 900-row prompt
+pack: 100 clean rows and 800 real-transfer rows over WhatsApp transfer,
+phone screenshot/resave, Instagram resave, and FaceTime frame capture. Two
+full 7B v0.3 rows are complete and tracked under
+`reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/` and
+`reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`.
+Kaggle kernel version 30 completed the SmolVLM2-2.2B full v0.3 run, tracked in
+`reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`. The generated
+comparison in `reports/vlm_open_weight_full_v03_comparison.md` is built from
+completed full v0.3 result directories.
+
 Status: complete for eight open-weight full rows. Kaggle kernel version 7 ran
 the SmolVLM2-500M 210-row prompt pack and wrote tracked artifacts under
 `reports/vlm_open_weight_smolvlm2_kaggle_v01/`. Kaggle kernel version 12 ran

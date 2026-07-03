@@ -1,0 +1,11 @@
+model_id,provider,model_version,label,clean_n,clean_accuracy,real_n,real_accuracy,real_unparseable_rate,accuracy_drop_vs_clean
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,lg_cell_phone,10,0.800000,80,0.750000,0.000000,0.050000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,calcium_bottle,10,0.800000,80,0.850000,0.000000,-0.050000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,canon_camera,10,1.000000,80,0.975000,0.000000,0.025000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,baseball,10,1.000000,80,1.000000,0.000000,0.000000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,dymo_label_maker,10,1.000000,80,1.000000,0.000000,0.000000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,hair_brush,10,1.000000,80,1.000000,0.000000,0.000000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,pan,10,1.000000,80,1.000000,0.000000,0.000000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,shoes,10,1.000000,80,1.000000,0.000000,0.000000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,toy,10,1.000000,80,1.000000,0.000000,0.000000
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,huggingface,,training_marker_cone,10,1.000000,80,1.000000,0.000000,0.000000
