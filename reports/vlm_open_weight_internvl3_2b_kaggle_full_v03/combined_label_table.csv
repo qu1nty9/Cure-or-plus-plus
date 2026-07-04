@@ -1,0 +1,11 @@
+slug,model_id,provider,model_version,label,clean_n,clean_accuracy,real_n,real_accuracy,real_unparseable_rate,accuracy_drop_vs_clean
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,lg_cell_phone,10,0.8,80,0.7625,0.0,0.0375
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,calcium_bottle,10,0.9,80,0.8625,0.0,0.0375
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,canon_camera,10,1.0,80,0.975,0.0,0.025
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,baseball,10,1.0,80,1.0,0.0,0.0
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,dymo_label_maker,10,1.0,80,1.0,0.0,0.0
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,hair_brush,10,1.0,80,1.0,0.0,0.0
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,pan,10,1.0,80,1.0,0.0,0.0
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,shoes,10,1.0,80,1.0,0.0,0.0
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,toy,10,1.0,80,1.0,0.0,0.0
+internvl3_2b,OpenGVLab/InternVL3-2B-hf,huggingface,,training_marker_cone,10,1.0,80,1.0,0.0,0.0

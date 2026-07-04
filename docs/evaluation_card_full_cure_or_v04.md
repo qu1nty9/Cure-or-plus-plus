@@ -132,12 +132,16 @@ VLM/API prompt-pack status:
   `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`,
   `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`,
   `reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/`,
+  `reports/vlm_open_weight_internvl3_2b_kaggle_full_v03/`,
   `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/`, and
   `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`. The generated
   comparison is `reports/vlm_open_weight_full_v03_comparison.md`.
   LLaVA-OneVision Qwen2 7B leads the completed v0.3 block at 0.9775
-  real-transfer accuracy. InternVL3-1B adds a strong small-family contrast at
-  0.9500 clean accuracy, 0.9563 real-transfer accuracy, and zero unparseables.
+  real-transfer accuracy. InternVL3-2B adds a strong 2B follow-up at 0.9700
+  clean accuracy, 0.9600 real-transfer accuracy, and zero unparseables, while
+  retaining a larger FaceTime-frame drop than InternVL3-1B. InternVL3-1B adds a
+  strong 1B contrast at 0.9500 clean accuracy, 0.9563 real-transfer accuracy,
+  and zero unparseables.
   LLaVA-OneVision Qwen2 0.5B adds a second small-model family contrast with
   0.9300 clean accuracy, 0.9213 real-transfer accuracy, and zero unparseables.
   Qwen2.5-VL-3B repeats the earlier generation-instability pattern at larger

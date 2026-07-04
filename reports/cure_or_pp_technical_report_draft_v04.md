@@ -30,7 +30,7 @@ Current strongest evidence:
   `Qwen/Qwen2.5-VL-7B-Instruct` and
   `llava-hf/llava-onevision-qwen2-7b-ov-hf` on Kaggle GPU.
 - a newer 900-row VLM v0.3 extension with completed Qwen2.5-VL-3B,
-  Qwen2.5-VL-7B, InternVL3-1B, LLaVA-OneVision Qwen2 0.5B,
+  Qwen2.5-VL-7B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision Qwen2 0.5B,
   LLaVA-OneVision Qwen2 7B, and SmolVLM2-2.2B rows plus a generated comparison
   report.
 
@@ -38,8 +38,8 @@ Main blocker:
 
 - final paper integration, public-release boundary decisions, and optional
   broader VLM/provider model coverage.
-- promotion of the completed six-row 900-row VLM extension into the main paper
-  tables after optional InternVL3-2B or provider rows, if desired.
+- promotion of the completed seven-row 900-row VLM extension into the main
+  paper tables after optional provider rows or repeatability reruns, if desired.
 
 ## Working Title
 
@@ -95,7 +95,7 @@ generation-instability case.
    LLaVA-OneVision 7B rows, validating assistant-style vision-language
    evaluation without paid API calls.
 8. A 900-row VLM v0.3 extension with completed Qwen2.5-VL-3B,
-   Qwen2.5-VL-7B, InternVL3-1B, LLaVA-OneVision Qwen2 0.5B,
+   Qwen2.5-VL-7B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision Qwen2 0.5B,
    LLaVA-OneVision Qwen2 7B, and SmolVLM2-2.2B rows over four real-transfer
    pipelines.
 
@@ -266,11 +266,16 @@ real-transfer sample, plus the Instagram `social_app_resave` pipeline:
 | --- | ---: | ---: | ---: | ---: |
 | LLaVA-OneVision-Qwen2-7B | 0.9800 | 0.9775 | 0.0025 | 0.0000 |
 | Qwen2.5-VL-7B | 0.9800 | 0.9613 | 0.0188 | 0.0000 |
+| InternVL3-2B | 0.9700 | 0.9600 | 0.0100 | 0.0000 |
 | SmolVLM2-2.2B | 0.9600 | 0.9575 | 0.0025 | 0.0000 |
 | InternVL3-1B | 0.9500 | 0.9563 | -0.0063 | 0.0000 |
 | LLaVA-OneVision-Qwen2-0.5B | 0.9300 | 0.9213 | 0.0088 | 0.0000 |
 | Qwen2.5-VL-3B | 0.8800 | 0.7650 | 0.1150 | 0.2088 |
 
+InternVL3-2B reaches 0.9700 clean accuracy and 0.9600 real-transfer accuracy
+with zero unparseables. It is slightly stronger than InternVL3-1B in aggregate
+real-transfer accuracy, but it has a larger clean-to-real drop and a weaker
+FaceTime frame row at 0.9350 accuracy.
 InternVL3-1B adds a strong small-family contrast in the larger setting: it
 reaches 0.9500 clean accuracy, 0.9563 real-transfer accuracy, and zero
 unparseables, with only a small FaceTime frame weakness at 0.9450 accuracy.
@@ -285,9 +290,10 @@ is executable on open-weight models without paid APIs. SmolVLM2-2.2B then
 shows a strong within-family scaling effect: unlike the 500M row, it preserves
 0.9333 accuracy on both clean and real-transfer. InternVL3-1B matches that
 strong result in the 210-row block, then stays strong in the larger 900-row
-block with 0.9563 real-transfer accuracy. InternVL3-2B stays
-fully parseable and very strong, but its small 0.0056 drop shows that scaling
-within the InternVL family is not monotonic on the current prompt pack.
+block with 0.9563 real-transfer accuracy. InternVL3-2B remains fully parseable
+and slightly improves aggregate real-transfer accuracy at 900-row scale, but
+the larger drop and weaker video-call frame row show that the scale-up is not
+uniform across transfer channels.
 LLaVA-OneVision 0.5B adds a different contrast: after a memory-safe input
 resize path, it reaches a strong 0.9333 real-transfer accuracy in the 210-row
 block and remains fully parseable at 0.9213 in the larger 900-row block, but it
@@ -334,7 +340,7 @@ model family.
   repeats per source/pipeline. It is an external-validity guardrail, not a
   comprehensive real-world transfer benchmark.
 - The current VLM evidence contains eight 210-row open-weight assistant-style
-  rows and six 900-row open-weight extension rows, not a broad
+  rows and seven 900-row open-weight extension rows, not a broad
   frontier/provider VLM comparison.
 - Full-CURE-OR v0.4 is a controlled probe, not an exhaustive evaluation of all
   images in the original dataset.
@@ -362,6 +368,7 @@ Important tracked artifacts:
 - `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`
 - `reports/vlm_open_weight_full_v03_comparison.md`
 - `reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/summary.md`
+- `reports/vlm_open_weight_internvl3_2b_kaggle_full_v03/summary.md`
 - `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/summary.md`
 
 Important scripts:

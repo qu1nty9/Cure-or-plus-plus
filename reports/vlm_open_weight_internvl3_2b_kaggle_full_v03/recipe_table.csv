@@ -1,0 +1,5 @@
+model_id,provider,model_version,recipe,n,accuracy,accuracy_ci_low,accuracy_ci_high,unparseable_rate,abstention_rate,accuracy_drop_vs_clean,accuracy_drop_ci_low,accuracy_drop_ci_high
+OpenGVLab/InternVL3-2B-hf,huggingface,,messenger_upload_download,200,0.980000,0.950000,1.000000,0.000000,0.000000,-0.010000,-0.030000,0.000000
+OpenGVLab/InternVL3-2B-hf,huggingface,,phone_screenshot_resave,200,0.955000,0.915000,0.990000,0.000000,0.000000,0.015000,0.000000,0.040000
+OpenGVLab/InternVL3-2B-hf,huggingface,,social_app_resave,200,0.970000,0.930000,1.000000,0.000000,0.000000,0.000000,0.000000,0.000000
+OpenGVLab/InternVL3-2B-hf,huggingface,,video_call_frame_capture,200,0.935000,0.885000,0.980000,0.000000,0.000000,0.035000,0.005000,0.075000

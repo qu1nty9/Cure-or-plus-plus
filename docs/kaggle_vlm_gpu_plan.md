@@ -33,6 +33,9 @@ v0.3 run, tracked in
 Kaggle kernel version 33 completed the InternVL3-1B full v0.3 run, tracked in
 `reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/`, with 0.9500 clean
 accuracy, 0.9563 real-transfer accuracy, and zero unparseables.
+Kaggle kernel version 34 completed the InternVL3-2B full v0.3 run, tracked in
+`reports/vlm_open_weight_internvl3_2b_kaggle_full_v03/`, with 0.9700 clean
+accuracy, 0.9600 real-transfer accuracy, and zero unparseables.
 The generated comparison in
 `reports/vlm_open_weight_full_v03_comparison.md` is built from completed full
 v0.3 result directories.
