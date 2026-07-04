@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = [
     "reports/full_cure_or_paper_tables_v04.md",
     "reports/full_cure_or_paper_tables_v04.tex",
+    "reports/vlm_open_weight_full_v03_paper_table.csv",
+    "reports/vlm_open_weight_full_v03_paper_table.md",
+    "reports/vlm_open_weight_full_v03_paper_table.tex",
     "reports/real_transfer_v02_results.md",
     "reports/real_transfer_v02_model_pipeline_table.csv",
     "reports/real_transfer_v02_pipeline_consensus_table.csv",
@@ -198,6 +201,7 @@ REQUIRED_FILES = [
     "scripts/run_hf_vlm.py",
     "scripts/integrate_kaggle_vlm_output.py",
     "scripts/build_vlm_open_weight_full_comparison.py",
+    "scripts/build_vlm_paper_tables.py",
     "scripts/prepare_kaggle_vlm_full_run.py",
     "scripts/evaluate_vlm_response_pack.py",
     "scripts/build_kaggle_vlm_package.py",
@@ -261,6 +265,7 @@ def main() -> int:
     checks.extend(check_vlm_open_weight_llava_full_v03())
     checks.extend(check_vlm_open_weight_smolvlm2_full_v03())
     checks.extend(check_vlm_open_weight_full_comparison_v03())
+    checks.extend(check_vlm_open_weight_paper_table_v03())
     checks.extend(check_vlm_open_weight_7b_comparison_v03())
     checks.extend(check_forbidden_public_strings())
 
@@ -1215,6 +1220,51 @@ def check_vlm_open_weight_full_comparison_v03() -> list[dict]:
         )
     )
     return checks
+
+
+def check_vlm_open_weight_paper_table_v03() -> list[dict]:
+    rows = load_csv(resolve_project_path("reports/vlm_open_weight_full_v03_paper_table.csv"))
+    by_slug = {row.get("slug"): row for row in rows}
+    markdown = resolve_project_path("reports/vlm_open_weight_full_v03_paper_table.md").read_text(encoding="utf-8")
+    latex = resolve_project_path("reports/vlm_open_weight_full_v03_paper_table.tex").read_text(encoding="utf-8")
+    paper = resolve_project_path("paper/main.tex").read_text(encoding="utf-8")
+    return [
+        check(
+            "vlm_open_weight_paper_table_v03_rows",
+            len(rows) == 7,
+            f"rows={len(rows)} expected=7",
+        ),
+        check(
+            "vlm_open_weight_paper_table_v03_leader",
+            rows and rows[0].get("slug") == "llava_onevision_qwen2_7b",
+            f"leader={rows[0].get('slug') if rows else None}",
+        ),
+        check(
+            "vlm_open_weight_paper_table_v03_internvl3_2b",
+            approx(by_slug.get("internvl3_2b", {}).get("real_accuracy"), 0.96),
+            f"accuracy={by_slug.get('internvl3_2b', {}).get('real_accuracy')} expected=0.96",
+        ),
+        check(
+            "vlm_open_weight_paper_table_v03_qwen3b_unparseable",
+            approx(by_slug.get("qwen2_5_vl_3b", {}).get("real_unparseable_rate"), 0.20875),
+            f"unparseable={by_slug.get('qwen2_5_vl_3b', {}).get('real_unparseable_rate')} expected=0.20875",
+        ),
+        check(
+            "vlm_open_weight_paper_table_v03_markdown",
+            "LLaVA-OneVision-Qwen2-7B" in markdown and "Qwen2.5-VL-3B" in markdown,
+            "missing expected model names in markdown table",
+        ),
+        check(
+            "vlm_open_weight_paper_table_v03_latex_label",
+            r"\label{tab:vlm-open-weight-full-v03}" in latex,
+            "missing latex table label",
+        ),
+        check(
+            "vlm_open_weight_paper_table_v03_paper_input",
+            r"\input{../reports/vlm_open_weight_full_v03_paper_table.tex}" in paper,
+            "paper/main.tex does not input VLM v0.3 paper table",
+        ),
+    ]
 
 
 def check_vlm_open_weight_7b_comparison_v03() -> list[dict]:

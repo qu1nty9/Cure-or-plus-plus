@@ -1,5 +1,5 @@
 {
-  "check_count": 365,
+  "check_count": 376,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -9,6 +9,21 @@
     {
       "detail": "exists=True size=2187 min_size=1",
       "name": "required_file:reports/full_cure_or_paper_tables_v04.tex",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=944 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_full_v03_paper_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=809 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_full_v03_paper_table.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=871 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_full_v03_paper_table.tex",
       "passed": true
     },
     {
@@ -77,7 +92,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=18289 min_size=1",
+      "detail": "exists=True size=16372 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -934,6 +949,11 @@
     {
       "detail": "exists=True size=9740 min_size=1",
       "name": "required_file:scripts/build_vlm_open_weight_full_comparison.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=5756 min_size=1",
+      "name": "required_file:scripts/build_vlm_paper_tables.py",
       "passed": true
     },
     {
@@ -1794,6 +1814,41 @@
     {
       "detail": "missing incomplete-result scope note",
       "name": "vlm_open_weight_full_comparison_v03_markdown_scope",
+      "passed": true
+    },
+    {
+      "detail": "rows=7 expected=7",
+      "name": "vlm_open_weight_paper_table_v03_rows",
+      "passed": true
+    },
+    {
+      "detail": "leader=llava_onevision_qwen2_7b",
+      "name": "vlm_open_weight_paper_table_v03_leader",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.96000 expected=0.96",
+      "name": "vlm_open_weight_paper_table_v03_internvl3_2b",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0.20875 expected=0.20875",
+      "name": "vlm_open_weight_paper_table_v03_qwen3b_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "missing expected model names in markdown table",
+      "name": "vlm_open_weight_paper_table_v03_markdown",
+      "passed": true
+    },
+    {
+      "detail": "missing latex table label",
+      "name": "vlm_open_weight_paper_table_v03_latex_label",
+      "passed": true
+    },
+    {
+      "detail": "paper/main.tex does not input VLM v0.3 paper table",
+      "name": "vlm_open_weight_paper_table_v03_paper_input",
       "passed": true
     },
     {

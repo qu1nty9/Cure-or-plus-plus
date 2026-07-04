@@ -15,14 +15,14 @@
 \maketitle
 
 \begin{abstract}
-Object-recognition systems are often evaluated on clean or synthetically corrupted images, but practical image use also includes acquisition artifacts, digital transfer, recompression, screenshots, and channel changes. CURE-OR++ builds a compact, reproducible benchmark layer around CURE-OR for measuring how vision models fail under object-centric native challenge conditions and real transfer pipelines. On the Full-CURE-OR v0.4 probe, eight usable baselines cover CLIP/OpenCLIP zero-shot models and frozen-feature prototype classifiers. The strongest current level-5 baseline, DINOv2 ViT-S/14 Prototype, reaches only 0.2766 mean level-5 accuracy despite 0.7520 clean accuracy. Across all eight usable baselines, grayscale salt-and-pepper noise, salt-and-pepper noise, and grayscale gaussian blur collapse to near-chance accuracy, with all models at the floor threshold. Confidence analysis shows that stronger zero-shot models can remain substantially overconfident under severe native challenges: OpenCLIP ViT-B/16 DataComp XL reaches 0.1451 level-5 accuracy while retaining 0.4997 mean confidence. A type-10 grayscale control confirms that grayscale conversion alone is damaging but does not explain the full native level-5 collapse. A 180-output real-transfer v0.2 block covers messenger upload/download, phone screenshot/resave, and video-call frame capture; source-matched drops are moderate, with video-call frame capture producing the largest mean drop at 2.1 percentage points. Eight open-weight VLM rows evaluate the same 210-row prompt pack: SmolVLM2-500M reaches 0.6000 clean-source and 0.5556 real-transfer accuracy, SmolVLM2-2.2B and InternVL3-1B both reach 0.9333 on clean and real-transfer splits, InternVL3-2B reaches 0.9333 clean-source and 0.9278 real-transfer accuracy with zero unparseables, LLaVA-OneVision 0.5B reaches 0.9667 clean-source and 0.9333 real-transfer accuracy after a memory-safe image-resize retry, Qwen2.5-VL-7B reaches 0.9667 clean-source and 0.9333 real-transfer accuracy with zero unparseables under a memory-controlled configuration, LLaVA-OneVision 7B reaches 0.9667 clean-source and 0.9778 real-transfer accuracy with zero unparseables under a memory-controlled configuration, and Qwen2.5-VL-3B drops from 0.9000 clean accuracy to 0.6389 real-transfer accuracy with a 0.3278 real-transfer unparseable rate.
+Object-recognition systems are often evaluated on clean or synthetically corrupted images, but practical image use also includes acquisition artifacts, digital transfer, recompression, screenshots, and channel changes. CURE-OR++ builds a compact, reproducible benchmark layer around CURE-OR for measuring how vision models fail under object-centric native challenge conditions and real transfer pipelines. On the Full-CURE-OR v0.4 probe, eight usable baselines cover CLIP/OpenCLIP zero-shot models and frozen-feature prototype classifiers. The strongest current level-5 baseline, DINOv2 ViT-S/14 Prototype, reaches only 0.2766 mean level-5 accuracy despite 0.7520 clean accuracy. Across all eight usable baselines, grayscale salt-and-pepper noise, salt-and-pepper noise, and grayscale gaussian blur collapse to near-chance accuracy, with all models at the floor threshold. Confidence analysis shows that stronger zero-shot models can remain substantially overconfident under severe native challenges: OpenCLIP ViT-B/16 DataComp XL reaches 0.1451 level-5 accuracy while retaining 0.4997 mean confidence. A type-10 grayscale control confirms that grayscale conversion alone is damaging but does not explain the full native level-5 collapse. A 180-output real-transfer v0.2 block covers messenger upload/download, phone screenshot/resave, and video-call frame capture; source-matched drops are moderate, with video-call frame capture producing the largest mean drop at 2.1 percentage points. The open-weight VLM track extends this guardrail to a 900-row v0.3 prompt pack with 100 clean rows and 800 real-transfer rows over four app/device pipelines. Across seven completed open-weight VLMs, LLaVA-OneVision Qwen2 7B leads with 0.9775 real-transfer accuracy, Qwen2.5-VL-7B reaches 0.9613, InternVL3-2B reaches 0.9600, and Qwen2.5-VL-3B exposes a generation-instability failure mode with 0.7650 real-transfer accuracy and a 0.2088 unparseable rate.
 \end{abstract}
 
 \section{Introduction}
 
 Robustness benchmarks often study isolated corruptions such as blur, noise, compression, or exposure shifts. Real image use is frequently more operational: images are captured, resized, recompressed, screenshotted, shared through applications, restored, or viewed through video-call pipelines. CURE-OR++ is designed around that narrower operational question: how do object-recognition baselines fail under reproducible object-centric challenge and transfer conditions?
 
-This draft focuses on the Full-CURE-OR v0.4 controlled probe, the evaluated real-transfer v0.2 validation block, and executed open-weight VLM prompt-pack rows. The current repository also contains a smaller CURE-OR++ v0.1 Kaggle-ready artifact. The real-transfer and VLM blocks reduce the main external-validity gap, but remain small and should be interpreted as guardrails rather than a comprehensive deployment or frontier-assistant study.
+This draft focuses on the Full-CURE-OR v0.4 controlled probe, the evaluated real-transfer v0.2 validation block, and executed open-weight VLM prompt-pack rows, including a 900-row v0.3 VLM extension. The current repository also contains a smaller CURE-OR++ v0.1 Kaggle-ready artifact. The real-transfer and VLM blocks reduce the main external-validity gap, but should still be interpreted as guardrails rather than a comprehensive deployment or frontier-assistant study.
 
 \paragraph{Current contributions.}
 The current artifact provides:
@@ -33,7 +33,8 @@ The current artifact provides:
   \item confidence and calibration analysis for the usable CLIP/OpenCLIP-family zero-shot rows;
   \item a type-10 grayscale control and paired color-versus-grayscale challenge-family analysis;
   \item an evaluated real-transfer v0.2 guardrail for messenger, screenshot, and video-call pipelines;
-  \item a 210-row VLM prompt-pack path with executed open-weight SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B rows.
+  \item a 210-row VLM prompt-pack path with executed open-weight SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B rows;
+  \item a 900-row open-weight VLM v0.3 extension over four app/device transfer pipelines.
 \end{enumerate}
 
 \section{Benchmark Design}
@@ -52,7 +53,7 @@ Real-transfer confidence intervals use source-level bootstrap resampling over th
 The repository tracks code, configs, aggregate reports, paper tables, and generated figures. Raw CURE-OR images, local real-transfer payloads, per-image prediction dumps, and source-dataset archives remain excluded from Git and are governed by the upstream dataset terms.
 
 \paragraph{VLM/API track.}
-The repository also defines a separate multiple-choice visual QA prompt pack over the same real-transfer v0.2 source set. This track is intentionally kept outside the CLIP/OpenCLIP/prototype leaderboard: VLMs produce text responses, have provider-specific versioning, and require answer extraction and raw-response auditing. The initial prompt pack contains 210 image-question rows per model, covering 30 clean source images and 180 transferred outputs. The executed open-weight rows use \path{HuggingFaceTB/SmolVLM2-500M-Video-Instruct}, \path{HuggingFaceTB/SmolVLM2-2.2B-Instruct}, \path{OpenGVLab/InternVL3-1B-hf}, \path{OpenGVLab/InternVL3-2B-hf}, \path{llava-hf/llava-onevision-qwen2-0.5b-ov-hf}, \path{Qwen/Qwen2.5-VL-3B-Instruct}, \path{Qwen/Qwen2.5-VL-7B-Instruct}, and \path{llava-hf/llava-onevision-qwen2-7b-ov-hf} on Kaggle GPU with the Hugging Face runner and response evaluator.
+The repository also defines a separate multiple-choice visual QA prompt pack over the same real-transfer source set. This track is intentionally kept outside the CLIP/OpenCLIP/prototype leaderboard: VLMs produce text responses, have provider-specific versioning, and require answer extraction and raw-response auditing. The initial prompt pack contains 210 image-question rows per model, covering 30 clean source images and 180 transferred outputs. The larger v0.3 prompt pack contains 900 rows per model, covering 100 clean rows and 800 real-transfer rows over messenger upload/download, phone screenshot/resave, social-app resave, and video-call frame capture. The executed open-weight rows use \path{HuggingFaceTB/SmolVLM2-500M-Video-Instruct}, \path{HuggingFaceTB/SmolVLM2-2.2B-Instruct}, \path{OpenGVLab/InternVL3-1B-hf}, \path{OpenGVLab/InternVL3-2B-hf}, \path{llava-hf/llava-onevision-qwen2-0.5b-ov-hf}, \path{Qwen/Qwen2.5-VL-3B-Instruct}, \path{Qwen/Qwen2.5-VL-7B-Instruct}, and \path{llava-hf/llava-onevision-qwen2-7b-ov-hf} on Kaggle GPU with the Hugging Face runner and response evaluator.
 
 \section{Models}
 
@@ -103,37 +104,13 @@ Real-transfer v0.2 evaluates 30 clean mini-CURE-OR sources across 10 labels, thr
 
 \subsection{Open-Weight VLM Prompt-Pack Runs}
 
-To validate the assistant-style VLM path without relying on paid provider APIs, we ran eight open-weight VLM rows on the 210-row prompt pack using Kaggle GPU. The Kaggle environment resolved to a Tesla P100, so the notebook pins a P100-compatible CUDA PyTorch stack and runs generation in float16. SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B returned parseable option letters for all rows; Qwen2.5-VL-3B completed all rows but produced literal \texttt{!!!!!!!!} outputs on many real-transfer examples.
+To validate the assistant-style VLM path without relying on paid provider APIs, we first ran eight open-weight VLM rows on a 210-row prompt pack using Kaggle GPU. That pilot established the generation runner, answer extraction, and raw-response audit path. We then promoted the track to a 900-row v0.3 prompt pack with 100 clean rows and 800 real-transfer rows per model. The Kaggle environment resolved to a Tesla P100, so the notebook pins a P100-compatible CUDA PyTorch stack and runs generation in float16 with model-specific memory controls where needed.
 
-\begin{table}[t]
-  \centering
-  \caption{Open-weight VLM real-transfer prompt-pack results.}
-  \label{tab:vlm-open-weight}
-  \begin{tabular}{lrrrr}
-    \hline
-    Model / split & $n$ & Accuracy & Unparseable & Drop vs. clean \\
-    \hline
-    SmolVLM2-500M clean source & 30 & 0.6000 & 0.0000 & -- \\
-    SmolVLM2-500M real-transfer & 180 & 0.5556 & 0.0000 & 0.0444 \\
-    SmolVLM2-2.2B clean source & 30 & 0.9333 & 0.0000 & -- \\
-    SmolVLM2-2.2B real-transfer & 180 & 0.9333 & 0.0000 & 0.0000 \\
-    InternVL3-1B clean source & 30 & 0.9333 & 0.0000 & -- \\
-    InternVL3-1B real-transfer & 180 & 0.9333 & 0.0000 & 0.0000 \\
-    InternVL3-2B clean source & 30 & 0.9333 & 0.0000 & -- \\
-    InternVL3-2B real-transfer & 180 & 0.9278 & 0.0000 & 0.0056 \\
-    LLaVA-OneVision 0.5B clean source & 30 & 0.9667 & 0.0000 & -- \\
-    LLaVA-OneVision 0.5B real-transfer & 180 & 0.9333 & 0.0000 & 0.0333 \\
-    Qwen2.5-VL-3B clean source & 30 & 0.9000 & 0.0333 & -- \\
-    Qwen2.5-VL-3B real-transfer & 180 & 0.6389 & 0.3278 & 0.2611 \\
-    Qwen2.5-VL-7B clean source & 30 & 0.9667 & 0.0000 & -- \\
-    Qwen2.5-VL-7B real-transfer & 180 & 0.9333 & 0.0000 & 0.0333 \\
-    LLaVA-OneVision 7B clean source & 30 & 0.9667 & 0.0000 & -- \\
-    LLaVA-OneVision 7B real-transfer & 180 & 0.9778 & 0.0000 & -0.0111 \\
-    \hline
-  \end{tabular}
-\end{table}
+\input{../reports/vlm_open_weight_full_v03_paper_table.tex}
 
-The SmolVLM2-500M row is weaker than the best CLIP/OpenCLIP real-transfer rows, but it proves that the prompt-pack, generation runner, parsing audit, and Kaggle GPU path are executable for open-weight VLMs. Scaling within the same family changes the interpretation: SmolVLM2-2.2B reaches 0.9333 accuracy on both the clean source and real-transfer splits, with recipe-level accuracy of 0.9333 for messenger upload/download, 0.9167 for phone screenshot/resave, and 0.9500 for video-call frame capture. InternVL3-1B matches that strong row at 0.9333 on both splits, while InternVL3-2B remains fully parseable and very strong but lands slightly lower at 0.9278 real-transfer accuracy with a 0.0056 drop. This makes the InternVL family comparison scientifically stronger: scaling from 1B to 2B is not monotonic on the current prompt pack. LLaVA-OneVision 0.5B adds a useful third-family contrast: after switching from unsafe processor overrides to a memory-safe input-resize path, it ties the earlier best executed real-transfer accuracy at 0.9333 while setting a 0.9667 clean split. Qwen2.5-VL-7B shows that a larger Qwen-family model can also complete on Kaggle P100 under explicit memory controls and match that headline result while remaining fully parseable across all 210 examples. LLaVA-OneVision 7B closes the large LLaVA-family follow-up: after a P100 OOM smoke failure, it completes under stricter memory controls and reaches 0.9778 real-transfer accuracy with zero unparseables. The negative clean-to-real drop should be read as small-sample variation, not as evidence that transfer improves recognition. Qwen2.5-VL-3B adds a different failure mode: despite 0.9000 clean accuracy, it drops to 0.6389 real-transfer accuracy because many transferred images trigger unparseable repeated-exclamation outputs. This should still be read as an initial assistant-style guardrail, not as a broad frontier-VLM claim.
+The v0.3 VLM table is the main assistant-style benchmark block in the current draft. LLaVA-OneVision Qwen2 7B is the strongest completed open-weight row, reaching 0.9775 real-transfer accuracy with zero unparseable responses. Qwen2.5-VL-7B is also strong at 0.9613 real-transfer accuracy, while Qwen2.5-VL-3B exposes a separate generation-stability failure mode: it remains usable on clean rows but produces many unparseable transferred-image outputs. The InternVL family comparison is more nuanced than a simple scaling result. InternVL3-2B improves aggregate real-transfer accuracy over InternVL3-1B, but it has a larger clean-to-real drop and a weaker video-call frame-capture row. SmolVLM2-2.2B remains competitive with the smaller InternVL rows, and LLaVA-OneVision 0.5B provides a lower-capacity LLaVA contrast with zero unparseables but a concentrated weakness on the \texttt{dymo\_label\_maker} label.
+
+Across completed open-weight rows, video-call frame capture is the dominant transfer stressor, appearing as the hardest pipeline for six of seven models. The exception is SmolVLM2-2.2B, whose hardest pipeline is social-app resave. This supports treating the VLM block as a real-transfer audit of both recognition accuracy and generation stability rather than as a single leaderboard score.
 
 \section{Related Work}
 
@@ -143,11 +120,11 @@ The intended differentiator is not scale, but transparent generation, paired met
 
 \section{Limitations}
 
-Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API track currently includes eight open-weight assistant-style rows, not a broad frontier/provider comparison; results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
+Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API track includes eight 210-row open-weight assistant-style rows and seven 900-row open-weight extension rows, but not a broad frontier/provider comparison; results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
 
 \section{Conclusion}
 
-CURE-OR++ currently provides a strong pre-paper benchmark artifact. The Full-CURE-OR v0.4 probe shows severe native challenge failures across model families, consensus floor failures under salt-and-pepper and blur variants, and confidence-preserving errors in stronger zero-shot models. Real-transfer v0.2 adds a small external-validity guardrail: real app and device pipelines produce moderate, model-dependent effects rather than universal collapse. The completed SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B prompt-pack runs validate the open-weight VLM evaluation path and provide an initial assistant-style model-family contrast for the real-transfer block.
+CURE-OR++ currently provides a strong pre-paper benchmark artifact. The Full-CURE-OR v0.4 probe shows severe native challenge failures across model families, consensus floor failures under salt-and-pepper and blur variants, and confidence-preserving errors in stronger zero-shot models. Real-transfer v0.2 adds a small external-validity guardrail: real app and device pipelines produce moderate, model-dependent effects rather than universal collapse. The completed SmolVLM2, InternVL3, Qwen2.5-VL, and LLaVA-OneVision prompt-pack runs validate the open-weight VLM evaluation path. The 900-row v0.3 extension turns that path into a usable assistant-style benchmark block, with strong 7B rows, small-model family contrasts, and a concrete generation-instability failure case.
 
 \bibliographystyle{plain}
 \bibliography{references}

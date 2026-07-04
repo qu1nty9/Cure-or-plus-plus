@@ -2,9 +2,10 @@
 
 This folder contains the working LaTeX scaffold for the serious CURE-OR++
 technical report. It is intentionally not final-publication ready yet: the
-current draft now includes Full-CURE-OR v0.4, real-transfer v0.2, and five
-open-weight VLM prompt-pack rows, but still needs final citation/license checks,
-venue formatting, and optional broader frontier/provider VLM coverage.
+current draft now includes Full-CURE-OR v0.4, real-transfer v0.2, eight
+210-row open-weight VLM prompt-pack rows, and seven 900-row open-weight VLM
+v0.3 extension rows, but still needs final citation/license checks, venue
+formatting, and optional broader frontier/provider VLM coverage.
 
 Validate paper sources and referenced assets without requiring a local TeX
 runtime:
@@ -28,6 +29,7 @@ Main source:
 Inserted generated tables:
 
 - `reports/full_cure_or_paper_tables_v04.tex`
+- `reports/vlm_open_weight_full_v03_paper_table.tex`
 
 Inserted generated figures:
 
