@@ -127,16 +127,19 @@ VLM/API prompt-pack status:
   strong 93.3% real-transfer rows.
 - A larger v0.3 prompt pack extends the same audit path to 900 rows per model:
   100 clean rows and 800 real-transfer rows over four pipelines, including
-  `social_app_resave`. The first two completed 7B rows are tracked in
-  `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/` and
-  `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`; the
-  SmolVLM2-2.2B row is tracked in
-  `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`; the Qwen2.5-VL-3B
-  row is tracked in `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`.
-  The generated comparison is `reports/vlm_open_weight_full_v03_comparison.md`.
-  Qwen2.5-VL-3B repeats the earlier generation-instability pattern at larger
-  scale, with 0.7650 real-transfer accuracy and 0.2088 real-transfer
-  unparseable rate.
+  `social_app_resave`. Completed rows are tracked in
+  `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/`,
+  `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`,
+  `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`,
+  `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/`, and
+  `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`. The generated
+  comparison is `reports/vlm_open_weight_full_v03_comparison.md`.
+  LLaVA-OneVision Qwen2 7B leads the completed v0.3 block at 0.9775
+  real-transfer accuracy. LLaVA-OneVision Qwen2 0.5B adds a small-model family
+  contrast with 0.9300 clean accuracy, 0.9213 real-transfer accuracy, and zero
+  unparseables. Qwen2.5-VL-3B repeats the earlier generation-instability
+  pattern at larger scale, with 0.7650 real-transfer accuracy and 0.2088
+  real-transfer unparseable rate.
 - It is intentionally not mixed into the current CLIP/OpenCLIP/prototype
   leaderboard because provider VLMs require text-answer extraction, exact model
   versioning, and raw-response audit handling.

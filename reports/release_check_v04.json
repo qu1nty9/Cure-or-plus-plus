@@ -1,5 +1,5 @@
 {
-  "check_count": 290,
+  "check_count": 315,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -87,12 +87,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=8246 min_size=1",
+      "detail": "exists=True size=8469 min_size=1",
       "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=5826 min_size=1",
+      "detail": "exists=True size=5898 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },
@@ -117,7 +117,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6648 min_size=1",
+      "detail": "exists=True size=6604 min_size=1",
       "name": "required_file:configs/vlm_open_weight_model_matrix_v03.json",
       "passed": true
     },
@@ -137,7 +137,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=2853 min_size=1",
+      "detail": "exists=True size=2872 min_size=1",
       "name": "required_file:docs/vlm_v03_full_runbook.md",
       "passed": true
     },
@@ -407,6 +407,61 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=1962 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=313 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=803 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1211 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=166707 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=542833 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/responses.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=319 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/combined_model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=781 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/combined_recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1294 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/combined_label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=109 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/run_manifest.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=561764 min_size=1",
+      "name": "required_file:reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/kaggle_kernel.log",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=1935 min_size=1",
       "name": "required_file:reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/summary.md",
       "passed": true
@@ -462,12 +517,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=1611 min_size=1",
+      "detail": "exists=True size=1967 min_size=1",
       "name": "required_file:reports/vlm_open_weight_full_v03_comparison.csv",
       "passed": true
     },
     {
-      "detail": "exists=True size=1527 min_size=1",
+      "detail": "exists=True size=1749 min_size=1",
       "name": "required_file:reports/vlm_open_weight_full_v03_comparison.md",
       "passed": true
     },
@@ -767,7 +822,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=9698 min_size=1",
+      "detail": "exists=True size=9740 min_size=1",
       "name": "required_file:scripts/build_vlm_open_weight_full_comparison.py",
       "passed": true
     },
@@ -1253,6 +1308,66 @@
     },
     {
       "detail": "rows=1 expected=1",
+      "name": "vlm_open_weight_llava_05b_full_v03_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "vlm_open_weight_llava_05b_full_v03_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_open_weight_llava_05b_full_v03_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_llava_05b_full_v03_responses",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_open_weight_llava_05b_full_v03_audit",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 slugs=['llava_onevision_qwen2_0_5b']",
+      "name": "vlm_open_weight_llava_05b_full_v03_manifest",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=100 expected=100",
+      "name": "vlm_open_weight_llava_05b_full_v03_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=800 expected=800",
+      "name": "vlm_open_weight_llava_05b_full_v03_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.930000 expected=0.93",
+      "name": "vlm_open_weight_llava_05b_full_v03_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.921250 expected=0.92125",
+      "name": "vlm_open_weight_llava_05b_full_v03_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_open_weight_llava_05b_full_v03_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.895000 expected=0.895",
+      "name": "vlm_open_weight_llava_05b_full_v03_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
       "name": "vlm_open_weight_llava_full_v03_summary_rows",
       "passed": true
     },
@@ -1372,12 +1487,12 @@
       "passed": true
     },
     {
-      "detail": "rows=4 expected>=4",
+      "detail": "rows=5 expected>=5",
       "name": "vlm_open_weight_full_comparison_v03_min_rows",
       "passed": true
     },
     {
-      "detail": "slugs=['llava_onevision_qwen2_7b', 'qwen2_5_vl_3b', 'qwen2_5_vl_7b', 'smolvlm2_2b'] required=['llava_onevision_qwen2_7b', 'qwen2_5_vl_3b', 'qwen2_5_vl_7b', 'smolvlm2_2b']",
+      "detail": "slugs=['llava_onevision_qwen2_0_5b', 'llava_onevision_qwen2_7b', 'qwen2_5_vl_3b', 'qwen2_5_vl_7b', 'smolvlm2_2b'] required=['llava_onevision_qwen2_0_5b', 'llava_onevision_qwen2_7b', 'qwen2_5_vl_3b', 'qwen2_5_vl_7b', 'smolvlm2_2b']",
       "name": "vlm_open_weight_full_comparison_v03_required_slugs",
       "passed": true
     },
@@ -1407,12 +1522,22 @@
       "passed": true
     },
     {
+      "detail": "accuracy=0.92125 expected=0.92125",
+      "name": "vlm_open_weight_full_comparison_v03_llava05b_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0.00000 expected=0",
+      "name": "vlm_open_weight_full_comparison_v03_llava05b_unparseable",
+      "passed": true
+    },
+    {
       "detail": "accuracy=0.95750 expected=0.9575",
       "name": "vlm_open_weight_full_comparison_v03_smolvlm2_real_accuracy",
       "passed": true
     },
     {
-      "detail": "hardest=[('llava_onevision_qwen2_7b', 'video_call_frame_capture'), ('qwen2_5_vl_7b', 'video_call_frame_capture'), ('smolvlm2_2b', 'social_app_resave'), ('qwen2_5_vl_3b', 'video_call_frame_capture')]",
+      "detail": "hardest=[('llava_onevision_qwen2_7b', 'video_call_frame_capture'), ('qwen2_5_vl_7b', 'video_call_frame_capture'), ('smolvlm2_2b', 'social_app_resave'), ('llava_onevision_qwen2_0_5b', 'video_call_frame_capture'), ('qwen2_5_vl_3b', 'video_call_frame_capture')]",
       "name": "vlm_open_weight_full_comparison_v03_hardest_pipeline",
       "passed": true
     },

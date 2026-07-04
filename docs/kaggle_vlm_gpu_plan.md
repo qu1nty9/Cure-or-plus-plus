@@ -26,7 +26,11 @@ Kaggle kernel version 30 completed the SmolVLM2-2.2B full v0.3 run, tracked in
 31 completed the Qwen2.5-VL-3B full v0.3 run, tracked in
 `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`; it preserves the
 earlier generation-instability signal, with 0.2088 real-transfer unparseable
-rate. The generated comparison in
+rate. Kaggle kernel version 32 completed the LLaVA-OneVision Qwen2 0.5B full
+v0.3 run, tracked in
+`reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/`, with
+0.9300 clean accuracy, 0.9213 real-transfer accuracy, and zero unparseables.
+The generated comparison in
 `reports/vlm_open_weight_full_v03_comparison.md` is built from completed full
 v0.3 result directories.
 
@@ -60,7 +64,8 @@ model-by-model full run under
 CUDA OOM in full mode on Kaggle P100, and then failed once more under unsafe
 `anyres` processor overrides. The successful completion path keeps default
 OneVision processing and resizes each input image to `max_side=768` before
-preprocessing.
+preprocessing. The same memory-safe path completed the 900-row v0.3 full run
+at Kaggle kernel version 32.
 
 ## What Codex Can Prepare Locally
 

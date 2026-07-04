@@ -194,7 +194,7 @@ def write_markdown(path: Path, rows: list[dict[str, str]], matrix: dict) -> None
         "",
         f"The current leader is `{leader['display_name']}` with real-transfer accuracy `{fmt4(leader['real_accuracy'])}`.",
         f"The consensus hardest pipeline across completed models is `{consensus_hardest}`.",
-        "As additional full v0.3 runs complete, this generated table becomes the main open-weight VLM benchmark block.",
+        "This generated table is the current main open-weight VLM benchmark block; optional additional full v0.3 runs extend it without changing the audit path.",
         "",
     ]
     path.parent.mkdir(parents=True, exist_ok=True)

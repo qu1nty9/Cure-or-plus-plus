@@ -30,15 +30,15 @@ Current strongest evidence:
   `Qwen/Qwen2.5-VL-7B-Instruct` and
   `llava-hf/llava-onevision-qwen2-7b-ov-hf` on Kaggle GPU.
 - a newer 900-row VLM v0.3 extension with completed Qwen2.5-VL-3B,
-  Qwen2.5-VL-7B, LLaVA-OneVision Qwen2 7B, and SmolVLM2-2.2B rows plus a
-  generated comparison report.
+  Qwen2.5-VL-7B, LLaVA-OneVision Qwen2 0.5B, LLaVA-OneVision Qwen2 7B, and
+  SmolVLM2-2.2B rows plus a generated comparison report.
 
 Main blocker:
 
 - final paper integration, public-release boundary decisions, and optional
   broader VLM/provider model coverage.
-- promotion of the completed four-row 900-row VLM extension into the main paper
-  tables after one or two additional family-contrast rows, if desired.
+- promotion of the completed five-row 900-row VLM extension into the main
+  paper tables after optional InternVL or provider rows, if desired.
 
 ## Working Title
 
@@ -93,6 +93,9 @@ generation-instability case.
    LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and
    LLaVA-OneVision 7B rows, validating assistant-style vision-language
    evaluation without paid API calls.
+8. A 900-row VLM v0.3 extension with completed Qwen2.5-VL-3B,
+   Qwen2.5-VL-7B, LLaVA-OneVision Qwen2 0.5B, LLaVA-OneVision Qwen2 7B, and
+   SmolVLM2-2.2B rows over four real-transfer pipelines.
 
 ## Method Summary
 
@@ -126,6 +129,11 @@ outputs into multiple-choice prompt rows. The completed open-weight rows are
 `llava-hf/llava-onevision-qwen2-7b-ov-hf`, all run on Kaggle GPU with
 Transformers and evaluated by
 `scripts/evaluate_vlm_response_pack.py`.
+
+The larger VLM v0.3 prompt pack expands this path to 900 rows per model: 100
+clean source rows and 800 real-transfer rows over WhatsApp transfer, phone
+screenshot/resave, Instagram resave, and FaceTime frame capture. Completed
+v0.3 rows are compared in `reports/vlm_open_weight_full_v03_comparison.md`.
 
 ## Current Baselines
 
@@ -249,6 +257,22 @@ path that disabled generation cache, used `device_map=auto`, resized inputs to
 recipe accuracies were 1.0000 for messenger upload/download, 1.0000 for phone
 screenshot/resave, and 0.9333 for video-call frame capture.
 
+The 900-row VLM v0.3 extension strengthens this block with a larger clean and
+real-transfer sample, plus the Instagram `social_app_resave` pipeline:
+
+| Model | Clean | Real-transfer | Drop | Real unparseable |
+| --- | ---: | ---: | ---: | ---: |
+| LLaVA-OneVision-Qwen2-7B | 0.9800 | 0.9775 | 0.0025 | 0.0000 |
+| Qwen2.5-VL-7B | 0.9800 | 0.9613 | 0.0188 | 0.0000 |
+| SmolVLM2-2.2B | 0.9600 | 0.9575 | 0.0025 | 0.0000 |
+| LLaVA-OneVision-Qwen2-0.5B | 0.9300 | 0.9213 | 0.0088 | 0.0000 |
+| Qwen2.5-VL-3B | 0.8800 | 0.7650 | 0.1150 | 0.2088 |
+
+LLaVA-OneVision Qwen2 0.5B adds the small-model LLaVA scale contrast in this
+larger setting: it remains fully parseable and reaches 0.9213 real-transfer
+accuracy, but its hardest label is `dymo_label_maker` at 0.3500 accuracy and
+its hardest pipeline is video-call frame capture at 0.8950 accuracy.
+
 Interpretation: SmolVLM2-500M is weaker than the best CLIP/OpenCLIP
 real-transfer rows, but it proves the VLM prompt-pack and response-audit path
 is executable on open-weight models without paid APIs. SmolVLM2-2.2B then
@@ -258,9 +282,10 @@ strong result while preserving zero unparseable responses. InternVL3-2B stays
 fully parseable and very strong, but its small 0.0056 drop shows that scaling
 within the InternVL family is not monotonic on the current prompt pack.
 LLaVA-OneVision 0.5B adds a different contrast: after a memory-safe input
-resize path, it ties the best executed real-transfer accuracy at 0.9333 while
-setting the strongest clean split at 0.9667, but it still shows a concentrated
-`dymo_label_maker` weakness and a larger drop on video-call frame capture.
+resize path, it reaches a strong 0.9333 real-transfer accuracy in the 210-row
+block and remains fully parseable at 0.9213 in the larger 900-row block, but it
+still shows a concentrated `dymo_label_maker` weakness and a larger drop on
+video-call frame capture.
 Qwen2.5-VL-3B adds a separate generation-stability failure mode under transfer
 pipelines. Qwen2.5-VL-7B shows that the stronger Qwen family member is
 executable on Kaggle P100 under explicit memory controls and can match the
@@ -301,8 +326,9 @@ model family.
 - Real-transfer v0.2 is small: 30 source images, three pipelines, and two
   repeats per source/pipeline. It is an external-validity guardrail, not a
   comprehensive real-world transfer benchmark.
-- The current VLM evidence contains eight open-weight assistant-style rows, not a
-  broad frontier/provider VLM comparison.
+- The current VLM evidence contains eight 210-row open-weight assistant-style
+  rows and five 900-row open-weight extension rows, not a broad
+  frontier/provider VLM comparison.
 - Full-CURE-OR v0.4 is a controlled probe, not an exhaustive evaluation of all
   images in the original dataset.
 - SigLIP is currently a diagnostic prompt-protocol failure rather than a usable
@@ -327,6 +353,8 @@ Important tracked artifacts:
 - `reports/real_transfer_v02_readiness.md`
 - `reports/real_transfer_v02_results.md`
 - `reports/vlm_open_weight_smolvlm2_kaggle_v01/summary.md`
+- `reports/vlm_open_weight_full_v03_comparison.md`
+- `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/summary.md`
 
 Important scripts:
 
