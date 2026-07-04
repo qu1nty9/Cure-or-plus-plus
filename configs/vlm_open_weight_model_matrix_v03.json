@@ -41,10 +41,12 @@
       "max_tokens": 8,
       "tier": "v03_family_contrast",
       "enabled_by_default": false,
-      "status": "v02_full_completed_v03_pending",
+      "status": "v03_full_running_kaggle_v33",
       "known_result_dir": "reports/vlm_open_weight_internvl3_1b_kaggle_v01",
       "license": "qwen",
-      "hf_url": "https://huggingface.co/OpenGVLab/InternVL3-1B-hf"
+      "hf_url": "https://huggingface.co/OpenGVLab/InternVL3-1B-hf",
+      "planned_v03_full_result_dir": "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03",
+      "active_v03_full_kernel_version": 33
     },
     {
       "slug": "internvl3_2b",
