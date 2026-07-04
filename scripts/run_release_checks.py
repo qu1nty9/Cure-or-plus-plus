@@ -81,6 +81,17 @@ REQUIRED_FILES = [
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/combined_label_table.csv",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/run_manifest.csv",
     "reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/kaggle_kernel.log",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/summary.md",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/model_summary.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/recipe_table.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/label_table.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/audit.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/responses.jsonl",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/combined_model_summary.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/combined_recipe_table.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/combined_label_table.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/run_manifest.csv",
+    "reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/kaggle_kernel.log",
     "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/summary.md",
     "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/model_summary.csv",
     "reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/recipe_table.csv",
@@ -233,6 +244,7 @@ def main() -> int:
     checks.extend(check_vlm_open_weight_smoke_v03())
     checks.extend(check_vlm_open_weight_qwen3b_full_v03())
     checks.extend(check_vlm_open_weight_qwen_full_v03())
+    checks.extend(check_vlm_open_weight_internvl3_1b_full_v03())
     checks.extend(check_vlm_open_weight_llava_05b_full_v03())
     checks.extend(check_vlm_open_weight_llava_full_v03())
     checks.extend(check_vlm_open_weight_smolvlm2_full_v03())
@@ -668,6 +680,89 @@ def check_vlm_open_weight_qwen_full_v03() -> list[dict]:
     return checks
 
 
+def check_vlm_open_weight_internvl3_1b_full_v03() -> list[dict]:
+    base = resolve_project_path("reports/vlm_open_weight_internvl3_1b_kaggle_full_v03")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    response_rows = load_jsonl(base / "responses.jsonl")
+    audit_rows = load_csv(base / "audit.csv")
+    manifest_rows = load_csv(base / "run_manifest.csv")
+
+    checks = [
+        check(
+            "vlm_open_weight_internvl3_1b_full_v03_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_open_weight_internvl3_1b_full_v03_recipe_rows",
+            len(recipe_rows) == 4,
+            f"rows={len(recipe_rows)} expected=4",
+        ),
+        check(
+            "vlm_open_weight_internvl3_1b_full_v03_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_open_weight_internvl3_1b_full_v03_responses",
+            len(response_rows) == 900,
+            f"rows={len(response_rows)} expected=900",
+        ),
+        check(
+            "vlm_open_weight_internvl3_1b_full_v03_audit",
+            len(audit_rows) == 900,
+            f"rows={len(audit_rows)} expected=900",
+        ),
+        check(
+            "vlm_open_weight_internvl3_1b_full_v03_manifest",
+            len(manifest_rows) == 1 and manifest_rows[0].get("slug") == "internvl3_1b",
+            f"rows={len(manifest_rows)} slugs={[row.get('slug') for row in manifest_rows]}",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_open_weight_internvl3_1b_full_v03_clean_n",
+                row.get("clean_n") == "100",
+                f"clean_n={row.get('clean_n')} expected=100",
+            ),
+            check(
+                "vlm_open_weight_internvl3_1b_full_v03_real_n",
+                row.get("real_n") == "800",
+                f"real_n={row.get('real_n')} expected=800",
+            ),
+            check(
+                "vlm_open_weight_internvl3_1b_full_v03_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.95),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.95",
+            ),
+            check(
+                "vlm_open_weight_internvl3_1b_full_v03_real_accuracy",
+                approx(row.get("real_accuracy"), 0.95625),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.95625",
+            ),
+            check(
+                "vlm_open_weight_internvl3_1b_full_v03_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.append(
+        check(
+            "vlm_open_weight_internvl3_1b_full_v03_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.945),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.945",
+        )
+    )
+    return checks
+
+
 def check_vlm_open_weight_llava_05b_full_v03() -> list[dict]:
     base = resolve_project_path("reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03")
     summary_rows = load_csv(base / "model_summary.csv")
@@ -920,6 +1015,7 @@ def check_vlm_open_weight_smolvlm2_full_v03() -> list[dict]:
 def check_vlm_open_weight_full_comparison_v03() -> list[dict]:
     rows = load_csv(resolve_project_path("reports/vlm_open_weight_full_v03_comparison.csv"))
     required_slugs = {
+        "internvl3_1b",
         "qwen2_5_vl_3b",
         "qwen2_5_vl_7b",
         "llava_onevision_qwen2_0_5b",
@@ -930,8 +1026,8 @@ def check_vlm_open_weight_full_comparison_v03() -> list[dict]:
     checks = [
         check(
             "vlm_open_weight_full_comparison_v03_min_rows",
-            len(rows) >= 5,
-            f"rows={len(rows)} expected>=5",
+            len(rows) >= 6,
+            f"rows={len(rows)} expected>=6",
         ),
         check(
             "vlm_open_weight_full_comparison_v03_required_slugs",
@@ -970,6 +1066,16 @@ def check_vlm_open_weight_full_comparison_v03() -> list[dict]:
             f"accuracy={by_slug.get('llava_onevision_qwen2_7b', {}).get('real_accuracy')} expected=0.9775",
         ),
         check(
+            "vlm_open_weight_full_comparison_v03_internvl3_1b_real_accuracy",
+            approx(by_slug.get("internvl3_1b", {}).get("real_accuracy"), 0.95625),
+            f"accuracy={by_slug.get('internvl3_1b', {}).get('real_accuracy')} expected=0.95625",
+        ),
+        check(
+            "vlm_open_weight_full_comparison_v03_internvl3_1b_unparseable",
+            approx(by_slug.get("internvl3_1b", {}).get("real_unparseable_rate"), 0.0),
+            f"unparseable={by_slug.get('internvl3_1b', {}).get('real_unparseable_rate')} expected=0",
+        ),
+        check(
             "vlm_open_weight_full_comparison_v03_llava05b_real_accuracy",
             approx(by_slug.get("llava_onevision_qwen2_0_5b", {}).get("real_accuracy"), 0.92125),
             f"accuracy={by_slug.get('llava_onevision_qwen2_0_5b', {}).get('real_accuracy')} expected=0.92125",
@@ -989,7 +1095,7 @@ def check_vlm_open_weight_full_comparison_v03() -> list[dict]:
             all(
                 row.get("hardest_pipeline") == "video_call_frame_capture"
                 for row in rows
-                if row.get("slug") in {"qwen2_5_vl_7b", "llava_onevision_qwen2_0_5b", "llava_onevision_qwen2_7b"}
+                if row.get("slug") in {"internvl3_1b", "qwen2_5_vl_7b", "llava_onevision_qwen2_0_5b", "llava_onevision_qwen2_7b"}
             ),
             f"hardest={[(row.get('slug'), row.get('hardest_pipeline')) for row in rows]}",
         ),

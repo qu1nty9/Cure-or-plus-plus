@@ -19,6 +19,7 @@ Completed full v0.3 rows:
 - `qwen2_5_vl_7b`: `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/`
 - `llava_onevision_qwen2_7b`: `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`
 - `smolvlm2_2b`: `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`
+- `internvl3_1b`: `reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/`
 - `llava_onevision_qwen2_0_5b`: `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/`
 - `qwen2_5_vl_3b`: `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`
 
@@ -81,10 +82,9 @@ real-transfer rows, four pipeline rows, and ten label rows.
 
 ## Next Model Order
 
-After `llava_onevision_qwen2_0_5b`, use this order unless a prior run fails:
+After `internvl3_1b`, use this order unless a prior run fails:
 
-1. `internvl3_1b`: adds a small InternVL family row.
-2. `internvl3_2b`: tests whether the earlier non-monotonic InternVL result persists.
+1. `internvl3_2b`: tests whether the earlier non-monotonic InternVL result persists at 900-row v0.3 scale.
 
 Keep frontier/provider API models in a separate block. They should not be mixed
 into the open-weight Kaggle leaderboard because model versioning, API policy,

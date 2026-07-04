@@ -30,6 +30,9 @@ rate. Kaggle kernel version 32 completed the LLaVA-OneVision Qwen2 0.5B full
 v0.3 run, tracked in
 `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/`, with
 0.9300 clean accuracy, 0.9213 real-transfer accuracy, and zero unparseables.
+Kaggle kernel version 33 completed the InternVL3-1B full v0.3 run, tracked in
+`reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/`, with 0.9500 clean
+accuracy, 0.9563 real-transfer accuracy, and zero unparseables.
 The generated comparison in
 `reports/vlm_open_weight_full_v03_comparison.md` is built from completed full
 v0.3 result directories.
