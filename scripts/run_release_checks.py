@@ -16,6 +16,24 @@ REQUIRED_FILES = [
     "reports/vlm_open_weight_full_v03_paper_table.csv",
     "reports/vlm_open_weight_full_v03_paper_table.md",
     "reports/vlm_open_weight_full_v03_paper_table.tex",
+    "reports/vlm_provider_full_v01_comparison.csv",
+    "reports/vlm_provider_full_v01_comparison.md",
+    "reports/vlm_provider_full_v01_comparison.tex",
+    "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/summary.md",
+    "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/model_summary.csv",
+    "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/recipe_table.csv",
+    "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/label_table.csv",
+    "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/audit.csv",
+    "reports/vlm_provider_openai_gpt_5_4_full_v01/summary.md",
+    "reports/vlm_provider_openai_gpt_5_4_full_v01/model_summary.csv",
+    "reports/vlm_provider_openai_gpt_5_4_full_v01/recipe_table.csv",
+    "reports/vlm_provider_openai_gpt_5_4_full_v01/label_table.csv",
+    "reports/vlm_provider_openai_gpt_5_4_full_v01/audit.csv",
+    "reports/vlm_provider_openai_gpt_5_5_full_v01/summary.md",
+    "reports/vlm_provider_openai_gpt_5_5_full_v01/model_summary.csv",
+    "reports/vlm_provider_openai_gpt_5_5_full_v01/recipe_table.csv",
+    "reports/vlm_provider_openai_gpt_5_5_full_v01/label_table.csv",
+    "reports/vlm_provider_openai_gpt_5_5_full_v01/audit.csv",
     "reports/real_transfer_v02_results.md",
     "reports/real_transfer_v02_model_pipeline_table.csv",
     "reports/real_transfer_v02_pipeline_consensus_table.csv",
@@ -44,6 +62,7 @@ REQUIRED_FILES = [
     "docs/vlm_v03_full_runbook.md",
     "reports/vlm_api_track_v01_prompt_pack.jsonl",
     "reports/vlm_api_track_v01_prompt_pack_summary.json",
+    "reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl",
     "reports/vlm_api_track_v03_prompt_pack.jsonl",
     "reports/vlm_api_track_v03_prompt_pack_summary.json",
     "reports/vlm_open_weight_matrix_smoke_kaggle_v03/summary.md",
@@ -202,6 +221,8 @@ REQUIRED_FILES = [
     "scripts/integrate_kaggle_vlm_output.py",
     "scripts/build_vlm_open_weight_full_comparison.py",
     "scripts/build_vlm_paper_tables.py",
+    "scripts/build_vlm_provider_comparison.py",
+    "scripts/merge_vlm_response_retries.py",
     "scripts/prepare_kaggle_vlm_full_run.py",
     "scripts/evaluate_vlm_response_pack.py",
     "scripts/build_kaggle_vlm_package.py",
@@ -256,6 +277,7 @@ def main() -> int:
     checks.extend(check_paper_links())
     checks.extend(check_paper_preflight())
     checks.extend(check_vlm_prompt_pack())
+    checks.extend(check_vlm_mixed_smoke_prompt_pack())
     checks.extend(check_vlm_open_weight_smoke_v03())
     checks.extend(check_vlm_open_weight_qwen3b_full_v03())
     checks.extend(check_vlm_open_weight_qwen_full_v03())
@@ -267,6 +289,10 @@ def main() -> int:
     checks.extend(check_vlm_open_weight_full_comparison_v03())
     checks.extend(check_vlm_open_weight_paper_table_v03())
     checks.extend(check_vlm_open_weight_7b_comparison_v03())
+    checks.extend(check_vlm_provider_openai_full_v01())
+    checks.extend(check_vlm_provider_openai_gpt54_full_v01())
+    checks.extend(check_vlm_provider_openai_gpt55_full_v01())
+    checks.extend(check_vlm_provider_comparison_v01())
     checks.extend(check_forbidden_public_strings())
 
     failed = [check for check in checks if not check["passed"]]
@@ -397,6 +423,9 @@ def check_paper_links() -> list[dict]:
         "Qwen2.5-VL-3B",
         "Qwen2.5-VL-7B",
         "LLaVA-OneVision 7B",
+        "OpenAI GPT-5.4-mini",
+        "OpenAI GPT-5.5",
+        "vlm_provider_full_v01_comparison.tex",
     ]
     return [
         check(f"paper_contains:{text}", text in paper, f"needle={text!r}")
@@ -468,6 +497,45 @@ def check_vlm_prompt_pack_file(
     present_fields = set(prompt_rows[0].keys()) if prompt_rows else set()
     checks.append(check(f"{prefix}_fields", required_fields.issubset(present_fields), f"missing={sorted(required_fields - present_fields)}"))
     return checks
+
+
+def check_vlm_mixed_smoke_prompt_pack() -> list[dict]:
+    smoke_rows = load_jsonl(resolve_project_path("reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl"))
+    full_rows = load_jsonl(resolve_project_path("reports/vlm_api_track_v01_prompt_pack.jsonl"))
+    full_by_id = {row["sample_id"]: row for row in full_rows}
+    smoke_ids = [row.get("sample_id", "") for row in smoke_rows]
+    expected_ids = [
+        "clean__clean__clean__09904",
+        "clean__clean__clean__10457",
+        "real_transfer__messenger_upload_download__rep_01__10183",
+        "real_transfer__phone_screenshot_resave__rep_01__10243",
+        "real_transfer__video_call_frame_capture__rep_01__09958",
+    ]
+    family_counts = {}
+    recipe_counts = {}
+    labels = set()
+    for row in smoke_rows:
+        family_counts[row.get("family", "")] = family_counts.get(row.get("family", ""), 0) + 1
+        recipe_counts[row.get("recipe", "")] = recipe_counts.get(row.get("recipe", ""), 0) + 1
+        labels.add(row.get("label", ""))
+    rows_match_full_pack = all(full_by_id.get(row.get("sample_id")) == row for row in smoke_rows)
+    return [
+        check("vlm_mixed_smoke_prompt_pack_rows", len(smoke_rows) == 5, f"rows={len(smoke_rows)} expected=5"),
+        check("vlm_mixed_smoke_prompt_pack_ids", smoke_ids == expected_ids, f"sample_ids={smoke_ids}"),
+        check("vlm_mixed_smoke_prompt_pack_families", family_counts == {"clean": 2, "real_transfer": 3}, f"family_counts={family_counts}"),
+        check(
+            "vlm_mixed_smoke_prompt_pack_recipes",
+            recipe_counts == {
+                "clean": 2,
+                "messenger_upload_download": 1,
+                "phone_screenshot_resave": 1,
+                "video_call_frame_capture": 1,
+            },
+            f"recipe_counts={recipe_counts}",
+        ),
+        check("vlm_mixed_smoke_prompt_pack_labels", len(labels) == 5, f"labels={sorted(labels)}"),
+        check("vlm_mixed_smoke_prompt_pack_matches_full_pack", rows_match_full_pack, "mixed smoke rows must be copied from v0.1 full prompt pack"),
+    ]
 
 
 def check_vlm_open_weight_smoke_v03() -> list[dict]:
@@ -1296,6 +1364,364 @@ def check_vlm_open_weight_7b_comparison_v03() -> list[dict]:
         ),
     ])
     return checks
+
+
+def check_vlm_provider_openai_full_v01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_openai_gpt_5_4_mini_full_v01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check(
+            "vlm_provider_openai_full_v01_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_openai_full_v01_recipe_rows",
+            len(recipe_rows) == 3,
+            f"rows={len(recipe_rows)} expected=3",
+        ),
+        check(
+            "vlm_provider_openai_full_v01_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_provider_openai_full_v01_audit_rows",
+            len(audit_rows) == 210,
+            f"rows={len(audit_rows)} expected=210",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_provider_openai_full_v01_clean_n",
+                row.get("clean_n") == "30",
+                f"clean_n={row.get('clean_n')} expected=30",
+            ),
+            check(
+                "vlm_provider_openai_full_v01_real_n",
+                row.get("real_n") == "180",
+                f"real_n={row.get('real_n')} expected=180",
+            ),
+            check(
+                "vlm_provider_openai_full_v01_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.966667, tolerance=1e-6),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.966667",
+            ),
+            check(
+                "vlm_provider_openai_full_v01_real_accuracy",
+                approx(row.get("real_accuracy"), 0.961111, tolerance=1e-6),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.961111",
+            ),
+            check(
+                "vlm_provider_openai_full_v01_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+            check(
+                "vlm_provider_openai_full_v01_abstention_rate",
+                approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0),
+                f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check(
+            "vlm_provider_openai_full_v01_whatsapp_accuracy",
+            approx(recipe_accuracy.get("messenger_upload_download"), 0.966667, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.966667",
+        ),
+        check(
+            "vlm_provider_openai_full_v01_screenshot_accuracy",
+            approx(recipe_accuracy.get("phone_screenshot_resave"), 0.983333, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.983333",
+        ),
+        check(
+            "vlm_provider_openai_full_v01_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.933333, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.933333",
+        ),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_openai_full_v01_clean_errors", clean_errors == 1, f"clean_errors={clean_errors} expected=1"),
+        check("vlm_provider_openai_full_v01_real_errors", real_errors == 7, f"real_errors={real_errors} expected=7"),
+        check("vlm_provider_openai_full_v01_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_openai_full_v01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_openai_gpt54_full_v01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_openai_gpt_5_4_full_v01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check(
+            "vlm_provider_openai_gpt54_full_v01_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_openai_gpt54_full_v01_recipe_rows",
+            len(recipe_rows) == 3,
+            f"rows={len(recipe_rows)} expected=3",
+        ),
+        check(
+            "vlm_provider_openai_gpt54_full_v01_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_provider_openai_gpt54_full_v01_audit_rows",
+            len(audit_rows) == 210,
+            f"rows={len(audit_rows)} expected=210",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_provider_openai_gpt54_full_v01_clean_n",
+                row.get("clean_n") == "30",
+                f"clean_n={row.get('clean_n')} expected=30",
+            ),
+            check(
+                "vlm_provider_openai_gpt54_full_v01_real_n",
+                row.get("real_n") == "180",
+                f"real_n={row.get('real_n')} expected=180",
+            ),
+            check(
+                "vlm_provider_openai_gpt54_full_v01_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.966667, tolerance=1e-6),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.966667",
+            ),
+            check(
+                "vlm_provider_openai_gpt54_full_v01_real_accuracy",
+                approx(row.get("real_accuracy"), 0.955556, tolerance=1e-6),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.955556",
+            ),
+            check(
+                "vlm_provider_openai_gpt54_full_v01_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+            check(
+                "vlm_provider_openai_gpt54_full_v01_abstention_rate",
+                approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0),
+                f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check(
+            "vlm_provider_openai_gpt54_full_v01_whatsapp_accuracy",
+            approx(recipe_accuracy.get("messenger_upload_download"), 0.966667, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.966667",
+        ),
+        check(
+            "vlm_provider_openai_gpt54_full_v01_screenshot_accuracy",
+            approx(recipe_accuracy.get("phone_screenshot_resave"), 0.95),
+            f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.95",
+        ),
+        check(
+            "vlm_provider_openai_gpt54_full_v01_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.95),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.95",
+        ),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_openai_gpt54_full_v01_clean_errors", clean_errors == 1, f"clean_errors={clean_errors} expected=1"),
+        check("vlm_provider_openai_gpt54_full_v01_real_errors", real_errors == 8, f"real_errors={real_errors} expected=8"),
+        check("vlm_provider_openai_gpt54_full_v01_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_openai_gpt54_full_v01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_openai_gpt55_full_v01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_openai_gpt_5_5_full_v01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check(
+            "vlm_provider_openai_gpt55_full_v01_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_openai_gpt55_full_v01_recipe_rows",
+            len(recipe_rows) == 3,
+            f"rows={len(recipe_rows)} expected=3",
+        ),
+        check(
+            "vlm_provider_openai_gpt55_full_v01_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_provider_openai_gpt55_full_v01_audit_rows",
+            len(audit_rows) == 210,
+            f"rows={len(audit_rows)} expected=210",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_provider_openai_gpt55_full_v01_clean_n",
+                row.get("clean_n") == "30",
+                f"clean_n={row.get('clean_n')} expected=30",
+            ),
+            check(
+                "vlm_provider_openai_gpt55_full_v01_real_n",
+                row.get("real_n") == "180",
+                f"real_n={row.get('real_n')} expected=180",
+            ),
+            check(
+                "vlm_provider_openai_gpt55_full_v01_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.966667, tolerance=1e-6),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.966667",
+            ),
+            check(
+                "vlm_provider_openai_gpt55_full_v01_real_accuracy",
+                approx(row.get("real_accuracy"), 0.95),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.95",
+            ),
+            check(
+                "vlm_provider_openai_gpt55_full_v01_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+            check(
+                "vlm_provider_openai_gpt55_full_v01_abstention_rate",
+                approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0),
+                f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check(
+            "vlm_provider_openai_gpt55_full_v01_whatsapp_accuracy",
+            approx(recipe_accuracy.get("messenger_upload_download"), 0.966667, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.966667",
+        ),
+        check(
+            "vlm_provider_openai_gpt55_full_v01_screenshot_accuracy",
+            approx(recipe_accuracy.get("phone_screenshot_resave"), 0.95),
+            f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.95",
+        ),
+        check(
+            "vlm_provider_openai_gpt55_full_v01_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.933333, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.933333",
+        ),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_openai_gpt55_full_v01_clean_errors", clean_errors == 1, f"clean_errors={clean_errors} expected=1"),
+        check("vlm_provider_openai_gpt55_full_v01_real_errors", real_errors == 9, f"real_errors={real_errors} expected=9"),
+        check("vlm_provider_openai_gpt55_full_v01_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_openai_gpt55_full_v01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_comparison_v01() -> list[dict]:
+    rows = load_csv(resolve_project_path("reports/vlm_provider_full_v01_comparison.csv"))
+    markdown = resolve_project_path("reports/vlm_provider_full_v01_comparison.md").read_text(encoding="utf-8")
+    latex = resolve_project_path("reports/vlm_provider_full_v01_comparison.tex").read_text(encoding="utf-8")
+    paper = resolve_project_path("paper/main.tex").read_text(encoding="utf-8")
+    by_slug = {row.get("slug"): row for row in rows}
+    mini = by_slug.get("openai_gpt_5_4_mini", {})
+    gpt54 = by_slug.get("openai_gpt_5_4", {})
+    flagship = by_slug.get("openai_gpt_5_5", {})
+    return [
+        check(
+            "vlm_provider_comparison_v01_rows",
+            len(rows) == 3,
+            f"rows={len(rows)} expected=3",
+        ),
+        check(
+            "vlm_provider_comparison_v01_openai_real_accuracy",
+            approx(mini.get("real_accuracy"), 0.96111, tolerance=1e-5),
+            f"real_accuracy={mini.get('real_accuracy')} expected=0.96111",
+        ),
+        check(
+            "vlm_provider_comparison_v01_gpt54_real_accuracy",
+            approx(gpt54.get("real_accuracy"), 0.95556, tolerance=1e-5),
+            f"real_accuracy={gpt54.get('real_accuracy')} expected=0.95556",
+        ),
+        check(
+            "vlm_provider_comparison_v01_gpt55_real_accuracy",
+            approx(flagship.get("real_accuracy"), 0.95),
+            f"real_accuracy={flagship.get('real_accuracy')} expected=0.95",
+        ),
+        check(
+            "vlm_provider_comparison_v01_openai_hardest_pipeline",
+            mini.get("hardest_pipeline") == "video_call_frame_capture"
+            and gpt54.get("hardest_pipeline") in {"phone_screenshot_resave", "video_call_frame_capture"}
+            and flagship.get("hardest_pipeline") == "video_call_frame_capture",
+            f"hardest_pipeline={[row.get('hardest_pipeline') for row in rows]} expected known OpenAI provider pipelines",
+        ),
+        check(
+            "vlm_provider_comparison_v01_openai_hardest_label",
+            mini.get("hardest_label") == "calcium_bottle"
+            and gpt54.get("hardest_label") == "calcium_bottle"
+            and flagship.get("hardest_label") == "calcium_bottle",
+            f"hardest_label={[row.get('hardest_label') for row in rows]} expected=calcium_bottle",
+        ),
+        check(
+            "vlm_provider_comparison_v01_markdown",
+            "OpenAI GPT-5.4-mini" in markdown
+            and "OpenAI GPT-5.4" in markdown
+            and "OpenAI GPT-5.5" in markdown
+            and "0.9611" in markdown
+            and "0.9556" in markdown
+            and "0.9500" in markdown,
+            "missing expected model/result in markdown comparison",
+        ),
+        check(
+            "vlm_provider_comparison_v01_latex_label",
+            r"\label{tab:vlm-provider-full-v01}" in latex,
+            "missing latex table label",
+        ),
+        check(
+            "vlm_provider_comparison_v01_paper_input",
+            r"\input{../reports/vlm_provider_full_v01_comparison.tex}" in paper,
+            "paper/main.tex does not input provider VLM table",
+        ),
+    ]
 
 
 def check_forbidden_public_strings() -> list[dict]:

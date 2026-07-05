@@ -44,7 +44,18 @@ def main() -> int:
         help="Responses endpoint only. Send store=false by default to avoid provider-side response retention when supported.",
     )
     parser.add_argument("--temperature", type=float, default=0.0)
-    parser.add_argument("--max-tokens", type=int, default=8)
+    parser.add_argument(
+        "--omit-temperature",
+        action="store_true",
+        help="Do not send a temperature parameter. Some hosted models reject it.",
+    )
+    parser.add_argument(
+        "--reasoning-effort",
+        choices=["", "none", "minimal", "low", "medium", "high", "xhigh"],
+        default="",
+        help="Responses endpoint only. Optional reasoning.effort for reasoning models.",
+    )
+    parser.add_argument("--max-tokens", type=int, default=16)
     parser.add_argument(
         "--chat-token-parameter",
         choices=["max_completion_tokens", "max_tokens"],
@@ -186,9 +197,12 @@ def build_payload(row: dict, args: argparse.Namespace, image_path: Path) -> dict
                     ],
                 }
             ],
-            "temperature": args.temperature,
             "max_output_tokens": args.max_tokens,
         }
+        if not args.omit_temperature:
+            payload["temperature"] = args.temperature
+        if args.reasoning_effort:
+            payload["reasoning"] = {"effort": args.reasoning_effort}
         payload["store"] = args.response_store == "true"
         if args.system_prompt:
             payload["instructions"] = args.system_prompt
@@ -206,12 +220,14 @@ def build_payload(row: dict, args: argparse.Namespace, image_path: Path) -> dict
             ],
         }
     )
-    return {
+    payload = {
         "model": args.model,
         "messages": messages,
-        "temperature": args.temperature,
         args.chat_token_parameter: args.max_tokens,
     }
+    if not args.omit_temperature:
+        payload["temperature"] = args.temperature
+    return payload
 
 
 def post_json(
@@ -240,7 +256,7 @@ def post_json(
             last_error = RuntimeError(f"HTTP {error.code}: {response_body[:2000]}")
             if error.code not in RETRYABLE_STATUS_CODES or attempt >= retries:
                 raise last_error
-        except urllib.error.URLError as error:
+        except (TimeoutError, urllib.error.URLError, OSError) as error:
             last_error = error
             if attempt >= retries:
                 raise RuntimeError(f"Request failed: {error}") from error
@@ -301,7 +317,8 @@ def build_output_row(
         "image_sha256": image_hash,
         "prompt_sha256": prompt_hash,
         "request_date_utc": cached["cached_at_utc"],
-        "temperature": args.temperature,
+        "temperature": "" if args.omit_temperature else args.temperature,
+        "reasoning_effort": args.reasoning_effort,
         "max_tokens": args.max_tokens,
     }
 
@@ -322,7 +339,9 @@ def build_request_fingerprint(
         "base_url_origin": base_url_origin(args.base_url),
         "image_sha256": image_hash,
         "prompt_sha256": prompt_hash,
-        "temperature": args.temperature,
+        "temperature": "" if args.omit_temperature else args.temperature,
+        "omit_temperature": args.omit_temperature,
+        "reasoning_effort": args.reasoning_effort,
         "max_tokens": args.max_tokens,
         "system_prompt_sha256": sha256_text(args.system_prompt or ""),
         "chat_token_parameter": args.chat_token_parameter if args.endpoint == "chat_completions" else "",

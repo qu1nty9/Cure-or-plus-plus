@@ -22,11 +22,12 @@ Recommended first full rows after smoke:
 
 | priority | provider | model | runner | reason |
 | ---: | --- | --- | --- | --- |
-| 1 | Google | `gemini-3.5-flash` | `scripts/run_gemini_vlm.py` | Usually the best first cost/latency probe. |
-| 2 | OpenAI | `gpt-5.4-mini` | `scripts/run_openai_compatible_vlm.py` | OpenAI low-cost/latency contrast. |
+| done | OpenAI | `gpt-5.4-mini` | `scripts/run_openai_compatible_vlm.py` | Completed first hosted-provider row. |
+| done | OpenAI | `gpt-5.4` | `scripts/run_openai_compatible_vlm.py` | Completed middle OpenAI tier row. |
+| done | OpenAI | `gpt-5.5` | `scripts/run_openai_compatible_vlm.py` | Completed flagship OpenAI row with targeted retry/merge. |
+| 1 | Google | `gemini-3.5-flash` | `scripts/run_gemini_vlm.py` | Usually the best next cost/latency probe. |
 | 3 | xAI | `grok-4.3` | `scripts/run_openai_compatible_vlm.py` | Grok provider contrast through an OpenAI-compatible Responses endpoint. |
 | 4 | Anthropic | `claude-sonnet-4-6` | `scripts/run_anthropic_vlm.py` | Practical Claude frontier row. |
-| 5 | OpenAI | `gpt-5.5` | `scripts/run_openai_compatible_vlm.py` | Strong flagship OpenAI row. |
 | 6 | Anthropic | `claude-fable-5` | `scripts/run_anthropic_vlm.py` | Strongest Claude row if the account has access. |
 
 Model names are intentionally kept in config rather than prose-only notes. If a
@@ -48,6 +49,14 @@ provider changes access or aliases, update the matrix before running.
   `base_url=https://api.x.ai/v1`, and document image-input constraints for
   image-input models.
 
+## Completed Rows
+
+| provider | model | prompt pack | clean | real-transfer | unparseable | notes |
+| --- | --- | --- | ---: | ---: | ---: | --- |
+| OpenAI | `gpt-5.4-mini` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9611 | 0.0000 | First completed hosted-provider row; hardest pipeline is FaceTime frame capture. |
+| OpenAI | `gpt-5.4` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9556 | 0.0000 | Middle OpenAI tier row; no parser failures or abstentions. |
+| OpenAI | `gpt-5.5` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9500 | 0.0000 | Flagship OpenAI row; targeted retries were needed because hidden reasoning consumed smaller output caps. |
+
 ## Privacy Boundary
 
 Running this block sends prompt-pack images to an external provider. Do not run
@@ -56,9 +65,16 @@ understands that usage may be billed.
 
 Rules:
 
-- use smoke mode first: five mixed clean/real-transfer rows;
+- use smoke mode first via
+  `reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl` with two clean rows
+  and one row from each v0.2 real-transfer pipeline;
 - use `temperature=0`;
-- use `max_tokens=8`;
+- omit `temperature` for hosted models that reject the parameter, including
+  the current GPT-5.4 and GPT-5.5 Responses API paths;
+- use `reasoning.effort=low` for GPT-5.5 and allocate enough visible-output
+  budget; a 16-token cap can be consumed entirely by hidden reasoning tokens;
+- use the shortest accepted output cap (`max_tokens=16` for OpenAI-compatible
+  Responses providers; `8` remains acceptable where provider APIs allow it);
 - use `store=false` on Responses-compatible providers when supported;
 - keep raw provider payloads and cache files outside Git;
 - track only sanitized `responses.jsonl`, aggregate CSVs, `audit.csv`, and
@@ -70,11 +86,15 @@ OpenAI:
 
 ```bash
 .venv/bin/python scripts/run_openai_compatible_vlm.py \
+  --prompt-pack reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl \
   --env-file .secrets/openai.env \
   --provider openai \
   --model gpt-5.5 \
   --endpoint responses \
   --response-store false \
+  --omit-temperature \
+  --reasoning-effort low \
+  --max-tokens 64 \
   --output reports/vlm_api_track_v01_responses_openai_gpt_5_5_smoke.jsonl \
   --limit 5
 ```
@@ -83,6 +103,7 @@ Gemini:
 
 ```bash
 .venv/bin/python scripts/run_gemini_vlm.py \
+  --prompt-pack reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl \
   --env-file .secrets/gemini.env \
   --provider google_gemini \
   --model gemini-3.5-flash \
@@ -94,6 +115,7 @@ Anthropic:
 
 ```bash
 .venv/bin/python scripts/run_anthropic_vlm.py \
+  --prompt-pack reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl \
   --env-file .secrets/anthropic.env \
   --provider anthropic \
   --model claude-sonnet-4-6 \
@@ -105,6 +127,7 @@ xAI:
 
 ```bash
 .venv/bin/python scripts/run_openai_compatible_vlm.py \
+  --prompt-pack reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl \
   --env-file .secrets/xai.env \
   --api-key-env XAI_API_KEY \
   --provider xai \
@@ -112,6 +135,7 @@ xAI:
   --base-url https://api.x.ai/v1 \
   --endpoint responses \
   --response-store false \
+  --max-tokens 16 \
   --output reports/vlm_api_track_v01_responses_xai_grok_4_3_smoke.jsonl \
   --limit 5
 ```
@@ -138,9 +162,8 @@ Promote a provider/model to the 210-row full run only when:
 - the user approves cost and data transfer for that provider/model.
 
 For the first serious public paper, the minimum useful provider block is three
-full rows:
+full rows. Two OpenAI rows are now complete, so the remaining minimum is:
 
-- one OpenAI row;
 - one Gemini row;
 - one Claude or Grok row.
 

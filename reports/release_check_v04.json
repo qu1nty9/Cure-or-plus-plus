@@ -1,5 +1,5 @@
 {
-  "check_count": 376,
+  "check_count": 466,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -24,6 +24,96 @@
     {
       "detail": "exists=True size=871 min_size=1",
       "name": "required_file:reports/vlm_open_weight_full_v03_paper_table.tex",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1047 min_size=1",
+      "name": "required_file:reports/vlm_provider_full_v01_comparison.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1402 min_size=1",
+      "name": "required_file:reports/vlm_provider_full_v01_comparison.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=543 min_size=1",
+      "name": "required_file:reports/vlm_provider_full_v01_comparison.tex",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1958 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_mini_full_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=278 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_mini_full_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=547 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_mini_full_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=862 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_mini_full_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=29876 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_mini_full_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1957 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_full_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=273 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_full_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=530 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_full_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=811 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_full_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=28827 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_4_full_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3097 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_5_full_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=273 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_5_full_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=530 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_5_full_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=811 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_5_full_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=28828 min_size=1",
+      "name": "required_file:reports/vlm_provider_openai_gpt_5_5_full_v01/audit.csv",
       "passed": true
     },
     {
@@ -92,7 +182,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=16372 min_size=1",
+      "detail": "exists=True size=18020 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -107,7 +197,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6049 min_size=1",
+      "detail": "exists=True size=6798 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },
@@ -122,7 +212,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=4341 min_size=1",
+      "detail": "exists=True size=5596 min_size=1",
       "name": "required_file:configs/vlm_frontier_provider_matrix_v01.json",
       "passed": true
     },
@@ -142,7 +232,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=5404 min_size=1",
+      "detail": "exists=True size=7194 min_size=1",
       "name": "required_file:docs/vlm_frontier_provider_block_v01.md",
       "passed": true
     },
@@ -164,6 +254,11 @@
     {
       "detail": "exists=True size=752 min_size=1",
       "name": "required_file:reports/vlm_api_track_v01_prompt_pack_summary.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=7500 min_size=1",
+      "name": "required_file:reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl",
       "passed": true
     },
     {
@@ -922,7 +1017,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=16150 min_size=1",
+      "detail": "exists=True size=17028 min_size=1",
       "name": "required_file:scripts/run_openai_compatible_vlm.py",
       "passed": true
     },
@@ -957,12 +1052,22 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=10651 min_size=1",
+      "name": "required_file:scripts/build_vlm_provider_comparison.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2832 min_size=1",
+      "name": "required_file:scripts/merge_vlm_response_retries.py",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=7053 min_size=1",
       "name": "required_file:scripts/prepare_kaggle_vlm_full_run.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=14081 min_size=1",
+      "detail": "exists=True size=14102 min_size=1",
       "name": "required_file:scripts/evaluate_vlm_response_pack.py",
       "passed": true
     },
@@ -1197,6 +1302,21 @@
       "passed": true
     },
     {
+      "detail": "needle='OpenAI GPT-5.4-mini'",
+      "name": "paper_contains:OpenAI GPT-5.4-mini",
+      "passed": true
+    },
+    {
+      "detail": "needle='OpenAI GPT-5.5'",
+      "name": "paper_contains:OpenAI GPT-5.5",
+      "passed": true
+    },
+    {
+      "detail": "needle='vlm_provider_full_v01_comparison.tex'",
+      "name": "paper_contains:vlm_provider_full_v01_comparison.tex",
+      "passed": true
+    },
+    {
       "detail": "exit_code=0",
       "name": "paper_preflight",
       "passed": true
@@ -1259,6 +1379,36 @@
     {
       "detail": "missing=[]",
       "name": "vlm_prompt_pack_v03_fields",
+      "passed": true
+    },
+    {
+      "detail": "rows=5 expected=5",
+      "name": "vlm_mixed_smoke_prompt_pack_rows",
+      "passed": true
+    },
+    {
+      "detail": "sample_ids=['clean__clean__clean__09904', 'clean__clean__clean__10457', 'real_transfer__messenger_upload_download__rep_01__10183', 'real_transfer__phone_screenshot_resave__rep_01__10243', 'real_transfer__video_call_frame_capture__rep_01__09958']",
+      "name": "vlm_mixed_smoke_prompt_pack_ids",
+      "passed": true
+    },
+    {
+      "detail": "family_counts={'clean': 2, 'real_transfer': 3}",
+      "name": "vlm_mixed_smoke_prompt_pack_families",
+      "passed": true
+    },
+    {
+      "detail": "recipe_counts={'clean': 2, 'messenger_upload_download': 1, 'phone_screenshot_resave': 1, 'video_call_frame_capture': 1}",
+      "name": "vlm_mixed_smoke_prompt_pack_recipes",
+      "passed": true
+    },
+    {
+      "detail": "labels=['baseball', 'canon_camera', 'dymo_label_maker', 'lg_cell_phone', 'training_marker_cone']",
+      "name": "vlm_mixed_smoke_prompt_pack_labels",
+      "passed": true
+    },
+    {
+      "detail": "mixed smoke rows must be copied from v0.1 full prompt pack",
+      "name": "vlm_mixed_smoke_prompt_pack_matches_full_pack",
       "passed": true
     },
     {
@@ -1869,6 +2019,306 @@
     {
       "detail": "accuracy=0.97750 expected=0.9775",
       "name": "vlm_open_weight_7b_comparison_v03_llava_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_openai_full_v01_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "vlm_provider_openai_full_v01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_openai_full_v01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_provider_openai_full_v01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=30 expected=30",
+      "name": "vlm_provider_openai_full_v01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=180 expected=180",
+      "name": "vlm_provider_openai_full_v01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_openai_full_v01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.961111 expected=0.961111",
+      "name": "vlm_provider_openai_full_v01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_openai_full_v01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_openai_full_v01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_openai_full_v01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.983333 expected=0.983333",
+      "name": "vlm_provider_openai_full_v01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.933333 expected=0.933333",
+      "name": "vlm_provider_openai_full_v01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=1 expected=1",
+      "name": "vlm_provider_openai_full_v01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=7 expected=7",
+      "name": "vlm_provider_openai_full_v01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_openai_full_v01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_openai_full_v01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_openai_gpt54_full_v01_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "vlm_provider_openai_gpt54_full_v01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_openai_gpt54_full_v01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_provider_openai_gpt54_full_v01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=30 expected=30",
+      "name": "vlm_provider_openai_gpt54_full_v01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=180 expected=180",
+      "name": "vlm_provider_openai_gpt54_full_v01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_openai_gpt54_full_v01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.955556 expected=0.955556",
+      "name": "vlm_provider_openai_gpt54_full_v01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_openai_gpt54_full_v01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_openai_gpt54_full_v01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_openai_gpt54_full_v01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_openai_gpt54_full_v01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_openai_gpt54_full_v01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=1 expected=1",
+      "name": "vlm_provider_openai_gpt54_full_v01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=8 expected=8",
+      "name": "vlm_provider_openai_gpt54_full_v01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_openai_gpt54_full_v01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_openai_gpt54_full_v01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_openai_gpt55_full_v01_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "vlm_provider_openai_gpt55_full_v01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_openai_gpt55_full_v01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_provider_openai_gpt55_full_v01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=30 expected=30",
+      "name": "vlm_provider_openai_gpt55_full_v01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=180 expected=180",
+      "name": "vlm_provider_openai_gpt55_full_v01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_openai_gpt55_full_v01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_openai_gpt55_full_v01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_openai_gpt55_full_v01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_openai_gpt55_full_v01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_openai_gpt55_full_v01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_openai_gpt55_full_v01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.933333 expected=0.933333",
+      "name": "vlm_provider_openai_gpt55_full_v01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=1 expected=1",
+      "name": "vlm_provider_openai_gpt55_full_v01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=9 expected=9",
+      "name": "vlm_provider_openai_gpt55_full_v01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_openai_gpt55_full_v01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_openai_gpt55_full_v01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "vlm_provider_comparison_v01_rows",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.96111 expected=0.96111",
+      "name": "vlm_provider_comparison_v01_openai_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.95556 expected=0.95556",
+      "name": "vlm_provider_comparison_v01_gpt54_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.95000 expected=0.95",
+      "name": "vlm_provider_comparison_v01_gpt55_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "hardest_pipeline=['video_call_frame_capture', 'phone_screenshot_resave', 'video_call_frame_capture'] expected known OpenAI provider pipelines",
+      "name": "vlm_provider_comparison_v01_openai_hardest_pipeline",
+      "passed": true
+    },
+    {
+      "detail": "hardest_label=['calcium_bottle', 'calcium_bottle', 'calcium_bottle'] expected=calcium_bottle",
+      "name": "vlm_provider_comparison_v01_openai_hardest_label",
+      "passed": true
+    },
+    {
+      "detail": "missing expected model/result in markdown comparison",
+      "name": "vlm_provider_comparison_v01_markdown",
+      "passed": true
+    },
+    {
+      "detail": "missing latex table label",
+      "name": "vlm_provider_comparison_v01_latex_label",
+      "passed": true
+    },
+    {
+      "detail": "paper/main.tex does not input provider VLM table",
+      "name": "vlm_provider_comparison_v01_paper_input",
       "passed": true
     },
     {

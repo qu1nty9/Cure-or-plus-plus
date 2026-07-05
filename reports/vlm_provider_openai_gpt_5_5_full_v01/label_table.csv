@@ -1,0 +1,11 @@
+model_id,provider,model_version,label,clean_n,clean_accuracy,real_n,real_accuracy,real_unparseable_rate,accuracy_drop_vs_clean
+gpt-5.5,openai,,calcium_bottle,3,0.666667,18,0.666667,0.000000,0.000000
+gpt-5.5,openai,,lg_cell_phone,3,1.000000,18,0.888889,0.000000,0.111111
+gpt-5.5,openai,,canon_camera,3,1.000000,18,0.944444,0.000000,0.055556
+gpt-5.5,openai,,baseball,3,1.000000,18,1.000000,0.000000,0.000000
+gpt-5.5,openai,,dymo_label_maker,3,1.000000,18,1.000000,0.000000,0.000000
+gpt-5.5,openai,,hair_brush,3,1.000000,18,1.000000,0.000000,0.000000
+gpt-5.5,openai,,pan,3,1.000000,18,1.000000,0.000000,0.000000
+gpt-5.5,openai,,shoes,3,1.000000,18,1.000000,0.000000,0.000000
+gpt-5.5,openai,,toy,3,1.000000,18,1.000000,0.000000,0.000000
+gpt-5.5,openai,,training_marker_cone,3,1.000000,18,1.000000,0.000000,0.000000
