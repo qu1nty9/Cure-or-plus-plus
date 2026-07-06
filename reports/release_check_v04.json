@@ -1,5 +1,5 @@
 {
-  "check_count": 623,
+  "check_count": 626,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -362,8 +362,23 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6814 min_size=1",
+      "detail": "exists=True size=7078 min_size=1",
       "name": "required_file:docs/public_release_checklist_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=6055 min_size=1",
+      "name": "required_file:docs/reproducibility_manifest_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3411 min_size=1",
+      "name": "required_file:docs/arxiv_source_package_checklist_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3000 min_size=1",
+      "name": "required_file:docs/github_release_notes_v0.4_preprint.md",
       "passed": true
     },
     {

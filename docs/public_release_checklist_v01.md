@@ -79,6 +79,12 @@ The current serious benchmark evidence consists of:
   `reports/vlm_provider_full_v03_comparison.*`.
 - arXiv readiness matrix:
   `reports/arxiv_readiness_matrix_v04.md`.
+- Reproducibility manifest:
+  `docs/reproducibility_manifest_v01.md`.
+- arXiv source package checklist:
+  `docs/arxiv_source_package_checklist_v01.md`.
+- Draft GitHub release notes:
+  `docs/github_release_notes_v0.4_preprint.md`.
 - Paper scaffold:
   `paper/main.tex`.
 
@@ -89,6 +95,7 @@ Run these before any public push, paper package, or notebook release:
 ```bash
 .venv/bin/python -m py_compile \
   scripts/run_release_checks.py \
+  scripts/build_paper_tables.py \
   scripts/build_vlm_provider_comparison.py \
   scripts/build_vlm_provider_v03_comparison.py \
   scripts/run_gigachat_vlm.py \
