@@ -61,6 +61,8 @@ reports/**/vlm_open_weight_runs/
 reports/vlm_api_track_*_responses*.jsonl
 reports/vlm_api_track_*_raw*.jsonl
 reports/vlm_api_track_*_response_audit.csv
+reports/vlm_api_track_*_smoke_*.csv
+reports/vlm_api_track_*_full_*.csv
 
 # Local LaTeX build artifacts.
 paper/build/
