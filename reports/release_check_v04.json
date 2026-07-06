@@ -347,27 +347,27 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=19725 min_size=1",
+      "detail": "exists=True size=21298 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
     {
-      "detail": "exists=True size=4911 min_size=1",
+      "detail": "exists=True size=5709 min_size=1",
       "name": "required_file:docs/dataset_card_cure_or_pp_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=8907 min_size=1",
+      "detail": "exists=True size=9663 min_size=1",
       "name": "required_file:docs/evaluation_card_full_cure_or_v04.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=5949 min_size=1",
+      "detail": "exists=True size=6814 min_size=1",
       "name": "required_file:docs/public_release_checklist_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=8071 min_size=1",
+      "detail": "exists=True size=8593 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },

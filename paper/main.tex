@@ -7,7 +7,7 @@
 \usepackage{url}
 
 \title{CURE-OR++: Object Recognition Robustness Under Native CURE-OR Challenges and Digital Transfer Pipelines}
-\author{CURE-OR++ Project}
+\author{Yaroslav Kholmirzayev\\Independent Researcher\\\texttt{yaric.kholm@gmail.com}}
 \date{\today}
 
 \begin{document}
@@ -51,7 +51,7 @@ All reported native CURE-OR means are computed from aggregate prediction rows an
 Real-transfer confidence intervals use source-level bootstrap resampling over the 30 selected source images. This intentionally treats repeated transferred outputs from the same source as dependent measurements rather than as independent test examples. The intervals are therefore wide, and the real-transfer result is interpreted as an external-validity guardrail rather than as a precise ranking of small app-specific effects.
 
 \paragraph{Release boundary.}
-The repository tracks code, configs, aggregate reports, paper tables, and generated figures. Raw CURE-OR images, local real-transfer payloads, per-image prediction dumps, and source-dataset archives remain excluded from Git and are governed by the upstream dataset terms.
+The repository tracks code, configs, aggregate reports, paper tables, generated figures, and sanitized response audits. Raw CURE-OR images, local real-transfer payloads, per-image prediction dumps, raw hosted-provider JSONL responses, API caches, and source-dataset archives remain excluded from Git and are governed by upstream dataset terms, local privacy constraints, or provider-specific data-handling constraints.
 
 \paragraph{Reproducibility boundary.}
 Reported tables are generated from tracked manifests, configs, aggregate CSV files, and scripts. Open-weight VLM rows are integrated from Kaggle GPU outputs into sanitized audits and summaries. Hosted-provider rows are reproducible at the protocol level, but exact model behavior may change because provider models are externally hosted, versioned, priced, and cached. Raw provider JSONL responses and local API caches remain outside Git; the tracked artifacts are the prompt-pack metadata, parsed-response audits, aggregate tables, and summaries.
@@ -132,9 +132,15 @@ CURE-OR++ should be positioned as a compact, object-centric robustness artifact 
 
 The intended differentiator is not scale, but transparent generation, paired metadata, small object-recognition scope, and failure tables that are easy to inspect by object class, challenge recipe, severity, and model family. The VLM/API track should therefore be interpreted as a bridge to modern multimodal assistants rather than as the central benchmark contribution of the current artifact.
 
+\section{Data Availability and Release Boundary}
+
+The public release is designed as an auditable benchmark package rather than a raw-image redistribution. Project-authored code, configs, aggregate reports, parsed audits, figures, and paper sources are released under the MIT License. Raw CURE-OR and mini-CURE-OR images are not redistributed by this repository; users should obtain them from the upstream dataset source under its own terms. Real-transfer image payloads remain local/private, and public artifacts expose only metadata, protocol descriptions, aggregate tables, and figures derived from that collection.
+
+Raw hosted-provider response JSONL files and local API caches are also excluded from the public package because they can contain provider-specific payloads, request metadata, and account-sensitive context. The tracked hosted-provider artifacts are sanitized aggregate tables, parsed-response audits, retry summaries, and paper-ready comparisons. This release boundary preserves traceability of the reported numeric claims while avoiding redistribution of upstream raw data, private collection payloads, or provider response dumps.
+
 \section{Limitations}
 
-Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API track includes eight 210-row open-weight assistant-style rows, seven 900-row open-weight extension rows, nine 210-row hosted-provider rows across OpenAI, xAI, Anthropic, and GigaChat, and one 900-row xAI hosted-provider row with a repeat run; it is still not a complete frontier-assistant benchmark, and Gemini/Mistral-style provider rows are left for future expansion. Hosted-provider results should be interpreted with provider-versioning and data-handling caveats. Results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
+Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API track includes eight 210-row open-weight assistant-style rows, seven 900-row open-weight extension rows, nine 210-row hosted-provider rows across OpenAI, xAI, Anthropic, and GigaChat, and one 900-row xAI hosted-provider row with a repeat run; it is still not a complete frontier-assistant benchmark, and Gemini/Mistral-style provider rows are left for future expansion. Hosted-provider results should be interpreted with provider-versioning and data-handling caveats. The public release intentionally excludes raw image payloads and raw provider responses, so third-party reproduction requires authorized access to upstream source data and rerunning provider/API calls where needed. Results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
 
 \section{Conclusion}
 

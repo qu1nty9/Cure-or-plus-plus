@@ -22,6 +22,18 @@ Raw source datasets remain governed by their upstream licenses and access
 conditions. The repository's MIT license applies to code, configs, reports, and
 tracked aggregate result artifacts only.
 
+## Public Release Boundary
+
+The current public package is intended to include code, configs, non-sensitive
+manifests, aggregate reports, parsed-response audits, generated figures, paper
+source, and documentation. It is not intended to include raw CURE-OR images,
+mini-CURE-OR images, local real-transfer photos, local collection packs, raw
+hosted-provider JSONL responses, provider API caches, or credentials.
+
+This boundary is deliberately conservative: it keeps the benchmark auditable
+through tracked aggregate artifacts while avoiding redistribution of upstream
+raw datasets, private transfer payloads, and provider response dumps.
+
 ## Current Benchmark Versions
 
 ### CURE-OR++ v0.1
@@ -124,6 +136,8 @@ Out-of-scope uses:
 ## Release Notes
 
 Public release should include this dataset card, the evaluation card, the
-technical report draft, and clear licensing notes. Raw CURE-OR and mini-CURE-OR
-images should remain excluded from the GitHub repository unless their upstream
-terms explicitly permit redistribution.
+technical report draft, aggregate tables, figures, paper source, and clear
+licensing notes. Raw CURE-OR and mini-CURE-OR images should remain excluded
+from the GitHub repository unless their upstream terms explicitly permit
+redistribution. Local real-transfer photos and raw hosted-provider response
+JSONL files should remain excluded from the public package.

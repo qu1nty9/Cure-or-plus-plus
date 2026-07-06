@@ -8,11 +8,25 @@ responses.
 
 Current status date: 2026-07-06.
 
+## Project Metadata
+
+- Author: Yaroslav Kholmirzayev.
+- Affiliation: Independent Researcher.
+- Public contact email: `yaric.kholm@gmail.com`.
+- Code/config/report license: MIT for project-authored code, configs, reports,
+  generated aggregate artifacts, figures, documentation, and paper source.
+- Raw-data policy: do not publish raw CURE-OR images, mini-CURE-OR images,
+  local real-transfer photos, local collection packs, raw hosted-provider JSONL
+  responses, API caches, or credentials.
+- Recommended publication route: GitHub repository plus arXiv/workshop-style
+  preprint first; Kaggle notebook/writeup after the paper text and aggregate
+  package are stable.
+
 ## Release Targets
 
 | Target | Status | Intended contents | Exclusions |
 |---|---|---|---|
-| GitHub repository | Ready after final review | Code, configs, aggregate reports, generated paper tables, generated figures, dataset/evaluation cards, paper source | raw CURE-OR images, real-transfer images, source archives, API keys, provider caches, raw provider JSONL |
+| GitHub repository | Ready after final review | Code, configs, aggregate reports, generated paper tables, generated figures, dataset/evaluation cards, paper source | raw CURE-OR images, mini-CURE-OR images, real-transfer images, source archives, API keys, provider caches, raw provider JSONL |
 | arXiv/workshop paper | Draft-ready | `paper/main.tex`, references, generated tables, figures, clear limitations and data availability text | raw data payloads, private provider responses |
 | Kaggle notebook/writeup | Ready after packaging pass | explanatory notebook, public aggregate tables/figures, setup commands, dataset access instructions | raw CURE-OR unless license/access terms explicitly allow redistribution |
 | Hugging Face/Kaggle dataset card | Optional | public metadata, configs, reports, small derived artifacts if license-safe | upstream raw images and private real-transfer payloads |
@@ -42,6 +56,8 @@ Current status date: 2026-07-06.
 - `data/vlm_api_cache/`.
 - Raw hosted-provider response JSONL files under
   `reports/vlm_api_track_*_responses*.jsonl`.
+- Raw provider request/response dumps from OpenAI, xAI, Anthropic, GigaChat,
+  Gemini, or future hosted providers unless explicitly sanitized.
 - Root-level evaluator scratch CSV files under
   `reports/vlm_api_track_*_smoke_*.csv` and
   `reports/vlm_api_track_*_full_*.csv`; canonical copies live in
@@ -113,10 +129,8 @@ These should be resolved before a final arXiv or workshop submission:
 
 - Final citation verification for related work and CURE-OR source references.
 - Local TeX compile with required tools installed.
-- Final data availability statement matching the selected release channel.
-- License review for any public dataset/package beyond code and aggregate
-  reports.
-- Final author/affiliation metadata.
+- Final license review if any public dataset/package goes beyond code,
+  documentation, figures, aggregate reports, and sanitized parsed audits.
 
 ## Non-Blocking Future Extensions
 
@@ -130,8 +144,9 @@ These are useful but not required for the current serious draft:
 
 ## Current Recommendation
 
-Proceed toward a polished arXiv/workshop-style draft using the current evidence
-package. Do not expand the model matrix further unless the paper narrative
-specifically needs another provider family. The highest-return work is now
-paper clarity, release boundary discipline, final citations, and reproducible
-packaging.
+Proceed toward a polished GitHub release plus arXiv/workshop-style draft using
+the current evidence package. Do not expand the model matrix further unless the
+paper narrative specifically needs another provider family. The highest-return
+work is now paper clarity, release boundary discipline, final citations,
+reproducible packaging, and a later Kaggle writeup built from the stable
+aggregate package.

@@ -265,3 +265,7 @@ Code, configs, reports, and generated aggregate result artifacts in this
 repository are released under the MIT License. Raw CURE-OR and mini-CURE-OR
 data are not included in this repository and are not relicensed here; use those
 datasets only under the terms provided by their original sources.
+Local real-transfer photos, collection payloads, raw hosted-provider JSONL
+responses, and API caches are not part of the public release. The public
+package is intended to contain reproducible code, configs, paper sources,
+figures, aggregate reports, and sanitized parsed-response audits.

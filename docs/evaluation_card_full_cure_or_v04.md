@@ -151,6 +151,20 @@ VLM/API prompt-pack status:
   leaderboard because provider VLMs require text-answer extraction, exact model
   versioning, and raw-response audit handling.
 
+## Release and Reproducibility Boundary
+
+The public evaluation package should contain code, configs, aggregate reports,
+paper tables, figures, parsed-response audits, and documentation. Raw CURE-OR
+or mini-CURE-OR images, local real-transfer photos, local collection packs, raw
+hosted-provider JSONL responses, API caches, and credentials should remain
+local or upstream-controlled.
+
+Open-weight rows are reproducible from the tracked runner, prompt packs,
+manifests, and aggregate outputs when the required source images and model
+weights are available. Hosted-provider rows are reproducible at the protocol
+level, but exact answers can drift because externally hosted models can change
+versioning, routing, pricing, caching, and data-handling behavior.
+
 ## Reproducibility Artifacts
 
 Paper-level outputs:
