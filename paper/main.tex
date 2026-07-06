@@ -22,6 +22,8 @@ Object-recognition systems are usually evaluated on clean images or isolated syn
 
 Robustness benchmarks often study isolated corruptions such as blur, noise, compression, or exposure shifts. Real image use is frequently more operational: images are captured, resized, recompressed, screenshotted, shared through applications, restored, or viewed through video-call pipelines. CURE-OR++ is designed around that narrower operational question: how do object-recognition baselines fail under reproducible object-centric challenge and transfer conditions?
 
+The main research question is not whether a single model wins a leaderboard, but whether different recognition families share a stable failure structure when the input moves from clean images to severe native challenges and app/device transfer pipelines. CURE-OR++ therefore combines three views: a controlled Full-CURE-OR probe for severe-condition behavior, a small real-transfer guardrail for app-mediated image movement, and a VLM prompt-pack track for assistant-style recognition with explicit parsing and audit metadata.
+
 This draft focuses on the Full-CURE-OR v0.4 controlled probe, the evaluated real-transfer v0.2 validation block, executed open-weight VLM prompt-pack rows, including a 900-row v0.3 VLM extension, and the completed hosted-provider VLM block. The current repository also contains a smaller CURE-OR++ v0.1 Kaggle-ready artifact. The real-transfer and VLM blocks reduce the main external-validity gap, but should still be interpreted as guardrails rather than a comprehensive deployment or frontier-assistant study.
 
 \paragraph{Current contributions.}
@@ -37,6 +39,8 @@ The current artifact provides:
   \item a 900-row open-weight VLM v0.3 extension over four app/device transfer pipelines;
   \item nine 210-row hosted-provider VLM rows across OpenAI, xAI, Anthropic, and GigaChat, plus a 900-row xAI Grok 4.3 hosted-provider v0.3 row and repeat run, with response auditing and retry handling.
 \end{enumerate}
+
+The intended contribution is a compact, auditable benchmark package: every headline claim is tied to tracked scripts, aggregate tables, figures, parsed-response audits, and release-boundary documentation rather than to an opaque private evaluation run.
 
 \section{Benchmark Design}
 
@@ -140,9 +144,17 @@ The public release is designed as an auditable benchmark package rather than a r
 
 Raw hosted-provider response JSONL files and local API caches are also excluded from the public package because they can contain provider-specific payloads, request metadata, and account-sensitive context. The tracked hosted-provider artifacts are sanitized aggregate tables, parsed-response audits, retry summaries, and paper-ready comparisons. This release boundary preserves traceability of the reported numeric claims while avoiding redistribution of upstream raw data, private collection payloads, or provider response dumps.
 
+\section{Reproducibility Package}
+
+The public repository is structured so that readers can audit the reported claims from tracked artifacts. Paper tables are regenerated from aggregate CSV files with \path{scripts/build_paper_tables.py}. Release consistency is checked with \path{scripts/run_release_checks.py}, and paper input/figure/bibliography paths are checked with \path{scripts/check_paper_build.py}. The VLM rows use prompt-pack metadata, provider/open-weight runners, parsed-response evaluators, and comparison builders rather than raw response dumps. The main public audit artifacts are the aggregate reports under \path{reports/}, generated figures under \path{results/}, dataset/evaluation cards under \path{docs/}, and paper source under \path{paper/}.
+
+For hosted-provider rows, exact reproduction requires rerunning provider calls under the same prompt protocol and accepting provider-side drift. For open-weight rows, reproduction requires access to the source images under upstream terms, the referenced model weights, and a GPU environment compatible with the documented Kaggle runners. These constraints are part of the benchmark record rather than hidden setup state.
+
 \section{Limitations}
 
-Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row. The VLM/API track includes eight 210-row open-weight assistant-style rows, seven 900-row open-weight extension rows, nine 210-row hosted-provider rows across OpenAI, xAI, Anthropic, and GigaChat, and one 900-row xAI hosted-provider row with a repeat run; it is still not a complete frontier-assistant benchmark, and Gemini/Mistral-style provider rows are left for future expansion. Hosted-provider results should be interpreted with provider-versioning and data-handling caveats. The public release intentionally excludes raw image payloads and raw provider responses, so third-party reproduction requires authorized access to upstream source data and rerunning provider/API calls where needed. Results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
+Real-transfer v0.2 is small: 30 sources, three pipelines, and two repeats per source/pipeline. It should not be treated as broad real-world transfer coverage or as a precise estimate of app-specific effect sizes. Full-CURE-OR v0.4 is a controlled probe rather than an exhaustive evaluation of every source image. Prototype classifiers and zero-shot contrastive models are useful robustness contrasts, but they are not identical evaluation protocols. Confidence and calibration analysis currently covers the usable CLIP/OpenCLIP-family zero-shot rows rather than every prototype row.
+
+The VLM/API track includes eight 210-row open-weight assistant-style rows, seven 900-row open-weight extension rows, nine 210-row hosted-provider rows across OpenAI, xAI, Anthropic, and GigaChat, and one 900-row xAI hosted-provider row with a repeat run. It is still not a complete frontier-assistant benchmark, and Gemini/Mistral-style provider rows are left for future expansion. Hosted-provider results should be interpreted with provider-versioning and data-handling caveats. The public release intentionally excludes raw image payloads and raw provider responses, so third-party reproduction requires authorized access to upstream source data and rerunning provider/API calls where needed. Results should therefore be read as object-recognition robustness evidence rather than a complete multimodal assistant benchmark.
 
 \section{Conclusion}
 
