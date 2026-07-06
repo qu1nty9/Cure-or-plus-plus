@@ -43,7 +43,7 @@ VLM coverage, and final release-boundary decisions.
 | Related work | Draft-ready | `docs/related_work_v01.md`, expanded LaTeX related-work paragraph | verify final citations before public submission |
 | Real-transfer validation | Ready for draft | 180 outputs, activation status, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
 | VLM/API track | Eight v0.2 open-weight rows executed; seven-row v0.3 900-row extension complete; nine hosted-provider v0.1 rows complete; one hosted-provider v0.3 row and repeat run complete | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/`, `reports/vlm_open_weight_full_v03_comparison.md`, `reports/vlm_provider_openai_gpt_5_4_mini_full_v01/`, `reports/vlm_provider_openai_gpt_5_4_full_v01/`, `reports/vlm_provider_openai_gpt_5_5_full_v01/`, `reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/`, `reports/vlm_provider_anthropic_claude_fable_5_full_v01/`, `reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/`, `reports/vlm_provider_gigachat_2_pro_full_v01/`, `reports/vlm_provider_gigachat_2_max_full_v01/`, `reports/vlm_provider_xai_grok_4_3_full_v01/`, `reports/vlm_provider_xai_grok_4_3_full_v03/`, `reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/`, `reports/vlm_provider_full_v01_comparison.md`, `reports/vlm_provider_full_v03_comparison.md`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/`, `reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/`, `reports/vlm_open_weight_internvl3_2b_kaggle_full_v03/`, `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`, `scripts/integrate_kaggle_vlm_output.py`, `scripts/build_vlm_provider_comparison.py`, `scripts/build_vlm_provider_v03_comparison.py`, `scripts/merge_vlm_response_retries.py`; SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B full v0.2 Kaggle GPU runs complete; Qwen2.5-VL-3B, Qwen2.5-VL-7B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, LLaVA-OneVision 7B, and SmolVLM2-2.2B full v0.3 runs complete; OpenAI GPT-5.4-mini, GPT-5.4, GPT-5.5, xAI Grok 4.3, Anthropic Claude Sonnet 5, Claude Fable 5, Claude Haiku 4.5, GigaChat 2 Pro, and GigaChat 2 Max full v0.1 provider rows complete; xAI Grok 4.3 full v0.3 provider row and repeat run complete | optionally add Gemini row and final raw-response audit rules |
-| Public release | Not final | Kaggle v0.1 package exists locally | decide Kaggle/HF release boundary and license text |
+| Public release | Checklist drafted | `docs/public_release_checklist_v01.md`, Kaggle v0.1 package exists locally | pass checklist gates, finalize Kaggle/HF boundary, license text, and data availability statement |
 
 ## Minimum Path To A Serious Public Draft
 
@@ -58,7 +58,7 @@ VLM coverage, and final release-boundary decisions.
 
 The ideal version adds:
 
-- execution of the VLM/API prompt pack on selected frontier VLMs beyond the completed OpenAI, xAI, Anthropic, and GigaChat provider rows;
+- optional execution of the VLM/API prompt pack on selected frontier VLMs beyond the completed OpenAI, xAI, Anthropic, and GigaChat provider rows;
 - completion of the v0.3 900-row open-weight VLM scale/family extension beyond the current seven rows;
 - repeatability reruns for the strongest open-weight rows if needed for final release confidence;
 - confidence/calibration for any added zero-shot/VLM row;
@@ -71,7 +71,7 @@ The ideal version adds:
 Do not submit as a final arXiv paper yet. The work is strong enough for an
 internal technical report and close to a workshop-style benchmark draft. The
 critical external-validity gap is now reduced by real-transfer v0.2, and the
-open-weight VLM path has a real model-family contrast. The hosted OpenAI and
-xAI and Claude rows now prove the provider path across three hosted-provider
-families. The next bar is final paper polish, capture metadata, and optionally
-adding a Gemini provider row.
+open-weight VLM path has a real model-family contrast. The hosted OpenAI, xAI,
+Anthropic, and GigaChat rows now prove the provider path across four provider
+families. The next bar is final paper polish, final citation/license checks,
+and passing the public-release checklist.

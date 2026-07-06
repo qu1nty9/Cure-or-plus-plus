@@ -83,6 +83,7 @@ REQUIRED_FILES = [
     "paper/main.tex",
     "docs/dataset_card_cure_or_pp_v04.md",
     "docs/evaluation_card_full_cure_or_v04.md",
+    "docs/public_release_checklist_v01.md",
     "reports/arxiv_readiness_matrix_v04.md",
     "configs/vlm_api_track_v01.json",
     "configs/vlm_api_track_v03.json",

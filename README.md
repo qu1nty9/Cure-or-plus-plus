@@ -188,8 +188,8 @@ current v0.4 row. The DataComp XL run adds a stronger OpenCLIP pretrained
 variant and lands third by mean native accuracy, but it also collapses near
 chance on salt-and-pepper and grayscale salt-and-pepper noise. This is still a
 controlled probe rather than a full paper-scale evaluation; the remaining gaps
-are broader frontier/provider VLM coverage, final paper polish, and
-release-boundary decisions.
+are final paper polish, citation/license review, and release-boundary
+discipline.
 The challenge-family analysis in
 `reports/full_cure_or_challenge_family_v04.md` adds a fifth finding: every
 usable model is worse on paired grayscale level-5 challenges than on the
@@ -207,6 +207,7 @@ iteration and now has real-transfer v0.2 results available for integration.
 Release-quality documentation is now split into
 `docs/dataset_card_cure_or_pp_v04.md`,
 `docs/evaluation_card_full_cure_or_v04.md`, and
+`docs/public_release_checklist_v01.md`, with publication readiness tracked in
 `reports/arxiv_readiness_matrix_v04.md`.
 The LaTeX paper scaffold is in `paper/main.tex`; source references are checked
 by `scripts/check_paper_build.py`, and full PDF compilation requires

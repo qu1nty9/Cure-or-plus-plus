@@ -1,5 +1,5 @@
 {
-  "check_count": 622,
+  "check_count": 623,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -362,7 +362,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7955 min_size=1",
+      "detail": "exists=True size=5949 min_size=1",
+      "name": "required_file:docs/public_release_checklist_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=8071 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },

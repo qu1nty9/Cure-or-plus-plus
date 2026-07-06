@@ -1,0 +1,137 @@
+# CURE-OR++ Public Release Checklist v0.1
+
+This checklist defines the public-release boundary for the current CURE-OR++
+benchmark draft. It is intentionally stricter than the internal workspace:
+public artifacts should be reproducible and inspectable without redistributing
+upstream raw datasets, local transfer payloads, API secrets, or raw provider
+responses.
+
+Current status date: 2026-07-06.
+
+## Release Targets
+
+| Target | Status | Intended contents | Exclusions |
+|---|---|---|---|
+| GitHub repository | Ready after final review | Code, configs, aggregate reports, generated paper tables, generated figures, dataset/evaluation cards, paper source | raw CURE-OR images, real-transfer images, source archives, API keys, provider caches, raw provider JSONL |
+| arXiv/workshop paper | Draft-ready | `paper/main.tex`, references, generated tables, figures, clear limitations and data availability text | raw data payloads, private provider responses |
+| Kaggle notebook/writeup | Ready after packaging pass | explanatory notebook, public aggregate tables/figures, setup commands, dataset access instructions | raw CURE-OR unless license/access terms explicitly allow redistribution |
+| Hugging Face/Kaggle dataset card | Optional | public metadata, configs, reports, small derived artifacts if license-safe | upstream raw images and private real-transfer payloads |
+
+## Publicly Safe To Track
+
+- Source code under `scripts/`, `configs/`, and notebooks that do not contain
+  credentials or private raw payloads.
+- Aggregate CSV/Markdown/LaTeX reports under `reports/`.
+- Generated figures under `results/`.
+- Paper source under `paper/`.
+- Dataset/evaluation/release documentation under `docs/`.
+- VLM prompt-pack metadata JSONL files, as long as they reference repository
+  paths and not private credentials.
+- Parsed-response audits and aggregate summaries in canonical result
+  directories such as `reports/vlm_provider_*` and
+  `reports/vlm_open_weight_*`.
+
+## Must Stay Local
+
+- `secrets/` and `.secrets/`.
+- API keys, provider tokens, OAuth material, and local environment files.
+- `data/raw/`, `data/interim/`, `data/processed/`, and source dataset archives.
+- Raw CURE-OR or mini-CURE-OR images unless upstream terms explicitly allow
+  redistribution through the selected release channel.
+- Local real-transfer image payloads and collection packs.
+- `data/vlm_api_cache/`.
+- Raw hosted-provider response JSONL files under
+  `reports/vlm_api_track_*_responses*.jsonl`.
+- Root-level evaluator scratch CSV files under
+  `reports/vlm_api_track_*_smoke_*.csv` and
+  `reports/vlm_api_track_*_full_*.csv`; canonical copies live in
+  `reports/vlm_provider_*`.
+
+## Current Evidence Package
+
+The current serious benchmark evidence consists of:
+
+- Full-CURE-OR v0.4 controlled probe:
+  `reports/full_cure_or_paper_tables_v04.*`.
+- Real-transfer v0.2 validation:
+  `reports/real_transfer_v02_results.md` and figures under `results/`.
+- Open-weight VLM v0.3 table:
+  `reports/vlm_open_weight_full_v03_paper_table.*`.
+- Hosted-provider VLM v0.1 table:
+  `reports/vlm_provider_full_v01_comparison.*`.
+- Hosted-provider VLM v0.3 xAI row and repeat:
+  `reports/vlm_provider_full_v03_comparison.*`.
+- arXiv readiness matrix:
+  `reports/arxiv_readiness_matrix_v04.md`.
+- Paper scaffold:
+  `paper/main.tex`.
+
+## Required Preflight Commands
+
+Run these before any public push, paper package, or notebook release:
+
+```bash
+.venv/bin/python -m py_compile \
+  scripts/run_release_checks.py \
+  scripts/build_vlm_provider_comparison.py \
+  scripts/build_vlm_provider_v03_comparison.py \
+  scripts/run_gigachat_vlm.py \
+  scripts/run_anthropic_vlm.py
+
+.venv/bin/python scripts/run_release_checks.py
+.venv/bin/python scripts/check_paper_build.py
+git diff --check
+git status --short
+```
+
+For final paper packaging, also run TeX compilation on a machine with
+`latexmk`, `pdflatex`, and `kpsewhich` installed:
+
+```bash
+.venv/bin/python scripts/check_paper_build.py --compile --require-tex --output-dir paper/build
+```
+
+## Manual Review Gates
+
+- Confirm that no key-like strings are staged:
+  `sk-`, `sk-proj-`, `KGAT_`, `OPENAI_API_KEY=`, `ANTHROPIC_API_KEY=`,
+  `XAI_API_KEY=`, `GIGACHAT_AUTH_KEY=`, `GEMINI_API_KEY=`.
+- Confirm that no raw CURE-OR archives or image payloads are staged.
+- Confirm that raw provider JSONL files are not staged.
+- Confirm that provider summaries do not expose account identifiers,
+  credentials, or private absolute image paths.
+- Confirm that paper text distinguishes:
+  open-weight rows, hosted-provider rows, raw data access, and aggregate
+  artifacts.
+- Confirm that limitations explicitly mention small real-transfer v0.2 size,
+  provider versioning, and incomplete frontier-provider coverage.
+- Confirm that dataset and evaluation cards match the actual public package.
+
+## Publication Blocking Items
+
+These should be resolved before a final arXiv or workshop submission:
+
+- Final citation verification for related work and CURE-OR source references.
+- Local TeX compile with required tools installed.
+- Final data availability statement matching the selected release channel.
+- License review for any public dataset/package beyond code and aggregate
+  reports.
+- Final author/affiliation metadata.
+
+## Non-Blocking Future Extensions
+
+These are useful but not required for the current serious draft:
+
+- Gemini or Mistral hosted-provider row.
+- Additional provider repeatability runs beyond xAI Grok 4.3 v0.3 repeat.
+- Larger real-transfer v0.3/v0.4 collection.
+- Broader confidence/calibration coverage for non-CLIP rows.
+- Public interactive notebook with lightweight visual examples.
+
+## Current Recommendation
+
+Proceed toward a polished arXiv/workshop-style draft using the current evidence
+package. Do not expand the model matrix further unless the paper narrative
+specifically needs another provider family. The highest-return work is now
+paper clarity, release boundary discipline, final citations, and reproducible
+packaging.
