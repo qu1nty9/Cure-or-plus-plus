@@ -1,0 +1,2 @@
+model_id,provider,model_version,clean_n,clean_accuracy,clean_unparseable_rate,clean_abstention_rate,real_n,real_accuracy,real_unparseable_rate,real_abstention_rate,accuracy_drop_vs_clean
+grok-4.3,xai,,100,0.990000,0.000000,0.000000,800,0.978750,0.000000,0.000000,0.011250

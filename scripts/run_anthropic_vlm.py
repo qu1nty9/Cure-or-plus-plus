@@ -36,6 +36,11 @@ def main() -> int:
     parser.add_argument("--anthropic-version", default="2023-06-01")
     parser.add_argument("--env-file", help="Optional local KEY=VALUE env file, for example .secrets/anthropic.env.")
     parser.add_argument("--temperature", type=float, default=0.0)
+    parser.add_argument(
+        "--omit-temperature",
+        action="store_true",
+        help="Do not send a temperature parameter. Some Claude models reject it.",
+    )
     parser.add_argument("--max-tokens", type=int, default=8)
     parser.add_argument("--timeout", type=float, default=90.0)
     parser.add_argument("--retries", type=int, default=3)
@@ -168,7 +173,6 @@ def build_payload(row: dict, args: argparse.Namespace, image_path: Path) -> dict
     payload = {
         "model": args.model,
         "max_tokens": args.max_tokens,
-        "temperature": args.temperature,
         "messages": [
             {
                 "role": "user",
@@ -186,6 +190,8 @@ def build_payload(row: dict, args: argparse.Namespace, image_path: Path) -> dict
             }
         ],
     }
+    if not args.omit_temperature:
+        payload["temperature"] = args.temperature
     if args.system_prompt:
         payload["system"] = args.system_prompt
     return payload
@@ -219,7 +225,7 @@ def post_json(
             last_error = RuntimeError(f"HTTP {error.code}: {response_body[:2000]}")
             if error.code not in RETRYABLE_STATUS_CODES or attempt >= retries:
                 raise last_error
-        except urllib.error.URLError as error:
+        except (TimeoutError, urllib.error.URLError, OSError) as error:
             last_error = error
             if attempt >= retries:
                 raise RuntimeError(f"Request failed: {error}") from error

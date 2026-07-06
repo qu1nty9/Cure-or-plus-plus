@@ -1,5 +1,5 @@
 {
-  "check_count": 466,
+  "check_count": 622,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -27,18 +27,33 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=1047 min_size=1",
+      "detail": "exists=True size=2525 min_size=1",
       "name": "required_file:reports/vlm_provider_full_v01_comparison.csv",
       "passed": true
     },
     {
-      "detail": "exists=True size=1402 min_size=1",
+      "detail": "exists=True size=2385 min_size=1",
       "name": "required_file:reports/vlm_provider_full_v01_comparison.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=543 min_size=1",
+      "detail": "exists=True size=1062 min_size=1",
       "name": "required_file:reports/vlm_provider_full_v01_comparison.tex",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=604 min_size=1",
+      "name": "required_file:reports/vlm_provider_full_v03_comparison.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1130 min_size=1",
+      "name": "required_file:reports/vlm_provider_full_v03_comparison.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=362 min_size=1",
+      "name": "required_file:reports/vlm_provider_full_v03_comparison.tex",
       "passed": true
     },
     {
@@ -117,6 +132,156 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=2174 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=285 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=569 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=923 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=31137 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2082 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_fable_5_full_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=283 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_fable_5_full_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=560 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_fable_5_full_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=911 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_fable_5_full_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=30920 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_fable_5_full_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1836 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=295 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=598 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1022 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=33239 min_size=1",
+      "name": "required_file:reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2200 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=272 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=529 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=792 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=28622 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v01/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2292 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=272 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=639 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=802 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=120895 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03/audit.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1968 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/summary.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=273 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/model_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=642 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/recipe_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=803 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/label_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=121171 min_size=1",
+      "name": "required_file:reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/audit.csv",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=7962 min_size=1",
       "name": "required_file:reports/real_transfer_v02_results.md",
       "passed": true
@@ -182,7 +347,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=18020 min_size=1",
+      "detail": "exists=True size=20041 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -197,7 +362,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6798 min_size=1",
+      "detail": "exists=True size=7955 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },
@@ -212,7 +377,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=5596 min_size=1",
+      "detail": "exists=True size=9290 min_size=1",
       "name": "required_file:configs/vlm_frontier_provider_matrix_v01.json",
       "passed": true
     },
@@ -232,7 +397,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7194 min_size=1",
+      "detail": "exists=True size=10266 min_size=1",
       "name": "required_file:docs/vlm_frontier_provider_block_v01.md",
       "passed": true
     },
@@ -1027,8 +1192,13 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=13839 min_size=1",
+      "detail": "exists=True size=14080 min_size=1",
       "name": "required_file:scripts/run_anthropic_vlm.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=20009 min_size=1",
+      "name": "required_file:scripts/run_gigachat_vlm.py",
       "passed": true
     },
     {
@@ -1054,6 +1224,11 @@
     {
       "detail": "exists=True size=10651 min_size=1",
       "name": "required_file:scripts/build_vlm_provider_comparison.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=10398 min_size=1",
+      "name": "required_file:scripts/build_vlm_provider_v03_comparison.py",
       "passed": true
     },
     {
@@ -2277,8 +2452,533 @@
       "passed": true
     },
     {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_summary_rows",
+      "passed": true
+    },
+    {
       "detail": "rows=3 expected=3",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=30 expected=30",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=180 expected=180",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.933333 expected=0.933333",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.961111 expected=0.961111",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.983333 expected=0.983333",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=2 expected=2",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=7 expected=7",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_anthropic_claude_sonnet5_full_v01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=30 expected=30",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=180 expected=180",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.961111 expected=0.961111",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.033333 real=0.005556 expected=0.033333/0.005556",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=1 expected=1",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=7 expected=7",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=2 expected=2",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_anthropic_claude_fable5_full_v01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=30 expected=30",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=180 expected=180",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.933333 expected=0.933333",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.933333 expected=0.933333",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=2 expected=2",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=9 expected=9",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_anthropic_claude_haiku45_full_v01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_xai_grok43_full_v01_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=3 expected=3",
+      "name": "vlm_provider_xai_grok43_full_v01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_xai_grok43_full_v01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=210 expected=210",
+      "name": "vlm_provider_xai_grok43_full_v01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=30 expected=30",
+      "name": "vlm_provider_xai_grok43_full_v01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=180 expected=180",
+      "name": "vlm_provider_xai_grok43_full_v01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_xai_grok43_full_v01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.983333 expected=0.983333",
+      "name": "vlm_provider_xai_grok43_full_v01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=1.000000 expected=1.0",
+      "name": "vlm_provider_xai_grok43_full_v01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.966667 expected=0.966667",
+      "name": "vlm_provider_xai_grok43_full_v01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.983333 expected=0.983333",
+      "name": "vlm_provider_xai_grok43_full_v01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=1 expected=1",
+      "name": "vlm_provider_xai_grok43_full_v01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=3 expected=3",
+      "name": "vlm_provider_xai_grok43_full_v01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_xai_grok43_full_v03_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "vlm_provider_xai_grok43_full_v03_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_xai_grok43_full_v03_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_provider_xai_grok43_full_v03_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=100 expected=100",
+      "name": "vlm_provider_xai_grok43_full_v03_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=800 expected=800",
+      "name": "vlm_provider_xai_grok43_full_v03_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.990000 expected=0.99",
+      "name": "vlm_provider_xai_grok43_full_v03_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.978750 expected=0.97875",
+      "name": "vlm_provider_xai_grok43_full_v03_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.995000 expected=0.995",
+      "name": "vlm_provider_xai_grok43_full_v03_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.980000 expected=0.98",
+      "name": "vlm_provider_xai_grok43_full_v03_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.990000 expected=0.99",
+      "name": "vlm_provider_xai_grok43_full_v03_social_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.950000 expected=0.95",
+      "name": "vlm_provider_xai_grok43_full_v03_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=1 expected=1",
+      "name": "vlm_provider_xai_grok43_full_v03_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=17 expected=17",
+      "name": "vlm_provider_xai_grok43_full_v03_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_summary_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=4 expected=4",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_recipe_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=10 expected=10",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_label_rows",
+      "passed": true
+    },
+    {
+      "detail": "rows=900 expected=900",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_audit_rows",
+      "passed": true
+    },
+    {
+      "detail": "clean_n=100 expected=100",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_clean_n",
+      "passed": true
+    },
+    {
+      "detail": "real_n=800 expected=800",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_real_n",
+      "passed": true
+    },
+    {
+      "detail": "clean_accuracy=0.970000 expected=0.97",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_clean_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.978750 expected=0.97875",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_unparseable_rate",
+      "passed": true
+    },
+    {
+      "detail": "clean=0.000000 real=0.000000 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_abstention_rate",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.990000 expected=0.99",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_whatsapp_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.980000 expected=0.98",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_screenshot_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.990000 expected=0.99",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_social_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "accuracy=0.955000 expected=0.955",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_video_call_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "clean_errors=3 expected=3",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_clean_errors",
+      "passed": true
+    },
+    {
+      "detail": "real_errors=17 expected=17",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_real_errors",
+      "passed": true
+    },
+    {
+      "detail": "unparseable=0 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_audit_unparseable",
+      "passed": true
+    },
+    {
+      "detail": "abstentions=0 expected=0",
+      "name": "vlm_provider_xai_grok43_full_v03_repeat01_audit_abstentions",
+      "passed": true
+    },
+    {
+      "detail": "rows=9 expected=9",
       "name": "vlm_provider_comparison_v01_rows",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.98333 expected=0.98333",
+      "name": "vlm_provider_comparison_v01_grok_real_accuracy",
       "passed": true
     },
     {
@@ -2297,13 +2997,58 @@
       "passed": true
     },
     {
-      "detail": "hardest_pipeline=['video_call_frame_capture', 'phone_screenshot_resave', 'video_call_frame_capture'] expected known OpenAI provider pipelines",
+      "detail": "real_accuracy=0.96111 expected=0.96111",
+      "name": "vlm_provider_comparison_v01_claude_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.96111 expected=0.96111",
+      "name": "vlm_provider_comparison_v01_fable_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.95000 expected=0.95",
+      "name": "vlm_provider_comparison_v01_haiku_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.87778 expected=0.87778",
+      "name": "vlm_provider_comparison_v01_gigachat_max_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.87778 expected=0.87778",
+      "name": "vlm_provider_comparison_v01_gigachat_pro_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "hardest_pipeline=['phone_screenshot_resave', 'video_call_frame_capture', 'messenger_upload_download', 'video_call_frame_capture', 'phone_screenshot_resave', 'video_call_frame_capture', 'video_call_frame_capture', 'video_call_frame_capture', 'video_call_frame_capture'] expected known OpenAI provider pipelines",
       "name": "vlm_provider_comparison_v01_openai_hardest_pipeline",
       "passed": true
     },
     {
-      "detail": "hardest_label=['calcium_bottle', 'calcium_bottle', 'calcium_bottle'] expected=calcium_bottle",
+      "detail": "hardest_label=['lg_cell_phone', 'calcium_bottle', 'calcium_bottle', 'calcium_bottle', 'calcium_bottle', 'calcium_bottle', 'calcium_bottle', 'canon_camera', 'canon_camera'] expected=calcium_bottle",
       "name": "vlm_provider_comparison_v01_openai_hardest_label",
+      "passed": true
+    },
+    {
+      "detail": "hardest_label=calcium_bottle expected=calcium_bottle",
+      "name": "vlm_provider_comparison_v01_claude_hardest_label",
+      "passed": true
+    },
+    {
+      "detail": "hardest_label fable=calcium_bottle haiku=calcium_bottle expected=calcium_bottle",
+      "name": "vlm_provider_comparison_v01_anthropic_hardest_label",
+      "passed": true
+    },
+    {
+      "detail": "hardest_label=lg_cell_phone expected=lg_cell_phone",
+      "name": "vlm_provider_comparison_v01_grok_hardest_label",
+      "passed": true
+    },
+    {
+      "detail": "hardest_label max=canon_camera pro=canon_camera expected=canon_camera",
+      "name": "vlm_provider_comparison_v01_gigachat_hardest_label",
       "passed": true
     },
     {
@@ -2319,6 +3064,41 @@
     {
       "detail": "paper/main.tex does not input provider VLM table",
       "name": "vlm_provider_comparison_v01_paper_input",
+      "passed": true
+    },
+    {
+      "detail": "rows=1 expected=1",
+      "name": "vlm_provider_comparison_v03_rows",
+      "passed": true
+    },
+    {
+      "detail": "real_accuracy=0.97875 expected=0.97875",
+      "name": "vlm_provider_comparison_v03_grok_real_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "video_call_frame_capture_accuracy=0.95000 expected=0.95",
+      "name": "vlm_provider_comparison_v03_grok_video_accuracy",
+      "passed": true
+    },
+    {
+      "detail": "hardest_label=toy expected=toy",
+      "name": "vlm_provider_comparison_v03_grok_hardest_label",
+      "passed": true
+    },
+    {
+      "detail": "missing expected model/result in markdown comparison",
+      "name": "vlm_provider_comparison_v03_markdown",
+      "passed": true
+    },
+    {
+      "detail": "missing latex table label",
+      "name": "vlm_provider_comparison_v03_latex_label",
+      "passed": true
+    },
+    {
+      "detail": "paper/main.tex does not input provider VLM v0.3 table",
+      "name": "vlm_provider_comparison_v03_paper_input",
       "passed": true
     },
     {

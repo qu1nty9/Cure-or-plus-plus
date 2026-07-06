@@ -19,6 +19,9 @@ REQUIRED_FILES = [
     "reports/vlm_provider_full_v01_comparison.csv",
     "reports/vlm_provider_full_v01_comparison.md",
     "reports/vlm_provider_full_v01_comparison.tex",
+    "reports/vlm_provider_full_v03_comparison.csv",
+    "reports/vlm_provider_full_v03_comparison.md",
+    "reports/vlm_provider_full_v03_comparison.tex",
     "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/summary.md",
     "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/model_summary.csv",
     "reports/vlm_provider_openai_gpt_5_4_mini_full_v01/recipe_table.csv",
@@ -34,6 +37,36 @@ REQUIRED_FILES = [
     "reports/vlm_provider_openai_gpt_5_5_full_v01/recipe_table.csv",
     "reports/vlm_provider_openai_gpt_5_5_full_v01/label_table.csv",
     "reports/vlm_provider_openai_gpt_5_5_full_v01/audit.csv",
+    "reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/summary.md",
+    "reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/model_summary.csv",
+    "reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/recipe_table.csv",
+    "reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/label_table.csv",
+    "reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/audit.csv",
+    "reports/vlm_provider_anthropic_claude_fable_5_full_v01/summary.md",
+    "reports/vlm_provider_anthropic_claude_fable_5_full_v01/model_summary.csv",
+    "reports/vlm_provider_anthropic_claude_fable_5_full_v01/recipe_table.csv",
+    "reports/vlm_provider_anthropic_claude_fable_5_full_v01/label_table.csv",
+    "reports/vlm_provider_anthropic_claude_fable_5_full_v01/audit.csv",
+    "reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/summary.md",
+    "reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/model_summary.csv",
+    "reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/recipe_table.csv",
+    "reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/label_table.csv",
+    "reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/audit.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v01/summary.md",
+    "reports/vlm_provider_xai_grok_4_3_full_v01/model_summary.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v01/recipe_table.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v01/label_table.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v01/audit.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03/summary.md",
+    "reports/vlm_provider_xai_grok_4_3_full_v03/model_summary.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03/recipe_table.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03/label_table.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03/audit.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/summary.md",
+    "reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/model_summary.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/recipe_table.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/label_table.csv",
+    "reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/audit.csv",
     "reports/real_transfer_v02_results.md",
     "reports/real_transfer_v02_model_pipeline_table.csv",
     "reports/real_transfer_v02_pipeline_consensus_table.csv",
@@ -217,11 +250,13 @@ REQUIRED_FILES = [
     "scripts/run_openai_compatible_vlm.py",
     "scripts/run_gemini_vlm.py",
     "scripts/run_anthropic_vlm.py",
+    "scripts/run_gigachat_vlm.py",
     "scripts/run_hf_vlm.py",
     "scripts/integrate_kaggle_vlm_output.py",
     "scripts/build_vlm_open_weight_full_comparison.py",
     "scripts/build_vlm_paper_tables.py",
     "scripts/build_vlm_provider_comparison.py",
+    "scripts/build_vlm_provider_v03_comparison.py",
     "scripts/merge_vlm_response_retries.py",
     "scripts/prepare_kaggle_vlm_full_run.py",
     "scripts/evaluate_vlm_response_pack.py",
@@ -292,7 +327,14 @@ def main() -> int:
     checks.extend(check_vlm_provider_openai_full_v01())
     checks.extend(check_vlm_provider_openai_gpt54_full_v01())
     checks.extend(check_vlm_provider_openai_gpt55_full_v01())
+    checks.extend(check_vlm_provider_anthropic_claude_sonnet5_full_v01())
+    checks.extend(check_vlm_provider_anthropic_claude_fable5_full_v01())
+    checks.extend(check_vlm_provider_anthropic_claude_haiku45_full_v01())
+    checks.extend(check_vlm_provider_xai_grok43_full_v01())
+    checks.extend(check_vlm_provider_xai_grok43_full_v03())
+    checks.extend(check_vlm_provider_xai_grok43_full_v03_repeat_01())
     checks.extend(check_vlm_provider_comparison_v01())
+    checks.extend(check_vlm_provider_comparison_v03())
     checks.extend(check_forbidden_public_strings())
 
     failed = [check for check in checks if not check["passed"]]
@@ -1657,6 +1699,494 @@ def check_vlm_provider_openai_gpt55_full_v01() -> list[dict]:
     return checks
 
 
+def check_vlm_provider_anthropic_claude_sonnet5_full_v01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_anthropic_claude_sonnet_5_full_v01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check(
+            "vlm_provider_anthropic_claude_sonnet5_full_v01_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_anthropic_claude_sonnet5_full_v01_recipe_rows",
+            len(recipe_rows) == 3,
+            f"rows={len(recipe_rows)} expected=3",
+        ),
+        check(
+            "vlm_provider_anthropic_claude_sonnet5_full_v01_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_provider_anthropic_claude_sonnet5_full_v01_audit_rows",
+            len(audit_rows) == 210,
+            f"rows={len(audit_rows)} expected=210",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_provider_anthropic_claude_sonnet5_full_v01_clean_n",
+                row.get("clean_n") == "30",
+                f"clean_n={row.get('clean_n')} expected=30",
+            ),
+            check(
+                "vlm_provider_anthropic_claude_sonnet5_full_v01_real_n",
+                row.get("real_n") == "180",
+                f"real_n={row.get('real_n')} expected=180",
+            ),
+            check(
+                "vlm_provider_anthropic_claude_sonnet5_full_v01_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.933333, tolerance=1e-6),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.933333",
+            ),
+            check(
+                "vlm_provider_anthropic_claude_sonnet5_full_v01_real_accuracy",
+                approx(row.get("real_accuracy"), 0.961111, tolerance=1e-6),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.961111",
+            ),
+            check(
+                "vlm_provider_anthropic_claude_sonnet5_full_v01_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+            check(
+                "vlm_provider_anthropic_claude_sonnet5_full_v01_abstention_rate",
+                approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0),
+                f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check(
+            "vlm_provider_anthropic_claude_sonnet5_full_v01_whatsapp_accuracy",
+            approx(recipe_accuracy.get("messenger_upload_download"), 0.95),
+            f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.95",
+        ),
+        check(
+            "vlm_provider_anthropic_claude_sonnet5_full_v01_screenshot_accuracy",
+            approx(recipe_accuracy.get("phone_screenshot_resave"), 0.983333, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.983333",
+        ),
+        check(
+            "vlm_provider_anthropic_claude_sonnet5_full_v01_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.95),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.95",
+        ),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_anthropic_claude_sonnet5_full_v01_clean_errors", clean_errors == 2, f"clean_errors={clean_errors} expected=2"),
+        check("vlm_provider_anthropic_claude_sonnet5_full_v01_real_errors", real_errors == 7, f"real_errors={real_errors} expected=7"),
+        check("vlm_provider_anthropic_claude_sonnet5_full_v01_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_anthropic_claude_sonnet5_full_v01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_anthropic_claude_fable5_full_v01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_anthropic_claude_fable_5_full_v01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check("vlm_provider_anthropic_claude_fable5_full_v01_summary_rows", len(summary_rows) == 1, f"rows={len(summary_rows)} expected=1"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_recipe_rows", len(recipe_rows) == 3, f"rows={len(recipe_rows)} expected=3"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_label_rows", len(label_rows) == 10, f"rows={len(label_rows)} expected=10"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_audit_rows", len(audit_rows) == 210, f"rows={len(audit_rows)} expected=210"),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check("vlm_provider_anthropic_claude_fable5_full_v01_clean_n", row.get("clean_n") == "30", f"clean_n={row.get('clean_n')} expected=30"),
+            check("vlm_provider_anthropic_claude_fable5_full_v01_real_n", row.get("real_n") == "180", f"real_n={row.get('real_n')} expected=180"),
+            check("vlm_provider_anthropic_claude_fable5_full_v01_clean_accuracy", approx(row.get("clean_accuracy"), 0.966667, tolerance=1e-6), f"clean_accuracy={row.get('clean_accuracy')} expected=0.966667"),
+            check("vlm_provider_anthropic_claude_fable5_full_v01_real_accuracy", approx(row.get("real_accuracy"), 0.961111, tolerance=1e-6), f"real_accuracy={row.get('real_accuracy')} expected=0.961111"),
+            check("vlm_provider_anthropic_claude_fable5_full_v01_unparseable_rate", approx(row.get("clean_unparseable_rate"), 0.033333, tolerance=1e-6) and approx(row.get("real_unparseable_rate"), 0.005556, tolerance=1e-6), f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0.033333/0.005556"),
+            check("vlm_provider_anthropic_claude_fable5_full_v01_abstention_rate", approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0), f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0"),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check("vlm_provider_anthropic_claude_fable5_full_v01_whatsapp_accuracy", approx(recipe_accuracy.get("messenger_upload_download"), 0.966667, tolerance=1e-6), f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.966667"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_screenshot_accuracy", approx(recipe_accuracy.get("phone_screenshot_resave"), 0.966667, tolerance=1e-6), f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.966667"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_video_call_accuracy", approx(recipe_accuracy.get("video_call_frame_capture"), 0.95), f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.95"),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_anthropic_claude_fable5_full_v01_clean_errors", clean_errors == 1, f"clean_errors={clean_errors} expected=1"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_real_errors", real_errors == 7, f"real_errors={real_errors} expected=7"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_audit_unparseable", unparseable == 2, f"unparseable={unparseable} expected=2"),
+        check("vlm_provider_anthropic_claude_fable5_full_v01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_anthropic_claude_haiku45_full_v01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_summary_rows", len(summary_rows) == 1, f"rows={len(summary_rows)} expected=1"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_recipe_rows", len(recipe_rows) == 3, f"rows={len(recipe_rows)} expected=3"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_label_rows", len(label_rows) == 10, f"rows={len(label_rows)} expected=10"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_audit_rows", len(audit_rows) == 210, f"rows={len(audit_rows)} expected=210"),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check("vlm_provider_anthropic_claude_haiku45_full_v01_clean_n", row.get("clean_n") == "30", f"clean_n={row.get('clean_n')} expected=30"),
+            check("vlm_provider_anthropic_claude_haiku45_full_v01_real_n", row.get("real_n") == "180", f"real_n={row.get('real_n')} expected=180"),
+            check("vlm_provider_anthropic_claude_haiku45_full_v01_clean_accuracy", approx(row.get("clean_accuracy"), 0.933333, tolerance=1e-6), f"clean_accuracy={row.get('clean_accuracy')} expected=0.933333"),
+            check("vlm_provider_anthropic_claude_haiku45_full_v01_real_accuracy", approx(row.get("real_accuracy"), 0.95), f"real_accuracy={row.get('real_accuracy')} expected=0.95"),
+            check("vlm_provider_anthropic_claude_haiku45_full_v01_unparseable_rate", approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0), f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0"),
+            check("vlm_provider_anthropic_claude_haiku45_full_v01_abstention_rate", approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0), f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0"),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_whatsapp_accuracy", approx(recipe_accuracy.get("messenger_upload_download"), 0.95), f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.95"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_screenshot_accuracy", approx(recipe_accuracy.get("phone_screenshot_resave"), 0.966667, tolerance=1e-6), f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.966667"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_video_call_accuracy", approx(recipe_accuracy.get("video_call_frame_capture"), 0.933333, tolerance=1e-6), f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.933333"),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_clean_errors", clean_errors == 2, f"clean_errors={clean_errors} expected=2"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_real_errors", real_errors == 9, f"real_errors={real_errors} expected=9"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_anthropic_claude_haiku45_full_v01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_xai_grok43_full_v01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_xai_grok_4_3_full_v01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check(
+            "vlm_provider_xai_grok43_full_v01_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v01_recipe_rows",
+            len(recipe_rows) == 3,
+            f"rows={len(recipe_rows)} expected=3",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v01_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v01_audit_rows",
+            len(audit_rows) == 210,
+            f"rows={len(audit_rows)} expected=210",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_provider_xai_grok43_full_v01_clean_n",
+                row.get("clean_n") == "30",
+                f"clean_n={row.get('clean_n')} expected=30",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v01_real_n",
+                row.get("real_n") == "180",
+                f"real_n={row.get('real_n')} expected=180",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v01_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.966667, tolerance=1e-6),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.966667",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v01_real_accuracy",
+                approx(row.get("real_accuracy"), 0.983333, tolerance=1e-6),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.983333",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v01_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v01_abstention_rate",
+                approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0),
+                f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check(
+            "vlm_provider_xai_grok43_full_v01_whatsapp_accuracy",
+            approx(recipe_accuracy.get("messenger_upload_download"), 1.0),
+            f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=1.0",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v01_screenshot_accuracy",
+            approx(recipe_accuracy.get("phone_screenshot_resave"), 0.966667, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.966667",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v01_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.983333, tolerance=1e-6),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.983333",
+        ),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_xai_grok43_full_v01_clean_errors", clean_errors == 1, f"clean_errors={clean_errors} expected=1"),
+        check("vlm_provider_xai_grok43_full_v01_real_errors", real_errors == 3, f"real_errors={real_errors} expected=3"),
+        check("vlm_provider_xai_grok43_full_v01_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_xai_grok43_full_v01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_xai_grok43_full_v03() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_xai_grok_4_3_full_v03")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check(
+            "vlm_provider_xai_grok43_full_v03_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_recipe_rows",
+            len(recipe_rows) == 4,
+            f"rows={len(recipe_rows)} expected=4",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_audit_rows",
+            len(audit_rows) == 900,
+            f"rows={len(audit_rows)} expected=900",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_provider_xai_grok43_full_v03_clean_n",
+                row.get("clean_n") == "100",
+                f"clean_n={row.get('clean_n')} expected=100",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_real_n",
+                row.get("real_n") == "800",
+                f"real_n={row.get('real_n')} expected=800",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.99),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.99",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_real_accuracy",
+                approx(row.get("real_accuracy"), 0.97875),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.97875",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_abstention_rate",
+                approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0),
+                f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check(
+            "vlm_provider_xai_grok43_full_v03_whatsapp_accuracy",
+            approx(recipe_accuracy.get("messenger_upload_download"), 0.995),
+            f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.995",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_screenshot_accuracy",
+            approx(recipe_accuracy.get("phone_screenshot_resave"), 0.98),
+            f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.98",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_social_accuracy",
+            approx(recipe_accuracy.get("social_app_resave"), 0.99),
+            f"accuracy={recipe_accuracy.get('social_app_resave')} expected=0.99",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.95),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.95",
+        ),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_xai_grok43_full_v03_clean_errors", clean_errors == 1, f"clean_errors={clean_errors} expected=1"),
+        check("vlm_provider_xai_grok43_full_v03_real_errors", real_errors == 17, f"real_errors={real_errors} expected=17"),
+        check("vlm_provider_xai_grok43_full_v03_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_xai_grok43_full_v03_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
+def check_vlm_provider_xai_grok43_full_v03_repeat_01() -> list[dict]:
+    base = resolve_project_path("reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01")
+    summary_rows = load_csv(base / "model_summary.csv")
+    recipe_rows = load_csv(base / "recipe_table.csv")
+    label_rows = load_csv(base / "label_table.csv")
+    audit_rows = load_csv(base / "audit.csv")
+
+    checks = [
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_summary_rows",
+            len(summary_rows) == 1,
+            f"rows={len(summary_rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_recipe_rows",
+            len(recipe_rows) == 4,
+            f"rows={len(recipe_rows)} expected=4",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_label_rows",
+            len(label_rows) == 10,
+            f"rows={len(label_rows)} expected=10",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_audit_rows",
+            len(audit_rows) == 900,
+            f"rows={len(audit_rows)} expected=900",
+        ),
+    ]
+
+    if summary_rows:
+        row = summary_rows[0]
+        checks.extend([
+            check(
+                "vlm_provider_xai_grok43_full_v03_repeat01_clean_n",
+                row.get("clean_n") == "100",
+                f"clean_n={row.get('clean_n')} expected=100",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_repeat01_real_n",
+                row.get("real_n") == "800",
+                f"real_n={row.get('real_n')} expected=800",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_repeat01_clean_accuracy",
+                approx(row.get("clean_accuracy"), 0.97),
+                f"clean_accuracy={row.get('clean_accuracy')} expected=0.97",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_repeat01_real_accuracy",
+                approx(row.get("real_accuracy"), 0.97875),
+                f"real_accuracy={row.get('real_accuracy')} expected=0.97875",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_repeat01_unparseable_rate",
+                approx(row.get("real_unparseable_rate"), 0.0) and approx(row.get("clean_unparseable_rate"), 0.0),
+                f"clean={row.get('clean_unparseable_rate')} real={row.get('real_unparseable_rate')} expected=0",
+            ),
+            check(
+                "vlm_provider_xai_grok43_full_v03_repeat01_abstention_rate",
+                approx(row.get("real_abstention_rate"), 0.0) and approx(row.get("clean_abstention_rate"), 0.0),
+                f"clean={row.get('clean_abstention_rate')} real={row.get('real_abstention_rate')} expected=0",
+            ),
+        ])
+
+    recipe_accuracy = {row.get("recipe"): row.get("accuracy") for row in recipe_rows}
+    checks.extend([
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_whatsapp_accuracy",
+            approx(recipe_accuracy.get("messenger_upload_download"), 0.99),
+            f"accuracy={recipe_accuracy.get('messenger_upload_download')} expected=0.99",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_screenshot_accuracy",
+            approx(recipe_accuracy.get("phone_screenshot_resave"), 0.98),
+            f"accuracy={recipe_accuracy.get('phone_screenshot_resave')} expected=0.98",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_social_accuracy",
+            approx(recipe_accuracy.get("social_app_resave"), 0.99),
+            f"accuracy={recipe_accuracy.get('social_app_resave')} expected=0.99",
+        ),
+        check(
+            "vlm_provider_xai_grok43_full_v03_repeat01_video_call_accuracy",
+            approx(recipe_accuracy.get("video_call_frame_capture"), 0.955),
+            f"accuracy={recipe_accuracy.get('video_call_frame_capture')} expected=0.955",
+        ),
+    ])
+
+    clean_errors = sum(1 for row in audit_rows if row.get("family") == "clean" and row.get("is_correct") != "True")
+    real_errors = sum(1 for row in audit_rows if row.get("family") == "real_transfer" and row.get("is_correct") != "True")
+    unparseable = sum(1 for row in audit_rows if row.get("is_unparseable") == "True")
+    abstentions = sum(1 for row in audit_rows if row.get("is_abstention") == "True")
+    checks.extend([
+        check("vlm_provider_xai_grok43_full_v03_repeat01_clean_errors", clean_errors == 3, f"clean_errors={clean_errors} expected=3"),
+        check("vlm_provider_xai_grok43_full_v03_repeat01_real_errors", real_errors == 17, f"real_errors={real_errors} expected=17"),
+        check("vlm_provider_xai_grok43_full_v03_repeat01_audit_unparseable", unparseable == 0, f"unparseable={unparseable} expected=0"),
+        check("vlm_provider_xai_grok43_full_v03_repeat01_audit_abstentions", abstentions == 0, f"abstentions={abstentions} expected=0"),
+    ])
+    return checks
+
+
 def check_vlm_provider_comparison_v01() -> list[dict]:
     rows = load_csv(resolve_project_path("reports/vlm_provider_full_v01_comparison.csv"))
     markdown = resolve_project_path("reports/vlm_provider_full_v01_comparison.md").read_text(encoding="utf-8")
@@ -1666,11 +2196,22 @@ def check_vlm_provider_comparison_v01() -> list[dict]:
     mini = by_slug.get("openai_gpt_5_4_mini", {})
     gpt54 = by_slug.get("openai_gpt_5_4", {})
     flagship = by_slug.get("openai_gpt_5_5", {})
+    grok = by_slug.get("xai_grok_4_3", {})
+    claude = by_slug.get("anthropic_claude_sonnet_5", {})
+    fable = by_slug.get("anthropic_claude_fable_5", {})
+    haiku = by_slug.get("anthropic_claude_haiku_4_5", {})
+    gigachat_pro = by_slug.get("gigachat_2_pro", {})
+    gigachat_max = by_slug.get("gigachat_2_max", {})
     return [
         check(
             "vlm_provider_comparison_v01_rows",
-            len(rows) == 3,
-            f"rows={len(rows)} expected=3",
+            len(rows) == 9,
+            f"rows={len(rows)} expected=9",
+        ),
+        check(
+            "vlm_provider_comparison_v01_grok_real_accuracy",
+            approx(grok.get("real_accuracy"), 0.98333, tolerance=1e-5),
+            f"real_accuracy={grok.get('real_accuracy')} expected=0.98333",
         ),
         check(
             "vlm_provider_comparison_v01_openai_real_accuracy",
@@ -1688,6 +2229,31 @@ def check_vlm_provider_comparison_v01() -> list[dict]:
             f"real_accuracy={flagship.get('real_accuracy')} expected=0.95",
         ),
         check(
+            "vlm_provider_comparison_v01_claude_real_accuracy",
+            approx(claude.get("real_accuracy"), 0.96111, tolerance=1e-5),
+            f"real_accuracy={claude.get('real_accuracy')} expected=0.96111",
+        ),
+        check(
+            "vlm_provider_comparison_v01_fable_real_accuracy",
+            approx(fable.get("real_accuracy"), 0.96111, tolerance=1e-5),
+            f"real_accuracy={fable.get('real_accuracy')} expected=0.96111",
+        ),
+        check(
+            "vlm_provider_comparison_v01_haiku_real_accuracy",
+            approx(haiku.get("real_accuracy"), 0.95),
+            f"real_accuracy={haiku.get('real_accuracy')} expected=0.95",
+        ),
+        check(
+            "vlm_provider_comparison_v01_gigachat_max_real_accuracy",
+            approx(gigachat_max.get("real_accuracy"), 0.87778, tolerance=1e-5),
+            f"real_accuracy={gigachat_max.get('real_accuracy')} expected=0.87778",
+        ),
+        check(
+            "vlm_provider_comparison_v01_gigachat_pro_real_accuracy",
+            approx(gigachat_pro.get("real_accuracy"), 0.87778, tolerance=1e-5),
+            f"real_accuracy={gigachat_pro.get('real_accuracy')} expected=0.87778",
+        ),
+        check(
             "vlm_provider_comparison_v01_openai_hardest_pipeline",
             mini.get("hardest_pipeline") == "video_call_frame_capture"
             and gpt54.get("hardest_pipeline") in {"phone_screenshot_resave", "video_call_frame_capture"}
@@ -1702,13 +2268,43 @@ def check_vlm_provider_comparison_v01() -> list[dict]:
             f"hardest_label={[row.get('hardest_label') for row in rows]} expected=calcium_bottle",
         ),
         check(
+            "vlm_provider_comparison_v01_claude_hardest_label",
+            claude.get("hardest_label") == "calcium_bottle",
+            f"hardest_label={claude.get('hardest_label')} expected=calcium_bottle",
+        ),
+        check(
+            "vlm_provider_comparison_v01_anthropic_hardest_label",
+            fable.get("hardest_label") == "calcium_bottle"
+            and haiku.get("hardest_label") == "calcium_bottle",
+            f"hardest_label fable={fable.get('hardest_label')} haiku={haiku.get('hardest_label')} expected=calcium_bottle",
+        ),
+        check(
+            "vlm_provider_comparison_v01_grok_hardest_label",
+            grok.get("hardest_label") == "lg_cell_phone",
+            f"hardest_label={grok.get('hardest_label')} expected=lg_cell_phone",
+        ),
+        check(
+            "vlm_provider_comparison_v01_gigachat_hardest_label",
+            gigachat_max.get("hardest_label") == "canon_camera"
+            and gigachat_pro.get("hardest_label") == "canon_camera",
+            f"hardest_label max={gigachat_max.get('hardest_label')} pro={gigachat_pro.get('hardest_label')} expected=canon_camera",
+        ),
+        check(
             "vlm_provider_comparison_v01_markdown",
-            "OpenAI GPT-5.4-mini" in markdown
+            "xAI Grok 4.3" in markdown
+            and "OpenAI GPT-5.4-mini" in markdown
             and "OpenAI GPT-5.4" in markdown
             and "OpenAI GPT-5.5" in markdown
+            and "Anthropic Claude Sonnet 5" in markdown
+            and "Anthropic Claude Fable 5" in markdown
+            and "Anthropic Claude Haiku 4.5" in markdown
+            and "GigaChat 2 Pro" in markdown
+            and "GigaChat 2 Max" in markdown
+            and "0.9833" in markdown
             and "0.9611" in markdown
             and "0.9556" in markdown
-            and "0.9500" in markdown,
+            and "0.9500" in markdown
+            and "0.8778" in markdown,
             "missing expected model/result in markdown comparison",
         ),
         check(
@@ -1720,6 +2316,52 @@ def check_vlm_provider_comparison_v01() -> list[dict]:
             "vlm_provider_comparison_v01_paper_input",
             r"\input{../reports/vlm_provider_full_v01_comparison.tex}" in paper,
             "paper/main.tex does not input provider VLM table",
+        ),
+    ]
+
+
+def check_vlm_provider_comparison_v03() -> list[dict]:
+    rows = load_csv(resolve_project_path("reports/vlm_provider_full_v03_comparison.csv"))
+    markdown = resolve_project_path("reports/vlm_provider_full_v03_comparison.md").read_text(encoding="utf-8")
+    latex = resolve_project_path("reports/vlm_provider_full_v03_comparison.tex").read_text(encoding="utf-8")
+    paper = resolve_project_path("paper/main.tex").read_text(encoding="utf-8")
+    by_slug = {row.get("slug"): row for row in rows}
+    grok = by_slug.get("xai_grok_4_3", {})
+    return [
+        check(
+            "vlm_provider_comparison_v03_rows",
+            len(rows) == 1,
+            f"rows={len(rows)} expected=1",
+        ),
+        check(
+            "vlm_provider_comparison_v03_grok_real_accuracy",
+            approx(grok.get("real_accuracy"), 0.97875),
+            f"real_accuracy={grok.get('real_accuracy')} expected=0.97875",
+        ),
+        check(
+            "vlm_provider_comparison_v03_grok_video_accuracy",
+            approx(grok.get("video_call_frame_capture_accuracy"), 0.95),
+            f"video_call_frame_capture_accuracy={grok.get('video_call_frame_capture_accuracy')} expected=0.95",
+        ),
+        check(
+            "vlm_provider_comparison_v03_grok_hardest_label",
+            grok.get("hardest_label") == "toy",
+            f"hardest_label={grok.get('hardest_label')} expected=toy",
+        ),
+        check(
+            "vlm_provider_comparison_v03_markdown",
+            "xAI Grok 4.3" in markdown and "0.9788" in markdown and "video_call_frame_capture" in markdown,
+            "missing expected model/result in markdown comparison",
+        ),
+        check(
+            "vlm_provider_comparison_v03_latex_label",
+            r"\label{tab:vlm-provider-full-v03}" in latex,
+            "missing latex table label",
+        ),
+        check(
+            "vlm_provider_comparison_v03_paper_input",
+            r"\input{../reports/vlm_provider_full_v03_comparison.tex}" in paper,
+            "paper/main.tex does not input provider VLM v0.3 table",
         ),
     ]
 

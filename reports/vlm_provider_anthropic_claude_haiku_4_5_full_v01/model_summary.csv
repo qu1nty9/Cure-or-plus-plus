@@ -1,0 +1,2 @@
+model_id,provider,model_version,clean_n,clean_accuracy,clean_unparseable_rate,clean_abstention_rate,real_n,real_accuracy,real_unparseable_rate,real_abstention_rate,accuracy_drop_vs_clean
+claude-haiku-4-5-20251001,anthropic,,30,0.933333,0.000000,0.000000,180,0.950000,0.000000,0.000000,-0.016667

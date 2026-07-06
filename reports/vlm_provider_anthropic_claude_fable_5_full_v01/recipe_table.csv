@@ -1,0 +1,4 @@
+model_id,provider,model_version,recipe,n,accuracy,accuracy_ci_low,accuracy_ci_high,unparseable_rate,abstention_rate,accuracy_drop_vs_clean,accuracy_drop_ci_low,accuracy_drop_ci_high
+claude-fable-5,anthropic,,messenger_upload_download,60,0.966667,0.900000,1.000000,0.016667,0.000000,0.000000,0.000000,0.000000
+claude-fable-5,anthropic,,phone_screenshot_resave,60,0.966667,0.900000,1.000000,0.000000,0.000000,0.000000,0.000000,0.000000
+claude-fable-5,anthropic,,video_call_frame_capture,60,0.950000,0.866667,1.000000,0.000000,0.000000,0.016667,0.000000,0.050000

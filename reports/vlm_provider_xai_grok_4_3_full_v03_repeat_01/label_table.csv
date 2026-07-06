@@ -1,0 +1,11 @@
+model_id,provider,model_version,label,clean_n,clean_accuracy,real_n,real_accuracy,real_unparseable_rate,accuracy_drop_vs_clean
+grok-4.3,xai,,toy,10,0.800000,80,0.925000,0.000000,-0.125000
+grok-4.3,xai,,canon_camera,10,1.000000,80,0.937500,0.000000,0.062500
+grok-4.3,xai,,lg_cell_phone,10,0.900000,80,0.937500,0.000000,-0.037500
+grok-4.3,xai,,calcium_bottle,10,1.000000,80,0.987500,0.000000,0.012500
+grok-4.3,xai,,baseball,10,1.000000,80,1.000000,0.000000,0.000000
+grok-4.3,xai,,dymo_label_maker,10,1.000000,80,1.000000,0.000000,0.000000
+grok-4.3,xai,,hair_brush,10,1.000000,80,1.000000,0.000000,0.000000
+grok-4.3,xai,,pan,10,1.000000,80,1.000000,0.000000,0.000000
+grok-4.3,xai,,shoes,10,1.000000,80,1.000000,0.000000,0.000000
+grok-4.3,xai,,training_marker_cone,10,1.000000,80,1.000000,0.000000,0.000000

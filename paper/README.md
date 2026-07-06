@@ -4,7 +4,8 @@ This folder contains the working LaTeX scaffold for the serious CURE-OR++
 technical report. It is intentionally not final-publication ready yet: the
 current draft now includes Full-CURE-OR v0.4, real-transfer v0.2, eight
 210-row open-weight VLM prompt-pack rows, seven 900-row open-weight VLM v0.3
-extension rows, and three 210-row hosted-provider OpenAI VLM rows, but still needs
+extension rows, nine 210-row hosted-provider rows across OpenAI, xAI,
+Anthropic, and GigaChat, and one 900-row xAI Grok 4.3 provider row with a repeat run, but still needs
 final citation/license checks, venue formatting, and optional broader
 frontier/provider VLM coverage.
 
@@ -31,6 +32,7 @@ Inserted generated tables:
 
 - `reports/full_cure_or_paper_tables_v04.tex`
 - `reports/vlm_open_weight_full_v03_paper_table.tex`
+- `reports/vlm_provider_full_v03_comparison.tex`
 - `reports/vlm_provider_full_v01_comparison.tex`
 
 Inserted generated figures:

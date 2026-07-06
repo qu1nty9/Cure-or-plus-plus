@@ -25,10 +25,13 @@ Recommended first full rows after smoke:
 | done | OpenAI | `gpt-5.4-mini` | `scripts/run_openai_compatible_vlm.py` | Completed first hosted-provider row. |
 | done | OpenAI | `gpt-5.4` | `scripts/run_openai_compatible_vlm.py` | Completed middle OpenAI tier row. |
 | done | OpenAI | `gpt-5.5` | `scripts/run_openai_compatible_vlm.py` | Completed flagship OpenAI row with targeted retry/merge. |
+| done | xAI | `grok-4.3` | `scripts/run_openai_compatible_vlm.py` | Completed first non-OpenAI hosted-provider row. |
+| done | Anthropic | `claude-sonnet-5` | `scripts/run_anthropic_vlm.py` | Completed Claude row with omitted temperature and one targeted retry. |
+| done | Anthropic | `claude-fable-5` | `scripts/run_anthropic_vlm.py` | Completed strongest-accessible Claude row; two rows remain unparseable after retry. |
+| done | Anthropic | `claude-haiku-4-5-20251001` | `scripts/run_anthropic_vlm.py` | Completed low-cost Claude row with zero unparseable responses. |
 | 1 | Google | `gemini-3.5-flash` | `scripts/run_gemini_vlm.py` | Usually the best next cost/latency probe. |
-| 3 | xAI | `grok-4.3` | `scripts/run_openai_compatible_vlm.py` | Grok provider contrast through an OpenAI-compatible Responses endpoint. |
-| 4 | Anthropic | `claude-sonnet-4-6` | `scripts/run_anthropic_vlm.py` | Practical Claude frontier row. |
-| 6 | Anthropic | `claude-fable-5` | `scripts/run_anthropic_vlm.py` | Strongest Claude row if the account has access. |
+| done | GigaChat | `GigaChat-2-Pro` | `scripts/run_gigachat_vlm.py` | Completed within-provider GigaChat family ablation; predictions match `GigaChat-2-Max` on all rows. |
+| done | GigaChat | `GigaChat-2-Max` | `scripts/run_gigachat_vlm.py` | Regional provider row completed with the local Russian Trusted Root CA bundle. |
 
 Model names are intentionally kept in config rather than prose-only notes. If a
 provider changes access or aliases, update the matrix before running.
@@ -40,7 +43,7 @@ provider changes access or aliases, update the matrix before running.
 - OpenAI image-input docs show `input_image` examples for `gpt-5.5` and describe
   image detail behavior.
 - Anthropic docs list current Claude model IDs, including `claude-fable-5`,
-  `claude-opus-4-8`, `claude-sonnet-4-6`, and `claude-haiku-4-5`, and state that
+  `claude-opus-4-8`, `claude-sonnet-5`, and `claude-haiku-4-5`, and state that
   current Claude models support image input and vision.
 - Anthropic vision docs document base64 image blocks for the Messages API.
 - Google Gemini docs list current Gemini 3 models and give `gemini-3.5-flash`
@@ -48,6 +51,10 @@ provider changes access or aliases, update the matrix before running.
 - xAI docs list `grok-4.3`, document OpenAI SDK usage with
   `base_url=https://api.x.ai/v1`, and document image-input constraints for
   image-input models.
+- GigaChat docs document chat completions and file upload flows; the local
+  runner uses OAuth, image file upload, and chat attachments rather than an
+  OpenAI-compatible image URL payload. Local TLS verification requires
+  `certs/russian_trusted_root_ca.pem`.
 
 ## Completed Rows
 
@@ -56,6 +63,17 @@ provider changes access or aliases, update the matrix before running.
 | OpenAI | `gpt-5.4-mini` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9611 | 0.0000 | First completed hosted-provider row; hardest pipeline is FaceTime frame capture. |
 | OpenAI | `gpt-5.4` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9556 | 0.0000 | Middle OpenAI tier row; no parser failures or abstentions. |
 | OpenAI | `gpt-5.5` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9500 | 0.0000 | Flagship OpenAI row; targeted retries were needed because hidden reasoning consumed smaller output caps. |
+| xAI | `grok-4.3` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9833 | 0.0000 | First non-OpenAI provider row; run with `reasoning.effort=none` for stable one-letter outputs. |
+| Anthropic | `claude-sonnet-5` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9333 | 0.9611 | 0.0000 | First Claude provider row; temperature omitted and one max-token retry merged. |
+| Anthropic | `claude-fable-5` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9667 | 0.9611 | 0.0056 | Strongest-accessible Claude row; two rows remain unparseable after targeted retry. |
+| Anthropic | `claude-haiku-4-5-20251001` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9333 | 0.9500 | 0.0000 | Low-cost Claude row; zero unparseable responses at `max_tokens=16`. |
+| GigaChat | `GigaChat-2-Pro` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9000 | 0.8778 | 0.0000 | Within-provider GigaChat ablation; identical parsed predictions to `GigaChat-2-Max` on all 210 rows. |
+| GigaChat | `GigaChat-2-Max` | `reports/vlm_api_track_v01_prompt_pack.jsonl` | 0.9000 | 0.8778 | 0.0000 | Regional provider row; stable formatting but weaker object recognition, especially on camera/label-maker/brush/bottle labels. |
+
+Attempted but not promoted:
+
+- `GigaChat-2-Lite` returned provider error `404 No such model` before any
+  smoke row was written.
 
 ## Privacy Boundary
 
@@ -70,9 +88,11 @@ Rules:
   and one row from each v0.2 real-transfer pipeline;
 - use `temperature=0`;
 - omit `temperature` for hosted models that reject the parameter, including
-  the current GPT-5.4 and GPT-5.5 Responses API paths;
+  the current GPT-5.4, GPT-5.5, and Claude Sonnet 5 API paths;
 - use `reasoning.effort=low` for GPT-5.5 and allocate enough visible-output
   budget; a 16-token cap can be consumed entirely by hidden reasoning tokens;
+- use `reasoning.effort=none` for Grok 4.3 unless a future prompt requires
+  reasoning; this avoids hidden reasoning spend and improves format compliance;
 - use the shortest accepted output cap (`max_tokens=16` for OpenAI-compatible
   Responses providers; `8` remains acceptable where provider APIs allow it);
 - use `store=false` on Responses-compatible providers when supported;
@@ -116,10 +136,12 @@ Anthropic:
 ```bash
 .venv/bin/python scripts/run_anthropic_vlm.py \
   --prompt-pack reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl \
-  --env-file .secrets/anthropic.env \
+  --env-file secrets/anthropic.env \
   --provider anthropic \
-  --model claude-sonnet-4-6 \
-  --output reports/vlm_api_track_v01_responses_anthropic_claude_sonnet_4_6_smoke.jsonl \
+  --model claude-sonnet-5 \
+  --omit-temperature \
+  --max-tokens 16 \
+  --output reports/vlm_api_track_v01_responses_anthropic_claude_sonnet_5_smoke.jsonl \
   --limit 5
 ```
 
@@ -128,7 +150,7 @@ xAI:
 ```bash
 .venv/bin/python scripts/run_openai_compatible_vlm.py \
   --prompt-pack reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl \
-  --env-file .secrets/xai.env \
+  --env-file secrets/xai.env \
   --api-key-env XAI_API_KEY \
   --provider xai \
   --model grok-4.3 \
@@ -139,6 +161,25 @@ xAI:
   --output reports/vlm_api_track_v01_responses_xai_grok_4_3_smoke.jsonl \
   --limit 5
 ```
+
+GigaChat:
+
+```bash
+.venv/bin/python scripts/run_gigachat_vlm.py \
+  --prompt-pack reports/vlm_api_track_v01_mixed_smoke_prompt_pack.jsonl \
+  --env-file secrets/gigachat.env \
+  --provider gigachat \
+  --model GigaChat-2-Max \
+  --max-tokens 16 \
+  --cafile certs/russian_trusted_root_ca.pem \
+  --output reports/vlm_api_track_v01_responses_gigachat_2_max_smoke.jsonl \
+  --limit 5
+```
+
+If Python TLS verification fails on the GigaChat OAuth endpoint with a
+self-signed certificate-chain error, use `--cafile certs/russian_trusted_root_ca.pem`.
+Use `--insecure` only after explicit approval because it sends credentials and
+images without TLS certificate verification.
 
 Evaluate any smoke output:
 
@@ -162,10 +203,11 @@ Promote a provider/model to the 210-row full run only when:
 - the user approves cost and data transfer for that provider/model.
 
 For the first serious public paper, the minimum useful provider block is three
-full rows. Two OpenAI rows are now complete, so the remaining minimum is:
+full rows. Nine rows are now complete across OpenAI, xAI, Anthropic, and
+GigaChat, so the remaining high-value addition is:
 
 - one Gemini row;
-- one Claude or Grok row.
 
-The ideal provider block is five or six full rows: OpenAI flagship, OpenAI
-mini, Gemini, Claude Sonnet, Claude strongest-accessible, and Grok.
+The ideal provider block is now a broad multi-provider table: OpenAI flagship
+and mini, xAI Grok, multiple Anthropic tiers, Gemini, and one regional provider
+where image input is supported.
