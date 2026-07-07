@@ -2,21 +2,21 @@
 
 Status date: 2026-07-07.
 
-This document defines the route from the current `v0.4-preprint` GitHub release
-to the first public writeups and preprint submissions.
+This document defines the route from the current `v0.4.1` archival metadata
+release to the first public writeups and preprint submissions.
 
 ## Current Stable Public Anchor
 
 - Repository: `https://github.com/qu1nty9/Cure-or-plus-plus`
-- Release: `https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4-preprint`
-- Tag: `v0.4-preprint`
-- Release commit: `c1d404e`
-- Attached source package: `arxiv_source_v0.4_preprint.zip`
-- Attached PDF: `cure-or-pp-v0.4-preprint.pdf`
+- Release: `https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1`
+- Tag: `v0.4.1`
+- Release commit: see the GitHub release tag.
+- Attached source package: `arxiv_source_v0.4.1.zip`
+- Attached PDF: `cure-or-pp-v0.4.1.pdf`
 
 ## Already Done
 
-- GitHub release/tag exists and is marked as a pre-release.
+- GitHub `v0.4-preprint` release/tag exists and is marked as a pre-release.
 - PDF is built from the staged source package.
 - Staged source zip is attached to the GitHub release.
 - `scripts/run_release_checks.py` passes 632 checks with 0 failures.
@@ -29,11 +29,9 @@ to the first public writeups and preprint submissions.
 ## Remaining Before First Broad Public Push
 
 1. Archival DOI.
-   - Connect the GitHub repository to Zenodo or archive the release through
-     OSF/another stable archival service.
-   - Because `.zenodo.json` was added after `v0.4-preprint`, prefer publishing
-     a small follow-up release such as `v0.4.1` after Zenodo integration is
-     enabled, so the archived record includes the metadata file.
+   - Create the `v0.4.1` GitHub release after Zenodo integration is enabled,
+     so the archived record includes `.zenodo.json`.
+   - Wait for Zenodo or the selected archive to mint a DOI.
    - Record the DOI in `CITATION.cff`, `.zenodo.json`, `README.md`,
      `paper/main.tex`, `docs/github_release_notes_v0.4_preprint.md`, and the
      Kaggle writeup.
@@ -57,13 +55,14 @@ to the first public writeups and preprint submissions.
 
 ## Recommended Publication Order
 
-1. GitHub release/tag: done.
-2. Zenodo/OSF integration and DOI minting.
-3. DOI metadata patch release if required, for example `v0.4.1`.
-4. Kaggle notebook/writeup.
-5. arXiv/workshop-style preprint.
-6. Public posts and feedback collection.
-7. `v0.5` cleanup release based on feedback.
+1. GitHub `v0.4-preprint` release/tag: done.
+2. Zenodo/OSF integration: user-enabled.
+3. GitHub `v0.4.1` archival metadata release.
+4. DOI minting and DOI metadata patch release if required.
+5. Kaggle notebook/writeup.
+6. arXiv/workshop-style preprint.
+7. Public posts and feedback collection.
+8. `v0.5` cleanup release based on feedback.
 
 ## Zenodo Workflow
 
@@ -72,8 +71,8 @@ Recommended path:
 1. Log in to Zenodo.
 2. Connect GitHub to Zenodo.
 3. Enable archival for `qu1nty9/Cure-or-plus-plus`.
-4. Create a new GitHub release after integration is enabled, preferably
-   `v0.4.1` if no scientific content changes are needed.
+4. Create a new GitHub release after integration is enabled: `v0.4.1` if no
+   scientific content changes are needed.
 5. Wait for Zenodo to archive the release and mint a DOI.
 6. Add the DOI back to the repository metadata and publish a final DOI metadata
    patch if needed.

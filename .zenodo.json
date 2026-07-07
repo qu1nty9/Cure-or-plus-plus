@@ -18,12 +18,12 @@
     "CURE-OR",
     "real-transfer"
   ],
-  "version": "v0.4-preprint",
+  "version": "v0.4.1",
   "publication_date": "2026-07-07",
   "access_right": "open",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4-preprint",
+      "identifier": "https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1",
       "relation": "isSupplementTo",
       "scheme": "url"
     },

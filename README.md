@@ -6,10 +6,10 @@ transfer pipelines.
 
 The current public release is:
 
-- GitHub release: <https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4-preprint>
-- Preprint PDF asset: `cure-or-pp-v0.4-preprint.pdf`
-- Staged paper source asset: `arxiv_source_v0.4_preprint.zip`
-- Release tag: `v0.4-preprint`
+- GitHub release: <https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1>
+- Preprint PDF asset: `cure-or-pp-v0.4.1.pdf`
+- Staged paper source asset: `arxiv_source_v0.4.1.zip`
+- Release tag: `v0.4.1`
 
 ## What This Measures
 
@@ -29,7 +29,7 @@ The project combines three evaluation views:
 
 ## Current Evidence Package
 
-The `v0.4-preprint` release includes:
+The `v0.4.1` release includes:
 
 - 500 clean Full-CURE-OR probe rows.
 - 38,999 native CURE-OR challenge rows.
@@ -132,27 +132,29 @@ own terms.
 
 ## Citation
 
-For now, cite the stable GitHub preprint release:
+For now, cite the stable GitHub archival metadata release:
 
 ```bibtex
 @misc{kholmirzayev2026cureorpp,
   title = {CURE-OR++: Object Recognition Robustness Under Native CURE-OR Challenges and Digital Transfer Pipelines},
   author = {Kholmirzayev, Yaroslav},
   year = {2026},
-  note = {Preprint release v0.4-preprint},
-  url = {https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4-preprint}
+  note = {Archival metadata release v0.4.1; scientific preprint baseline v0.4-preprint},
+  url = {https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1}
 }
 ```
 
-The machine-readable citation metadata is in `CITATION.cff`. If a DOI is added
-through Zenodo, OSF, or another archive, update `CITATION.cff`, `.zenodo.json`,
-this README, the paper, and the Kaggle writeup.
+The machine-readable citation metadata is in `CITATION.cff`, and archival
+metadata for Zenodo is in `.zenodo.json`. When Zenodo or another archive mints
+a DOI, update `CITATION.cff`, `.zenodo.json`, this README, the paper, and the
+Kaggle writeup.
 
 ## Publication Status
 
-`v0.4-preprint` is a public preprint release. The next publication steps are:
+`v0.4.1` is a public archival metadata release for the `v0.4-preprint`
+scientific baseline. The next publication steps are:
 
-1. Add archival DOI metadata.
+1. Wait for the archive service to mint a DOI.
 2. Publish a Kaggle notebook/writeup from the stable aggregate package.
 3. Submit or post the staged source package as an arXiv/workshop-style
    preprint after final venue-specific formatting review.

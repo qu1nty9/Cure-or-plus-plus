@@ -2,7 +2,7 @@
   "check_count": 632,
   "checks": [
     {
-      "detail": "exists=True size=5297 min_size=1",
+      "detail": "exists=True size=5413 min_size=1",
       "name": "required_file:README.md",
       "passed": true
     },
@@ -12,12 +12,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=800 min_size=1",
+      "detail": "exists=True size=797 min_size=1",
       "name": "required_file:CITATION.cff",
       "passed": true
     },
     {
-      "detail": "exists=True size=1682 min_size=1",
+      "detail": "exists=True size=1668 min_size=1",
       "name": "required_file:.zenodo.json",
       "passed": true
     },
@@ -407,7 +407,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=3881 min_size=1",
+      "detail": "exists=True size=3786 min_size=1",
       "name": "required_file:docs/publication_and_archival_plan_v01.md",
       "passed": true
     },
