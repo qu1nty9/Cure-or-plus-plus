@@ -1,5 +1,50 @@
 # Kaggle Publishing Notes
 
+## Public aggregate package: v0.4.1
+
+Build the current public aggregate package:
+
+```bash
+.venv/bin/python scripts/build_kaggle_publication_package.py \
+  --output-dir kaggle/cure-or-plus-plus-v041-public \
+  --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public \
+  --clean
+```
+
+Build the reader-facing notebook/writeup:
+
+```bash
+.venv/bin/python scripts/write_kaggle_publication_notebook.py
+```
+
+Validate the notebook locally against the package:
+
+```bash
+MPLCONFIGDIR=/private/tmp/cure_or_pp_mpl \
+XDG_CACHE_HOME=/private/tmp/cure_or_pp_cache \
+MPLBACKEND=Agg \
+  .venv/bin/python scripts/validate_notebook.py \
+  notebooks/cure_or_pp_kaggle_v041_public.ipynb
+```
+
+Upload after final manual review:
+
+```bash
+kaggle datasets create -p kaggle/cure-or-plus-plus-v041-public
+kaggle kernels push -p kaggle/public_kernel_v041
+```
+
+If the dataset already exists:
+
+```bash
+kaggle datasets version -p kaggle/cure-or-plus-plus-v041-public \
+  -m "CURE-OR++ v0.4.1 public aggregate release"
+```
+
+Use `kaggle/writeup_v041.md` as the Kaggle description/writeup copy.
+
+## Legacy mini-CURE package: v0.1
+
 Build the local dataset folder:
 
 ```bash
@@ -20,4 +65,3 @@ kaggle datasets create -p kaggle/cure-or-plus-plus-v01
 
 The Kaggle API expects `dataset-metadata.json` in the upload folder. Kaggle's
 dataset metadata docs list `CC-BY-4.0` as a supported license id.
-

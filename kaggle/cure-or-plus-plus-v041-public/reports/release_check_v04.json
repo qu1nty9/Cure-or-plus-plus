@@ -1,5 +1,5 @@
 {
-  "check_count": 651,
+  "check_count": 632,
   "checks": [
     {
       "detail": "exists=True size=5604 min_size=1",
@@ -407,108 +407,13 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=3808 min_size=1",
+      "detail": "exists=True size=3664 min_size=1",
       "name": "required_file:docs/publication_and_archival_plan_v01.md",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=4181 min_size=1",
-      "name": "required_file:docs/kaggle_release_checklist.md",
       "passed": true
     },
     {
       "detail": "exists=True size=8726 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=11655 min_size=1",
-      "name": "required_file:scripts/build_kaggle_publication_package.py",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=12424 min_size=1",
-      "name": "required_file:scripts/write_kaggle_publication_notebook.py",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=14017 min_size=1",
-      "name": "required_file:notebooks/cure_or_pp_kaggle_v041_public.ipynb",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=14017 min_size=1",
-      "name": "required_file:kaggle/public_kernel_v041/cure_or_pp_kaggle_v041_public.ipynb",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=395 min_size=1",
-      "name": "required_file:kaggle/public_kernel_v041/kernel-metadata.json",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=2381 min_size=1",
-      "name": "required_file:kaggle/writeup_v041.md",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=1420 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/README.md",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=580 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/CITATION.md",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=8770 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/MANIFEST.json",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=177 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/dataset-metadata.json",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=702 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/docs/public_boundary.md",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=789 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/docs/reproducibility_note.md",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=1641 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/reports/full_cure_or_paper_model_table_v04.csv",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=583 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/reports/real_transfer_v02_pipeline_consensus_table.csv",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=944 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/reports/vlm_open_weight_full_v03_paper_table.csv",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=2525 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/reports/vlm_provider_full_v01_comparison.csv",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=604 min_size=1",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/reports/vlm_provider_full_v03_comparison.csv",
-      "passed": true
-    },
-    {
-      "detail": "exists=True size=82828 min_size=10000",
-      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/figures/real_transfer_v02_source_matched_drops.png",
       "passed": true
     },
     {

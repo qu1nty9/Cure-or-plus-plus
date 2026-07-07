@@ -1,0 +1,13 @@
+{
+  "id": "yaroslavkholmirzayev/cure-or-plus-plus-v041-public-writeup",
+  "title": "CURE-OR++ v0.4.1 Public Benchmark Writeup",
+  "code_file": "cure_or_pp_kaggle_v041_public.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "yaroslavkholmirzayev/cure-or-plus-plus-v041-public"
+  ]
+}
