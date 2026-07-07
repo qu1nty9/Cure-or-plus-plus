@@ -6,6 +6,8 @@ Ready locally:
 
 - Public aggregate package:
   `kaggle/cure-or-plus-plus-v041-public`.
+- Public aggregate package for Kaggle API upload:
+  `kaggle/cure-or-plus-plus-v041-public-flat`.
 - Public notebook/writeup:
   `notebooks/cure_or_pp_kaggle_v041_public.ipynb`.
 - Kaggle kernel folder:
@@ -16,6 +18,10 @@ Ready locally:
   `https://doi.org/10.5281/zenodo.21239828`.
 - Release:
   `https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1`.
+- Published Kaggle dataset:
+  `https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat`.
+- Published Kaggle notebook/writeup:
+  `https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup`.
 
 Package boundary:
 
@@ -73,6 +79,11 @@ kaggle datasets version -p kaggle/cure-or-plus-plus-v041-public-flat \
 The notebook supports both the tracked nested package and the flat upload
 package. Prefer the flat path for Kaggle API publication because nested folder
 uploads can be skipped by the CLI/server unless packaged explicitly.
+
+Do not use the earlier `yaroslavkholmirzayev/cure-or-plus-plus-v041-public`
+Kaggle slug as the public citation target; that upload is incomplete because
+the nested folders were skipped. The canonical public Kaggle dataset is the
+`...v041-public-flat` slug above.
 
 ## Legacy mini-CURE Package: v0.1
 

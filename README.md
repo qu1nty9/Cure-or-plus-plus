@@ -14,6 +14,10 @@ The current public release is:
 - Release tag: `v0.4.1`
 - Version DOI: <https://doi.org/10.5281/zenodo.21239828>
 - Concept DOI: <https://doi.org/10.5281/zenodo.21239827>
+- Kaggle public aggregate dataset:
+  <https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat>
+- Kaggle public notebook/writeup:
+  <https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup>
 
 ## What This Measures
 
@@ -99,7 +103,7 @@ Build a staged arXiv/workshop source package:
 The current release baseline is:
 
 ```text
-scripts/run_release_checks.py: 632 checks, 0 failures
+scripts/run_release_checks.py: 660 checks, 0 failures
 ```
 
 For the full release boundary and caveats, see:
@@ -157,12 +161,19 @@ release series.
 ## Publication Status
 
 `v0.4.1` is a public archival metadata release for the `v0.4-preprint`
-scientific baseline. The next publication steps are:
+scientific baseline. The public Kaggle aggregate dataset and reader-facing
+notebook/writeup are live:
 
-1. Publish a Kaggle notebook/writeup from the stable aggregate package.
-2. Submit or post the staged source package as an arXiv/workshop-style
+- Dataset:
+  <https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat>
+- Notebook/writeup:
+  <https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup>
+
+The next publication steps are:
+
+1. Submit or post the staged source package as an arXiv/workshop-style
    preprint after final venue-specific formatting review.
-3. Collect feedback and use it to shape `v0.5`.
+2. Collect feedback and use it to shape `v0.5`.
 
 See `docs/publication_and_archival_plan_v01.md` for the current publication
 route.

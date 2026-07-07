@@ -2,6 +2,17 @@
 
 ## Public aggregate package: v0.4.1
 
+Canonical public Kaggle links:
+
+- Dataset:
+  <https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat>
+- Notebook/writeup:
+  <https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup>
+
+Do not cite the earlier `yaroslavkholmirzayev/cure-or-plus-plus-v041-public`
+Kaggle slug. It is an incomplete upload caused by skipped nested folders. Use
+the flat `...v041-public-flat` dataset as the public Kaggle artifact.
+
 Build the current public aggregate package:
 
 ```bash

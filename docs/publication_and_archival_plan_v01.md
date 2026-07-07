@@ -15,37 +15,35 @@ release to the first public writeups and preprint submissions.
 - Attached PDF: `cure-or-pp-v0.4.1.pdf`
 - Version DOI: `https://doi.org/10.5281/zenodo.21239828`
 - Concept DOI: `https://doi.org/10.5281/zenodo.21239827`
+- Kaggle public aggregate dataset:
+  `https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat`
+- Kaggle public notebook/writeup:
+  `https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup`
 
 ## Already Done
 
 - GitHub `v0.4-preprint` release/tag exists and is marked as a pre-release.
 - PDF is built from the staged source package.
 - Staged source zip is attached to the GitHub release.
-- `scripts/run_release_checks.py` passes 632 checks with 0 failures.
+- `scripts/run_release_checks.py` passes 660 checks with 0 failures.
 - Public release boundary is documented.
 - Raw CURE-OR, mini-CURE-OR, real-transfer photos, provider raw JSONL, API
   caches, and secrets are excluded from the public package.
 - `CITATION.cff` exists for GitHub citation metadata.
 - `.zenodo.json` exists for Zenodo/GitHub archival metadata.
 - Zenodo DOI metadata exists for the `v0.4.1` release.
-- Local Kaggle public aggregate package and reader-facing notebook are drafted
-  and validated against the public release boundary.
+- Kaggle public aggregate package and reader-facing notebook/writeup are
+  published and validated against the public release boundary.
 
 ## Remaining Before First Broad Public Push
 
-1. Kaggle notebook/writeup publication.
-   - Use only public aggregate artifacts and figures.
-   - Link to the GitHub release, PDF, source zip, and DOI.
-   - Explain the benchmark in reader-facing terms rather than as an internal
-     development log.
-
-2. arXiv/workshop-style preprint.
+1. arXiv/workshop-style preprint.
    - Submit the staged source package after final venue-specific formatting
      review.
    - Keep data availability and limitations aligned with the public release
      boundary.
 
-3. Public feedback loop.
+2. Public feedback loop.
    - Announce the release with links to GitHub, PDF, Kaggle, and DOI.
    - Invite issues for reproduction problems, unclear claims, and model-row
      extension proposals.
@@ -56,7 +54,7 @@ release to the first public writeups and preprint submissions.
 2. Zenodo/OSF integration: user-enabled.
 3. GitHub `v0.4.1` archival metadata release: done.
 4. DOI minting and DOI metadata update: done.
-5. Kaggle notebook/writeup.
+5. Kaggle public aggregate dataset and notebook/writeup: done.
 6. arXiv/workshop-style preprint.
 7. Public posts and feedback collection.
 8. `v0.5` cleanup release based on feedback.
@@ -95,6 +93,6 @@ The first publication wave is considered complete when:
 - the GitHub release is stable;
 - a DOI exists;
 - the Kaggle notebook/writeup is public;
-- the preprint source/PDF has been submitted or posted;
 - README, citation metadata, paper, and Kaggle all point to the same stable
   public version.
+- the preprint source/PDF has been submitted or posted.
