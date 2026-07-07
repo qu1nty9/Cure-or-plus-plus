@@ -1,8 +1,8 @@
 {
-  "check_count": 631,
+  "check_count": 632,
   "checks": [
     {
-      "detail": "exists=True size=5281 min_size=1",
+      "detail": "exists=True size=5297 min_size=1",
       "name": "required_file:README.md",
       "passed": true
     },
@@ -14,6 +14,11 @@
     {
       "detail": "exists=True size=800 min_size=1",
       "name": "required_file:CITATION.cff",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1682 min_size=1",
+      "name": "required_file:.zenodo.json",
       "passed": true
     },
     {
@@ -382,12 +387,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7395 min_size=1",
+      "detail": "exists=True size=7412 min_size=1",
       "name": "required_file:docs/public_release_checklist_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=6911 min_size=1",
+      "detail": "exists=True size=6928 min_size=1",
       "name": "required_file:docs/reproducibility_manifest_v01.md",
       "passed": true
     },
@@ -402,7 +407,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=2958 min_size=1",
+      "detail": "exists=True size=3881 min_size=1",
       "name": "required_file:docs/publication_and_archival_plan_v01.md",
       "passed": true
     },

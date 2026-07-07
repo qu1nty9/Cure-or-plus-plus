@@ -173,6 +173,7 @@ Documentation:
 
 - `README.md`
 - `CITATION.cff`
+- `.zenodo.json`
 - `docs/dataset_card_cure_or_pp_v04.md`
 - `docs/evaluation_card_full_cure_or_v04.md`
 - `docs/public_release_checklist_v01.md`
@@ -203,7 +204,7 @@ git status --short
 
 Current release-check baseline:
 
-- `scripts/run_release_checks.py`: 631 checks, 0 failures.
+- `scripts/run_release_checks.py`: 632 checks, 0 failures.
 
 ## Reproduction Caveats
 

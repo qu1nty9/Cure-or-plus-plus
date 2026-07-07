@@ -68,7 +68,7 @@ Current status date: 2026-07-06.
 The current serious benchmark evidence consists of:
 
 - Public entrypoint and citation metadata:
-  `README.md` and `CITATION.cff`.
+  `README.md`, `CITATION.cff`, and `.zenodo.json`.
 - Full-CURE-OR v0.4 controlled probe:
   `reports/full_cure_or_paper_tables_v04.*`.
 - Real-transfer v0.2 validation:

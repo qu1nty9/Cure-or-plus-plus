@@ -14,6 +14,7 @@ REQUIRED_FILES = [
     "README.md",
     "LICENSE",
     "CITATION.cff",
+    ".zenodo.json",
     "reports/full_cure_or_paper_tables_v04.md",
     "reports/full_cure_or_paper_tables_v04.tex",
     "reports/vlm_open_weight_full_v03_paper_table.csv",
@@ -301,6 +302,8 @@ FORBIDDEN_PUBLIC_STRINGS = {
 
 TEXT_SCAN_PATHS = [
     "README.md",
+    "CITATION.cff",
+    ".zenodo.json",
     "docs",
     "paper",
     "reports",

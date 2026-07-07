@@ -1,0 +1,37 @@
+{
+  "title": "CURE-OR++: Object Recognition Robustness Under Native CURE-OR Challenges and Digital Transfer Pipelines",
+  "upload_type": "software",
+  "description": "CURE-OR++ is a compact benchmark package for auditing object-recognition robustness under native CURE-OR challenge conditions, documented real-transfer pipelines, and VLM prompt-pack evaluations. The public package contains project-authored code, configs, aggregate reports, generated figures, paper source, release documentation, and sanitized parsed-response summaries. It intentionally excludes raw CURE-OR images, local real-transfer image payloads, raw hosted-provider responses, provider caches, source dataset archives, and credentials.",
+  "creators": [
+    {
+      "name": "Kholmirzayev, Yaroslav",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "computer vision",
+    "robustness",
+    "object recognition",
+    "vision-language models",
+    "benchmark",
+    "CURE-OR",
+    "real-transfer"
+  ],
+  "version": "v0.4-preprint",
+  "publication_date": "2026-07-07",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4-preprint",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/qu1nty9/Cure-or-plus-plus",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Raw CURE-OR and mini-CURE-OR images, local real-transfer image payloads, raw hosted-provider response JSONL files, provider API caches, source dataset archives, and credentials are not included in the public archive."
+}

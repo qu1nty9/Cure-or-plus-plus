@@ -95,7 +95,7 @@ Build a staged arXiv/workshop source package:
 The current release baseline is:
 
 ```text
-scripts/run_release_checks.py: 631 checks, 0 failures
+scripts/run_release_checks.py: 632 checks, 0 failures
 ```
 
 For the full release boundary and caveats, see:
@@ -145,8 +145,8 @@ For now, cite the stable GitHub preprint release:
 ```
 
 The machine-readable citation metadata is in `CITATION.cff`. If a DOI is added
-through Zenodo, OSF, or another archive, update `CITATION.cff`, this README,
-the paper, and the Kaggle writeup.
+through Zenodo, OSF, or another archive, update `CITATION.cff`, `.zenodo.json`,
+this README, the paper, and the Kaggle writeup.
 
 ## Publication Status
 
