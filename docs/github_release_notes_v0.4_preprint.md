@@ -1,8 +1,8 @@
-# Draft GitHub Release Notes: v0.4-preprint
+# GitHub Release Notes: v0.4-preprint
 
 Tag: `v0.4-preprint`
 
-Status: draft release notes, not yet tagged.
+Status: public preprint release.
 
 ## Summary
 
@@ -66,15 +66,15 @@ Staged arXiv source package: successful
 Final Tectonic logs: no LaTeX errors, no undefined citations, no overfull boxes
 ```
 
-Current locally verified staged source package and PDF:
+Attached release artifacts:
 
 ```text
-/Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint.zip
-/Volumes/980PRO/CURE-OR++/builds/arxiv_source_v0.4_preprint/main.pdf
+arxiv_source_v0.4_preprint.zip
+cure-or-pp-v0.4-preprint.pdf
 ```
 
-These paths are local-only. A release PDF and/or source zip can be attached
-manually after final review if desired.
+The source zip contains the staged LaTeX source package, generated paper tables,
+figures, README, and manifest. The PDF is built from that staged source package.
 
 ## Recommended Citation
 
@@ -89,6 +89,6 @@ manually after final review if desired.
 
 ## Next Steps
 
-- Perform final source-package review.
-- Publish the GitHub release/tag after final approval.
 - Prepare a Kaggle notebook/writeup from the stable aggregate package.
+- Optionally submit the staged source package to arXiv or a workshop track after
+  final venue-specific formatting review.

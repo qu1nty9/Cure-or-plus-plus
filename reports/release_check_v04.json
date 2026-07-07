@@ -382,7 +382,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=3408 min_size=1",
+      "detail": "exists=True size=3363 min_size=1",
       "name": "required_file:docs/github_release_notes_v0.4_preprint.md",
       "passed": true
     },
