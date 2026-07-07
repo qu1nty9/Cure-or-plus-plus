@@ -11,6 +11,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED_FILES = [
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
     "reports/full_cure_or_paper_tables_v04.md",
     "reports/full_cure_or_paper_tables_v04.tex",
     "reports/vlm_open_weight_full_v03_paper_table.csv",
@@ -88,6 +91,7 @@ REQUIRED_FILES = [
     "docs/reproducibility_manifest_v01.md",
     "docs/arxiv_source_package_checklist_v01.md",
     "docs/github_release_notes_v0.4_preprint.md",
+    "docs/publication_and_archival_plan_v01.md",
     "reports/arxiv_readiness_matrix_v04.md",
     "configs/vlm_api_track_v01.json",
     "configs/vlm_api_track_v03.json",

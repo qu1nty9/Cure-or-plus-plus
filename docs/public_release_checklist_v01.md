@@ -67,6 +67,8 @@ Current status date: 2026-07-06.
 
 The current serious benchmark evidence consists of:
 
+- Public entrypoint and citation metadata:
+  `README.md` and `CITATION.cff`.
 - Full-CURE-OR v0.4 controlled probe:
   `reports/full_cure_or_paper_tables_v04.*`.
 - Real-transfer v0.2 validation:
@@ -85,6 +87,8 @@ The current serious benchmark evidence consists of:
   `docs/arxiv_source_package_checklist_v01.md`.
 - Draft GitHub release notes:
   `docs/github_release_notes_v0.4_preprint.md`.
+- Publication and archival plan:
+  `docs/publication_and_archival_plan_v01.md`.
 - Paper scaffold:
   `paper/main.tex`.
 

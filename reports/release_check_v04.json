@@ -1,6 +1,21 @@
 {
-  "check_count": 627,
+  "check_count": 631,
   "checks": [
+    {
+      "detail": "exists=True size=5281 min_size=1",
+      "name": "required_file:README.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1064 min_size=1",
+      "name": "required_file:LICENSE",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=800 min_size=1",
+      "name": "required_file:CITATION.cff",
+      "passed": true
+    },
     {
       "detail": "exists=True size=2501 min_size=1",
       "name": "required_file:reports/full_cure_or_paper_tables_v04.md",
@@ -367,12 +382,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7238 min_size=1",
+      "detail": "exists=True size=7395 min_size=1",
       "name": "required_file:docs/public_release_checklist_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=6834 min_size=1",
+      "detail": "exists=True size=6911 min_size=1",
       "name": "required_file:docs/reproducibility_manifest_v01.md",
       "passed": true
     },
@@ -384,6 +399,11 @@
     {
       "detail": "exists=True size=3363 min_size=1",
       "name": "required_file:docs/github_release_notes_v0.4_preprint.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=2958 min_size=1",
+      "name": "required_file:docs/publication_and_archival_plan_v01.md",
       "passed": true
     },
     {

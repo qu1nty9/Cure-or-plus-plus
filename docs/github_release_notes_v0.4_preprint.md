@@ -59,7 +59,7 @@ source-package builder for staging a clean paper source bundle.
 Current preflight status:
 
 ```text
-scripts/run_release_checks.py: 627 checks, 0 failures
+scripts/run_release_checks.py: 631 checks, 0 failures
 scripts/check_paper_build.py: paper inputs, figures, and bibliography present
 Tectonic PDF build: successful
 Staged arXiv source package: successful
