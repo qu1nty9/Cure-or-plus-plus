@@ -8,6 +8,6 @@
   "enable_gpu": false,
   "enable_internet": false,
   "dataset_sources": [
-    "yaroslavkholmirzayev/cure-or-plus-plus-v041-public"
+    "yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat"
   ]
 }

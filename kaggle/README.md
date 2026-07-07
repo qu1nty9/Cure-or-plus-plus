@@ -13,7 +13,7 @@ Build the current public aggregate package:
 
 .venv/bin/python scripts/build_kaggle_publication_package.py \
   --output-dir kaggle/cure-or-plus-plus-v041-public-flat \
-  --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public \
+  --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat \
   --layout flat \
   --clean
 ```
@@ -37,14 +37,14 @@ MPLBACKEND=Agg \
 Upload after final manual review:
 
 ```bash
-kaggle datasets create -p kaggle/cure-or-plus-plus-v041-public
+kaggle datasets create -p kaggle/cure-or-plus-plus-v041-public-flat
 kaggle kernels push -p kaggle/public_kernel_v041
 ```
 
 If the dataset already exists:
 
 ```bash
-kaggle datasets version -p kaggle/cure-or-plus-plus-v041-public \
+kaggle datasets version -p kaggle/cure-or-plus-plus-v041-public-flat \
   -m "CURE-OR++ v0.4.1 public aggregate release"
 ```
 

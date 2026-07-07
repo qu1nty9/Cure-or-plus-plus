@@ -1,7 +1,7 @@
 {
   "package": "CURE-OR++ public Kaggle aggregate package",
   "version": "v0.4.1",
-  "kaggle_id": "yaroslavkholmirzayev/cure-or-plus-plus-v041-public",
+  "kaggle_id": "yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat",
   "license": "MIT",
   "version_doi": "https://doi.org/10.5281/zenodo.21239828",
   "concept_doi": "https://doi.org/10.5281/zenodo.21239827",
@@ -172,8 +172,8 @@
     {
       "source": "reports/release_check_v04.json",
       "path": "reports__release_check_v04.json",
-      "size_bytes": 107040,
-      "sha256": "37d9b6a3a82362a19509947486f0ba298b7e22877880c86c2de4752f5b4788a1"
+      "size_bytes": 108577,
+      "sha256": "02e68e1593718b76a2c699d043f11619f68d51dc2b59a91f03f65f2cf9b04063"
     },
     {
       "source": "results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png",

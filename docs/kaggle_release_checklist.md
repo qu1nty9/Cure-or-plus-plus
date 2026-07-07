@@ -35,7 +35,7 @@ Validate before upload:
 
 .venv/bin/python scripts/build_kaggle_publication_package.py \
   --output-dir kaggle/cure-or-plus-plus-v041-public-flat \
-  --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public \
+  --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat \
   --layout flat \
   --clean
 

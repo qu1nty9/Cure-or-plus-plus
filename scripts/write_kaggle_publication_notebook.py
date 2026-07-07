@@ -418,7 +418,7 @@ def write_kernel_metadata(path: Path) -> None:
         "enable_gpu": False,
         "enable_internet": False,
         "dataset_sources": [
-            "yaroslavkholmirzayev/cure-or-plus-plus-v041-public",
+            "yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat",
         ],
     }
     path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")

@@ -412,7 +412,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=4652 min_size=1",
+      "detail": "exists=True size=4657 min_size=1",
       "name": "required_file:docs/kaggle_release_checklist.md",
       "passed": true
     },
@@ -427,7 +427,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=13823 min_size=1",
+      "detail": "exists=True size=13828 min_size=1",
       "name": "required_file:scripts/write_kaggle_publication_notebook.py",
       "passed": true
     },
@@ -442,7 +442,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=397 min_size=1",
+      "detail": "exists=True size=402 min_size=1",
       "name": "required_file:kaggle/public_kernel_v041/kernel-metadata.json",
       "passed": true
     },
@@ -527,12 +527,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=8994 min_size=1",
+      "detail": "exists=True size=8999 min_size=1",
       "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/MANIFEST.json",
       "passed": true
     },
     {
-      "detail": "exists=True size=177 min_size=1",
+      "detail": "exists=True size=182 min_size=1",
       "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/dataset-metadata.json",
       "passed": true
     },
