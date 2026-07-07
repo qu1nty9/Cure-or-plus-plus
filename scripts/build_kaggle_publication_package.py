@@ -55,6 +55,7 @@ def main() -> int:
     parser.add_argument("--output-dir", default="kaggle/cure-or-plus-plus-v041-public")
     parser.add_argument("--kaggle-id", default="yaroslavkholmirzayev/cure-or-plus-plus-v041-public")
     parser.add_argument("--license-name", default="MIT")
+    parser.add_argument("--layout", choices=["nested", "flat"], default="nested")
     parser.add_argument("--clean", action="store_true")
     args = parser.parse_args()
 
@@ -66,17 +67,20 @@ def main() -> int:
     copied = []
     for source_rel, target_rel in PUBLIC_FILES:
         source = ROOT / source_rel
-        target = output_dir / target_rel
+        package_rel = package_path(target_rel, args.layout)
+        target = output_dir / package_rel
         copy_file(source, target)
-        copied.append(record_file(source_rel, target_rel, target))
+        copied.append(record_file(source_rel, package_rel, target))
 
     write_dataset_metadata(output_dir / "dataset-metadata.json", args.kaggle_id, args.license_name)
     write_readme(output_dir / "README.md")
     write_citation(output_dir / "CITATION.md")
-    write_reproducibility_note(output_dir / "docs/reproducibility_note.md")
-    copied.append(record_file("<generated>", "docs/reproducibility_note.md", output_dir / "docs/reproducibility_note.md"))
-    write_public_boundary(output_dir / "docs/public_boundary.md")
-    copied.append(record_file("<generated>", "docs/public_boundary.md", output_dir / "docs/public_boundary.md"))
+    reproducibility_note = package_path("docs/reproducibility_note.md", args.layout)
+    write_reproducibility_note(output_dir / reproducibility_note)
+    copied.append(record_file("<generated>", reproducibility_note, output_dir / reproducibility_note))
+    public_boundary = package_path("docs/public_boundary.md", args.layout)
+    write_public_boundary(output_dir / public_boundary)
+    copied.append(record_file("<generated>", public_boundary, output_dir / public_boundary))
     write_manifest(output_dir / "MANIFEST.json", copied, args.kaggle_id, args.license_name)
 
     print(f"Kaggle public aggregate package: {output_dir}")
@@ -90,6 +94,12 @@ def copy_file(source: Path, target: Path) -> None:
         raise FileNotFoundError(source)
     target.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(source, target)
+
+
+def package_path(path_text: str, layout: str) -> str:
+    if layout == "nested" or "/" not in path_text:
+        return path_text
+    return path_text.replace("/", "__")
 
 
 def record_file(source_rel: str, target_rel: str, target: Path) -> dict:

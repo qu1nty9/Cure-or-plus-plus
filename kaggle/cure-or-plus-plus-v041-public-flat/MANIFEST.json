@@ -27,19 +27,19 @@
   "files": [
     {
       "source": "README.md",
-      "path": "repository/README.md",
+      "path": "repository__README.md",
       "size_bytes": 5604,
       "sha256": "08c5b83d30daa30554b8d5b52ca7e0bd2559a15b25c07e9d3b3988862d188d82"
     },
     {
       "source": "CITATION.cff",
-      "path": "repository/CITATION.cff",
+      "path": "repository__CITATION.cff",
       "size_bytes": 828,
       "sha256": "e6311091535870128b48ad6e1aca11fa4aacb6ea512bec425c5261d8d5e27c38"
     },
     {
       "source": "LICENSE",
-      "path": "repository/LICENSE",
+      "path": "repository__LICENSE",
       "size_bytes": 1064,
       "sha256": "42dbe29eaba956f48102951441735a9d037c4e15b4cc767705c9f56a00024792"
     },
@@ -51,175 +51,175 @@
     },
     {
       "source": "docs/dataset_card_cure_or_pp_v04.md",
-      "path": "docs/dataset_card_cure_or_pp_v04.md",
+      "path": "docs__dataset_card_cure_or_pp_v04.md",
       "size_bytes": 5709,
       "sha256": "271e4c3d50b3329c3657d8df783aa597e902b406593e10a703b8a889074ed323"
     },
     {
       "source": "docs/evaluation_card_full_cure_or_v04.md",
-      "path": "docs/evaluation_card_full_cure_or_v04.md",
+      "path": "docs__evaluation_card_full_cure_or_v04.md",
       "size_bytes": 9663,
       "sha256": "431c9c1cc41c3dbbbbcd0bc0dd1b649ca1d51bad6a62039165ae3de226b38455"
     },
     {
       "source": "docs/publication_and_archival_plan_v01.md",
-      "path": "docs/publication_and_archival_plan_v01.md",
+      "path": "docs__publication_and_archival_plan_v01.md",
       "size_bytes": 3808,
       "sha256": "377861912412476e197d7bc9a6159a71dc82a240340de41f5786a7a0104ebac8"
     },
     {
       "source": "reports/full_cure_or_paper_model_table_v04.csv",
-      "path": "reports/full_cure_or_paper_model_table_v04.csv",
+      "path": "reports__full_cure_or_paper_model_table_v04.csv",
       "size_bytes": 1641,
       "sha256": "a818891e2dff62d99e0e2ec9edeaa89425b7d1af7282e9e105444ebba9cc9d16"
     },
     {
       "source": "reports/full_cure_or_paper_failure_table_v04.csv",
-      "path": "reports/full_cure_or_paper_failure_table_v04.csv",
+      "path": "reports__full_cure_or_paper_failure_table_v04.csv",
       "size_bytes": 497,
       "sha256": "9ceaefcc7a6c3fe37114db4238f70960137cae1c0ccbcda407f5e883fa5208c5"
     },
     {
       "source": "reports/full_cure_or_paper_control_table_v04.csv",
-      "path": "reports/full_cure_or_paper_control_table_v04.csv",
+      "path": "reports__full_cure_or_paper_control_table_v04.csv",
       "size_bytes": 1163,
       "sha256": "b920244b52eb28630fbf28ed9f614a25dd75b5887fd17224d9a03db7feee7a80"
     },
     {
       "source": "reports/full_cure_or_paper_tables_v04.md",
-      "path": "reports/full_cure_or_paper_tables_v04.md",
+      "path": "reports__full_cure_or_paper_tables_v04.md",
       "size_bytes": 2501,
       "sha256": "aff854be07b1a2f2a5212a438995dec69028de1c0cf9fc9aefdab44cca62fe7c"
     },
     {
       "source": "reports/real_transfer_v02_results.md",
-      "path": "reports/real_transfer_v02_results.md",
+      "path": "reports__real_transfer_v02_results.md",
       "size_bytes": 7962,
       "sha256": "8f88e40c2671d888dfed1245cb2239901e78263b82d5388185a0a4da2c44cff2"
     },
     {
       "source": "reports/real_transfer_v02_model_pipeline_table.csv",
-      "path": "reports/real_transfer_v02_model_pipeline_table.csv",
+      "path": "reports__real_transfer_v02_model_pipeline_table.csv",
       "size_bytes": 4498,
       "sha256": "e67a3de6a750a747b63044a13caf49ff1932aadcf968e60c3b684622e7453e98"
     },
     {
       "source": "reports/real_transfer_v02_pipeline_consensus_table.csv",
-      "path": "reports/real_transfer_v02_pipeline_consensus_table.csv",
+      "path": "reports__real_transfer_v02_pipeline_consensus_table.csv",
       "size_bytes": 583,
       "sha256": "4e1bf119651bd8eec0a52e053d2d4b3355f1b8ab7a5074eb9f5a47189ba9b421"
     },
     {
       "source": "reports/real_transfer_v02_label_failure_table.csv",
-      "path": "reports/real_transfer_v02_label_failure_table.csv",
+      "path": "reports__real_transfer_v02_label_failure_table.csv",
       "size_bytes": 3544,
       "sha256": "49029f08a00b4ee01c0f07804ca3b8ef279f95b2136d38892c7bff3fe0d6f2a4"
     },
     {
       "source": "reports/vlm_open_weight_full_v03_paper_table.csv",
-      "path": "reports/vlm_open_weight_full_v03_paper_table.csv",
+      "path": "reports__vlm_open_weight_full_v03_paper_table.csv",
       "size_bytes": 944,
       "sha256": "dcd17a920e92adca5acc5cace51790f15f72af7877d77fb0852676fb4d6b742b"
     },
     {
       "source": "reports/vlm_open_weight_full_v03_paper_table.md",
-      "path": "reports/vlm_open_weight_full_v03_paper_table.md",
+      "path": "reports__vlm_open_weight_full_v03_paper_table.md",
       "size_bytes": 809,
       "sha256": "0b3843684fbf9995c21a9584efab96668ee328b1d8d7bdd1b3dc39df7f8cb483"
     },
     {
       "source": "reports/vlm_open_weight_full_v03_comparison.csv",
-      "path": "reports/vlm_open_weight_full_v03_comparison.csv",
+      "path": "reports__vlm_open_weight_full_v03_comparison.csv",
       "size_bytes": 2558,
       "sha256": "3b74383d6ec3f7007c27ad28773d6de41fcd8dafba79770a1c6ff79b420f8536"
     },
     {
       "source": "reports/vlm_open_weight_full_v03_comparison.md",
-      "path": "reports/vlm_open_weight_full_v03_comparison.md",
+      "path": "reports__vlm_open_weight_full_v03_comparison.md",
       "size_bytes": 2048,
       "sha256": "deef767c0f9b61cd00e1452cc0a6e066003891bea44afbe47e8efc9462eb6b6e"
     },
     {
       "source": "reports/vlm_provider_full_v03_comparison.csv",
-      "path": "reports/vlm_provider_full_v03_comparison.csv",
+      "path": "reports__vlm_provider_full_v03_comparison.csv",
       "size_bytes": 604,
       "sha256": "53aecb179f747302ee15c227bc55fde8a81e1e4d87ebd5666e33fa9f8c46378a"
     },
     {
       "source": "reports/vlm_provider_full_v03_comparison.md",
-      "path": "reports/vlm_provider_full_v03_comparison.md",
+      "path": "reports__vlm_provider_full_v03_comparison.md",
       "size_bytes": 1130,
       "sha256": "f9a86a63a3374247252522d8ab5562412abfce69ce32c01f472d29dc7a2d78a8"
     },
     {
       "source": "reports/vlm_provider_full_v01_comparison.csv",
-      "path": "reports/vlm_provider_full_v01_comparison.csv",
+      "path": "reports__vlm_provider_full_v01_comparison.csv",
       "size_bytes": 2525,
       "sha256": "92c120650bfcd0de1e74729b2011ea98ad4cb31a6ccd373f04bc037e0dd3c1c4"
     },
     {
       "source": "reports/vlm_provider_full_v01_comparison.md",
-      "path": "reports/vlm_provider_full_v01_comparison.md",
+      "path": "reports__vlm_provider_full_v01_comparison.md",
       "size_bytes": 2385,
       "sha256": "4160cde0dea86c91bc59d0817721102979d83de10e0e6d1f6f328c9d3d14fa49"
     },
     {
       "source": "reports/arxiv_readiness_matrix_v04.md",
-      "path": "reports/arxiv_readiness_matrix_v04.md",
+      "path": "reports__arxiv_readiness_matrix_v04.md",
       "size_bytes": 8726,
       "sha256": "0151f5678438e2989e9a95edfce19100ebee14ff3caaf85a0c742212eefe2f27"
     },
     {
       "source": "reports/release_check_v04.json",
-      "path": "reports/release_check_v04.json",
+      "path": "reports__release_check_v04.json",
       "size_bytes": 107040,
       "sha256": "37d9b6a3a82362a19509947486f0ba298b7e22877880c86c2de4752f5b4788a1"
     },
     {
       "source": "results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png",
-      "path": "figures/full_cure_or_probe_v04_with_prototypes_level5_ranking.png",
+      "path": "figures__full_cure_or_probe_v04_with_prototypes_level5_ranking.png",
       "size_bytes": 146354,
       "sha256": "f846cc451b62778643868de659661808e80715262afaa68aee1a8d4ec969a835"
     },
     {
       "source": "results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png",
-      "path": "figures/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png",
+      "path": "figures__full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png",
       "size_bytes": 152059,
       "sha256": "ad565028bd6569b8176be74bd76d47a6ac737cc0efac21e534eb629641b550b3"
     },
     {
       "source": "results/full_cure_or_probe_v04_level5_overconfidence.png",
-      "path": "figures/full_cure_or_probe_v04_level5_overconfidence.png",
+      "path": "figures__full_cure_or_probe_v04_level5_overconfidence.png",
       "size_bytes": 77203,
       "sha256": "c510195efa567d6a907cb906eb9592394e37125d431607a4aa862318a2bb3279"
     },
     {
       "source": "results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.png",
-      "path": "figures/full_cure_or_grayscale_control_v04_with_prototypes_comparison.png",
+      "path": "figures__full_cure_or_grayscale_control_v04_with_prototypes_comparison.png",
       "size_bytes": 126958,
       "sha256": "b0e6679b7fb8a22346cdd37af7310d4122119a3e2b3b3807ff16430836f72f98"
     },
     {
       "source": "results/real_transfer_v02_source_matched_drops.png",
-      "path": "figures/real_transfer_v02_source_matched_drops.png",
+      "path": "figures__real_transfer_v02_source_matched_drops.png",
       "size_bytes": 82828,
       "sha256": "cd534b28882b4fb359268cc01a2bf4ddd790dd38867202420da9ef1095468394"
     },
     {
       "source": "results/real_transfer_v02_accuracy_heatmap.png",
-      "path": "figures/real_transfer_v02_accuracy_heatmap.png",
+      "path": "figures__real_transfer_v02_accuracy_heatmap.png",
       "size_bytes": 119395,
       "sha256": "5f6353de58f6246d1957f9696031be68d662ef962c6343e24393debb1932fcf9"
     },
     {
       "source": "<generated>",
-      "path": "docs/reproducibility_note.md",
+      "path": "docs__reproducibility_note.md",
       "size_bytes": 789,
       "sha256": "6e710b5b46bda80d6acd300fb0fe541fae2a56ac93905e7aa60b3afd2b76a735"
     },
     {
       "source": "<generated>",
-      "path": "docs/public_boundary.md",
+      "path": "docs__public_boundary.md",
       "size_bytes": 702,
       "sha256": "2d341f0029120c1f38ab6e5bcfb6a9ed7d87a51f792b732f345cca3fb6ede774"
     }

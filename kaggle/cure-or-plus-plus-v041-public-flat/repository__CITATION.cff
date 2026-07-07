@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use CURE-OR++, please cite the v0.4.1 archival metadata release."
+title: "CURE-OR++: Object Recognition Robustness Under Native CURE-OR Challenges and Digital Transfer Pipelines"
+type: software
+authors:
+  - family-names: Kholmirzayev
+    given-names: Yaroslav
+version: "v0.4.1"
+date-released: "2026-07-07"
+license: MIT
+doi: "10.5281/zenodo.21239828"
+repository-code: "https://github.com/qu1nty9/Cure-or-plus-plus"
+url: "https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1"
+abstract: "CURE-OR++ is a compact benchmark package for auditing object-recognition robustness under native CURE-OR challenge conditions, real-transfer pipelines, and VLM prompt-pack evaluations."
+keywords:
+  - computer vision
+  - robustness
+  - object recognition
+  - vision-language models
+  - benchmark

@@ -103,14 +103,31 @@ plt.rcParams['figure.dpi'] = 120
 
 CANDIDATE_ROOTS = [
     Path('/kaggle/input/cure-or-plus-plus-v041-public'),
+    Path('/kaggle/input/cure-or-plus-plus-v041-public-flat'),
     Path('/kaggle/input/cure-or-plus-plus-v041-public-benchmark-aggregates'),
     Path('../kaggle/cure-or-plus-plus-v041-public'),
+    Path('../kaggle/cure-or-plus-plus-v041-public-flat'),
     Path('kaggle/cure-or-plus-plus-v041-public'),
+    Path('kaggle/cure-or-plus-plus-v041-public-flat'),
     Path('.'),
 ]
 
+def artifact_path(relative_path):
+    direct = DATA_ROOT / relative_path
+    if direct.exists():
+        return direct
+    flat = DATA_ROOT / str(relative_path).replace('/', '__')
+    if flat.exists():
+        return flat
+    raise FileNotFoundError(f'Missing artifact: {relative_path}')
+
 DATA_ROOT = next(
-    (path for path in CANDIDATE_ROOTS if (path / 'reports/full_cure_or_paper_model_table_v04.csv').exists()),
+    (
+        path
+        for path in CANDIDATE_ROOTS
+        if (path / 'reports/full_cure_or_paper_model_table_v04.csv').exists()
+        or (path / 'reports__full_cure_or_paper_model_table_v04.csv').exists()
+    ),
     None,
 )
 if DATA_ROOT is None:
@@ -133,16 +150,16 @@ The package has four evidence blocks:
         ),
         code(
             """
-full_models = pd.read_csv(DATA_ROOT / 'reports/full_cure_or_paper_model_table_v04.csv')
-full_failures = pd.read_csv(DATA_ROOT / 'reports/full_cure_or_paper_failure_table_v04.csv')
-full_control = pd.read_csv(DATA_ROOT / 'reports/full_cure_or_paper_control_table_v04.csv')
+full_models = pd.read_csv(artifact_path('reports/full_cure_or_paper_model_table_v04.csv'))
+full_failures = pd.read_csv(artifact_path('reports/full_cure_or_paper_failure_table_v04.csv'))
+full_control = pd.read_csv(artifact_path('reports/full_cure_or_paper_control_table_v04.csv'))
 
-real_transfer = pd.read_csv(DATA_ROOT / 'reports/real_transfer_v02_model_pipeline_table.csv')
-real_transfer_consensus = pd.read_csv(DATA_ROOT / 'reports/real_transfer_v02_pipeline_consensus_table.csv')
+real_transfer = pd.read_csv(artifact_path('reports/real_transfer_v02_model_pipeline_table.csv'))
+real_transfer_consensus = pd.read_csv(artifact_path('reports/real_transfer_v02_pipeline_consensus_table.csv'))
 
-vlm_open = pd.read_csv(DATA_ROOT / 'reports/vlm_open_weight_full_v03_paper_table.csv')
-vlm_provider_v03 = pd.read_csv(DATA_ROOT / 'reports/vlm_provider_full_v03_comparison.csv')
-vlm_provider_v01 = pd.read_csv(DATA_ROOT / 'reports/vlm_provider_full_v01_comparison.csv')
+vlm_open = pd.read_csv(artifact_path('reports/vlm_open_weight_full_v03_paper_table.csv'))
+vlm_provider_v03 = pd.read_csv(artifact_path('reports/vlm_provider_full_v03_comparison.csv'))
+vlm_provider_v01 = pd.read_csv(artifact_path('reports/vlm_provider_full_v01_comparison.csv'))
 
 print(f'Full-CURE-OR baseline rows: {len(full_models)}')
 print(f'Real-transfer model/pipeline rows: {len(real_transfer)}')
@@ -392,7 +409,7 @@ reproduction.
 
 def write_kernel_metadata(path: Path) -> None:
     metadata = {
-        "id": "yaroslavkholmirzayev/cure-or-plus-plus-v041-public-writeup",
+        "id": "yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup",
         "title": "CURE-OR++ v0.4.1 Public Benchmark Writeup",
         "code_file": "cure_or_pp_kaggle_v041_public.ipynb",
         "language": "python",

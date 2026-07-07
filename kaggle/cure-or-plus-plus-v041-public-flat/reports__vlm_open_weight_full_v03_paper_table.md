@@ -1,0 +1,13 @@
+# Open-Weight VLM Full v0.3 Paper Table
+
+Generated from `reports/vlm_open_weight_full_v03_comparison.csv`.
+
+| Model | Clean | Real | Drop | Unparseable | FaceTime | Hardest label |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| LLaVA-OneVision-Qwen2-7B | 0.9800 | 0.9775 | 0.0025 | 0.0000 | 0.9550 | canon_camera |
+| Qwen2.5-VL-7B | 0.9800 | 0.9613 | 0.0187 | 0.0000 | 0.9300 | canon_camera |
+| InternVL3-2B | 0.9700 | 0.9600 | 0.0100 | 0.0000 | 0.9350 | lg_cell_phone |
+| SmolVLM2-2.2B | 0.9600 | 0.9575 | 0.0025 | 0.0000 | 0.9550 | lg_cell_phone |
+| InternVL3-1B | 0.9500 | 0.9563 | -0.0063 | 0.0000 | 0.9450 | lg_cell_phone |
+| LLaVA-OneVision-Qwen2-0.5B | 0.9300 | 0.9213 | 0.0088 | 0.0000 | 0.8950 | dymo_label_maker |
+| Qwen2.5-VL-3B | 0.8800 | 0.7650 | 0.1150 | 0.2087 | 0.6400 | calcium_bottle |

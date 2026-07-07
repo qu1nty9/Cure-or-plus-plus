@@ -1,5 +1,5 @@
 {
-  "check_count": 652,
+  "check_count": 660,
   "checks": [
     {
       "detail": "exists=True size=5604 min_size=1",
@@ -412,7 +412,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=4181 min_size=1",
+      "detail": "exists=True size=4652 min_size=1",
       "name": "required_file:docs/kaggle_release_checklist.md",
       "passed": true
     },
@@ -422,27 +422,27 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=11701 min_size=1",
+      "detail": "exists=True size=12117 min_size=1",
       "name": "required_file:scripts/build_kaggle_publication_package.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=13224 min_size=1",
+      "detail": "exists=True size=13823 min_size=1",
       "name": "required_file:scripts/write_kaggle_publication_notebook.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=14952 min_size=1",
+      "detail": "exists=True size=15702 min_size=1",
       "name": "required_file:notebooks/cure_or_pp_kaggle_v041_public.ipynb",
       "passed": true
     },
     {
-      "detail": "exists=True size=14952 min_size=1",
+      "detail": "exists=True size=15702 min_size=1",
       "name": "required_file:kaggle/public_kernel_v041/cure_or_pp_kaggle_v041_public.ipynb",
       "passed": true
     },
     {
-      "detail": "exists=True size=395 min_size=1",
+      "detail": "exists=True size=397 min_size=1",
       "name": "required_file:kaggle/public_kernel_v041/kernel-metadata.json",
       "passed": true
     },
@@ -514,6 +514,46 @@
     {
       "detail": "exists=True size=82828 min_size=10000",
       "name": "required_file:kaggle/cure-or-plus-plus-v041-public/figures/real_transfer_v02_source_matched_drops.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1420 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/README.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=6210 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/WRITEUP.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=8994 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/MANIFEST.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=177 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/dataset-metadata.json",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1641 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/reports__full_cure_or_paper_model_table_v04.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=583 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/reports__real_transfer_v02_pipeline_consensus_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=944 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/reports__vlm_open_weight_full_v03_paper_table.csv",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=82828 min_size=10000",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public-flat/figures__real_transfer_v02_source_matched_drops.png",
       "passed": true
     },
     {

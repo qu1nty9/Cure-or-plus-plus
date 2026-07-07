@@ -1,0 +1,9 @@
+model_name,model_slug,clean_accuracy,native_mean_accuracy,native_level_1_accuracy,native_level_5_accuracy,level_5_drop_vs_clean,worst_level_5_recipe,worst_level_5_challenge,worst_level_5_accuracy
+DINOv2 ViT-S/14 Prototype,dinov2_vit_small_patch14_prototype,0.752,0.43931895689633066,0.5884485560695087,0.2765714285714286,0.4754285714285714,native_challenge_type_18,Grayscale salt & pepper noise,0.008
+ConvNeXt-Tiny Prototype,convnext_tiny_fb_in1k_prototype,0.616,0.34364983717531217,0.4480560070008751,0.22385714285714287,0.3921428571428571,native_challenge_type_18,Grayscale salt & pepper noise,0.008
+OpenCLIP ViT-B/16 DataComp XL,openclip_vit_b16_datacomp_xl,0.546,0.256083489320239,0.3620452556569571,0.14514285714285713,0.4008571428571429,native_challenge_type_09,Salt & pepper noise,0.008
+HGNetV2-B0 Prototype,hgnetv2_b0_prototype,0.624,0.2546731967486346,0.3792974121765221,0.12185714285714286,0.5021428571428571,native_challenge_type_05,Gaussian blur,0.01
+CLIP ViT-B/16,clip_vit_b16,0.444,0.19290238211236185,0.27715964495561946,0.09942857142857142,0.3445714285714286,native_challenge_type_09,Salt & pepper noise,0.01
+MobileNetV3-Small Prototype,mobilenet_v3_small_prototype,0.556,0.19359470755660402,0.2855356919614952,0.096,0.4600000000000001,native_challenge_type_05,Gaussian blur,0.01
+OpenCLIP ViT-B/32 LAION2B,openclip_vit_b32_laion2b,0.412,0.17046590938229186,0.2472809101137642,0.089,0.32299999999999995,native_challenge_type_18,Grayscale salt & pepper noise,0.008
+CLIP ViT-B/32,clip_vit_b32,0.35,0.15323469832559808,0.22202775346918366,0.07414285714285715,0.2758571428571428,native_challenge_type_09,Salt & pepper noise,0.006

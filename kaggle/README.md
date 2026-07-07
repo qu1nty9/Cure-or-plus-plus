@@ -8,6 +8,13 @@ Build the current public aggregate package:
 .venv/bin/python scripts/build_kaggle_publication_package.py \
   --output-dir kaggle/cure-or-plus-plus-v041-public \
   --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public \
+  --layout nested \
+  --clean
+
+.venv/bin/python scripts/build_kaggle_publication_package.py \
+  --output-dir kaggle/cure-or-plus-plus-v041-public-flat \
+  --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public \
+  --layout flat \
   --clean
 ```
 
@@ -40,6 +47,10 @@ If the dataset already exists:
 kaggle datasets version -p kaggle/cure-or-plus-plus-v041-public \
   -m "CURE-OR++ v0.4.1 public aggregate release"
 ```
+
+Use `kaggle/cure-or-plus-plus-v041-public-flat` for Kaggle API uploads if the
+CLI/server skips nested folders. The notebook supports both nested and flat
+layouts.
 
 Use `kaggle/writeup_v041.md` as the Kaggle description/writeup copy.
 

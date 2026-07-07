@@ -30,6 +30,13 @@ Validate before upload:
 .venv/bin/python scripts/build_kaggle_publication_package.py \
   --output-dir kaggle/cure-or-plus-plus-v041-public \
   --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public \
+  --layout nested \
+  --clean
+
+.venv/bin/python scripts/build_kaggle_publication_package.py \
+  --output-dir kaggle/cure-or-plus-plus-v041-public-flat \
+  --kaggle-id yaroslavkholmirzayev/cure-or-plus-plus-v041-public \
+  --layout flat \
   --clean
 
 .venv/bin/python scripts/write_kaggle_publication_notebook.py
@@ -52,16 +59,20 @@ Expected notebook validation:
 Upload after final manual review:
 
 ```bash
-kaggle datasets create -p kaggle/cure-or-plus-plus-v041-public
+kaggle datasets create -p kaggle/cure-or-plus-plus-v041-public-flat
 kaggle kernels push -p kaggle/public_kernel_v041
 ```
 
 If the Kaggle dataset already exists:
 
 ```bash
-kaggle datasets version -p kaggle/cure-or-plus-plus-v041-public \
+kaggle datasets version -p kaggle/cure-or-plus-plus-v041-public-flat \
   -m "CURE-OR++ v0.4.1 public aggregate release"
 ```
+
+The notebook supports both the tracked nested package and the flat upload
+package. Prefer the flat path for Kaggle API publication because nested folder
+uploads can be skipped by the CLI/server unless packaged explicitly.
 
 ## Legacy mini-CURE Package: v0.1
 
