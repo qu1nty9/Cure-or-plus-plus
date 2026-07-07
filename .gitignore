@@ -75,3 +75,6 @@ paper/*.log
 paper/*.out
 paper/*.pdf
 paper/*.synctex.gz
+
+# Local release/source-package exports.
+exports/

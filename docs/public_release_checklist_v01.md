@@ -95,6 +95,7 @@ Run these before any public push, paper package, or notebook release:
 ```bash
 .venv/bin/python -m py_compile \
   scripts/run_release_checks.py \
+  scripts/build_arxiv_source_package.py \
   scripts/build_paper_tables.py \
   scripts/build_vlm_provider_comparison.py \
   scripts/build_vlm_provider_v03_comparison.py \
@@ -103,6 +104,7 @@ Run these before any public push, paper package, or notebook release:
 
 .venv/bin/python scripts/run_release_checks.py
 .venv/bin/python scripts/check_paper_build.py
+.venv/bin/python scripts/build_arxiv_source_package.py --output-dir /private/tmp/cure-or-pp-arxiv-source-test --clean
 git diff --check
 git status --short
 ```

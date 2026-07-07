@@ -1,5 +1,5 @@
 {
-  "check_count": 626,
+  "check_count": 627,
   "checks": [
     {
       "detail": "exists=True size=2501 min_size=1",
@@ -352,6 +352,11 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=10450 min_size=1",
+      "name": "required_file:scripts/build_arxiv_source_package.py",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=5709 min_size=1",
       "name": "required_file:docs/dataset_card_cure_or_pp_v04.md",
       "passed": true
@@ -362,17 +367,17 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7078 min_size=1",
+      "detail": "exists=True size=7238 min_size=1",
       "name": "required_file:docs/public_release_checklist_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=6055 min_size=1",
+      "detail": "exists=True size=6533 min_size=1",
       "name": "required_file:docs/reproducibility_manifest_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=3411 min_size=1",
+      "detail": "exists=True size=3924 min_size=1",
       "name": "required_file:docs/arxiv_source_package_checklist_v01.md",
       "passed": true
     },

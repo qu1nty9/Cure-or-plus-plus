@@ -81,6 +81,7 @@ REQUIRED_FILES = [
     "results/real_transfer_v03_source_matched_drops.png",
     "results/real_transfer_v03_accuracy_heatmap.png",
     "paper/main.tex",
+    "scripts/build_arxiv_source_package.py",
     "docs/dataset_card_cure_or_pp_v04.md",
     "docs/evaluation_card_full_cure_or_v04.md",
     "docs/public_release_checklist_v01.md",

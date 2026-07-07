@@ -37,6 +37,18 @@ In the staged `main.tex`, rewrite:
 Do not rewrite tracked repository source for this staging step; create a copied
 package directory.
 
+Use the tracked builder:
+
+```bash
+.venv/bin/python scripts/build_arxiv_source_package.py \
+  --output-dir /Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint \
+  --make-zip
+```
+
+The builder rewrites paper paths only inside the staged copy, writes
+`MANIFEST.json`, creates an optional `.zip` archive, and validates that forbidden
+raw-data/provider-cache file classes were not included.
+
 ## Include
 
 Paper source:
@@ -86,6 +98,7 @@ Before staging:
 ```bash
 .venv/bin/python scripts/run_release_checks.py
 .venv/bin/python scripts/check_paper_build.py
+.venv/bin/python scripts/build_arxiv_source_package.py --output-dir /private/tmp/cure-or-pp-arxiv-source-test --clean
 git diff --check
 ```
 

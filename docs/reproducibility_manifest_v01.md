@@ -65,6 +65,18 @@ This local machine currently lacks `latexmk`, `pdflatex`, and `kpsewhich`, so
 the strict TeX toolchain compile path remains a final packaging gate on a
 machine with those tools installed.
 
+The arXiv/workshop source package is generated with:
+
+```bash
+.venv/bin/python scripts/build_arxiv_source_package.py \
+  --output-dir /Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint \
+  --make-zip
+```
+
+This creates a staged package with `main.tex`, `references.bib`, required
+LaTeX table inputs, required figures, `README.md`, and `MANIFEST.json`. The
+staged `main.tex` uses package-local `reports/` and `results/` paths.
+
 ## Aggregate Table Generation
 
 Full-CURE-OR v0.4 paper tables:
@@ -167,6 +179,7 @@ Run before release, paper package creation, or public notebook publication:
 ```bash
 .venv/bin/python -m py_compile \
   scripts/run_release_checks.py \
+  scripts/build_arxiv_source_package.py \
   scripts/build_paper_tables.py \
   scripts/build_vlm_provider_comparison.py \
   scripts/build_vlm_provider_v03_comparison.py \
