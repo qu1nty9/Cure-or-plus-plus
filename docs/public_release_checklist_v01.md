@@ -21,6 +21,10 @@ Current status date: 2026-07-06.
 - Recommended publication route: GitHub repository plus arXiv/workshop-style
   preprint first; Kaggle notebook/writeup after the paper text and aggregate
   package are stable.
+- Stable archival release DOI:
+  `https://doi.org/10.5281/zenodo.21239828`.
+- Zenodo concept DOI for the release series:
+  `https://doi.org/10.5281/zenodo.21239827`.
 
 ## Release Targets
 

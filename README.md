@@ -1,5 +1,7 @@
 # CURE-OR++
 
+[![DOI](https://zenodo.org/badge/1257066003.svg)](https://doi.org/10.5281/zenodo.21239827)
+
 CURE-OR++ is a compact benchmark package for auditing object-recognition
 robustness under native CURE-OR challenge conditions and real app/device
 transfer pipelines.
@@ -10,6 +12,8 @@ The current public release is:
 - Preprint PDF asset: `cure-or-pp-v0.4.1.pdf`
 - Staged paper source asset: `arxiv_source_v0.4.1.zip`
 - Release tag: `v0.4.1`
+- Version DOI: <https://doi.org/10.5281/zenodo.21239828>
+- Concept DOI: <https://doi.org/10.5281/zenodo.21239827>
 
 ## What This Measures
 
@@ -140,25 +144,25 @@ For now, cite the stable GitHub archival metadata release:
   author = {Kholmirzayev, Yaroslav},
   year = {2026},
   note = {Archival metadata release v0.4.1; scientific preprint baseline v0.4-preprint},
+  doi = {10.5281/zenodo.21239828},
   url = {https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1}
 }
 ```
 
 The machine-readable citation metadata is in `CITATION.cff`, and archival
-metadata for Zenodo is in `.zenodo.json`. When Zenodo or another archive mints
-a DOI, update `CITATION.cff`, `.zenodo.json`, this README, the paper, and the
-Kaggle writeup.
+metadata for Zenodo is in `.zenodo.json`. Use the version DOI above for citing
+this release; the concept DOI points to the latest archived version in the
+release series.
 
 ## Publication Status
 
 `v0.4.1` is a public archival metadata release for the `v0.4-preprint`
 scientific baseline. The next publication steps are:
 
-1. Wait for the archive service to mint a DOI.
-2. Publish a Kaggle notebook/writeup from the stable aggregate package.
-3. Submit or post the staged source package as an arXiv/workshop-style
+1. Publish a Kaggle notebook/writeup from the stable aggregate package.
+2. Submit or post the staged source package as an arXiv/workshop-style
    preprint after final venue-specific formatting review.
-4. Collect feedback and use it to shape `v0.5`.
+3. Collect feedback and use it to shape `v0.5`.
 
 See `docs/publication_and_archival_plan_v01.md` for the current publication
 route.

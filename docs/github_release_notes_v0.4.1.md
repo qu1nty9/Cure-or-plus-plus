@@ -4,6 +4,10 @@ Tag: `v0.4.1`
 
 Status: archival metadata patch release.
 
+Version DOI: `https://doi.org/10.5281/zenodo.21239828`
+
+Concept DOI: `https://doi.org/10.5281/zenodo.21239827`
+
 ## Summary
 
 This release is a metadata-only archival patch for the `v0.4-preprint`
@@ -44,6 +48,6 @@ from that staged source package.
 
 ## Next Step
 
-Wait for Zenodo or the selected archival service to mint a DOI for this release.
-After the DOI exists, update `CITATION.cff`, `.zenodo.json`, `README.md`,
-`paper/main.tex`, release notes, and the future Kaggle writeup.
+Use this DOI metadata in the Kaggle notebook/writeup and arXiv/workshop-style
+preprint submission. Do not create a new GitHub release solely to record this
+DOI unless a target venue requires it.

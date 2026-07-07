@@ -2,7 +2,7 @@
   "check_count": 632,
   "checks": [
     {
-      "detail": "exists=True size=5413 min_size=1",
+      "detail": "exists=True size=5604 min_size=1",
       "name": "required_file:README.md",
       "passed": true
     },
@@ -12,12 +12,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=797 min_size=1",
+      "detail": "exists=True size=828 min_size=1",
       "name": "required_file:CITATION.cff",
       "passed": true
     },
     {
-      "detail": "exists=True size=1668 min_size=1",
+      "detail": "exists=True size=1900 min_size=1",
       "name": "required_file:.zenodo.json",
       "passed": true
     },
@@ -367,7 +367,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=23237 min_size=1",
+      "detail": "exists=True size=23417 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -387,12 +387,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7412 min_size=1",
+      "detail": "exists=True size=7578 min_size=1",
       "name": "required_file:docs/public_release_checklist_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=6928 min_size=1",
+      "detail": "exists=True size=7078 min_size=1",
       "name": "required_file:docs/reproducibility_manifest_v01.md",
       "passed": true
     },
@@ -407,7 +407,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=3786 min_size=1",
+      "detail": "exists=True size=3664 min_size=1",
       "name": "required_file:docs/publication_and_archival_plan_v01.md",
       "passed": true
     },

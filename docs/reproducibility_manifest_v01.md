@@ -9,6 +9,12 @@ from public, tracked artifacts. It complements `docs/public_release_checklist_v0
 
 Target release: `v0.4-preprint`.
 
+Stable archival release: `v0.4.1`.
+
+Version DOI: `https://doi.org/10.5281/zenodo.21239828`.
+
+Concept DOI: `https://doi.org/10.5281/zenodo.21239827`.
+
 Author metadata:
 
 - Author: Yaroslav Kholmirzayev.

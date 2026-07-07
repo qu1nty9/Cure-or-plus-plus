@@ -13,6 +13,8 @@ release to the first public writeups and preprint submissions.
 - Release commit: see the GitHub release tag.
 - Attached source package: `arxiv_source_v0.4.1.zip`
 - Attached PDF: `cure-or-pp-v0.4.1.pdf`
+- Version DOI: `https://doi.org/10.5281/zenodo.21239828`
+- Concept DOI: `https://doi.org/10.5281/zenodo.21239827`
 
 ## Already Done
 
@@ -25,30 +27,23 @@ release to the first public writeups and preprint submissions.
   caches, and secrets are excluded from the public package.
 - `CITATION.cff` exists for GitHub citation metadata.
 - `.zenodo.json` exists for Zenodo/GitHub archival metadata.
+- Zenodo DOI metadata exists for the `v0.4.1` release.
 
 ## Remaining Before First Broad Public Push
 
-1. Archival DOI.
-   - Create the `v0.4.1` GitHub release after Zenodo integration is enabled,
-     so the archived record includes `.zenodo.json`.
-   - Wait for Zenodo or the selected archive to mint a DOI.
-   - Record the DOI in `CITATION.cff`, `.zenodo.json`, `README.md`,
-     `paper/main.tex`, `docs/github_release_notes_v0.4_preprint.md`, and the
-     Kaggle writeup.
-
-2. Kaggle notebook/writeup.
+1. Kaggle notebook/writeup.
    - Use only public aggregate artifacts and figures.
-   - Link to the GitHub release, PDF, source zip, and DOI if available.
+   - Link to the GitHub release, PDF, source zip, and DOI.
    - Explain the benchmark in reader-facing terms rather than as an internal
      development log.
 
-3. arXiv/workshop-style preprint.
+2. arXiv/workshop-style preprint.
    - Submit the staged source package after final venue-specific formatting
      review.
    - Keep data availability and limitations aligned with the public release
      boundary.
 
-4. Public feedback loop.
+3. Public feedback loop.
    - Announce the release with links to GitHub, PDF, Kaggle, and DOI.
    - Invite issues for reproduction problems, unclear claims, and model-row
      extension proposals.
@@ -57,8 +52,8 @@ release to the first public writeups and preprint submissions.
 
 1. GitHub `v0.4-preprint` release/tag: done.
 2. Zenodo/OSF integration: user-enabled.
-3. GitHub `v0.4.1` archival metadata release.
-4. DOI minting and DOI metadata patch release if required.
+3. GitHub `v0.4.1` archival metadata release: done.
+4. DOI minting and DOI metadata update: done.
 5. Kaggle notebook/writeup.
 6. arXiv/workshop-style preprint.
 7. Public posts and feedback collection.
@@ -73,9 +68,10 @@ Recommended path:
 3. Enable archival for `qu1nty9/Cure-or-plus-plus`.
 4. Create a new GitHub release after integration is enabled: `v0.4.1` if no
    scientific content changes are needed.
-5. Wait for Zenodo to archive the release and mint a DOI.
-6. Add the DOI back to the repository metadata and publish a final DOI metadata
-   patch if needed.
+5. Confirm that Zenodo archived the release and minted a DOI.
+6. Add the DOI back to the repository metadata. Avoid creating another release
+   solely for this metadata update unless a venue explicitly requires it,
+   because each new GitHub release can mint a new Zenodo version DOI.
 
 Do not upload raw datasets, provider caches, or credentials manually to Zenodo.
 The intended archive boundary is the public GitHub release source archive plus
@@ -95,7 +91,7 @@ the attached PDF/source package artifacts.
 The first publication wave is considered complete when:
 
 - the GitHub release is stable;
-- a DOI or archive landing page exists;
+- a DOI exists;
 - the Kaggle notebook/writeup is public;
 - the preprint source/PDF has been submitted or posted;
 - README, citation metadata, paper, and Kaggle all point to the same stable

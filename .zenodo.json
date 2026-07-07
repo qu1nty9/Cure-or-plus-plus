@@ -31,6 +31,16 @@
       "identifier": "https://github.com/qu1nty9/Cure-or-plus-plus",
       "relation": "isSupplementTo",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.21239828",
+      "relation": "isIdenticalTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.21239827",
+      "relation": "isVersionOf",
+      "scheme": "doi"
     }
   ],
   "notes": "Raw CURE-OR and mini-CURE-OR images, local real-transfer image payloads, raw hosted-provider response JSONL files, provider API caches, source dataset archives, and credentials are not included in the public archive."
