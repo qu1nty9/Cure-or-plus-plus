@@ -14,6 +14,8 @@ Ready locally:
   `kaggle/public_kernel_v041`.
 - Kaggle writeup copy:
   `kaggle/writeup_v041.md`.
+- Kaggle profile-level writeup draft:
+  `kaggle/profile_writeup_v041.md`.
 - Version DOI:
   `https://doi.org/10.5281/zenodo.21239828`.
 - Release:
@@ -84,6 +86,10 @@ Do not use the earlier `yaroslavkholmirzayev/cure-or-plus-plus-v041-public`
 Kaggle slug as the public citation target; that upload is incomplete because
 the nested folders were skipped. The canonical public Kaggle dataset is the
 `...v041-public-flat` slug above.
+
+For Kaggle's profile-level **New writeup** editor, use
+`kaggle/profile_writeup_v041.md`. This is a separate manual UI publication from
+the dataset description and executable notebook.
 
 ## Legacy mini-CURE Package: v0.1
 

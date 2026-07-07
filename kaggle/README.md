@@ -13,6 +13,10 @@ Do not cite the earlier `yaroslavkholmirzayev/cure-or-plus-plus-v041-public`
 Kaggle slug. It is an incomplete upload caused by skipped nested folders. Use
 the flat `...v041-public-flat` dataset as the public Kaggle artifact.
 
+Use `kaggle/profile_writeup_v041.md` for Kaggle's profile-level **New writeup**
+editor. It is a separate Project writeup draft, not the dataset README and not
+the executable notebook.
+
 Build the current public aggregate package:
 
 ```bash

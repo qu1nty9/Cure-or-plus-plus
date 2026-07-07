@@ -25,7 +25,7 @@ release to the first public writeups and preprint submissions.
 - GitHub `v0.4-preprint` release/tag exists and is marked as a pre-release.
 - PDF is built from the staged source package.
 - Staged source zip is attached to the GitHub release.
-- `scripts/run_release_checks.py` passes 660 checks with 0 failures.
+- `scripts/run_release_checks.py` passes 661 checks with 0 failures.
 - Public release boundary is documented.
 - Raw CURE-OR, mini-CURE-OR, real-transfer photos, provider raw JSONL, API
   caches, and secrets are excluded from the public package.
@@ -34,16 +34,25 @@ release to the first public writeups and preprint submissions.
 - Zenodo DOI metadata exists for the `v0.4.1` release.
 - Kaggle public aggregate package and reader-facing notebook/writeup are
   published and validated against the public release boundary.
+- Kaggle profile-level writeup draft exists at
+  `kaggle/profile_writeup_v041.md`; this is a separate manual Kaggle UI
+  publication from the dataset description and executable notebook.
 
 ## Remaining Before First Broad Public Push
 
-1. arXiv/workshop-style preprint.
+1. Kaggle profile-level writeup publication.
+   - Paste `kaggle/profile_writeup_v041.md` into Kaggle's New writeup editor.
+   - Use Project type, the v0.4.1 title, public links, and generated figures.
+   - Do not upload raw CURE-OR, mini-CURE-OR, local real-transfer photos,
+     provider raw JSONL, caches, or credentials.
+
+2. arXiv/workshop-style preprint.
    - Submit the staged source package after final venue-specific formatting
      review.
    - Keep data availability and limitations aligned with the public release
      boundary.
 
-2. Public feedback loop.
+3. Public feedback loop.
    - Announce the release with links to GitHub, PDF, Kaggle, and DOI.
    - Invite issues for reproduction problems, unclear claims, and model-row
      extension proposals.
@@ -55,9 +64,10 @@ release to the first public writeups and preprint submissions.
 3. GitHub `v0.4.1` archival metadata release: done.
 4. DOI minting and DOI metadata update: done.
 5. Kaggle public aggregate dataset and notebook/writeup: done.
-6. arXiv/workshop-style preprint.
-7. Public posts and feedback collection.
-8. `v0.5` cleanup release based on feedback.
+6. Kaggle profile-level project writeup.
+7. arXiv/workshop-style preprint.
+8. Public posts and feedback collection.
+9. `v0.5` cleanup release based on feedback.
 
 ## Zenodo Workflow
 

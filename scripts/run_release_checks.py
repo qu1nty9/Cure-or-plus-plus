@@ -101,6 +101,7 @@ REQUIRED_FILES = [
     "kaggle/public_kernel_v041/cure_or_pp_kaggle_v041_public.ipynb",
     "kaggle/public_kernel_v041/kernel-metadata.json",
     "kaggle/writeup_v041.md",
+    "kaggle/profile_writeup_v041.md",
     "kaggle/cure-or-plus-plus-v041-public/README.md",
     "kaggle/cure-or-plus-plus-v041-public/WRITEUP.md",
     "kaggle/cure-or-plus-plus-v041-public/CITATION.md",
@@ -340,6 +341,7 @@ TEXT_SCAN_PATHS = [
     "kaggle/cure-or-plus-plus-v041-public-flat",
     "kaggle/public_kernel_v041",
     "kaggle/writeup_v041.md",
+    "kaggle/profile_writeup_v041.md",
 ]
 
 

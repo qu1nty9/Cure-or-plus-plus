@@ -210,7 +210,7 @@ git status --short
 
 Current release-check baseline:
 
-- `scripts/run_release_checks.py`: 660 checks, 0 failures.
+- `scripts/run_release_checks.py`: 661 checks, 0 failures.
 
 ## Reproduction Caveats
 

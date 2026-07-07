@@ -103,7 +103,7 @@ Build a staged arXiv/workshop source package:
 The current release baseline is:
 
 ```text
-scripts/run_release_checks.py: 660 checks, 0 failures
+scripts/run_release_checks.py: 661 checks, 0 failures
 ```
 
 For the full release boundary and caveats, see:
