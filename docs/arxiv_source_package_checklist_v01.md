@@ -134,10 +134,11 @@ Before upload:
 - Confirm bibliography entries render correctly.
 - Open the final PDF and inspect all tables and figures.
 
-## Current Local PDF
+## Current Local Package
 
-The latest locally verified PDF is:
+The latest locally verified staged source package and PDF are:
 
-- `/Volumes/980PRO/CURE-OR++/builds/paper_tectonic/main.pdf`
+- `/Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint.zip`
+- `/Volumes/980PRO/CURE-OR++/builds/arxiv_source_v0.4_preprint/main.pdf`
 
-This path is local-only and should not be referenced as a public artifact.
+These paths are local-only and should not be referenced as public artifacts.

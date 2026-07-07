@@ -347,7 +347,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=23081 min_size=1",
+      "detail": "exists=True size=23237 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -372,22 +372,22 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=6533 min_size=1",
+      "detail": "exists=True size=6834 min_size=1",
       "name": "required_file:docs/reproducibility_manifest_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=3924 min_size=1",
+      "detail": "exists=True size=4038 min_size=1",
       "name": "required_file:docs/arxiv_source_package_checklist_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=3000 min_size=1",
+      "detail": "exists=True size=3408 min_size=1",
       "name": "required_file:docs/github_release_notes_v0.4_preprint.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=8593 min_size=1",
+      "detail": "exists=True size=8726 min_size=1",
       "name": "required_file:reports/arxiv_readiness_matrix_v04.md",
       "passed": true
     },

@@ -2,10 +2,12 @@
 
 ## Summary
 
-CURE-OR++ is currently a strong pre-paper benchmark artifact, not a final
-arXiv-ready paper. The Full-CURE-OR v0.4 controlled benchmark evidence is
-substantial, and the real-transfer v0.2 external-validity guardrail has now
-been collected and evaluated. The open-weight VLM/API path now has eight full
+CURE-OR++ is currently in final preprint-review state: the benchmark evidence,
+release boundary, and staged arXiv/workshop source package are in place, while
+the remaining gate is final human review before public tagging/submission. The
+Full-CURE-OR v0.4 controlled benchmark evidence is substantial, and the
+real-transfer v0.2 external-validity guardrail has now been collected and
+evaluated. The open-weight VLM/API path now has eight full
 rows, including a strong SmolVLM2-2.2B same-family scale-up, two strong
 InternVL family rows with a slight non-monotonic 2B follow-up, a completed
 LLaVA-OneVision 0.5B row after memory-safe retry, a memory-controlled
@@ -23,8 +25,8 @@ reaches 0.9556, GPT-5.5 and Claude Haiku 4.5 reach 0.9500, and GigaChat 2 Pro
 and GigaChat 2 Max each reach 0.8778. It also now has a 900-row v0.3 xAI
 Grok 4.3 row, reaching 0.9788 real-transfer accuracy with zero unparseable
 responses, plus a repeat run that preserves 0.9788 real-transfer accuracy.
-The remaining work is paper polish, final citation/license checks, and
-reproducible public packaging. The release boundary is now conservative:
+The remaining work is final paper review, final citation/license checks, and
+release/tag approval. The release boundary is now conservative:
 publish code, configs, aggregate reports, figures, paper source, and sanitized
 audits; do not publish raw source images, local real-transfer photos, raw
 provider JSONL responses, API caches, or credentials.
@@ -41,22 +43,20 @@ provider JSONL responses, API caches, or credentials.
 | Consensus analysis | Ready | top three level-5 failures floor 8/8; rank correlations 0.892-0.988 | none before draft |
 | Paper tables | Ready | Markdown, CSV, and LaTeX paper-table pack generated | final formatting in paper source |
 | Technical report draft | Draft-ready | `reports/cure_or_pp_technical_report_draft_v04.md` | convert to final paper structure |
-| LaTeX paper source | Draft-ready | `paper/main.tex`, `paper/references.bib` | final citation verification and venue formatting |
+| LaTeX paper source | Source-package ready | `paper/main.tex`, `paper/references.bib`, `scripts/build_arxiv_source_package.py`, staged source package build verified locally | final citation verification and venue formatting |
 | Dataset card | Draft-ready | `docs/dataset_card_cure_or_pp_v04.md` | update if public release packaging changes |
 | Evaluation card | Draft-ready | `docs/evaluation_card_full_cure_or_v04.md` | update after any added frontier/provider VLM rows |
 | Related work | Draft-ready | `docs/related_work_v01.md`, expanded LaTeX related-work paragraph | verify final citations before public submission |
 | Real-transfer validation | Ready for draft | 180 outputs, activation status, source-matched report, bootstrap intervals, figures, collector-supplied iPhone/WhatsApp/FaceTime metadata | integrate into final paper; optionally extract per-file dates from EXIF |
 | VLM/API track | Eight v0.2 open-weight rows executed; seven-row v0.3 900-row extension complete; nine hosted-provider v0.1 rows complete; one hosted-provider v0.3 row and repeat run complete | `reports/vlm_open_weight_smolvlm2_kaggle_v01/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_1b_kaggle_v01/`, `reports/vlm_open_weight_internvl3_2b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_v01/`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_v01/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_v01/`, `reports/vlm_open_weight_full_v03_comparison.md`, `reports/vlm_provider_openai_gpt_5_4_mini_full_v01/`, `reports/vlm_provider_openai_gpt_5_4_full_v01/`, `reports/vlm_provider_openai_gpt_5_5_full_v01/`, `reports/vlm_provider_anthropic_claude_sonnet_5_full_v01/`, `reports/vlm_provider_anthropic_claude_fable_5_full_v01/`, `reports/vlm_provider_anthropic_claude_haiku_4_5_full_v01/`, `reports/vlm_provider_gigachat_2_pro_full_v01/`, `reports/vlm_provider_gigachat_2_max_full_v01/`, `reports/vlm_provider_xai_grok_4_3_full_v01/`, `reports/vlm_provider_xai_grok_4_3_full_v03/`, `reports/vlm_provider_xai_grok_4_3_full_v03_repeat_01/`, `reports/vlm_provider_full_v01_comparison.md`, `reports/vlm_provider_full_v03_comparison.md`, `reports/vlm_open_weight_qwen2_5_vl_3b_kaggle_full_v03/`, `reports/vlm_open_weight_qwen2_5_vl_7b_kaggle_full_v03/`, `reports/vlm_open_weight_internvl3_1b_kaggle_full_v03/`, `reports/vlm_open_weight_internvl3_2b_kaggle_full_v03/`, `reports/vlm_open_weight_llava_onevision_qwen2_0_5b_kaggle_full_v03/`, `reports/vlm_open_weight_llava_onevision_qwen2_7b_kaggle_full_v03/`, `reports/vlm_open_weight_smolvlm2_2b_kaggle_full_v03/`, `scripts/run_hf_vlm.py`, `scripts/evaluate_vlm_response_pack.py`, `scripts/integrate_kaggle_vlm_output.py`, `scripts/build_vlm_provider_comparison.py`, `scripts/build_vlm_provider_v03_comparison.py`, `scripts/merge_vlm_response_retries.py`; SmolVLM2-500M, SmolVLM2-2.2B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, Qwen2.5-VL-3B, Qwen2.5-VL-7B, and LLaVA-OneVision 7B full v0.2 Kaggle GPU runs complete; Qwen2.5-VL-3B, Qwen2.5-VL-7B, InternVL3-1B, InternVL3-2B, LLaVA-OneVision 0.5B, LLaVA-OneVision 7B, and SmolVLM2-2.2B full v0.3 runs complete; OpenAI GPT-5.4-mini, GPT-5.4, GPT-5.5, xAI Grok 4.3, Anthropic Claude Sonnet 5, Claude Fable 5, Claude Haiku 4.5, GigaChat 2 Pro, and GigaChat 2 Max full v0.1 provider rows complete; xAI Grok 4.3 full v0.3 provider row and repeat run complete | optionally add Gemini row and final raw-response audit rules |
-| Public release | Conservative boundary selected | `docs/public_release_checklist_v01.md`, author metadata in `paper/main.tex`, Kaggle v0.1 package exists locally | pass checklist gates, final license/citation checks, TeX compile, and stable aggregate packaging |
+| Public release | Pre-release package ready | `docs/public_release_checklist_v01.md`, `docs/reproducibility_manifest_v01.md`, `docs/arxiv_source_package_checklist_v01.md`, author metadata in `paper/main.tex`, staged source zip built locally | final visual review, final license/citation checks, and release/tag approval |
 
 ## Minimum Path To A Serious Public Draft
 
-1. Integrate `reports/real_transfer_v02_results.md` into the technical draft
-   and LaTeX paper source.
-2. Fill capture metadata in the real-transfer checklist if the device/app
-   details are available.
-3. Convert the technical draft into final paper prose with tables from
-   `reports/full_cure_or_paper_tables_v04.tex`.
+1. Perform final human PDF/source review.
+2. Confirm citation/license/data-availability wording.
+3. Approve and publish the GitHub release/tag.
+4. Build the Kaggle notebook/writeup from the stable aggregate package.
 
 ## Ideal Path
 
@@ -72,13 +72,12 @@ The ideal version adds:
 
 ## Current Publication Recommendation
 
-Do not submit as a final arXiv paper yet. The work is strong enough for an
-internal technical report and close to a workshop-style benchmark draft. The
-best publication sequence is GitHub repository plus arXiv/workshop-style
-preprint first, then a Kaggle notebook/writeup once the paper text and public
-aggregate package are stable. The critical external-validity gap is now reduced
-by real-transfer v0.2, and the open-weight VLM path has a real model-family
-contrast. The hosted OpenAI, xAI, Anthropic, and GigaChat rows now prove the
-provider path across four provider families. The next bar is final paper
-polish, final citation/license checks, TeX compilation, and passing the
-public-release checklist.
+Proceed to final human review before public release. The work is strong enough
+for a GitHub preprint release and a workshop-style benchmark draft once the PDF,
+source package, citation/license wording, and data-availability boundary are
+approved. The best publication sequence is GitHub repository plus
+arXiv/workshop-style preprint first, then a Kaggle notebook/writeup built from
+the stable aggregate package. The critical external-validity gap is now reduced
+by real-transfer v0.2, the open-weight VLM path has a real model-family
+contrast, and the OpenAI, xAI, Anthropic, and GigaChat rows prove the hosted
+provider path across four provider families.

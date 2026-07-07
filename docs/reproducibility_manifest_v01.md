@@ -53,6 +53,7 @@ env \
 Verified local PDF:
 
 - `/Volumes/980PRO/CURE-OR++/builds/paper_tectonic/main.pdf`
+- `/Volumes/980PRO/CURE-OR++/builds/arxiv_source_v0.4_preprint/main.pdf`
 
 The repository preflight checker also validates that all paper inputs, figures,
 and bibliography files exist:
@@ -76,6 +77,10 @@ The arXiv/workshop source package is generated with:
 This creates a staged package with `main.tex`, `references.bib`, required
 LaTeX table inputs, required figures, `README.md`, and `MANIFEST.json`. The
 staged `main.tex` uses package-local `reports/` and `results/` paths.
+
+Latest verified staged source package:
+
+- `/Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint.zip`
 
 ## Aggregate Table Generation
 
@@ -188,13 +193,14 @@ Run before release, paper package creation, or public notebook publication:
 
 .venv/bin/python scripts/run_release_checks.py
 .venv/bin/python scripts/check_paper_build.py
+.venv/bin/python scripts/build_arxiv_source_package.py --output-dir /private/tmp/cure-or-pp-arxiv-source-test --clean
 git diff --check
 git status --short
 ```
 
 Current release-check baseline:
 
-- `scripts/run_release_checks.py`: 623 checks, 0 failures.
+- `scripts/run_release_checks.py`: 627 checks, 0 failures.
 
 ## Reproduction Caveats
 
