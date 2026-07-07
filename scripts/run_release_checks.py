@@ -102,6 +102,7 @@ REQUIRED_FILES = [
     "kaggle/public_kernel_v041/kernel-metadata.json",
     "kaggle/writeup_v041.md",
     "kaggle/cure-or-plus-plus-v041-public/README.md",
+    "kaggle/cure-or-plus-plus-v041-public/WRITEUP.md",
     "kaggle/cure-or-plus-plus-v041-public/CITATION.md",
     "kaggle/cure-or-plus-plus-v041-public/MANIFEST.json",
     "kaggle/cure-or-plus-plus-v041-public/dataset-metadata.json",

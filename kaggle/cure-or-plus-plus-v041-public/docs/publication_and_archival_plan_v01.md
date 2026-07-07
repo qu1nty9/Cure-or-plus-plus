@@ -28,10 +28,12 @@ release to the first public writeups and preprint submissions.
 - `CITATION.cff` exists for GitHub citation metadata.
 - `.zenodo.json` exists for Zenodo/GitHub archival metadata.
 - Zenodo DOI metadata exists for the `v0.4.1` release.
+- Local Kaggle public aggregate package and reader-facing notebook are drafted
+  and validated against the public release boundary.
 
 ## Remaining Before First Broad Public Push
 
-1. Kaggle notebook/writeup.
+1. Kaggle notebook/writeup publication.
    - Use only public aggregate artifacts and figures.
    - Link to the GitHub release, PDF, source zip, and DOI.
    - Explain the benchmark in reader-facing terms rather than as an internal

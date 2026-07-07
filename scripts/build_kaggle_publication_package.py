@@ -17,6 +17,7 @@ PUBLIC_FILES = [
     ("README.md", "repository/README.md"),
     ("CITATION.cff", "repository/CITATION.cff"),
     ("LICENSE", "repository/LICENSE"),
+    ("kaggle/writeup_v041.md", "WRITEUP.md"),
     ("docs/dataset_card_cure_or_pp_v04.md", "docs/dataset_card_cure_or_pp_v04.md"),
     ("docs/evaluation_card_full_cure_or_v04.md", "docs/evaluation_card_full_cure_or_v04.md"),
     ("docs/publication_and_archival_plan_v01.md", "docs/publication_and_archival_plan_v01.md"),

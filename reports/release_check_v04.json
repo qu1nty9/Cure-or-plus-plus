@@ -1,5 +1,5 @@
 {
-  "check_count": 651,
+  "check_count": 652,
   "checks": [
     {
       "detail": "exists=True size=5604 min_size=1",
@@ -422,22 +422,22 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=11655 min_size=1",
+      "detail": "exists=True size=11701 min_size=1",
       "name": "required_file:scripts/build_kaggle_publication_package.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=12424 min_size=1",
+      "detail": "exists=True size=13224 min_size=1",
       "name": "required_file:scripts/write_kaggle_publication_notebook.py",
       "passed": true
     },
     {
-      "detail": "exists=True size=14017 min_size=1",
+      "detail": "exists=True size=14952 min_size=1",
       "name": "required_file:notebooks/cure_or_pp_kaggle_v041_public.ipynb",
       "passed": true
     },
     {
-      "detail": "exists=True size=14017 min_size=1",
+      "detail": "exists=True size=14952 min_size=1",
       "name": "required_file:kaggle/public_kernel_v041/cure_or_pp_kaggle_v041_public.ipynb",
       "passed": true
     },
@@ -447,7 +447,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=2381 min_size=1",
+      "detail": "exists=True size=6210 min_size=1",
       "name": "required_file:kaggle/writeup_v041.md",
       "passed": true
     },
@@ -457,12 +457,17 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=6210 min_size=1",
+      "name": "required_file:kaggle/cure-or-plus-plus-v041-public/WRITEUP.md",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=580 min_size=1",
       "name": "required_file:kaggle/cure-or-plus-plus-v041-public/CITATION.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=8770 min_size=1",
+      "detail": "exists=True size=8962 min_size=1",
       "name": "required_file:kaggle/cure-or-plus-plus-v041-public/MANIFEST.json",
       "passed": true
     },

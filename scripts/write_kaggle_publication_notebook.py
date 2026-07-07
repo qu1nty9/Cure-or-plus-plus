@@ -69,9 +69,22 @@ def cells() -> list[dict]:
 # CURE-OR++ v0.4.1: Object Recognition Robustness Under Native and Real Transfer Stress
 
 This notebook is the public Kaggle writeup for the CURE-OR++ v0.4.1 aggregate
-release. It reads only public aggregate tables and generated figures. It does
+release. It reads only public aggregate tables and generated figures; it does
 not require raw CURE-OR images, local real-transfer photos, hosted-provider raw
 JSONL responses, provider caches, or API keys.
+
+The benchmark asks a narrow robustness question: do object-recognition systems
+share stable failure patterns when clean object images move into severe native
+challenge conditions and real digital transfer pipelines?
+
+TL;DR:
+
+- Severe native CURE-OR failures are stable across model families.
+- Grayscale alone does not explain the level-5 collapse.
+- Real-transfer v0.2 is a small external-validity guardrail, not a leaderboard.
+- VLM rows measure both recognition accuracy and generation stability.
+- Hosted-provider rows are useful but should be interpreted separately because
+  providers control model versioning and data handling.
 
 Version DOI: https://doi.org/10.5281/zenodo.21239828
 
@@ -340,7 +353,7 @@ vlm_provider_v01[
             """
 ## What This Gives Us
 
-The current evidence package supports a serious benchmark/writeup claim:
+The current evidence package supports a serious benchmark claim:
 
 - native CURE-OR severe challenge failures are stable across model families;
 - grayscale alone does not explain the severe challenge collapse;
@@ -352,7 +365,9 @@ The current evidence package supports a serious benchmark/writeup claim:
 
 The important release boundary is also part of the result: this public package
 is auditable without redistributing raw upstream images or private provider
-payloads.
+payloads. That boundary is not a limitation to hide; it is what makes the
+Kaggle package publishable while keeping the full source and DOI trail
+available through GitHub and Zenodo.
 """
         ),
         md(

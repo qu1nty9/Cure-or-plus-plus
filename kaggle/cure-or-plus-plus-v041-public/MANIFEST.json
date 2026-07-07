@@ -44,6 +44,12 @@
       "sha256": "42dbe29eaba956f48102951441735a9d037c4e15b4cc767705c9f56a00024792"
     },
     {
+      "source": "kaggle/writeup_v041.md",
+      "path": "WRITEUP.md",
+      "size_bytes": 6210,
+      "sha256": "b9270dc19ff908ce05d20470339a03f3db06b4745bb4fdc2c83184b757ea2397"
+    },
+    {
       "source": "docs/dataset_card_cure_or_pp_v04.md",
       "path": "docs/dataset_card_cure_or_pp_v04.md",
       "size_bytes": 5709,
@@ -58,8 +64,8 @@
     {
       "source": "docs/publication_and_archival_plan_v01.md",
       "path": "docs/publication_and_archival_plan_v01.md",
-      "size_bytes": 3664,
-      "sha256": "78a74997a79a024be3f7f7eb1de0ce2da80372cc0899ce51d9837892660512bd"
+      "size_bytes": 3808,
+      "sha256": "377861912412476e197d7bc9a6159a71dc82a240340de41f5786a7a0104ebac8"
     },
     {
       "source": "reports/full_cure_or_paper_model_table_v04.csv",
@@ -166,8 +172,8 @@
     {
       "source": "reports/release_check_v04.json",
       "path": "reports/release_check_v04.json",
-      "size_bytes": 103504,
-      "sha256": "5cff1aae97c63de532db8d23bc271290bfbd8cde8682501db915cf3f6d741413"
+      "size_bytes": 106875,
+      "sha256": "cdaa776b74306963f337b226a08700eae20f5753e0587c7698e9104fa3d77a0d"
     },
     {
       "source": "results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png",
