@@ -100,6 +100,7 @@ REQUIRED_FILES = [
     "docs/public_release_checklist_v01.md",
     "docs/reproducibility_manifest_v01.md",
     "docs/arxiv_source_package_checklist_v01.md",
+    "docs/arxiv_submission_fields_v041.md",
     "docs/github_release_notes_v0.4_preprint.md",
     "docs/publication_and_archival_plan_v01.md",
     "docs/kaggle_release_checklist.md",

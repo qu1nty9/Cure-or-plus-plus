@@ -6,7 +6,7 @@ public artifacts should be reproducible and inspectable without redistributing
 upstream raw datasets, local transfer payloads, API secrets, or raw provider
 responses.
 
-Current status date: 2026-07-06.
+Current status date: 2026-07-08.
 
 ## Project Metadata
 
@@ -18,9 +18,8 @@ Current status date: 2026-07-06.
 - Raw-data policy: do not publish raw CURE-OR images, mini-CURE-OR images,
   local real-transfer photos, local collection packs, raw hosted-provider JSONL
   responses, API caches, or credentials.
-- Recommended publication route: GitHub repository plus arXiv/workshop-style
-  preprint first; Kaggle notebook/writeup after the paper text and aggregate
-  package are stable.
+- Recommended publication route: GitHub repository, Zenodo DOI, Kaggle
+  aggregate dataset/notebook/writeup, then arXiv/workshop-style preprint.
 - Stable archival release DOI:
   `https://doi.org/10.5281/zenodo.21239828`.
 - Zenodo concept DOI for the release series:
@@ -31,8 +30,8 @@ Current status date: 2026-07-06.
 | Target | Status | Intended contents | Exclusions |
 |---|---|---|---|
 | GitHub repository | Ready after final review | Code, configs, aggregate reports, generated paper tables, generated figures, dataset/evaluation cards, paper source | raw CURE-OR images, mini-CURE-OR images, real-transfer images, source archives, API keys, provider caches, raw provider JSONL |
-| arXiv/workshop paper | Draft-ready | `paper/main.tex`, references, generated tables, figures, clear limitations and data availability text | raw data payloads, private provider responses |
-| Kaggle notebook/writeup | Ready after packaging pass | explanatory notebook, public aggregate tables/figures, setup commands, dataset access instructions | raw CURE-OR unless license/access terms explicitly allow redistribution |
+| arXiv/workshop paper | Ready after final submission-field review | `paper/main.tex`, references, generated tables, figures, clear limitations and data availability text | raw data payloads, private provider responses |
+| Kaggle notebook/writeup | Published | explanatory notebook, public aggregate tables/figures, setup commands, dataset access instructions | raw CURE-OR unless license/access terms explicitly allow redistribution |
 | Hugging Face/Kaggle dataset card | Optional | public metadata, configs, reports, small derived artifacts if license-safe | upstream raw images and private real-transfer payloads |
 
 ## Publicly Safe To Track
@@ -111,17 +110,17 @@ Run these before any public push, paper package, or notebook release:
   scripts/run_anthropic_vlm.py
 
 .venv/bin/python scripts/run_release_checks.py
-.venv/bin/python scripts/check_paper_build.py
-.venv/bin/python scripts/build_arxiv_source_package.py --output-dir /private/tmp/cure-or-pp-arxiv-source-test --clean
+.venv/bin/python scripts/check_paper_build.py --compile --output-dir /private/tmp/cure-or-pp-paper-check
+.venv/bin/python scripts/build_arxiv_source_package.py --output-dir /private/tmp/cure-or-pp-arxiv-source-test --clean --make-zip
 git diff --check
 git status --short
 ```
 
 For final paper packaging, also run TeX compilation on a machine with
-`latexmk`, `pdflatex`, and `kpsewhich` installed:
+`pdflatex`, `bibtex`, and `kpsewhich` installed:
 
 ```bash
-.venv/bin/python scripts/check_paper_build.py --compile --require-tex --output-dir paper/build
+.venv/bin/python scripts/check_paper_build.py --compile --require-tex --output-dir /private/tmp/cure-or-pp-paper-check
 ```
 
 ## Manual Review Gates
@@ -145,7 +144,7 @@ For final paper packaging, also run TeX compilation on a machine with
 These should be resolved before a final arXiv or workshop submission:
 
 - Final citation verification for related work and CURE-OR source references.
-- Local TeX compile with required tools installed.
+- Local TeX compile with required tools installed: complete on BasicTeX/pdflatex.
 - Final license review if any public dataset/package goes beyond code,
   documentation, figures, aggregate reports, and sanitized parsed audits.
 
@@ -161,9 +160,8 @@ These are useful but not required for the current serious draft:
 
 ## Current Recommendation
 
-Proceed toward a polished GitHub release plus arXiv/workshop-style draft using
-the current evidence package. Do not expand the model matrix further unless the
-paper narrative specifically needs another provider family. The highest-return
-work is now paper clarity, release boundary discipline, final citations,
-reproducible packaging, and a later Kaggle writeup built from the stable
-aggregate package.
+Proceed to arXiv/workshop-style submission using the current evidence package.
+Do not expand the model matrix further unless the paper narrative specifically
+needs another provider family. The highest-return work is now submission-field
+accuracy, release-boundary discipline, public feedback collection, and a later
+`v0.5` cleanup release.

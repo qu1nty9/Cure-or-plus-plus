@@ -12,9 +12,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT_DIR = ROOT / "exports" / "arxiv_source_v0.4_preprint"
+DEFAULT_OUTPUT_DIR = ROOT / "exports" / "arxiv_source_v0.4.1"
 
-VERSION = "v0.4-preprint"
+VERSION = "v0.4.1"
 
 PAPER_SOURCE = ROOT / "paper" / "main.tex"
 BIB_SOURCE = ROOT / "paper" / "references.bib"
@@ -54,7 +54,7 @@ def main() -> int:
     parser.add_argument(
         "--output-dir",
         default=str(DEFAULT_OUTPUT_DIR),
-        help="Directory to create. Defaults to exports/arxiv_source_v0.4_preprint.",
+        help="Directory to create. Defaults to exports/arxiv_source_v0.4.1.",
     )
     parser.add_argument(
         "--clean",

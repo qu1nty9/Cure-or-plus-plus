@@ -1,5 +1,5 @@
 {
-  "check_count": 670,
+  "check_count": 671,
   "checks": [
     {
       "detail": "exists=True size=6340 min_size=1",
@@ -412,7 +412,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=10450 min_size=1",
+      "detail": "exists=True size=10429 min_size=1",
       "name": "required_file:scripts/build_arxiv_source_package.py",
       "passed": true
     },
@@ -432,18 +432,23 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7578 min_size=1",
+      "detail": "exists=True size=7621 min_size=1",
       "name": "required_file:docs/public_release_checklist_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=7078 min_size=1",
+      "detail": "exists=True size=6935 min_size=1",
       "name": "required_file:docs/reproducibility_manifest_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=4038 min_size=1",
+      "detail": "exists=True size=4026 min_size=1",
       "name": "required_file:docs/arxiv_source_package_checklist_v01.md",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=3902 min_size=1",
+      "name": "required_file:docs/arxiv_submission_fields_v041.md",
       "passed": true
     },
     {
@@ -1497,7 +1502,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=9774 min_size=1",
+      "detail": "exists=True size=9778 min_size=1",
       "name": "required_file:scripts/check_paper_build.py",
       "passed": true
     },

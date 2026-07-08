@@ -37,7 +37,7 @@ def main() -> int:
         default=None,
         help="PDF output directory for --compile. Defaults to a temporary directory.",
     )
-    parser.add_argument("--compile", action="store_true", help="Run latexmk after preflight checks.")
+    parser.add_argument("--compile", action="store_true", help="Compile the PDF after preflight checks.")
     parser.add_argument(
         "--require-tex",
         action="store_true",

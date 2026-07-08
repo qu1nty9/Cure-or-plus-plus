@@ -1,15 +1,15 @@
-# CURE-OR++ Reproducibility Manifest v0.1
+# CURE-OR++ Reproducibility Manifest v0.2
 
-Status date: 2026-07-06.
+Status date: 2026-07-08.
 
 This manifest defines how the current CURE-OR++ preprint package can be audited
 from public, tracked artifacts. It complements `docs/public_release_checklist_v01.md`.
 
 ## Release Scope
 
-Target release: `v0.4-preprint`.
+Target release: `v0.4.1`.
 
-Stable archival release: `v0.4.1`.
+Scientific baseline: `v0.4-preprint`.
 
 Version DOI: `https://doi.org/10.5281/zenodo.21239828`.
 
@@ -40,26 +40,22 @@ The paper source is:
 - `paper/main.tex`
 - `paper/references.bib`
 
-The current local verified build uses Tectonic and writes build/cache artifacts
-to the external workspace:
+The current local verified build uses a BasicTeX/TeX Live command-line
+toolchain. `scripts/check_paper_build.py` detects common macOS TeX locations
+and uses `latexmk` when present; otherwise it falls back to
+`pdflatex -> bibtex -> pdflatex -> pdflatex`.
 
 ```bash
-mkdir -p /Volumes/980PRO/CURE-OR++/builds/paper_tectonic
-mkdir -p /Volumes/980PRO/CURE-OR++/cache/tectonic
-
-cd /Users/yaroslav/Documents/CURE-OR++/paper
-env \
-  XDG_CACHE_HOME=/Volumes/980PRO/CURE-OR++/cache \
-  TECTONIC_CACHE_DIR=/Volumes/980PRO/CURE-OR++/cache/tectonic \
-  tectonic -p --keep-logs \
-    --outdir /Volumes/980PRO/CURE-OR++/builds/paper_tectonic \
-    main.tex
+.venv/bin/python scripts/check_paper_build.py \
+  --compile \
+  --require-tex \
+  --output-dir /private/tmp/cure-or-pp-paper-check
 ```
 
 Verified local PDF:
 
-- `/Volumes/980PRO/CURE-OR++/builds/paper_tectonic/main.pdf`
-- `/Volumes/980PRO/CURE-OR++/builds/arxiv_source_v0.4_preprint/main.pdf`
+- `/private/tmp/cure-or-pp-paper-check/main.pdf`
+- `/private/tmp/cure-or-pp-arxiv-source-test/main.pdf`
 
 The repository preflight checker also validates that all paper inputs, figures,
 and bibliography files exist:
@@ -68,15 +64,16 @@ and bibliography files exist:
 .venv/bin/python scripts/check_paper_build.py
 ```
 
-This local machine currently lacks `latexmk`, `pdflatex`, and `kpsewhich`, so
-the strict TeX toolchain compile path remains a final packaging gate on a
-machine with those tools installed.
+The current verified TeX requirement is `pdflatex`, `bibtex`, and `kpsewhich`.
+`latexmk`, `biber`, `xelatex`, and `lualatex` are useful but not required for
+the current paper source.
 
 The arXiv/workshop source package is generated with:
 
 ```bash
 .venv/bin/python scripts/build_arxiv_source_package.py \
-  --output-dir /Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint \
+  --output-dir exports/arxiv_source_v0.4.1 \
+  --clean \
   --make-zip
 ```
 
@@ -86,7 +83,8 @@ staged `main.tex` uses package-local `reports/` and `results/` paths.
 
 Latest verified staged source package:
 
-- `/Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint.zip`
+- `exports/arxiv_source_v0.4.1.zip`
+- `/private/tmp/cure-or-pp-arxiv-source-test.zip`
 
 ## Aggregate Table Generation
 

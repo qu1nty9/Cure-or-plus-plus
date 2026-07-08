@@ -1,8 +1,8 @@
-# CURE-OR++ arXiv Source Package Checklist v0.1
+# CURE-OR++ arXiv Source Package Checklist v0.2
 
-Status date: 2026-07-06.
+Status date: 2026-07-08.
 
-Target tag: `v0.4-preprint`.
+Target tag: `v0.4.1`.
 
 This checklist defines the intended arXiv/workshop source package boundary. It
 does not publish raw image data, provider caches, API keys, or raw hosted
@@ -41,7 +41,8 @@ Use the tracked builder:
 
 ```bash
 .venv/bin/python scripts/build_arxiv_source_package.py \
-  --output-dir /Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint \
+  --output-dir exports/arxiv_source_v0.4.1 \
+  --clean \
   --make-zip
 ```
 
@@ -97,21 +98,19 @@ Before staging:
 
 ```bash
 .venv/bin/python scripts/run_release_checks.py
-.venv/bin/python scripts/check_paper_build.py
-.venv/bin/python scripts/build_arxiv_source_package.py --output-dir /private/tmp/cure-or-pp-arxiv-source-test --clean
+.venv/bin/python scripts/check_paper_build.py --compile --output-dir /private/tmp/cure-or-pp-paper-check
+.venv/bin/python scripts/build_arxiv_source_package.py --output-dir /private/tmp/cure-or-pp-arxiv-source-test --clean --make-zip
 git diff --check
 ```
 
-Local Tectonic build command used for verification:
+Traditional TeX build command used for final staged-package verification:
 
 ```bash
-cd /Users/yaroslav/Documents/CURE-OR++/paper
-env \
-  XDG_CACHE_HOME=/Volumes/980PRO/CURE-OR++/cache \
-  TECTONIC_CACHE_DIR=/Volumes/980PRO/CURE-OR++/cache/tectonic \
-  tectonic -p --keep-logs \
-    --outdir /Volumes/980PRO/CURE-OR++/builds/paper_tectonic \
-    main.tex
+cd /private/tmp/cure-or-pp-arxiv-source-test
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+bibtex main
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 Expected final log state:
@@ -138,7 +137,7 @@ Before upload:
 
 The latest locally verified staged source package and PDF are:
 
-- `/Volumes/980PRO/CURE-OR++/exports/arxiv_source_v0.4_preprint.zip`
-- `/Volumes/980PRO/CURE-OR++/builds/arxiv_source_v0.4_preprint/main.pdf`
+- `/private/tmp/cure-or-pp-arxiv-source-test.zip`
+- `/private/tmp/cure-or-pp-arxiv-source-test/main.pdf`
 
 These paths are local-only and should not be referenced as public artifacts.
