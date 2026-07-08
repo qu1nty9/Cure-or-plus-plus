@@ -91,6 +91,12 @@ For Kaggle's profile-level **New writeup** editor, use
 `kaggle/profile_writeup_v041.md`. This is a separate manual UI publication from
 the dataset description and executable notebook.
 
+Use these prepared image assets in the writeup UI:
+
+- Media gallery: `results/kaggle_writeup_media_v041.png` (`640 x 360`).
+- Card and thumbnail: `results/kaggle_writeup_card_thumbnail_v041.png`
+  (`560 x 280`).
+
 ## Legacy mini-CURE Package: v0.1
 
 ## Ready Locally

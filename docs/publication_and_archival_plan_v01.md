@@ -25,7 +25,7 @@ release to the first public writeups and preprint submissions.
 - GitHub `v0.4-preprint` release/tag exists and is marked as a pre-release.
 - PDF is built from the staged source package.
 - Staged source zip is attached to the GitHub release.
-- `scripts/run_release_checks.py` passes 661 checks with 0 failures.
+- `scripts/run_release_checks.py` passes 664 checks with 0 failures.
 - Public release boundary is documented.
 - Raw CURE-OR, mini-CURE-OR, real-transfer photos, provider raw JSONL, API
   caches, and secrets are excluded from the public package.

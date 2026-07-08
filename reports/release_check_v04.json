@@ -1,5 +1,5 @@
 {
-  "check_count": 661,
+  "check_count": 664,
   "checks": [
     {
       "detail": "exists=True size=6085 min_size=1",
@@ -367,6 +367,16 @@
       "passed": true
     },
     {
+      "detail": "exists=True size=98518 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_media_v041.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=75203 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_card_thumbnail_v041.png",
+      "passed": true
+    },
+    {
       "detail": "exists=True size=23417 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
@@ -374,6 +384,11 @@
     {
       "detail": "exists=True size=10450 min_size=1",
       "name": "required_file:scripts/build_arxiv_source_package.py",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=1452 min_size=1",
+      "name": "required_file:scripts/build_kaggle_writeup_media.py",
       "passed": true
     },
     {
@@ -412,7 +427,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=5529 min_size=1",
+      "detail": "exists=True size=5742 min_size=1",
       "name": "required_file:docs/kaggle_release_checklist.md",
       "passed": true
     },
@@ -452,7 +467,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=8637 min_size=1",
+      "detail": "exists=True size=9601 min_size=1",
       "name": "required_file:kaggle/profile_writeup_v041.md",
       "passed": true
     },

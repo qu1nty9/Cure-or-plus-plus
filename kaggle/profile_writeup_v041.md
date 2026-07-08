@@ -4,30 +4,47 @@ This file is drafted for Kaggle's profile-level **New writeup** editor. It is
 separate from the Kaggle dataset description and separate from the executable
 Kaggle notebook.
 
-## Suggested Kaggle Fields
+## Title
 
-- Type: Project
-- Title: CURE-OR++: Object Recognition Robustness Under Native and Real Transfer Stress
-- Short description:
-  A public aggregate benchmark for testing whether object-recognition models
-  share stable failures under severe CURE-OR challenges, phone/app transfer
-  pipelines, and VLM prompt-pack evaluation.
-- Tags:
-  computer-vision, robustness, object-recognition, vision-language-models,
-  benchmark, openclip
-- Cover image candidate:
-  `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
-- Secondary image candidates:
-  `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png`,
-  `results/real_transfer_v02_source_matched_drops.png`,
-  `results/real_transfer_v02_accuracy_heatmap.png`
+CURE-OR++: Object Recognition Robustness Under Native and Real Transfer Stress
 
-## Body
+## Subtitle
 
-# CURE-OR++: Do Object Recognition Models Fail in the Same Places?
+A public aggregate benchmark for testing whether object-recognition models
+share stable failures under severe CURE-OR challenges, phone/app transfer
+pipelines, and VLM prompt-pack evaluation.
+
+## Media Gallery
+
+Upload:
+
+- `results/kaggle_writeup_media_v041.png`
+
+Required UI size:
+
+- `640 x 360`
+
+Backup gallery options:
+
+- `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
+- `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png`
+- `results/real_transfer_v02_source_matched_drops.png`
+- `results/real_transfer_v02_accuracy_heatmap.png`
+
+## Card and Thumbnail Image
+
+Upload:
+
+- `results/kaggle_writeup_card_thumbnail_v041.png`
+
+Required UI size:
+
+- `560 x 280`
+
+## Content
 
 Modern object-recognition systems are strong on clean images, but clean-image
-accuracy is only part of the story. CURE-OR++ asks a more specific robustness
+accuracy is only part of the story. CURE-OR++ asks a narrower robustness
 question:
 
 > When clean object images move into severe challenge conditions and real
@@ -207,7 +224,45 @@ The main claim is narrow by design: CURE-OR++ shows stable, shared robustness
 failures under native CURE-OR stress and gives an initial real-transfer/VLM
 guardrail around those failures.
 
-## Citation
+## Tags
+
+Use:
+
+- computer-vision
+- robustness
+- object-recognition
+- vision-language-models
+- benchmark
+- openclip
+
+## Attachments
+
+Project links:
+
+- Dataset: https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat
+- Notebook: https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup
+- GitHub release: https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1
+- GitHub repository: https://github.com/qu1nty9/Cure-or-plus-plus
+- Version DOI: https://doi.org/10.5281/zenodo.21239828
+
+Files to attach only if Kaggle asks for optional supporting files:
+
+- `results/kaggle_writeup_media_v041.png`
+- `results/kaggle_writeup_card_thumbnail_v041.png`
+
+Do not attach:
+
+- raw CURE-OR or mini-CURE-OR images
+- local real-transfer photos
+- hosted-provider raw JSONL files
+- provider caches
+- API keys, OAuth files, `.env` files, or credentials
+
+## DOI Citation
+
+Enable DOI citation if Kaggle offers it for this writeup.
+
+Recommended citation metadata:
 
 ```bibtex
 @misc{kholmirzayev2026cureorpp,
@@ -219,4 +274,3 @@ guardrail around those failures.
   url = {https://github.com/qu1nty9/Cure-or-plus-plus/releases/tag/v0.4.1}
 }
 ```
-

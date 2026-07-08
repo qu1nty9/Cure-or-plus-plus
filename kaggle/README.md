@@ -17,6 +17,12 @@ Use `kaggle/profile_writeup_v041.md` for Kaggle's profile-level **New writeup**
 editor. It is a separate Project writeup draft, not the dataset README and not
 the executable notebook.
 
+Prepared writeup images:
+
+- Media gallery: `results/kaggle_writeup_media_v041.png` (`640 x 360`).
+- Card and thumbnail: `results/kaggle_writeup_card_thumbnail_v041.png`
+  (`560 x 280`).
+
 Build the current public aggregate package:
 
 ```bash
