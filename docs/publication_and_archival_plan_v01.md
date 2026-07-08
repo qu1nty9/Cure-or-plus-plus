@@ -1,6 +1,6 @@
 # CURE-OR++ Publication and Archival Plan v0.1
 
-Status date: 2026-07-07.
+Status date: 2026-07-08.
 
 This document defines the route from the current `v0.4.1` archival metadata
 release to the first public writeups and preprint submissions.
@@ -19,6 +19,8 @@ release to the first public writeups and preprint submissions.
   `https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat`
 - Kaggle public notebook/writeup:
   `https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup`
+- Kaggle profile writeup:
+  `https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat`
 
 ## Already Done
 
@@ -34,25 +36,21 @@ release to the first public writeups and preprint submissions.
 - Zenodo DOI metadata exists for the `v0.4.1` release.
 - Kaggle public aggregate package and reader-facing notebook/writeup are
   published and validated against the public release boundary.
-- Kaggle profile-level writeup draft exists at
-  `kaggle/profile_writeup_v041.md`; this is a separate manual Kaggle UI
-  publication from the dataset description and executable notebook.
+- Kaggle profile-level writeup is published at
+  `https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat`.
+- The source draft is tracked at `kaggle/profile_writeup_v041.md`; this is a
+  separate manual Kaggle UI publication from the dataset description and
+  executable notebook.
 
 ## Remaining Before First Broad Public Push
 
-1. Kaggle profile-level writeup publication.
-   - Paste `kaggle/profile_writeup_v041.md` into Kaggle's New writeup editor.
-   - Use Project type, the v0.4.1 title, public links, and generated figures.
-   - Do not upload raw CURE-OR, mini-CURE-OR, local real-transfer photos,
-     provider raw JSONL, caches, or credentials.
-
-2. arXiv/workshop-style preprint.
+1. arXiv/workshop-style preprint.
    - Submit the staged source package after final venue-specific formatting
      review.
    - Keep data availability and limitations aligned with the public release
      boundary.
 
-3. Public feedback loop.
+2. Public feedback loop.
    - Announce the release with links to GitHub, PDF, Kaggle, and DOI.
    - Invite issues for reproduction problems, unclear claims, and model-row
      extension proposals.
@@ -64,7 +62,7 @@ release to the first public writeups and preprint submissions.
 3. GitHub `v0.4.1` archival metadata release: done.
 4. DOI minting and DOI metadata update: done.
 5. Kaggle public aggregate dataset and notebook/writeup: done.
-6. Kaggle profile-level project writeup.
+6. Kaggle profile-level project writeup: done.
 7. arXiv/workshop-style preprint.
 8. Public posts and feedback collection.
 9. `v0.5` cleanup release based on feedback.
@@ -102,7 +100,7 @@ The first publication wave is considered complete when:
 
 - the GitHub release is stable;
 - a DOI exists;
-- the Kaggle notebook/writeup is public;
+- the Kaggle dataset, notebook, and profile writeup are public;
 - README, citation metadata, paper, and Kaggle all point to the same stable
   public version.
 - the preprint source/PDF has been submitted or posted.

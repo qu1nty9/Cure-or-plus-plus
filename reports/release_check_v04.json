@@ -2,7 +2,7 @@
   "check_count": 670,
   "checks": [
     {
-      "detail": "exists=True size=6085 min_size=1",
+      "detail": "exists=True size=6340 min_size=1",
       "name": "required_file:README.md",
       "passed": true
     },
@@ -452,12 +452,12 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=4401 min_size=1",
+      "detail": "exists=True size=4375 min_size=1",
       "name": "required_file:docs/publication_and_archival_plan_v01.md",
       "passed": true
     },
     {
-      "detail": "exists=True size=6105 min_size=1",
+      "detail": "exists=True size=6379 min_size=1",
       "name": "required_file:docs/kaggle_release_checklist.md",
       "passed": true
     },
@@ -497,7 +497,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=10187 min_size=1",
+      "detail": "exists=True size=10305 min_size=1",
       "name": "required_file:kaggle/profile_writeup_v041.md",
       "passed": true
     },

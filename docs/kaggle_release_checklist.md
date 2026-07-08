@@ -24,6 +24,8 @@ Ready locally:
   `https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat`.
 - Published Kaggle notebook/writeup:
   `https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup`.
+- Published Kaggle profile writeup:
+  `https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat`.
 
 Package boundary:
 
@@ -90,6 +92,9 @@ the nested folders were skipped. The canonical public Kaggle dataset is the
 For Kaggle's profile-level **New writeup** editor, use
 `kaggle/profile_writeup_v041.md`. This is a separate manual UI publication from
 the dataset description and executable notebook.
+
+Published profile writeup:
+`https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat`.
 
 Use these prepared image assets in the writeup UI:
 

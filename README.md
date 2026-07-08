@@ -18,6 +18,8 @@ The current public release is:
   <https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat>
 - Kaggle public notebook/writeup:
   <https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup>
+- Kaggle profile writeup:
+  <https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat>
 
 ## What This Measures
 
@@ -168,6 +170,8 @@ notebook/writeup are live:
   <https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat>
 - Notebook/writeup:
   <https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup>
+- Profile writeup:
+  <https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat>
 
 The next publication steps are:
 

@@ -8,6 +8,8 @@ Canonical public Kaggle links:
   <https://www.kaggle.com/datasets/yaroslavkholmirzayev/cure-or-plus-plus-v041-public-flat>
 - Notebook/writeup:
   <https://www.kaggle.com/code/yaroslavkholmirzayev/cure-or-v0-4-1-public-benchmark-writeup>
+- Profile writeup:
+  <https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat>
 
 Do not cite the earlier `yaroslavkholmirzayev/cure-or-plus-plus-v041-public`
 Kaggle slug. It is an incomplete upload caused by skipped nested folders. Use
@@ -16,6 +18,9 @@ the flat `...v041-public-flat` dataset as the public Kaggle artifact.
 Use `kaggle/profile_writeup_v041.md` for Kaggle's profile-level **New writeup**
 editor. It is a separate Project writeup draft, not the dataset README and not
 the executable notebook.
+
+Published profile writeup:
+<https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat>
 
 Prepared writeup images:
 

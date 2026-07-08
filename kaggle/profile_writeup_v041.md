@@ -4,6 +4,10 @@ This file is drafted for Kaggle's profile-level **New writeup** editor. It is
 separate from the Kaggle dataset description and separate from the executable
 Kaggle notebook.
 
+Published URL:
+
+https://www.kaggle.com/writeups/yaroslavkholmirzayev/cure-or-object-recognition-robustness-under-nat
+
 ## Title
 
 CURE-OR++: Object Recognition Robustness Under Native and Real Transfer Stress
