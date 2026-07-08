@@ -18,18 +18,21 @@ pipelines, and VLM prompt-pack evaluation.
 
 Upload:
 
-- `results/kaggle_writeup_media_v041.png`
+- `results/kaggle_writeup_media_v041_01_mean_accuracy.png`
+- `results/kaggle_writeup_media_v041_02_level5_ranking.png`
+- `results/kaggle_writeup_media_v041_03_real_transfer_drops.png`
+- `results/kaggle_writeup_media_v041_04_real_transfer_heatmap.png`
+- `results/kaggle_writeup_media_v041_05_grayscale_control.png`
+- `results/kaggle_writeup_media_v041_06_level5_overconfidence.png`
 
 Required UI size:
 
 - `640 x 360`
 
-Backup gallery options:
+Compatibility alias:
 
-- `results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png`
-- `results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png`
-- `results/real_transfer_v02_source_matched_drops.png`
-- `results/real_transfer_v02_accuracy_heatmap.png`
+- `results/kaggle_writeup_media_v041.png` is the same image as
+  `results/kaggle_writeup_media_v041_01_mean_accuracy.png`.
 
 ## Card and Thumbnail Image
 
@@ -248,6 +251,12 @@ Project links:
 Files to attach only if Kaggle asks for optional supporting files:
 
 - `results/kaggle_writeup_media_v041.png`
+- `results/kaggle_writeup_media_v041_01_mean_accuracy.png`
+- `results/kaggle_writeup_media_v041_02_level5_ranking.png`
+- `results/kaggle_writeup_media_v041_03_real_transfer_drops.png`
+- `results/kaggle_writeup_media_v041_04_real_transfer_heatmap.png`
+- `results/kaggle_writeup_media_v041_05_grayscale_control.png`
+- `results/kaggle_writeup_media_v041_06_level5_overconfidence.png`
 - `results/kaggle_writeup_card_thumbnail_v041.png`
 
 Do not attach:

@@ -93,7 +93,14 @@ the dataset description and executable notebook.
 
 Use these prepared image assets in the writeup UI:
 
-- Media gallery: `results/kaggle_writeup_media_v041.png` (`640 x 360`).
+- Media gallery:
+  - `results/kaggle_writeup_media_v041_01_mean_accuracy.png`
+  - `results/kaggle_writeup_media_v041_02_level5_ranking.png`
+  - `results/kaggle_writeup_media_v041_03_real_transfer_drops.png`
+  - `results/kaggle_writeup_media_v041_04_real_transfer_heatmap.png`
+  - `results/kaggle_writeup_media_v041_05_grayscale_control.png`
+  - `results/kaggle_writeup_media_v041_06_level5_overconfidence.png`
+  - all are `640 x 360`.
 - Card and thumbnail: `results/kaggle_writeup_card_thumbnail_v041.png`
   (`560 x 280`).
 

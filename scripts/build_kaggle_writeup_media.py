@@ -7,14 +7,66 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png"
-OUTPUTS = [
-    (ROOT / "results/kaggle_writeup_media_v041.png", (640, 360)),
-    (ROOT / "results/kaggle_writeup_card_thumbnail_v041.png", (560, 280)),
+MEDIA_OUTPUTS = [
+    (
+        ROOT / "results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png",
+        ROOT / "results/kaggle_writeup_media_v041.png",
+        (640, 360),
+    ),
+    (
+        ROOT / "results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png",
+        ROOT / "results/kaggle_writeup_media_v041_01_mean_accuracy.png",
+        (640, 360),
+    ),
+    (
+        ROOT / "results/full_cure_or_probe_v04_with_prototypes_level5_ranking.png",
+        ROOT / "results/kaggle_writeup_media_v041_02_level5_ranking.png",
+        (640, 360),
+    ),
+    (
+        ROOT / "results/real_transfer_v02_source_matched_drops.png",
+        ROOT / "results/kaggle_writeup_media_v041_03_real_transfer_drops.png",
+        (640, 360),
+    ),
+    (
+        ROOT / "results/real_transfer_v02_accuracy_heatmap.png",
+        ROOT / "results/kaggle_writeup_media_v041_04_real_transfer_heatmap.png",
+        (640, 360),
+    ),
+    (
+        ROOT / "results/full_cure_or_grayscale_control_v04_with_prototypes_comparison.png",
+        ROOT / "results/kaggle_writeup_media_v041_05_grayscale_control.png",
+        (640, 360),
+    ),
+    (
+        ROOT / "results/full_cure_or_probe_v04_level5_overconfidence.png",
+        ROOT / "results/kaggle_writeup_media_v041_06_level5_overconfidence.png",
+        (640, 360),
+    ),
+]
+CARD_OUTPUTS = [
+    (
+        ROOT / "results/full_cure_or_probe_v04_with_prototypes_mean_accuracy_by_level.png",
+        ROOT / "results/kaggle_writeup_card_thumbnail_v041.png",
+        (560, 280),
+    ),
 ]
 
 
-def center_crop_to_aspect(image: Image.Image, target_width: int, target_height: int) -> Image.Image:
+def fit_on_canvas(image: Image.Image, target_width: int, target_height: int) -> Image.Image:
+    image.thumbnail((target_width, target_height), Image.Resampling.LANCZOS)
+    canvas = Image.new("RGB", (target_width, target_height), "white")
+    left = (target_width - image.width) // 2
+    top = (target_height - image.height) // 2
+    canvas.paste(image, (left, top))
+    return canvas
+
+
+def center_crop_to_aspect(
+    image: Image.Image,
+    target_width: int,
+    target_height: int,
+) -> Image.Image:
     source_width, source_height = image.size
     target_aspect = target_width / target_height
     source_aspect = source_width / source_height
@@ -32,8 +84,14 @@ def center_crop_to_aspect(image: Image.Image, target_width: int, target_height: 
 
 
 def main() -> int:
-    source = Image.open(SOURCE).convert("RGB")
-    for output_path, size in OUTPUTS:
+    for source_path, output_path, size in MEDIA_OUTPUTS:
+        source = Image.open(source_path).convert("RGB")
+        resized = fit_on_canvas(source, *size)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        resized.save(output_path)
+
+    for source_path, output_path, size in CARD_OUTPUTS:
+        source = Image.open(source_path).convert("RGB")
         cropped = center_crop_to_aspect(source, *size)
         resized = cropped.resize(size, Image.Resampling.LANCZOS)
         output_path.parent.mkdir(parents=True, exist_ok=True)

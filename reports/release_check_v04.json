@@ -1,5 +1,5 @@
 {
-  "check_count": 664,
+  "check_count": 670,
   "checks": [
     {
       "detail": "exists=True size=6085 min_size=1",
@@ -367,8 +367,38 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=98518 min_size=10000",
+      "detail": "exists=True size=98327 min_size=10000",
       "name": "required_file:results/kaggle_writeup_media_v041.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=98327 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_media_v041_01_mean_accuracy.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=56769 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_media_v041_02_level5_ranking.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=39246 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_media_v041_03_real_transfer_drops.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=54435 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_media_v041_04_real_transfer_heatmap.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=30129 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_media_v041_05_grayscale_control.png",
+      "passed": true
+    },
+    {
+      "detail": "exists=True size=58940 min_size=10000",
+      "name": "required_file:results/kaggle_writeup_media_v041_06_level5_overconfidence.png",
       "passed": true
     },
     {
@@ -387,7 +417,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=1452 min_size=1",
+      "detail": "exists=True size=3442 min_size=1",
       "name": "required_file:scripts/build_kaggle_writeup_media.py",
       "passed": true
     },
@@ -427,7 +457,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=5742 min_size=1",
+      "detail": "exists=True size=6105 min_size=1",
       "name": "required_file:docs/kaggle_release_checklist.md",
       "passed": true
     },
@@ -467,7 +497,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=9601 min_size=1",
+      "detail": "exists=True size=10187 min_size=1",
       "name": "required_file:kaggle/profile_writeup_v041.md",
       "passed": true
     },

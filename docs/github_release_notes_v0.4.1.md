@@ -25,7 +25,7 @@ artifacts are unchanged from `v0.4-preprint`.
 - Added `docs/publication_and_archival_plan_v01.md`.
 - Strengthened `scripts/run_release_checks.py` so README, LICENSE,
   `CITATION.cff`, `.zenodo.json`, and archival docs are required and scanned.
-- Release checks now pass with 664 checks and 0 failures.
+- Release checks now pass with 670 checks and 0 failures.
 
 ## Attached Release Artifacts
 
