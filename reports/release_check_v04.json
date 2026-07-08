@@ -407,7 +407,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=23999 min_size=1",
+      "detail": "exists=True size=23948 min_size=1",
       "name": "required_file:paper/main.tex",
       "passed": true
     },
@@ -1497,7 +1497,7 @@
       "passed": true
     },
     {
-      "detail": "exists=True size=7464 min_size=1",
+      "detail": "exists=True size=9774 min_size=1",
       "name": "required_file:scripts/check_paper_build.py",
       "passed": true
     },

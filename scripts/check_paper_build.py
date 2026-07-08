@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -17,8 +18,13 @@ INPUT_RE = re.compile(r"\\input\{([^{}]+)\}")
 GRAPHICS_RE = re.compile(r"\\includegraphics(?:\[[^\]]*\])?\{([^{}]+)\}")
 BIBLIOGRAPHY_RE = re.compile(r"\\bibliography\{([^{}]+)\}")
 
-REQUIRED_TEX_TOOLS = ("latexmk", "pdflatex", "kpsewhich")
-RECOMMENDED_TEX_TOOLS = ("biber", "xelatex", "lualatex")
+COMMON_TEX_PATHS = (
+    Path("/Library/TeX/texbin"),
+    Path("/usr/local/texlive/2026basic/bin/universal-darwin"),
+    Path("/usr/local/texlive/2026/bin/universal-darwin"),
+)
+REQUIRED_TEX_TOOLS = ("pdflatex", "bibtex", "kpsewhich")
+RECOMMENDED_TEX_TOOLS = ("latexmk", "biber", "xelatex", "lualatex")
 
 
 def main() -> int:
@@ -120,8 +126,8 @@ def check_source_references(paper_path: Path) -> list[dict[str, object]]:
 
 
 def detect_tex_runtime() -> dict[str, object]:
-    required = {tool: shutil.which(tool) for tool in REQUIRED_TEX_TOOLS}
-    recommended = {tool: shutil.which(tool) for tool in RECOMMENDED_TEX_TOOLS}
+    required = {tool: tool_path(tool) for tool in REQUIRED_TEX_TOOLS}
+    recommended = {tool: tool_path(tool) for tool in RECOMMENDED_TEX_TOOLS}
     missing_required = [tool for tool, path in required.items() if path is None]
     missing_recommended = [tool for tool, path in recommended.items() if path is None]
     return {
@@ -130,37 +136,74 @@ def detect_tex_runtime() -> dict[str, object]:
         "required_ready": not missing_required,
         "missing_required": missing_required,
         "missing_recommended": missing_recommended,
+        "path_prefix": tex_path_prefix(),
     }
 
 
 def compile_paper(paper_path: Path, output_dir: Path) -> dict[str, object]:
     output_dir.mkdir(parents=True, exist_ok=True)
-    cmd = [
-        "latexmk",
-        "-pdf",
-        "-interaction=nonstopmode",
-        "-halt-on-error",
-        "-outdir=" + str(output_dir),
-        paper_path.name,
-    ]
-    result = subprocess.run(
-        cmd,
-        cwd=paper_path.parent,
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    latexmk = tool_path("latexmk")
+    env = tex_env()
+    if latexmk:
+        command_steps = [
+            {
+                "cmd": [
+                    latexmk,
+                    "-pdf",
+                    "-interaction=nonstopmode",
+                    "-halt-on-error",
+                    "-outdir=" + str(output_dir),
+                    paper_path.name,
+                ],
+                "cwd": paper_path.parent,
+            }
+        ]
+    else:
+        pdflatex_cmd = [
+            tool_path("pdflatex") or "pdflatex",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "-output-directory=" + str(output_dir),
+            paper_path.name,
+        ]
+        command_steps = [
+            {"cmd": pdflatex_cmd, "cwd": paper_path.parent},
+            {"cmd": [tool_path("bibtex") or "bibtex", paper_path.stem], "cwd": output_dir},
+            {"cmd": pdflatex_cmd, "cwd": paper_path.parent},
+            {"cmd": pdflatex_cmd, "cwd": paper_path.parent},
+        ]
+
+    combined_stdout = []
+    combined_stderr = []
+    exit_code = 0
+    for step in command_steps:
+        result = subprocess.run(
+            step["cmd"],
+            cwd=step["cwd"],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+        )
+        combined_stdout.append(result.stdout)
+        combined_stderr.append(result.stderr)
+        if result.returncode != 0:
+            exit_code = result.returncode
+            break
     pdf_path = output_dir / (paper_path.stem + ".pdf")
     pdf_ok = pdf_path.exists() and pdf_path.stat().st_size > 0
     return {
         "attempted": True,
-        "passed": result.returncode == 0 and pdf_ok,
-        "reason": f"exit_code={result.returncode} pdf_exists={pdf_path.exists()} pdf_size={pdf_path.stat().st_size if pdf_path.exists() else 0}",
-        "command": cmd,
+        "passed": exit_code == 0 and pdf_ok,
+        "reason": f"exit_code={exit_code} pdf_exists={pdf_path.exists()} pdf_size={pdf_path.stat().st_size if pdf_path.exists() else 0}",
+        "commands": [
+            {"cmd": step["cmd"], "cwd": str(step["cwd"])}
+            for step in command_steps
+        ],
         "output_dir": str(output_dir),
         "pdf": str(pdf_path),
-        "stdout_tail": tail(result.stdout),
-        "stderr_tail": tail(result.stderr),
+        "stdout_tail": tail("\n".join(combined_stdout)),
+        "stderr_tail": tail("\n".join(combined_stderr)),
     }
 
 
@@ -188,6 +231,33 @@ def print_human_report(report: dict[str, object]) -> None:
 
 def check(name: str, passed: bool, detail: str) -> dict[str, object]:
     return {"name": name, "passed": bool(passed), "detail": detail}
+
+
+def tool_path(tool: str) -> str | None:
+    direct = shutil.which(tool)
+    if direct:
+        return direct
+    for directory in COMMON_TEX_PATHS:
+        candidate = directory / tool
+        if candidate.exists() and candidate.is_file():
+            return str(candidate)
+    return None
+
+
+def tex_path_prefix() -> str:
+    existing = [str(path) for path in COMMON_TEX_PATHS if path.exists()]
+    return ":".join(existing)
+
+
+def tex_env() -> dict[str, str]:
+    env = dict(os.environ)
+    prefix = tex_path_prefix()
+    if prefix:
+        env["PATH"] = prefix + ":" + env.get("PATH", "")
+    paper_dir = str(DEFAULT_PAPER.parent)
+    env["BIBINPUTS"] = paper_dir + os.pathsep + env.get("BIBINPUTS", "")
+    env["TEXINPUTS"] = paper_dir + os.pathsep + env.get("TEXINPUTS", "")
+    return env
 
 
 def resolve_path(path: str | Path) -> Path:
